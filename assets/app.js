@@ -101,7 +101,7 @@
   function renderHome() {
     document.body.className = "home-page";
     document.title = `收益率排行 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("ranking")}<main><section class="ranking-section dark-band" id="ranking"><div class="shell"><div class="ranking-head"><span>排名 / 公司</span><span>相对位置</span><span>预期回报</span></div><div class="ranking-list">${rankingRows()}</div><p class="ranking-note">收益率来自固定情景模型，是研究假设的可比结果，不是实时交易信号。数据截至 ${db.meta.updatedAt}。</p><a class="text-link page-switch" href="reports.html">浏览全部个股报告 <b>↗</b></a></div></section></main>${footer()}`;
+    document.body.innerHTML = `${header("ranking")}<main><section class="ranking-section dark-band" id="ranking"><div class="shell"><div class="ranking-list">${rankingRows()}</div><p class="ranking-note">收益率来自固定情景模型，是研究假设的可比结果，不是实时交易信号。数据截至 ${db.meta.updatedAt}。</p><a class="text-link page-switch" href="reports.html">浏览全部个股报告 <b>↗</b></a></div></section></main>${footer()}`;
   }
 
   function renderReports() {

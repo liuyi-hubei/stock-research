@@ -71,7 +71,6 @@ p { margin: 0; }
 .reports-page .report-metrics dd { color: #d8dbe0; }
 .reports-page .report-metrics div:first-child dd { color: var(--accent); }
 .reports-page .report-action { color: #c3c6cb; }
-.ranking-head { display: grid; grid-template-columns: minmax(260px, .9fr) 1.2fr 150px; gap: 28px; padding: 0 56px 12px 0; color: #686b70; font: 500 10px/1 var(--mono); letter-spacing: .13em; text-transform: uppercase; }
 .ranking-list { border-top: 1px solid var(--line-inverse); }
 .ranking-row { display: grid; grid-template-columns: 76px minmax(190px, .7fr) 1.2fr 120px 24px; align-items: center; gap: 28px; min-height: 104px; border-bottom: 1px solid var(--line-inverse); transition: background-color .18s ease; }
 .ranking-row:hover { background: rgba(255, 255, 255, .035); }
@@ -318,7 +317,6 @@ tbody tr:hover td { background: rgba(16, 17, 20, .025); }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 42px; }
   .hero-copy { max-width: 620px; }
-  .ranking-head { display: none; }
   .ranking-row { grid-template-columns: 48px 1fr 90px 20px; gap: 18px; min-height: 92px; }
   .rank-track { grid-column: 2 / 4; grid-row: 2; margin-top: -18px; }
   .report-row { grid-template-columns: 48px 1fr auto; gap: 22px; }
