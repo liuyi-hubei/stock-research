@@ -276,8 +276,8 @@ tbody tr:hover td { background: rgba(16, 17, 20, .025); }
 
 /* 研究图表 */
 .chart-card { margin: 30px 0 26px; padding: 28px 30px 22px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 18px; background: linear-gradient(160deg, rgba(20, 24, 31, .8), rgba(12, 15, 20, .8)); }
-.chart-card figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px; color: #e8eaee; font-size: 15px; font-weight: 580; }
-.chart-card figcaption span { color: #7f858f; font: 11px/1.4 var(--mono); letter-spacing: .04em; }
+.chart-card figcaption { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin-bottom: 18px; color: #e8eaee; font-size: 15px; font-weight: 580; }
+.chart-card figcaption span { color: #7f858f; font: 11px/1.5 var(--mono); letter-spacing: .04em; }
 .chart-card svg { display: block; width: 100%; height: auto; }
 .chart-card .grid-line { stroke: rgba(255, 255, 255, .07); stroke-width: 1; }
 .chart-card .axis-label { fill: #71767f; font: 11px var(--mono); }

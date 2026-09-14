@@ -52,7 +52,8 @@
 
   function scenarioChart(stock) {
     const W = 760, H = 210, padL = 96, padR = 110, top = 34, rowH = 52;
-    const discount = num(stock.model.discountRate) || 10;
+    const discountStr = String(stock.model.discountRate).trim();
+    const discount = num(discountStr) || 10;
     const rows = stock.model.scenarios.map((s, i) => ({ name: `${s.name}情景`, v: num(s.cagr), cls: ["bear", "base", "bull"][i] }));
     const max = Math.max(...rows.map(r => r.v), discount) * 1.18;
     const x = v => padL + (v / max) * (W - padL - padR);
@@ -62,7 +63,7 @@
       return `<g class="chart-row ${r.cls}"><text class="axis-label" x="${padL - 14}" y="${y + 19}" text-anchor="end">${r.name}</text><rect x="${padL}" y="${y}" width="${w}" height="26" rx="6" class="bar"/><text class="bar-value" x="${padL + w + 12}" y="${y + 18}">${r.v.toFixed(1)}%</text></g>`;
     }).join("");
     const dx = x(discount);
-    return `<figure class="chart-card"><figcaption class="chart-title">三情景十年年化收益率对比<span>虚线为 ${discount.toFixed(0)}% 目标折现率</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="三情景年化收益率对比图">${bars}<line x1="${dx}" y1="${top - 12}" x2="${dx}" y2="${top + rows.length * rowH - 14}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${dx}" y="${top - 18}" text-anchor="middle">折现率 ${discount.toFixed(0)}%</text></svg><div class="chart-legend"><span class="bear">悲观</span><span class="base">基准</span><span class="bull">乐观</span></div></figure>`;
+    return `<figure class="chart-card"><figcaption class="chart-title">三情景十年年化收益率对比<span>虚线为该公司目标折现率 ${discountStr}，按企业风险分别校准</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="三情景年化收益率对比图">${bars}<line x1="${dx}" y1="${top - 12}" x2="${dx}" y2="${top + rows.length * rowH - 14}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${dx}" y="${top - 18}" text-anchor="middle">折现率 ${discountStr}</text></svg><div class="chart-legend"><span class="bear">悲观</span><span class="base">基准</span><span class="bull">乐观</span></div></figure>`;
   }
 
   function modelChart(stock) {
@@ -84,7 +85,7 @@
     const last = rows.at(-1);
     const first = rows[0];
     const symbol = currencySymbol(stock);
-    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7b66d" stop-opacity=".28"/><stop offset="100%" stop-color="#d7b66d" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}<text class="point-label" x="${x(0)}" y="${y(first.value) - 12}" text-anchor="start">${first.year} ${symbol}${price.format(first.value)}</text><text class="point-label" x="${x(rows.length - 1)}" y="${y(last.value) - 12}" text-anchor="end">${last.year} ${symbol}${price.format(last.value)}</text></svg></figure>`;
+    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7b66d" stop-opacity=".28"/><stop offset="100%" stop-color="#d7b66d" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}<text class="point-label" x="${x(0) + 6}" y="${y(first.value) - 16}" text-anchor="start">${first.year} ${symbol}${price.format(first.value)}</text><text class="point-label" x="${x(rows.length - 1)}" y="${y(last.value) - 12}" text-anchor="end">${last.year} ${symbol}${price.format(last.value)}</text></svg></figure>`;
   }
 
   function rankingRows() {
