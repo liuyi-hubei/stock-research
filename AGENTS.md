@@ -10,14 +10,15 @@
 - `stock.html`：个股详情页结构与报告容器。
 - `assets/app.js`：页面渲染、路由参数、排名逻辑和数据映射。
 - `assets/styles.css`：全站视觉系统、布局、响应式样式。
-- `data/stocks.js`：股票清单、指标、收益率和研究内容；必须保持为有效 JavaScript。
+- `data/stocks.js`：基础股票清单、站点元数据和更新记录；必须保持为有效 JavaScript。
+- `data/additional-stocks.js`：扩展股票研究数据；在三个 HTML 入口中必须位于 `stocks.js` 之后、`app.js` 之前加载。
 - `reports/`：个股报告 Markdown 归档，文件名建议使用 `股票名称-股票代码.md`。
 - `docs/`：研究方法和项目说明。
 - `.github/workflows/`：部署配置。未经项目负责人确认，不要主动修改或触发部署。
 
 ## 内容与数据规则
 
-1. 新增或更新股票时，优先修改 `data/stocks.js`，并同步维护对应的 `reports/*.md`。
+1. 新增股票默认写入 `data/additional-stocks.js`，原有基础股票仍在 `data/stocks.js`；更新时修改股票实际所在文件，并同步维护对应的 `reports/*.md`。
 2. 首页“预期收益率排名”由数据中的 `baseReturn` 自动排序并最多展示十只，不要把排名或数值写死在 HTML 中。
 3. 每只股票都应能通过现有详情页路由打开；更新数据后要检查首页、详情页和各投资者视角页面。
 4. 报告应保留研究日期、数据口径和来源说明；后续更新默认覆盖当前报告内容，除非明确要求保留历史快照。
@@ -43,6 +44,7 @@ python3 -m http.server 8080
 ```bash
 node --check assets/app.js
 node --check data/stocks.js
+node --check data/additional-stocks.js
 git diff --check
 ```
 
