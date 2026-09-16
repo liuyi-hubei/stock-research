@@ -9,9 +9,11 @@
 - `index.html`：首页结构与入口文案。
 - `stock.html`：个股详情页结构与报告容器。
 - `assets/app.js`：页面渲染、路由参数、排名逻辑和数据映射。
-- `assets/styles.css`：全站视觉系统、布局、响应式样式。
+- `assets/site.css`：唯一的全站样式入口，按设计变量、基础、页面、研究组件、响应式组织；不再叠加历史覆盖样式文件。
+- `assets/brand-mark.svg`：站点标识与浏览器图标共用的图形资源。
 - `data/stocks.js`：基础股票清单、站点元数据和更新记录；必须保持为有效 JavaScript。
 - `data/additional-stocks.js`：扩展股票研究数据；在三个 HTML 入口中必须位于 `stocks.js` 之后、`app.js` 之前加载。
+- `data/industries.js`：行业报告的结构化正文、表格与图表数据；`industry.html` 为详情入口，原始报告归档在 `reports/industries/`。
 - `reports/`：个股报告 Markdown 归档，文件名建议使用 `股票名称-股票代码.md`。
 - `docs/`：研究方法和项目说明。
 - `.github/workflows/`：部署配置。未经项目负责人确认，不要主动修改或触发部署。
@@ -28,8 +30,11 @@
 
 - 页面视觉保持统一的深色金融研究风格、栅格、间距、圆角和文字层级。
 - 优先复用现有组件和 CSS 变量，避免为单个页面堆叠一次性样式。
+- 全局导航由 `assets/app.js` 的 `navigation` 配置生成，使用 `aria-current="page"` 标记当前栏目；报告分类只在顶部出现。
+- 修改颜色与圆角优先更新 `assets/site.css` 顶部变量，组件规则在对应分区修改，不在文件末尾追加新版本覆盖。新增静态资源后同步检查三个 HTML 入口。
 - 保证桌面端和移动端都可读，避免横向溢出、过长标题异常换行和不可见文字。
 - 除非任务确有必要，不新增框架、依赖或构建步骤。
+- 行业报告的统计图使用可缩放的 HTML 图表组件，数值和来源放在 `data/industries.js`；避免放大含文字的低分辨率截图。报告目录锚点保持唯一。
 
 ## 本地预览与校验
 
@@ -45,6 +50,7 @@ python3 -m http.server 8080
 node --check assets/app.js
 node --check data/stocks.js
 node --check data/additional-stocks.js
+node --check data/industries.js
 git diff --check
 ```
 

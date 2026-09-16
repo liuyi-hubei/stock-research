@@ -1,5 +1,5 @@
 window.STOCK_RESEARCH = {
-  meta: { siteName: "长期主义研究室", updatedAt: "2026-09-14", priceDate: "2026-09-14 收盘", dataMode: "2026年中报 · 固定情景模型" },
+  meta: { siteName: "长期主义研究室", updatedAt: "2026-09-17", priceDate: "各报告标注收盘日", dataMode: "2026年中报 · 固定情景模型" },
   stocks: [
     {
       code: "000568", slug: "luzhou-laojiao", name: "泸州老窖", market: "深交所 A股", industry: "高端白酒", status: "重点跟踪",
