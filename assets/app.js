@@ -3,26 +3,21 @@
   const price = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const returnValue = value => Number.parseFloat(String(value).replace("%", "")) || 0;
   const num = value => Number.parseFloat(String(value).replace(/[^0-9.-]/g, "")) || 0;
-  const allReturns = () => db.stocks.map(stock => returnValue(stock.baseReturn));
   const pct = value => `${value >= 0 ? "+" : ""}${value.toFixed(1)}%`;
   const currencySymbol = stock => stock.market.includes("港股") ? "HK$" : "¥";
   const displayPrice = stock => `${currencySymbol(stock)}${price.format(stock.price)}`;
   const rankedStocks = [...db.stocks].sort((a, b) => returnValue(b.baseReturn) - returnValue(a.baseReturn)).slice(0, 10);
-  const highestReturn = Math.max(...rankedStocks.map(stock => returnValue(stock.baseReturn)), 1);
 
-  function favicon() {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#08090b"/><path d="M15 43V25h7v18zm13 0V18h7v25zm13 0V12h7v31z" fill="#f0c56d"/></svg>`;
-    const link = document.createElement("link");
-    link.rel = "icon";
-    link.type = "image/svg+xml";
-    link.href = `data:image/svg+xml,${encodeURIComponent(svg)}`;
-    document.head.appendChild(link);
-  }
+  const navigation = [
+    { id: "ranking", label: "收益率排行", href: "index.html" },
+    { id: "reports", label: "个股研究", href: "reports.html?category=stocks" },
+    { id: "industries", label: "行业研究", href: "reports.html?category=industries" }
+  ];
 
   function header(active) {
     return `<header class="site-header"><div class="shell nav">
-      <a class="brand" href="index.html" aria-label="返回研究首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>${db.meta.siteName}</span></a>
-      <nav class="nav-links" aria-label="主导航"><a class="${active === "ranking" ? "active" : ""}" href="index.html">收益率排行</a><a class="${active === "reports" ? "active" : ""}" href="reports.html?category=stocks">个股研究</a><a class="${active === "industries" ? "active" : ""}" href="reports.html?category=industries">行业研究</a></nav>
+      <a class="brand" href="index.html" aria-label="返回研究首页"><img class="brand-mark" src="assets/brand-mark.svg" width="32" height="32" alt=""><span>${db.meta.siteName}</span></a>
+      <nav class="nav-links" aria-label="主导航">${navigation.map(item => `<a href="${item.href}"${item.id === active ? ' aria-current="page"' : ""}>${item.label}</a>`).join("")}</nav>
       <div class="header-meta"><span>研究数据</span><strong>${db.meta.updatedAt}</strong></div>
     </div></header>`;
   }
@@ -85,7 +80,7 @@
     const last = rows.at(-1);
     const first = rows[0];
     const symbol = currencySymbol(stock);
-    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7b66d" stop-opacity=".28"/><stop offset="100%" stop-color="#d7b66d" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}<text class="point-label" x="${x(0) + 6}" y="${y(first.value) - 16}" text-anchor="start">${first.year} ${symbol}${price.format(first.value)}</text><text class="point-label" x="${x(rows.length - 1)}" y="${y(last.value) - 12}" text-anchor="end">${last.year} ${symbol}${price.format(last.value)}</text></svg></figure>`;
+    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7b66d" stop-opacity=".28"/><stop offset="100%" stop-color="#d7b66d" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}</svg><div class="chart-endpoints"><span>${first.year}年 <strong>${symbol}${price.format(first.value)}</strong></span><span>${last.year}年 <strong>${symbol}${price.format(last.value)}</strong></span></div></figure>`;
   }
 
   function rankingRows() {
@@ -98,12 +93,34 @@
     return db.stocks.map(stock => `<a class="report-row" href="stock.html?code=${stock.code}"><div class="report-main"><div class="report-kicker">${stock.market} · ${stock.code} · ${stock.industry}</div><h3>${stock.name}</h3><p>${stock.thesis}</p></div><dl class="report-metrics"><div><dt>基准年化</dt><dd>${stock.baseReturn}</dd></div><div><dt>最新收盘</dt><dd>${displayPrice(stock)}</dd></div><div><dt>研究结论</dt><dd>${stock.valuation}</dd></div></dl><span class="report-action">阅读报告 <b>↗</b></span></a>`).join("");
   }
 
-  function reportCategoryNav(active) {
-    return `<nav class="report-categories" aria-label="报告分类"><a class="${active === "stocks" ? "active" : ""}" href="reports.html?category=stocks">个股报告</a><a class="${active === "industries" ? "active" : ""}" href="reports.html?category=industries">行业报告</a></nav>`;
+  function industryReportLink() {
+    const industries = window.INDUSTRY_REPORTS || {};
+    const entries = Object.values(industries);
+    if (!entries.length) return `<p class="report-page-intro">行业报告整理中。</p>`;
+    return `<div class="report-list">${entries.map(report => `<a class="report-row" href="industry.html?id=${report.id}"><div class="report-main"><div class="report-kicker">${report.kicker}</div><h3>${report.title}</h3><p>${report.subject} · 数据截至 ${report.date}</p></div><dl class="report-metrics">${report.stats.slice(0, 2).map(stat => `<div><dt>${stat.label}</dt><dd>${stat.value}</dd></div>`).join("")}<div><dt>报告形式</dt><dd>网页版全文</dd></div></dl><span class="report-action">阅读报告 <b>↗</b></span></a>`).join("")}</div>`;
   }
 
-  function industryReportEmpty() {
-    return `<a class="industry-card" href="reports/industries/白酒板块景气度分析报告.pdf" target="_blank" rel="noopener"><div><span class="report-kicker">行业专题 · PDF 报告</span><h2>白酒板块景气度分析报告</h2><p>阅读完整行业研究文档</p></div><span class="industry-arrow" aria-hidden="true">↗</span></a>`;
+  const cellClass = value => (/^[+-]\d/.test(value) ? (value.startsWith("+") ? "cell-up" : "cell-down") : "");
+
+  function industryBlock(block) {
+    if (block.h3) return `<h3 class="ind-h3">${block.h3}</h3>`;
+    if (block.p) return `<p class="ind-p">${block.p}</p>`;
+    if (block.bullets) return bullets(block.bullets);
+    if (block.numbered) return `<ol class="ind-numbered">${block.numbered.map(item => `<li>${item}</li>`).join("")}</ol>`;
+    if (block.panels) return `<div class="debate-grid">${block.panels.map(panel => `<article class="panel"><h3>${panel.title}</h3>${panel.body ? `<p>${panel.body}</p>` : bullets(panel.items)}</article>`).join("")}</div>`;
+    if (block.evidence) return `<div class="evidence-grid">${block.evidence.map(item => `<article${item.danger ? ' class="danger"' : ""}><div class="section-label">${item.label}</div><h2>${item.heading}</h2>${bullets(item.items)}</article>`).join("")}</div>`;
+    if (block.table) {
+      const t = block.table;
+      return `<div class="table-wrap"><table><thead><tr>${t.head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${t.rows.map(row => `<tr>${row.map(cell => { const cls = cellClass(String(cell)); return `<td${cls ? ` class="${cls}"` : ""}>${cell}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div>${t.note ? `<p class="footnote">${t.note}</p>` : ""}`;
+    }
+    return "";
+  }
+
+  function renderIndustry(report) {
+    document.body.className = "industry-page";
+    document.title = `${report.title} | ${db.meta.siteName}`;
+    const sections = report.sections.map((section, index) => `<section class="section" id="${section.id}"><div class="section-head"><span class="section-label">${String(index + 2).padStart(2, "0")} / ${section.title}</span><h2>${section.title}</h2><p>${section.sub}</p></div>${section.blocks.map(industryBlock).join("")}</section>`).join("");
+    document.body.innerHTML = `${header("industries")}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=industries">← 返回行业报告</a><div class="detail-hero"><div><div class="eyebrow">${report.kicker}</div><div class="title-row"><h1>${report.title}</h1></div><div class="ticker ticker-sub">${report.subject} · 数据截至 ${report.date}</div></div><aside class="price-panel">${report.aside.map(item => `<div class="ind-aside"><span>${item.label}</span><strong>${item.value}</strong><small>${item.note}</small></div>`).join("")}</aside></div><nav class="report-nav" aria-label="报告目录">${report.nav.map(([id, label]) => `<a href="#${id}">${label}</a>`).join("")}</nav></div></section><div class="shell report-body"><section class="section lead-panel" id="summary"><div class="section-label">01 / 核心结论</div><h2>“基本面底 + 估值底 + 筹码底”三底共振</h2><p class="lede">${report.coreConclusion}</p><div class="verdict-grid">${report.stats.map(stat => `<div><span>${stat.label}</span><strong>${stat.value}</strong></div>`).join("")}</div></section>${sections}<section class="section sources" id="sources"><div class="section-head"><h2>来源与说明</h2><p>原始报告归档可下载</p></div><p class="method-note">${report.sourcesNote}</p><p class="method-note">${report.disclaimer}</p><a class="text-link" href="${report.pdf}" target="_blank" rel="noopener">下载原始 PDF 报告 ↗</a></section></div></main>${footer()}`;
   }
 
   function renderHome() {
@@ -117,8 +134,8 @@
     const title = category === "industries" ? "行业报告" : "个股报告";
     document.body.className = "reports-page";
     document.title = `${title} | ${db.meta.siteName}`;
-    const content = category === "industries" ? industryReportEmpty() : `<div class="report-list">${reportRows()}</div>`;
-    document.body.innerHTML = `${header(category === "industries" ? "industries" : "reports")}<main><section class="reports-section" id="reports"><div class="shell"><div class="section-label report-page-label">研究档案</div><h1 class="report-page-title">${title}</h1><p class="report-page-intro">${category === "industries" ? "从行业变化理解企业所处的位置。" : "从结论进入报告，继续核对模型假设、事实与风险。"}</p>${reportCategoryNav(category)}${content}</div></section></main>${footer()}`;
+    const content = category === "industries" ? industryReportLink() : `<div class="report-list">${reportRows()}</div>`;
+    document.body.innerHTML = `${header(category === "industries" ? "industries" : "reports")}<main><section class="reports-section" id="reports"><div class="shell"><div class="section-label report-page-label">研究档案</div><h1 class="report-page-title">${title}</h1><p class="report-page-intro">${category === "industries" ? "从行业变化理解企业所处的位置。" : "从结论进入报告，继续核对模型假设、事实与风险。"}</p>${content}</div></section></main>${footer()}`;
   }
 
   function reportNav() {
@@ -131,13 +148,18 @@
     document.body.innerHTML = `${header("reports")}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">${stock.status} · ${stock.industry}</div><div class="title-row"><h1>${stock.name}</h1><span class="ticker">${stock.market} / ${stock.code}</span></div><div class="ticker ticker-sub">研究日 ${db.meta.updatedAt} · 完整个股研究报告</div></div><aside class="price-panel"><span>${stock.priceDate} 收盘</span><strong>${displayPrice(stock)}</strong><small>${stock.marketCap}</small></aside></div>${reportNav()}</div></section><div class="shell report-body"><section class="section lead-panel" id="summary"><div class="section-label">01 / 投资结论</div><h2>${stock.valuation}</h2><p class="lede">${stock.conclusion}</p><div class="verdict-grid"><div><span>基准十年年化</span><strong>${stock.baseReturn}</strong></div><div><span>研究置信度</span><strong>${stock.confidence}</strong></div><div><span>模型价格</span><strong>${displayPrice(stock)}</strong></div></div></section><section class="section" id="status"><div class="section-head"><h2>行业与企业现状</h2><p>先看生意，再看价格</p></div><div class="status-stack"><section class="status-block"><div class="status-side"><span class="section-label">行业</span></div><div class="status-text">${paragraphs(stock.industryStatus)}</div></section><section class="status-block"><div class="status-side"><span class="section-label">公司</span></div><div class="status-text">${paragraphs(stock.companyStatus)}</div></section></div></section><section class="section"><div class="section-head"><h2>关键事实</h2><p>最新实际披露与行情</p></div>${factTable(stock.facts)}</section><section class="section"><div class="section-head"><h2>关键争议</h2><p>结论与反证分开</p></div><div class="debate-grid">${stock.debate.map(item => `<article class="panel"><h3>${item.title}</h3><p>${item.body}</p></article>`).join("")}</div></section><section class="section" id="forecast"><div class="section-head"><h2>2026年利润预测</h2><p>不把半年数据简单乘二</p></div><article class="model-intro"><p>${stock.profitForecast.note}</p></article>${forecastTable(stock)}</section><section class="section" id="valuation"><div class="section-head"><h2>十年分红复投与现金流折现</h2><p>${stock.model.period} · 起始价 ${stock.model.price}</p></div><article class="model-intro"><div class="section-label">计算口径</div><p>${stock.model.method}</p></article>${scenarioChart(stock)}${scenarioCards(stock)}<article class="dividend-view"><div class="section-label">分红判断</div><p>${stock.dividendView}</p></article>${modelChart(stock)}<details class="projection"><summary>展开基准情景逐年现金流</summary>${modelTable(stock)}</details></section><section class="section"><div class="section-head"><h2>护城河与商业质量</h2><p>优势必须转化为所有者现金流</p></div><article class="panel">${bullets(stock.moat)}</article></section><section class="section" id="framework"><div class="section-head"><h2>五种独立研究视角</h2><p>同一家公司，五套独立判断</p></div><div class="view-grid">${stock.masterViews.map((view, index) => `<article class="panel view-card"><div class="view-head"><span class="view-num">${String(index + 1).padStart(2, "0")}</span><span class="section-label">${view.name}</span></div><h3>${view.verdict}</h3><p>${view.text}</p></article>`).join("")}</div></section><section class="section evidence-grid" id="risks"><article><div class="section-label">后续验证</div><h2>什么会提高置信度</h2>${bullets(stock.questions)}</article><article class="danger"><div class="section-label">失效条件</div><h2>什么会推翻判断</h2>${bullets(stock.risks)}</article></section><section class="section sources" id="sources"><div class="section-head"><h2>来源与方法</h2><p>公开来源可直接打开</p></div><div class="source-list">${stock.sources.map(source => `<a href="${source[2]}" target="_blank" rel="noopener"><span>${source[0]}</span><time>${source[1]}</time><b>↗</b></a>`).join("")}</div><p class="method-note">研究框架参考巴菲特股东信、芒格决策清单、段永平投资问答、散户乙历史发言及杰克·韦尔奇管理框架。相关材料仅用于方法论推演；五位视角不等于其本人对当前价格的公开评级。</p></section></div></main>${footer()}`;
   }
 
-  favicon();
   const isStock = location.pathname.endsWith("stock.html");
+  const isIndustry = location.pathname.endsWith("industry.html");
   if (isStock) {
     const code = new URLSearchParams(location.search).get("code");
     const stock = db.stocks.find(item => item.code === code);
     if (stock) renderStock(stock);
     else document.body.innerHTML = `${header()}<main class="shell empty"><h1>未找到这个标的</h1><p>请返回<a class="text-link" href="reports.html?category=stocks">个股报告</a>选择研究公司。</p></main>${footer()}`;
+  } else if (isIndustry) {
+    const id = new URLSearchParams(location.search).get("id");
+    const report = (window.INDUSTRY_REPORTS || {})[id];
+    if (report) renderIndustry(report);
+    else document.body.innerHTML = `${header()}<main class="shell empty"><h1>未找到这份行业报告</h1><p>请返回<a class="text-link" href="reports.html?category=industries">行业报告</a>列表选择。</p></main>${footer()}`;
   } else if (location.pathname.endsWith("reports.html")) renderReports();
   else renderHome();
 })();
