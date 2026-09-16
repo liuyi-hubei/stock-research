@@ -22,7 +22,7 @@
   function header(active) {
     return `<header class="site-header"><div class="shell nav">
       <a class="brand" href="index.html" aria-label="返回研究首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>${db.meta.siteName}</span></a>
-      <nav class="nav-links" aria-label="主导航"><a class="${active === "ranking" ? "active" : ""}" href="index.html">收益率排行</a><a class="${active === "reports" ? "active" : ""}" href="reports.html">研究报告</a></nav>
+      <nav class="nav-links" aria-label="主导航"><a class="${active === "ranking" ? "active" : ""}" href="index.html">收益率排行</a><a class="${active === "reports" ? "active" : ""}" href="reports.html?category=stocks">个股研究</a><a class="${active === "industries" ? "active" : ""}" href="reports.html?category=industries">行业研究</a></nav>
       <div class="header-meta"><span>研究数据</span><strong>${db.meta.updatedAt}</strong></div>
     </div></header>`;
   }
@@ -90,27 +90,26 @@
 
   function rankingRows() {
     return rankedStocks.map((stock, index) => {
-      const width = Math.max(12, returnValue(stock.baseReturn) / highestReturn * 100);
-      return `<a class="ranking-row" href="stock.html?code=${stock.code}" style="--rank-width:${width}%"><span class="rank-number">${String(index + 1).padStart(2, "0")}</span><span class="rank-company"><strong>${stock.name}</strong><small>${stock.code} · ${stock.industry}</small></span><span class="rank-track" aria-hidden="true"><i></i></span><span class="rank-return"><strong>${stock.baseReturn}</strong><small>基准年化</small></span><span class="row-arrow" aria-hidden="true">↗</span></a>`;
+      return `<a class="ranking-row" href="stock.html?code=${stock.code}"><span class="rank-number">${String(index + 1).padStart(2, "0")}</span><span class="rank-company"><strong>${stock.name}</strong><small>${stock.code} · ${stock.industry}</small></span><span class="rank-verdict">${stock.valuation}</span><span class="rank-return"><small>十年基准年化</small><strong>${stock.baseReturn}</strong></span><span class="row-arrow" aria-hidden="true">查看报告 ↗</span></a>`;
     }).join("");
   }
 
   function reportRows() {
-    return db.stocks.map((stock, index) => `<a class="report-row" href="stock.html?code=${stock.code}"><span class="report-index">${String(index + 1).padStart(2, "0")}</span><div class="report-main"><div class="report-kicker">${stock.market} · ${stock.status}</div><h3>${stock.name}</h3><p>${stock.thesis}</p></div><dl class="report-metrics"><div><dt>基准年化</dt><dd>${stock.baseReturn}</dd></div><div><dt>最新收盘</dt><dd>${displayPrice(stock)}</dd></div><div><dt>研究结论</dt><dd>${stock.valuation}</dd></div></dl><span class="report-action">阅读报告 <b>↗</b></span></a>`).join("");
+    return db.stocks.map(stock => `<a class="report-row" href="stock.html?code=${stock.code}"><div class="report-main"><div class="report-kicker">${stock.market} · ${stock.code} · ${stock.industry}</div><h3>${stock.name}</h3><p>${stock.thesis}</p></div><dl class="report-metrics"><div><dt>基准年化</dt><dd>${stock.baseReturn}</dd></div><div><dt>最新收盘</dt><dd>${displayPrice(stock)}</dd></div><div><dt>研究结论</dt><dd>${stock.valuation}</dd></div></dl><span class="report-action">阅读报告 <b>↗</b></span></a>`).join("");
   }
 
   function reportCategoryNav(active) {
-    return `<nav class="report-categories" aria-label="报告分类"><a class="${active === "stocks" ? "active" : ""}" href="reports.html?category=stocks">个股</a><a class="${active === "industries" ? "active" : ""}" href="reports.html?category=industries">行业</a></nav>`;
+    return `<nav class="report-categories" aria-label="报告分类"><a class="${active === "stocks" ? "active" : ""}" href="reports.html?category=stocks">个股报告</a><a class="${active === "industries" ? "active" : ""}" href="reports.html?category=industries">行业报告</a></nav>`;
   }
 
   function industryReportEmpty() {
-    return `<div class="report-empty"><div class="section-label">行业报告</div><h2>行业研究正在整理</h2><p>当前归档中的研究内容已全部归入“个股”。后续行业研究报告将单独放入 <code>reports/industries/</code>，并在这里集中展示。</p></div>`;
+    return `<a class="industry-card" href="reports/industries/白酒板块景气度分析报告.pdf" target="_blank" rel="noopener"><div><span class="report-kicker">行业专题 · PDF 报告</span><h2>白酒板块景气度分析报告</h2><p>阅读完整行业研究文档</p></div><span class="industry-arrow" aria-hidden="true">↗</span></a>`;
   }
 
   function renderHome() {
     document.body.className = "home-page";
     document.title = `收益率排行 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("ranking")}<main><section class="ranking-section dark-band" id="ranking"><div class="shell"><div class="ranking-list">${rankingRows()}</div><p class="ranking-note">收益率来自固定情景模型，是研究假设的可比结果，不是实时交易信号。数据截至 ${db.meta.updatedAt}。</p><a class="text-link page-switch" href="reports.html?category=stocks">浏览全部个股报告 <b>↗</b></a></div></section></main>${footer()}`;
+    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>数据截至</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准情景排序，点击公司查看假设与风险。</p></div><div class="ranking-list">${rankingRows()}</div><p class="ranking-note">收益率来自固定情景模型，是研究假设的可比结果，不是实时交易信号。数据截至 ${db.meta.updatedAt}。</p></div></section></main>${footer()}`;
   }
 
   function renderReports() {
@@ -119,7 +118,7 @@
     document.body.className = "reports-page";
     document.title = `${title} | ${db.meta.siteName}`;
     const content = category === "industries" ? industryReportEmpty() : `<div class="report-list">${reportRows()}</div>`;
-    document.body.innerHTML = `${header("reports")}<main><section class="reports-section dark-band" id="reports"><div class="shell"><div class="section-label report-page-label">研究报告</div><h1 class="report-page-title">${title}</h1>${reportCategoryNav(category)}${content}</div></section></main>${footer()}`;
+    document.body.innerHTML = `${header(category === "industries" ? "industries" : "reports")}<main><section class="reports-section" id="reports"><div class="shell"><div class="section-label report-page-label">研究档案</div><h1 class="report-page-title">${title}</h1><p class="report-page-intro">${category === "industries" ? "从行业变化理解企业所处的位置。" : "从结论进入报告，继续核对模型假设、事实与风险。"}</p>${reportCategoryNav(category)}${content}</div></section></main>${footer()}`;
   }
 
   function reportNav() {
