@@ -232,6 +232,18 @@ tbody tr:hover { background: #f2f4f7; }
 .cell-up { color: var(--up); font-weight: 600; }
 .cell-down { color: var(--down); font-weight: 600; }
 
+/* 报告内嵌图表（源自原始 PDF，深底浅字，独立深色面板承载） */
+.report-figure { margin: 22px 0 6px; padding: 20px 22px 14px; border: 1px solid rgba(38, 43, 51, .1); border-radius: 16px; background: linear-gradient(165deg, #262b34, #171b22); box-shadow: 0 14px 34px rgba(23, 27, 34, .16); }
+.report-figure img { display: block; width: 100%; height: auto; }
+.report-figure figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .08); }
+.report-figure .fig-title { color: #e8ebf0; font-size: 12.5px; font-weight: 600; letter-spacing: .02em; }
+.report-figure .fig-note { color: #8b919c; font-size: 11px; }
+.fig-legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; }
+.fig-legend span { display: inline-flex; align-items: center; gap: 8px; color: #c9cdd5; font-size: 12px; }
+.fig-legend i { width: 13px; height: 13px; border-radius: 4px; flex-basis: 13px; }
+.figure-narrow { display: grid; grid-template-columns: minmax(0, 460px); justify-content: center; }
+.figure-narrow figcaption, .figure-narrow .fig-legend { grid-column: 1; }
+
 /* 统一断点；不追加页面覆盖文件 */
 @media (max-width: 960px) {
   .header-meta { display: none; }
@@ -272,6 +284,7 @@ tbody tr:hover { background: #f2f4f7; }
   .reports-section { padding-top: 34px; }
   .report-page-title { font-size: 32px; }
   .report-row, .industry-card { padding: 22px; }
+  .report-figure { padding: 12px 10px 8px; border-radius: 12px; margin: 16px 0 4px; }
   .report-metrics { grid-template-columns: 1fr 1fr; }
   .report-metrics div:last-child { grid-column: 1 / -1; }
   .detail-hero { grid-template-columns: 1fr; gap: 24px; }

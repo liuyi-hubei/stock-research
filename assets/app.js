@@ -108,6 +108,11 @@
     if (block.bullets) return bullets(block.bullets);
     if (block.numbered) return `<ol class="ind-numbered">${block.numbered.map(item => `<li>${item}</li>`).join("")}</ol>`;
     if (block.panels) return `<div class="debate-grid">${block.panels.map(panel => `<article class="panel"><h3>${panel.title}</h3>${panel.body ? `<p>${panel.body}</p>` : bullets(panel.items)}</article>`).join("")}</div>`;
+    if (block.image) {
+      const im = block.image;
+      const legend = im.legend ? `<div class="fig-legend">${im.legend.map(item => `<span><i style="background:${item.color}"></i>${item.label}</span>`).join("")}</div>` : "";
+      return `<figure class="report-figure${im.narrow ? " figure-narrow" : ""}"><img src="${im.src}" alt="${im.alt}" loading="lazy">${legend}${im.caption ? `<figcaption><span class="fig-title">${im.caption}</span>${im.note ? `<span class="fig-note">${im.note}</span>` : ""}</figcaption>` : ""}</figure>`;
+    }
     if (block.evidence) return `<div class="evidence-grid">${block.evidence.map(item => `<article${item.danger ? ' class="danger"' : ""}><div class="section-label">${item.label}</div><h2>${item.heading}</h2>${bullets(item.items)}</article>`).join("")}</div>`;
     if (block.table) {
       const t = block.table;
