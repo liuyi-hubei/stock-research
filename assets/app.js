@@ -16,7 +16,7 @@
 
   function header(active) {
     return `<header class="site-header"><div class="shell nav">
-      <a class="brand" href="index.html" aria-label="返回研究首页"><img class="brand-mark" src="assets/brand-mark.svg" width="32" height="32" alt=""><span>${db.meta.siteName}</span></a>
+      <a class="brand" href="index.html" aria-label="返回研究首页"><img class="brand-mark" src="assets/brand-mark.svg?v=20260917-orange-1" width="32" height="32" alt=""><span>${db.meta.siteName}</span></a>
       <nav class="nav-links" aria-label="主导航">${navigation.map(item => `<a href="${item.href}"${item.id === active ? ' aria-current="page"' : ""}>${item.label}</a>`).join("")}</nav>
       <div class="header-meta"><span>研究库更新</span><strong>${db.meta.updatedAt}</strong></div>
     </div></header>`;
@@ -80,7 +80,7 @@
     const last = rows.at(-1);
     const first = rows[0];
     const symbol = currencySymbol(stock);
-    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d7b66d" stop-opacity=".28"/><stop offset="100%" stop-color="#d7b66d" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}</svg><div class="chart-endpoints"><span>${first.year}年 <strong>${symbol}${price.format(first.value)}</strong></span><span>${last.year}年 <strong>${symbol}${price.format(last.value)}</strong></span></div></figure>`;
+    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f56a16" stop-opacity=".22"/><stop offset="100%" stop-color="#f56a16" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}</svg><div class="chart-endpoints"><span>${first.year}年 <strong>${symbol}${price.format(first.value)}</strong></span><span>${last.year}年 <strong>${symbol}${price.format(last.value)}</strong></span></div></figure>`;
   }
 
   function rankingRows() {
@@ -161,6 +161,32 @@
     return `<nav class="report-nav" aria-label="报告目录"><a href="#summary">结论</a><a href="#status">现状</a><a href="#forecast">利润</a><a href="#valuation">估值</a><a href="#framework">五视角</a><a href="#risks">风险</a><a href="#sources">来源</a></nav>`;
   }
 
+  function setupReportNav() {
+    const nav = document.querySelector(".report-nav");
+    if (!nav) return;
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+    const setCurrent = id => {
+      links.forEach(link => {
+        if (link.hash === `#${id}`) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    };
+    setCurrent(sections.some(section => `#${section.id}` === location.hash) ? location.hash.slice(1) : links[0]?.hash.slice(1));
+    nav.addEventListener("click", event => {
+      const link = event.target.closest('a[href^="#"]');
+      if (link && nav.contains(link)) setCurrent(link.hash.slice(1));
+    });
+    window.addEventListener("hashchange", () => setCurrent(location.hash.slice(1)));
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setCurrent(visible[0].target.id);
+      }, { rootMargin: "-120px 0px -55% 0px" });
+      sections.forEach(section => observer.observe(section));
+    }
+  }
+
   function renderStock(stock) {
     document.body.className = "stock-page";
     document.title = `${stock.name}完整研究报告 | ${db.meta.siteName}`;
@@ -181,4 +207,5 @@
     else document.body.innerHTML = `${header()}<main class="shell empty"><h1>未找到这份行业报告</h1><p>请返回<a class="text-link" href="reports.html?category=industries">行业报告</a>列表选择。</p></main>${footer()}`;
   } else if (location.pathname.endsWith("reports.html")) renderReports();
   else renderHome();
+  setupReportNav();
 })();
