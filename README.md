@@ -1,15 +1,6 @@
 # 长期主义研究室
 
-一个无需数据库和构建工具的个人个股研究静态网站，适合部署在小型云服务器的 Nginx 上。
-
-## 当前页面
-
-- 研究首页：标的列表和更新记录；
-- 个股页：行业与企业现状、关键事实、核心争议、利润预测、五种研究视角与失效条件；
-- 十年模型：基于统一研究日收盘价的悲观、基准、乐观分红复投与现金流折现结果；
-- 当前标的：泸州老窖、贵州茅台。
-
-当前报告以2026年中报和2026年9月11日收盘价为基准。前端不提供成本价输入或即时计算，避免把个人持仓与统一研究口径混合。价格、财报或核心假设变化后需要重新生成模型。
+无需数据库或构建工具的个股与行业研究静态网站。首页按个股报告中的基准十年年化收益率展示 Top 10，个股和行业报告分别有独立页面。收益率是带假设的研究情景，不是收益承诺。
 
 ## 本地预览
 
@@ -17,18 +8,37 @@
 python3 -m http.server 8080
 ```
 
-打开 `http://localhost:8080`。
+打开 `http://localhost:8080/`。个股结构化数据位于 `data/stocks.js` 和 `data/additional-stocks.js`，Markdown 报告归档位于 `reports/stocks/`，行业报告位于 `data/industries.js` 与 `reports/industries/`。修改后先检查本地页面，再提交到 `main`。
 
-## 扩展个股
+## 阿里云自动部署
 
-编辑 `data/stocks.js`，复制一个股票对象并修改代码、名称、研究要点和模型参数。首页和详情页会自动生成对应内容。
+服务器的 Nginx 网站根目录为 `/var/www/stock-research`。部署由服务器上的 `stock-research-pull.timer` 完成：每 5 分钟以低权限 `stockdeploy` 用户读取公开仓库的 `main` 分支，有新提交才同步静态文件。GitHub Actions **不再 SSH 登录服务器**；仓库不需要 `ALIYUN_HOST`、`ALIYUN_USER` 或 `ALIYUN_SSH_PRIVATE_KEY` Secrets。更新通常在推送后 5 分钟内可见，并可能受浏览器缓存影响。
 
-## 阿里云部署
+部署脚本及 systemd 单元位于 [`deploy/`](deploy/)。首次安装或迁移服务器时，以具有管理权限的账号在服务器上执行（先确认该账号及 `/var/www/stock-research` 目录均属于预期项目）：
 
-仓库包含手动触发的 GitHub Actions 工作流。配置以下仓库 Secrets 后，可在 Actions 页面选择 `Deploy to Alibaba Cloud` 手动发布：
+```bash
+sudo install -d -o stockdeploy -g stockdeploy -m 0755 /var/lib/stock-research
+sudo install -d -o stockdeploy -g stockdeploy -m 0755 /var/www/stock-research
+sudo install -m 0755 deploy/server-pull.sh /usr/local/bin/stock-research-pull
+sudo install -m 0644 deploy/stock-research-pull.service /etc/systemd/system/
+sudo install -m 0644 deploy/stock-research-pull.timer /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now stock-research-pull.timer
+sudo systemctl start stock-research-pull.service
+```
 
-- `ALIYUN_HOST`
-- `ALIYUN_USER`
-- `ALIYUN_SSH_PRIVATE_KEY`
+上面的相对路径以仓库根目录为当前目录。脚本会在 `/var/lib/stock-research/source` 建立独立 Git 检出，不会把 `.git`、工作流、部署脚本或项目说明发布到网站。拉取失败、远端异常或服务器检出出现本地改动时会报错并保留已部署版本；不要直接修改服务器检出和网站文件，应修改 GitHub 仓库。
 
-部署用户应拥有 `/var/www/stock-research` 的写权限。不要在仓库或对话中保存私钥。
+检查与手动同步：
+
+```bash
+sudo systemctl status stock-research-pull.timer
+sudo systemctl list-timers stock-research-pull.timer
+sudo journalctl -u stock-research-pull.service -n 50 --no-pager
+sudo systemctl start stock-research-pull.service
+cat /var/lib/stock-research/deployed-commit
+```
+
+仓库当前为公开仓库，因此服务器可匿名通过 HTTPS 拉取；若将来改为私有仓库，需要先配置**只读**部署凭据。请勿把 Token、Cookie、私钥写入仓库。若修改了 `deploy/` 下的脚本或 systemd 单元，仅推送 GitHub 不会自动更新服务器已安装的副本，需重新执行相应的 `install` 和 `systemctl daemon-reload`。
+
+为避免误报，请在阿里云云安全中心保留异常登录检测。此次切换后，正常的网站更新不会从 GitHub 临时 IP 登录 SSH；若仍收到异常登录短信，应核对告警 IP、账号和时间，不要直接忽略。
