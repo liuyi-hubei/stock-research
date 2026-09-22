@@ -1,8 +1,8 @@
 [Unit]
-Description=Check stock-research GitHub main for updates every five minutes
+Description=Check stock-research GitHub main daily at 18:00 Asia/Shanghai
 
 [Timer]
-OnCalendar=*:0/5
+OnCalendar=*-*-* 18:00:00
 Persistent=true
 Unit=stock-research-pull.service
 

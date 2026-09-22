@@ -12,7 +12,7 @@ python3 -m http.server 8080
 
 ## 阿里云自动部署
 
-服务器的 Nginx 网站根目录为 `/var/www/stock-research`。部署由服务器上的 `stock-research-pull.timer` 完成：每 5 分钟以低权限 `stockdeploy` 用户读取公开仓库的 `main` 分支，有新提交才同步静态文件。GitHub Actions **不再 SSH 登录服务器**；仓库不需要 `ALIYUN_HOST`、`ALIYUN_USER` 或 `ALIYUN_SSH_PRIVATE_KEY` Secrets。更新通常在推送后 5 分钟内可见，并可能受浏览器缓存影响。
+服务器的 Nginx 网站根目录为 `/var/www/stock-research`。部署由服务器上的 `stock-research-pull.timer` 完成：每天北京时间 18:00 以低权限 `stockdeploy` 用户读取公开仓库的 `main` 分支，有新提交才同步静态文件。服务器时区设置为 `Asia/Shanghai`。18:00 之后推送的变更通常到次日 18:00 才会发布；如需提前发布，可手动启动下述服务。GitHub Actions **不再 SSH 登录服务器**；仓库不需要 `ALIYUN_HOST`、`ALIYUN_USER` 或 `ALIYUN_SSH_PRIVATE_KEY` Secrets。
 
 部署脚本及 systemd 单元位于 [`deploy/`](deploy/)。首次安装或迁移服务器时，以具有管理权限的账号在服务器上执行（先确认该账号及 `/var/www/stock-research` 目录均属于预期项目）：
 
