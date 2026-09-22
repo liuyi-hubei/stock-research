@@ -56,6 +56,7 @@ done
 rsync -a --delete --delay-updates \
   --exclude='/.git/' \
   --exclude='/.github/' \
+  --exclude='/.gitignore' \
   --exclude='/deploy/' \
   --exclude='/docs/' \
   --exclude='/README.md' \
