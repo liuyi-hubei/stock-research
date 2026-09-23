@@ -1,11 +1,13 @@
 (function () {
   const db = window.STOCK_RESEARCH;
   const price = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const precisePrice = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 3 });
   const returnValue = value => Number.parseFloat(String(value).replace("%", "")) || 0;
   const num = value => Number.parseFloat(String(value).replace(/[^0-9.-]/g, "")) || 0;
   const pct = value => `${value >= 0 ? "+" : ""}${value.toFixed(1)}%`;
   const currencySymbol = stock => stock.market.includes("港股") ? "HK$" : "¥";
-  const displayPrice = stock => `${currencySymbol(stock)}${price.format(stock.price)}`;
+  const formatPrice = value => (Math.abs(Number(value)) < 10 ? precisePrice : price).format(value);
+  const displayPrice = stock => `${currencySymbol(stock)}${formatPrice(stock.price)}`;
   const rankedStocks = [...db.stocks].sort((a, b) => returnValue(b.baseReturn) - returnValue(a.baseReturn)).slice(0, 10);
 
   const navigation = [
@@ -83,7 +85,7 @@
     const last = rows.at(-1);
     const first = rows[0];
     const symbol = currencySymbol(stock);
-    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${price.format(current)} → ${last.year}年 ${symbol}${price.format(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f56a16" stop-opacity=".22"/><stop offset="100%" stop-color="#f56a16" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${price.format(current)}</text>${dots}${yearLabels}</svg><div class="chart-endpoints"><span>${first.year}年 <strong>${symbol}${price.format(first.value)}</strong></span><span>${last.year}年 <strong>${symbol}${price.format(last.value)}</strong></span></div></figure>`;
+    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${formatPrice(current)} → ${last.year}年 ${symbol}${formatPrice(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f56a16" stop-opacity=".22"/><stop offset="100%" stop-color="#f56a16" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${formatPrice(current)}</text>${dots}${yearLabels}</svg><div class="chart-endpoints"><span>${first.year}年 <strong>${symbol}${formatPrice(first.value)}</strong></span><span>${last.year}年 <strong>${symbol}${formatPrice(last.value)}</strong></span></div></figure>`;
   }
 
   function rankingRows() {
