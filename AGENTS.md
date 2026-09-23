@@ -12,7 +12,7 @@
 - `assets/site.css`：唯一的全站样式入口，按设计变量、基础、页面、研究组件、响应式组织；不再叠加历史覆盖样式文件。
 - `assets/brand-mark.svg`：站点标识与浏览器图标共用的图形资源。
 - `data/stocks.js`：基础股票清单、站点元数据和更新记录；必须保持为有效 JavaScript。
-- `data/additional-stocks.js`：扩展股票研究数据；在三个 HTML 入口中必须位于 `stocks.js` 之后、`app.js` 之前加载。
+- `data/additional-stocks.js`：扩展股票研究数据；在四个动态渲染 HTML 入口中必须位于 `stocks.js` 之后、`app.js` 之前加载。
 - `data/industries.js`：行业报告的结构化正文、表格与图表数据；`industry.html` 为详情入口，原始报告归档在 `reports/industries/`。
 - `reports/`：个股报告 Markdown 归档，文件名建议使用 `股票名称-股票代码.md`。
 - `docs/`：研究方法和项目说明。
@@ -20,7 +20,7 @@
 
 ## 内容与数据规则
 
-1. 新增股票默认写入 `data/additional-stocks.js`，原有基础股票仍在 `data/stocks.js`；更新时修改股票实际所在文件，并同步维护对应的 `reports/*.md`。
+1. 新增股票默认写入 `data/additional-stocks.js`，原有基础股票仍在 `data/stocks.js`；更新时修改股票实际所在文件，并同步维护对应的 `reports/stocks/*.md`。
 2. 首页“预期收益率排名”由数据中的 `baseReturn` 自动排序并最多展示十只，不要把排名或数值写死在 HTML 中。
 3. 每只股票都应能通过现有详情页路由打开；更新数据后要检查首页、详情页和各投资者视角页面。
 4. 报告应保留研究日期、数据口径和来源说明；后续更新默认覆盖当前报告内容，除非明确要求保留历史快照。
@@ -28,7 +28,7 @@
 
 ## 前端修改规则
 
-- 页面视觉保持统一的深色金融研究风格、栅格、间距、圆角和文字层级。
+- 页面视觉保持当前暖白背景、橙色强调色及统一栅格、间距、圆角和文字层级。
 - 优先复用现有组件和 CSS 变量，避免为单个页面堆叠一次性样式。
 - 全局导航由 `assets/app.js` 的 `navigation` 配置生成，使用 `aria-current="page"` 标记当前栏目；报告分类只在顶部出现。
 - 修改颜色与圆角优先更新 `assets/site.css` 顶部变量，组件规则在对应分区修改，不在文件末尾追加新版本覆盖。新增静态资源后同步检查三个 HTML 入口。
@@ -51,6 +51,8 @@ node --check assets/app.js
 node --check data/stocks.js
 node --check data/additional-stocks.js
 node --check data/industries.js
+node docs/validate.mjs
+node docs/render-archive.mjs --check
 git diff --check
 ```
 

@@ -26,4 +26,6 @@
 
 ## 新增个股
 
-在 `data/stocks.js` 的 `stocks` 数组中增加一个对象，即可自动出现在首页，并复用统一的个股研究页和估值模型。
+新增股票默认写入 `data/additional-stocks.js`，基础股票仍在 `data/stocks.js`；按既有数据结构补齐事实、来源和模型字段，并同步维护 `reports/stocks/` 归档。首页只展示基准年化排名前十只，全部标的在个股研究列表展示。
+
+Markdown 归档不会自动成为网页。补充报告须登记阅读入口；华能蒙电全面体检阅读页由 `node docs/render-archive.mjs` 生成。对已有网页但缺少归档的标的，可运行 `node docs/export-stock-archive.mjs 股票代码` 导出当前数据快照；工具拒绝覆盖已有文件，也不会更新行情。

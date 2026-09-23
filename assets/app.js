@@ -42,7 +42,8 @@
   }
 
   function modelTable(stock) {
-    return `<div class="table-wrap"><table><thead><tr><th>年度</th><th>EPS（元）</th><th>当年分红②</th><th>年末持股</th><th>年末总价值（元）</th></tr></thead><tbody>${stock.model.baseRows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody></table></div><p class="footnote">②当年分红按年初持股计算并在年内按基准情景PE复投；金额随累计持股增加。</p>`;
+    const unit = stock.model.currency || "元";
+    return `<div class="table-wrap"><table><thead><tr><th>年度</th><th>EPS（${unit}）</th><th>当年分红②（${unit}）</th><th>年末持股</th><th>年末总价值（${unit}）</th></tr></thead><tbody>${stock.model.baseRows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody></table></div><p class="footnote">②当年分红按年初持股计算并在年内按基准情景PE复投；金额随累计持股增加。</p>`;
   }
 
   function scenarioChart(stock) {
@@ -50,12 +51,14 @@
     const discountStr = String(stock.model.discountRate).trim();
     const discount = num(discountStr) || 10;
     const rows = stock.model.scenarios.map((s, i) => ({ name: `${s.name}情景`, v: num(s.cagr), cls: ["bear", "base", "bull"][i] }));
-    const max = Math.max(...rows.map(r => r.v), discount) * 1.18;
-    const x = v => padL + (v / max) * (W - padL - padR);
+    const min = Math.min(0, ...rows.map(r => r.v), discount) * 1.18;
+    const max = Math.max(0, ...rows.map(r => r.v), discount) * 1.18;
+    const x = v => padL + ((v - min) / (max - min || 1)) * (W - padL - padR);
     const bars = rows.map((r, i) => {
       const y = top + i * rowH;
-      const w = Math.max(4, x(r.v) - padL);
-      return `<g class="chart-row ${r.cls}"><text class="axis-label" x="${padL - 14}" y="${y + 19}" text-anchor="end">${r.name}</text><rect x="${padL}" y="${y}" width="${w}" height="26" rx="6" class="bar"/><text class="bar-value" x="${padL + w + 12}" y="${y + 18}">${r.v.toFixed(1)}%</text></g>`;
+      const start = Math.min(x(0), x(r.v));
+      const w = Math.abs(x(r.v) - x(0));
+      return `<g class="chart-row ${r.cls}"><text class="axis-label" x="${padL - 14}" y="${y + 19}" text-anchor="end">${r.name}</text><line x1="${x(0)}" y1="${y - 4}" x2="${x(0)}" y2="${y + 30}" class="ref-line"/><rect x="${start}" y="${y}" width="${w}" height="26" rx="6" class="bar"/><text class="bar-value" x="${Math.max(x(0), x(r.v)) + 12}" y="${y + 18}">${r.v.toFixed(1)}%</text></g>`;
     }).join("");
     const dx = x(discount);
     return `<figure class="chart-card"><figcaption class="chart-title">三情景十年年化收益率对比<span>虚线为该公司目标折现率 ${discountStr}，按企业风险分别校准</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="三情景年化收益率对比图">${bars}<line x1="${dx}" y1="${top - 12}" x2="${dx}" y2="${top + rows.length * rowH - 14}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${dx}" y="${top - 18}" text-anchor="middle">折现率 ${discountStr}</text></svg><div class="chart-legend"><span class="bear">悲观</span><span class="base">基准</span><span class="bull">乐观</span></div></figure>`;
@@ -198,7 +201,16 @@
   if (isStock) {
     const code = new URLSearchParams(location.search).get("code");
     const stock = db.stocks.find(item => item.code === code);
-    if (stock) renderStock(stock);
+    if (stock) {
+      renderStock(stock);
+      if (stock.supplementaryReport) {
+        const link = document.createElement("a");
+        link.className = "primary-link";
+        link.href = stock.supplementaryReport;
+        link.textContent = "阅读补充报告：2026-09-21 全面体检 ↗";
+        document.querySelector("#summary").append(link);
+      }
+    }
     else document.body.innerHTML = `${header()}<main class="shell empty"><h1>未找到这个标的</h1><p>请返回<a class="text-link" href="reports.html?category=stocks">个股报告</a>选择研究公司。</p></main>${footer()}`;
   } else if (isIndustry) {
     const id = new URLSearchParams(location.search).get("id");

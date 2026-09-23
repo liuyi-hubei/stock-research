@@ -10,6 +10,18 @@ python3 -m http.server 8080
 
 打开 `http://localhost:8080/`。个股结构化数据位于 `data/stocks.js` 和 `data/additional-stocks.js`，Markdown 报告归档位于 `reports/stocks/`，行业报告位于 `data/industries.js` 与 `reports/industries/`。修改后先检查本地页面，再提交到 `main`。
 
+## 本地完整性检查
+
+```bash
+node docs/validate.mjs
+node docs/render-archive.mjs --check
+git diff --check
+```
+
+检查覆盖全部个股/行业路由、站内文件与目录锚点、脚本加载顺序、负收益率图，以及补充报告原文与阅读页是否同步。另需用浏览器检查桌面和手机布局。
+
+华能蒙电新增全面体检报告从个股页顶部进入；原文放在 `reports/stocks/`，修改后运行 `node docs/render-archive.mjs`，并将生成的 `report-600863-20260921.html` 一并保存。该页没有运行时依赖，图表数据也可展开为表格。
+
 ## 阿里云自动部署
 
 服务器的 Nginx 网站根目录为 `/var/www/stock-research`。部署由服务器上的 `stock-research-pull.timer` 完成：每天北京时间 18:00 以低权限 `stockdeploy` 用户读取公开仓库的 `main` 分支，有新提交才同步静态文件。服务器时区设置为 `Asia/Shanghai`。18:00 之后推送的变更通常到次日 18:00 才会发布；如需提前发布，可手动启动下述服务。GitHub Actions **不再 SSH 登录服务器**；仓库不需要 `ALIYUN_HOST`、`ALIYUN_USER` 或 `ALIYUN_SSH_PRIVATE_KEY` Secrets。
