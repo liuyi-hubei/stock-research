@@ -203,6 +203,22 @@ tbody tr:hover { background: #f2f4f7; }
 .empty p { margin-top: 16px; }
 .text-link { text-decoration: underline; }
 
+.tracking-intro { margin-top: 18px; max-width: 900px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.signal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.signal-card { min-width: 0; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.signal-card strong { display: block; margin-top: 12px; color: var(--accent); font-size: 20px; }
+.signal-card time { display: block; margin-top: 6px; color: var(--muted); font-size: 11px; }
+.signal-card p { margin-top: 14px; color: #586371; font-size: 13px; line-height: 1.75; }
+.signal-card a, .tracking-table a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.signal-card a { display: inline-block; margin-top: 12px; font-size: 12px; }
+.tracking-price-head { margin-top: 28px; }
+.tracking-price-head h3 { font-size: 17px; }
+.tracking-price-head p { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.tracking-table { min-width: 620px; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) {
+  .signal-grid { grid-template-columns: 1fr; }
+}
+
 /* 图表的文字与绘图区分开，避免标注遮挡数据 */
 .chart-card { margin: 30px 0 26px; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .chart-title { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; font-size: 14px; font-weight: 600; }
