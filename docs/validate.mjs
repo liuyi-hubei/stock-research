@@ -73,5 +73,15 @@ assert(!/分红复投/.test(homeHtml), 'Home still references the retired reinve
 assert(!/baseReturn|undefined/.test(homeHtml), 'Home leaked a retired field or undefined value');
 const archived = fs.readdirSync(path.join(root, 'reports/stocks'));
 const missing = stocks.filter(s => !archived.some(file => file.includes(s.code)));
+// 归档必须与页面同口径：不得残留分红复投、期末持股、折现值等旧口径表述。
+// 新口径说明里的「不假设分红复投」是允许的，只移除这一短语，不跳过整行。
+const LEGACY = /复投年化|分红复投|复投所得|期末持股|期末价值|期末财富|折现值|十年年化|税前年化|目标折现率/;
+for (const file of archived.filter(name => name.endsWith('.md'))) {
+  const content = fs.readFileSync(path.join(root, 'reports/stocks', file), 'utf8');
+  for (const line of content.split('\n')) {
+    const checked = line.replaceAll('不假设分红复投', '');
+    assert(!LEGACY.test(checked), `reports/stocks/${file}: 残留旧收益口径 → ${line.trim().slice(0, 70)}`);
+  }
+}
 console.log(`PASS: ${stocks.length} stocks, ${industries.length} industries, ${routes.length} routes, local links and negative-return chart.`);
 if (missing.length) console.log(`Archive coverage warning (web reports remain available): ${missing.map(s => `${s.name} ${s.code}`).join(', ')}`);

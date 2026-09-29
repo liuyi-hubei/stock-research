@@ -9,15 +9,18 @@
   const formatPrice = value => (Math.abs(Number(value)) < 10 ? precisePrice : price).format(value);
   const displayPrice = stock => `${currencySymbol(stock)}${formatPrice(stock.price)}`;
   const isIRR = stock => stock.model.version === "shareholder-irr-v1";
-  for (const stock of db.stocks.filter(isIRR)) {
+  // 研究池保留全部公司；无有效结果或关键假设待核验的公司不参与排名。
+  for (const stock of db.stocks) {
+    stock.returnEvaluation = null;
+    if (!isIRR(stock)) continue;
     try { stock.returnEvaluation = window.ShareholderModel.evaluate(stock); }
     catch { stock.returnEvaluation = null; }
   }
-  const stockReturn = stock => stock.returnEvaluation ? `${(stock.returnEvaluation.base.irr * 100).toFixed(1)}%` : "待核验";
+  const stockReturn = stock => stock.returnEvaluation && stock.model.rankingEligible !== false ? `${(stock.returnEvaluation.base.irr * 100).toFixed(1)}%` : "待核验";
   const irrOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.base.irr : null);
   const surplusOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.base.surplus : null);
   const bearOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.scenarios[0].irr : null);
-  const rankedBy = mode => db.stocks.filter(isIRR).slice().sort((a, b) => {
+  const rankedBy = mode => db.stocks.filter(s => s.returnEvaluation && s.model.rankingEligible !== false).sort((a, b) => {
     if (mode === "irr") return (irrOf(b) ?? -9) - (irrOf(a) ?? -9);
     const gap = (surplusOf(b) ?? -9) - (surplusOf(a) ?? -9);
     if (gap !== 0) return gap;
@@ -56,8 +59,32 @@
   }
 
   function summaryMetrics(stock) {
-    const base = stock.returnEvaluation?.base;
+    const base = stock.model.rankingEligible === false ? null : stock.returnEvaluation?.base;
     return `<div><span>基准十年 IRR</span><strong>${stockReturn(stock)}</strong></div><div><span>研究回报要求</span><strong>${(stock.model.requiredReturn * 100).toFixed(1)}%</strong></div><div><span>达标参考价</span><strong>${base ? `${currencySymbol(stock)}${formatPrice(base.fairPrice)}` : "待核验"}</strong></div>`;
+  }
+
+  function annualPath(values) {
+    const runs = [];
+    values.forEach((value, i) => {
+      const last = runs[runs.length - 1];
+      if (last && last.value === value) last.end = i + 1;
+      else runs.push({ start: i + 1, end: i + 1, value });
+    });
+    return runs.map(r => `第${r.start === r.end ? r.start : `${r.start}—${r.end}`}年 ${(r.value * 100).toFixed(1)}%`).join("；");
+  }
+
+  function modelReview(stock) {
+    const review = stock.model.parameterReview;
+    if (!review) return "";
+    const d = window.ShareholderModel.sensitivity(stock);
+    const pct = n => `${(n * 100).toFixed(1)}%`;
+    return `<div class="model-review"><div class="section-head"><h3>假设依据与估值依赖</h3><p>${review.status} · 方法审阅 ${review.reviewedAt}</p></div>
+      <p>十年后EPS为起点的 <strong>${d.epsMultiple.toFixed(2)} 倍</strong>；第十年卖出所得占模型总现值的 <strong>${pct(d.terminalShare)}</strong>（按研究回报要求折现）。占比越高，结论越依赖远期盈利和退出估值。</p>
+      <dl class="assumption-evidence"><div><dt>盈利起点</dt><dd>${stock.profitForecast.note}</dd></div><div><dt>经营路径</dt><dd>${review.operatingCheck}</dd></div><div><dt>资金约束</dt><dd>${review.capitalCheck}</dd></div><div><dt>每股口径</dt><dd>${review.shareCheck}</dd></div><div><dt>退出估值</dt><dd>${review.exitCheck}</dd></div></dl>
+      <details class="projection"><summary>敏感性分析 · 单项假设变化会带来什么影响</summary>
+      <p class="method-note">每次只改变一项，其余保持基准情景；下表是压力测试，不是概率区间。调高分红率不能被视为无成本增加收益，因此不单独做“多分红更好”的测试。</p>
+      <div class="table-wrap"><table><caption>基准IRR对假设的敏感性</caption><thead><tr><th>参数</th><th>变化幅度</th><th>下调后IRR</th><th>原基准IRR</th><th>上调后IRR</th></tr></thead><tbody>${d.metrics.map(m => `<tr><th scope="row">${m.label}</th><td>${m.change}</td><td>${pct(m.low)}</td><td>${pct(stock.returnEvaluation.base.irr)}</td><td>${pct(m.high)}</td></tr>`).join("")}</tbody></table></div>
+      <div class="table-wrap"><table><caption>回报门槛变化 · 不改变同一组现金流的IRR</caption><thead><tr><th>研究回报要求</th><th>达标参考价</th><th>IRR与门槛差额</th></tr></thead><tbody>${d.hurdle.map(h => `<tr><th scope="row">${pct(h.rate)}</th><td>${currencySymbol(stock)}${formatPrice(h.fairPrice)}</td><td>${(h.surplus * 100).toFixed(1)}个百分点</td></tr>`).join("")}</tbody></table></div></details></div>`;
   }
 
   function irrSection(stock) {
@@ -67,12 +94,12 @@
     const base = result.base;
     const delta = `${base.surplus >= 0 ? "+" : ""}${(base.surplus * 100).toFixed(1)}`;
     return `<section class="section irr-section" id="valuation"><div class="section-head"><h2>十年股东现金流收益</h2><p>领取分红 · 第十年末卖出 · 税费前${stock.model.currency}名义回报${stock.market.includes("港股") ? " · 未计未来汇率变化" : ""}</p></div>
-      <p class="irr-verdict">基准 IRR <strong>${percent(base.irr)}</strong>，相对回报要求 <strong>${delta} 个百分点</strong>。达标参考价 <strong>${currencySymbol(stock)}${formatPrice(base.fairPrice)}</strong>，仅在下述假设成立时有效。</p>
-      <div class="table-wrap"><table><caption>三情景假设与结果 · 起始 EPS 为研究预测值</caption><thead><tr><th>情景</th><th>起始EPS</th><th>前三年 / 后七年增长</th><th>分红率</th><th>退出PE</th><th>十年IRR</th></tr></thead><tbody>${result.scenarios.map(s => `<tr><th scope="row">${s.name}</th><td>${price.format(s.eps)}${stock.model.currency}</td><td>${percent(s.early)} / ${percent(s.late)}</td><td>${percent(s.payout)}</td><td>${s.exitPE}倍</td><td><strong>${percent(s.irr)}</strong></td></tr>`).join("")}</tbody></table></div>
+      ${stock.model.rankingEligible === false ? `<p class="irr-verdict"><strong>关键假设待核验</strong> · ${stock.model.rankingReason} 以下仅保留原参数的条件演算。</p>` : `<p class="irr-verdict">基准 IRR <strong>${percent(base.irr)}</strong>，相对回报要求 <strong>${delta} 个百分点</strong>。达标参考价 <strong>${currencySymbol(stock)}${formatPrice(base.fairPrice)}</strong>，仅在下述假设成立时有效。</p>`}
+      <div class="table-wrap"><table><caption>三情景${stock.model.rankingEligible === false ? "条件演算" : "假设与结果"} · 起始 EPS 为研究预测值</caption><thead><tr><th>情景</th><th>起始EPS</th><th>EPS年增长路径</th><th>逐年分红率</th><th>退出PE</th><th>十年IRR</th></tr></thead><tbody>${result.scenarios.map(s => `<tr><th scope="row">${s.name}</th><td>${price.format(s.eps)}${stock.model.currency}</td><td>${annualPath(s.growthRates)}</td><td>${annualPath(s.payoutRates)}</td><td>${s.exitPE}倍</td><td><strong>${percent(s.irr)}</strong></td></tr>`).join("")}</tbody></table></div>
       <p class="method-note">${stock.model.assumptionNote} 行情日 ${stock.priceDate}；财务报告期 ${stock.model.financialPeriod}；模型复核日 ${stock.model.reviewedAt}。${stock.model.requiredReturnReason}</p>
-      <details class="projection irr-formula"><summary>展开计算公式与基准逐年现金流</summary><div class="irr-explanation"><p>${stock.model.method}</p><p>EPS<sub>t</sub> = EPS<sub>t−1</sub> × (1 + g<sub>t</sub>)；分红 D<sub>t</sub> = EPS<sub>t−1</sub> × 分红率；卖出价 P<sub>10</sub> = EPS<sub>10</sub> × 退出 PE。</p><p class="irr-equation">P<sub>0</sub> = Σ<sub>t=1…10</sub> D<sub>t</sub> / (1 + r)<sup>t</sup> + P<sub>10</sub> / (1 + r)<sup>10</sup></p><p>求出的 r 为 IRR。达标参考价是这些现金流按 ${(stock.model.requiredReturn * 100).toFixed(0)}% 回报要求折现之和。首年分红为预测，第十年同时收到分红和卖出价。IRR 不等于领取分红后实际财富的复合增长率。</p></div>
-      <div class="table-wrap"><table><caption>每买入1股的现金流 · 单位${stock.model.currency}</caption><thead><tr><th>持有年度</th><th>当年EPS</th><th>领取分红</th><th>卖出所得</th><th>净现金流</th></tr></thead><tbody><tr><th scope="row">买入</th><td>—</td><td>—</td><td>—</td><td>−${price.format(stock.price)}</td></tr>${base.rows.map(r => `<tr><th scope="row">第${r.year}年</th><td>${price.format(r.eps)}</td><td>${price.format(r.dividend)}</td><td>${r.sale ? price.format(r.sale) : "—"}</td><td>${price.format(r.cashFlow)}</td></tr>`).join("")}</tbody></table></div><p class="footnote">按未四舍五入数值计算，表中只展示两位小数。不计个人税费、通胀和未来股本变化；情景范围不代表统计置信区间。</p></details>
-      <article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${stock.model.dividendNote}</p><p>${stock.dividendView}</p></article></section>`;
+      <details class="projection irr-formula"><summary>展开计算公式与基准逐年现金流</summary><div class="irr-explanation"><p>${stock.model.method}</p><p>EPS<sub>t</sub> = EPS<sub>t−1</sub> × (1 + g<sub>t</sub>)；分红 D<sub>t</sub> = EPS<sub>t−1</sub> × 分红率；卖出价 P<sub>10</sub> = EPS<sub>10</sub> × 退出 PE。</p><p class="irr-equation">P<sub>0</sub> = Σ<sub>t=1…10</sub> D<sub>t</sub> / (1 + r)<sup>t</sup> + P<sub>10</sub> / (1 + r)<sup>10</sup></p><p>求出的 r 为 IRR。达标参考价是这些现金流按 ${(stock.model.requiredReturn * 100).toFixed(1)}% 回报要求折现之和。首年分红为预测，第十年同时收到分红和卖出价。IRR 不等于领取分红后实际财富的复合增长率。</p></div>
+      <div class="table-wrap"><table><caption>每买入1股的现金流 · 单位${stock.model.currency}</caption><thead><tr><th>持有年度</th><th>EPS增速</th><th>当年EPS</th><th>分红率</th><th>领取分红</th><th>卖出所得</th><th>净现金流</th></tr></thead><tbody><tr><th scope="row">买入</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>−${formatPrice(stock.price)}</td></tr>${base.rows.map(r => `<tr><th scope="row">第${r.year}年</th><td>${percent(r.growth)}</td><td>${price.format(r.eps)}</td><td>${percent(r.payoutRate)}</td><td>${price.format(r.dividend)}</td><td>${r.sale ? price.format(r.sale) : "—"}</td><td>${price.format(r.cashFlow)}</td></tr>`).join("")}</tbody></table></div><p class="footnote">按未四舍五入数值计算；买入价按行情精度展示，年度预测现金流保留两位小数。不计个人税费、通胀和未来股本变化；情景范围不代表统计置信区间。</p></details>
+      <article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${stock.model.dividendNote}</p><p>${stock.dividendView}</p></article>${modelReview(stock)}</section>`;
   }
 
   function rankingRows() {
@@ -165,7 +192,7 @@
   function renderHome() {
     document.body.className = "home-page";
     document.title = `收益率排行 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}<div class="ranking-list">${rankingRows()}</div><p class="ranking-note">全池已统一为十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
+    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}<div class="ranking-list">${rankingRows()}</div><p class="ranking-note">研究池 ${db.stocks.length} 只，参与排名 ${rankedBy(homeSort).length} 只；其余因关键假设待核验暂停排名，仍可在报告目录查看。各股行情日不同，细小差额不代表确定优势。统一采用十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
     bindRanking();
   }
 
@@ -179,7 +206,7 @@
   }
 
   function reportNav() {
-    return `<nav class="report-nav" aria-label="报告目录"><a href="#summary">结论</a><a href="#status">现状</a><a href="#tracking">跟踪</a><a href="#forecast">利润</a><a href="#valuation">估值</a><a href="#framework">五视角</a><a href="#risks">风险</a><a href="#sources">来源</a></nav>`;
+    return `<nav class="report-nav" aria-label="报告目录"><a href="#summary">结论</a><a href="#status">现状</a><a href="#tracking">跟踪</a><a href="#forecast">利润</a><a href="#valuation">估值</a><a href="#framework">视角</a><a href="#risks">风险</a><a href="#sources">来源</a></nav>`;
   }
 
   function setupReportNav() {
