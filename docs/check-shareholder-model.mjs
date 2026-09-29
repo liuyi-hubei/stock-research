@@ -19,9 +19,22 @@ assert.throws(() => scenario(100, 0.11, { eps: 0, early: 0, late: 0, payout: 0.5
 
 globalThis.window = {};
 await import('../data/stocks.js');
-const stock = window.STOCK_RESEARCH.stocks.find(item => item.code === '000568');
+await import('../data/additional-stocks.js');
+const stocks = window.STOCK_RESEARCH.stocks;
+assert(stocks.length > 1, 'Expected the full research pool');
+for (const stock of stocks) {
+  assert(stock.model.version === 'shareholder-irr-v1', `${stock.code}: not on the unified IRR caliber`);
+  const evaluation = evaluate(stock);
+  const [bear, base, bull] = evaluation.scenarios;
+  assert(bear.irr <= base.irr && base.irr <= bull.irr, `${stock.code}: scenario order needs review`);
+  near(pv(base.rows.map(row => row.cashFlow), base.irr) / stock.price, 1, 1e-8);
+  for (const item of evaluation.scenarios) {
+    assert(Number.isFinite(item.irr) && item.irr > -1, `${stock.code}: invalid IRR`);
+    assert(Number.isFinite(item.fairPrice) && item.fairPrice >= 0, `${stock.code}: invalid reference price`);
+  }
+}
+const stock = stocks.find(item => item.code === '000568');
 const result = evaluate(stock);
-assert(result.scenarios[0].irr < result.base.irr && result.base.irr < result.scenarios[2].irr);
 near(result.base.irr, 0.08291604324606527);
 near(result.base.fairPrice, 57.84628269165934);
-console.log('PASS: shareholder cash-flow IRR examples, discounting, validation, and Luzhou Laojiao assumptions.');
+console.log(`PASS: shareholder cash-flow IRR across ${stocks.length} stocks, plus discounting, validation, and Luzhou Laojiao assumptions.`);

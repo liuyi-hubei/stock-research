@@ -13,8 +13,18 @@
     try { stock.returnEvaluation = window.ShareholderModel.evaluate(stock); }
     catch { stock.returnEvaluation = null; }
   }
-  const stockReturn = stock => isIRR(stock) ? (stock.returnEvaluation ? `${(stock.returnEvaluation.base.irr * 100).toFixed(1)}%` : "待核验") : stock.baseReturn;
-  const rankedStocks = db.stocks.filter(stock => !isIRR(stock)).sort((a, b) => returnValue(b.baseReturn) - returnValue(a.baseReturn)).slice(0, 10);
+  const stockReturn = stock => stock.returnEvaluation ? `${(stock.returnEvaluation.base.irr * 100).toFixed(1)}%` : "待核验";
+  const irrOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.base.irr : null);
+  const surplusOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.base.surplus : null);
+  const bearOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.scenarios[0].irr : null);
+  const rankedBy = mode => db.stocks.filter(isIRR).slice().sort((a, b) => {
+    if (mode === "irr") return (irrOf(b) ?? -9) - (irrOf(a) ?? -9);
+    const gap = (surplusOf(b) ?? -9) - (surplusOf(a) ?? -9);
+    if (gap !== 0) return gap;
+    return (bearOf(b) ?? -9) - (bearOf(a) ?? -9);
+  });
+  let homeSort = "surplus";
+  let homeAll = false;
 
   const navigation = [
     { id: "ranking", label: "收益率排行", href: "index.html" },
@@ -45,17 +55,7 @@
     return `<div class="table-wrap"><table><thead><tr><th>情景</th><th>2026归母净利润</th><th>EPS</th><th>当前PE</th><th>核心假设</th></tr></thead><tbody>${stock.profitForecast.scenarios.map(scenario => `<tr><td><strong>${scenario.name}</strong></td><td>${scenario.profit}</td><td>${scenario.eps}</td><td>${scenario.pe}</td><td>${scenario.reason}</td></tr>`).join("")}</tbody></table></div>`;
   }
 
-  function scenarioCards(stock) {
-    return `<div class="scenario-grid">${stock.model.scenarios.map((scenario, index) => `<article class="scenario ${index === 1 ? "base" : ""}"><div class="scenario-title"><span>${scenario.name}情景</span>${index === 1 ? "<em>核心估计</em>" : ""}</div><strong class="scenario-return">${scenario.cagr}</strong><small>十年分红复投年化</small><dl><div><dt>起始EPS</dt><dd>${scenario.startEps}</dd></div><div><dt>利润增速</dt><dd>${scenario.growth}</dd></div><div><dt>分红率</dt><dd>${scenario.payout}</dd></div><div><dt>退出PE</dt><dd>${scenario.exitPE}</dd></div><div><dt>累计分红①</dt><dd>${scenario.dividends}</dd></div><div><dt>期末持股</dt><dd>${scenario.shares}</dd></div><div><dt>期末总价值</dt><dd>${scenario.terminal}</dd></div><div><dt>${stock.model.discountRate}折现值</dt><dd>${scenario.pv}</dd></div></dl></article>`).join("")}</div><p class="footnote">①累计分红为复投过程中收到的名义现金合计，已全部用于增持，不能与期末价值再次相加。</p>`;
-  }
-
-  function modelTable(stock) {
-    const unit = stock.model.currency || "元";
-    return `<div class="table-wrap"><table><thead><tr><th>年度</th><th>EPS（${unit}）</th><th>当年分红②（${unit}）</th><th>年末持股</th><th>年末总价值（${unit}）</th></tr></thead><tbody>${stock.model.baseRows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody></table></div><p class="footnote">②当年分红按年初持股计算并在年内按基准情景PE复投；金额随累计持股增加。</p>`;
-  }
-
   function summaryMetrics(stock) {
-    if (!isIRR(stock)) return `<div><span>基准十年年化</span><strong>${stock.baseReturn}</strong></div><div><span>研究置信度</span><strong>${stock.confidence}</strong></div><div><span>模型价格</span><strong>${displayPrice(stock)}</strong></div>`;
     const base = stock.returnEvaluation?.base;
     return `<div><span>基准十年 IRR</span><strong>${stockReturn(stock)}</strong></div><div><span>研究回报要求</span><strong>${(stock.model.requiredReturn * 100).toFixed(1)}%</strong></div><div><span>达标参考价</span><strong>${base ? `${currencySymbol(stock)}${formatPrice(base.fairPrice)}` : "待核验"}</strong></div>`;
   }
@@ -75,54 +75,42 @@
       <article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${stock.model.dividendNote}</p><p>${stock.dividendView}</p></article></section>`;
   }
 
-  function scenarioChart(stock) {
-    const W = 760, H = 210, padL = 96, padR = 110, top = 34, rowH = 52;
-    const discountStr = String(stock.model.discountRate).trim();
-    const discount = num(discountStr) || 10;
-    const rows = stock.model.scenarios.map((s, i) => ({ name: `${s.name}情景`, v: num(s.cagr), cls: ["bear", "base", "bull"][i] }));
-    const min = Math.min(0, ...rows.map(r => r.v), discount) * 1.18;
-    const max = Math.max(0, ...rows.map(r => r.v), discount) * 1.18;
-    const x = v => padL + ((v - min) / (max - min || 1)) * (W - padL - padR);
-    const bars = rows.map((r, i) => {
-      const y = top + i * rowH;
-      const start = Math.min(x(0), x(r.v));
-      const w = Math.abs(x(r.v) - x(0));
-      return `<g class="chart-row ${r.cls}"><text class="axis-label" x="${padL - 14}" y="${y + 19}" text-anchor="end">${r.name}</text><line x1="${x(0)}" y1="${y - 4}" x2="${x(0)}" y2="${y + 30}" class="ref-line"/><rect x="${start}" y="${y}" width="${w}" height="26" rx="6" class="bar"/><text class="bar-value" x="${Math.max(x(0), x(r.v)) + 12}" y="${y + 18}">${r.v.toFixed(1)}%</text></g>`;
-    }).join("");
-    const dx = x(discount);
-    return `<figure class="chart-card"><figcaption class="chart-title">三情景十年年化收益率对比<span>虚线为该公司目标折现率 ${discountStr}，按企业风险分别校准</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="三情景年化收益率对比图">${bars}<line x1="${dx}" y1="${top - 12}" x2="${dx}" y2="${top + rows.length * rowH - 14}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${dx}" y="${top - 18}" text-anchor="middle">折现率 ${discountStr}</text></svg><div class="chart-legend"><span class="bear">悲观</span><span class="base">基准</span><span class="bull">乐观</span></div></figure>`;
-  }
-
-  function modelChart(stock) {
-    const W = 760, H = 300, padL = 76, padR = 96, top = 28, bottom = 46;
-    const rows = stock.model.baseRows.map(r => ({ year: r[0], value: num(r[4]) }));
-    const current = num(stock.model.price);
-    const lo = Math.min(current, ...rows.map(r => r.value)) * 0.9;
-    const hi = Math.max(...rows.map(r => r.value)) * 1.06;
-    const x = i => padL + (i / (rows.length - 1)) * (W - padL - padR);
-    const y = v => top + (1 - (v - lo) / (hi - lo)) * (H - top - bottom);
-    const pts = rows.map((r, i) => `${x(i)},${y(r.value)}`).join(" ");
-    const area = `${padL},${H - bottom} ${pts} ${x(rows.length - 1)},${H - bottom}`;
-    const grid = [0.25, 0.5, 0.75].map(t => {
-      const v = lo + (hi - lo) * (1 - t);
-      return `<line x1="${padL}" y1="${y(v)}" x2="${W - padR}" y2="${y(v)}" class="grid-line"/><text class="axis-label" x="${padL - 12}" y="${y(v) + 4}" text-anchor="end">${v >= 1000 ? Math.round(v) : v.toFixed(0)}</text>`;
-    }).join("");
-    const yearLabels = rows.map((r, i) => `<text class="axis-label" x="${x(i)}" y="${H - bottom + 22}" text-anchor="middle">${r.year.slice(2)}年</text>`).join("");
-    const dots = rows.map((r, i) => `<circle cx="${x(i)}" cy="${y(r.value)}" r="3.5" class="dot"/>`).join("");
-    const last = rows.at(-1);
-    const first = rows[0];
-    const symbol = currencySymbol(stock);
-    return `<figure class="chart-card"><figcaption class="chart-title">基准情景：分红复投下每股总价值增长<span>起始价 ${symbol}${formatPrice(current)} → ${last.year}年 ${symbol}${formatPrice(last.value)}</span></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="十年分红复投价值增长曲线"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f56a16" stop-opacity=".22"/><stop offset="100%" stop-color="#f56a16" stop-opacity="0"/></linearGradient></defs>${grid}<polygon points="${area}" fill="url(#areaFill)"/><polyline points="${pts}" class="main-line" fill="none"/><line x1="${padL}" y1="${y(current)}" x2="${W - padR}" y2="${y(current)}" class="ref-line" stroke-dasharray="5 5"/><text class="ref-label" x="${W - padR}" y="${y(current) - 8}" text-anchor="end">当前价 ${symbol}${formatPrice(current)}</text>${dots}${yearLabels}</svg><div class="chart-endpoints"><span>${first.year}年 <strong>${symbol}${formatPrice(first.value)}</strong></span><span>${last.year}年 <strong>${symbol}${formatPrice(last.value)}</strong></span></div></figure>`;
-  }
-
   function rankingRows() {
-    return rankedStocks.map((stock, index) => {
-      return `<a class="ranking-row" href="stock.html?code=${stock.code}"><span class="rank-number">${String(index + 1).padStart(2, "0")}</span><span class="rank-company"><strong>${stock.name}</strong><small>${stock.code} · ${stock.industry}</small></span><span class="rank-verdict">${stock.valuation}</span><span class="rank-return"><small>十年基准年化</small><strong>${stock.baseReturn}</strong></span><span class="row-arrow" aria-hidden="true">查看报告 ↗</span></a>`;
+    const list = rankedBy(homeSort);
+    const shown = homeAll ? list : list.slice(0, 10);
+    const pct = value => (value === null ? "待核验" : `${(value * 100).toFixed(1)}%`);
+    return shown.map((stock, index) => {
+      const result = stock.returnEvaluation;
+      const gap = result ? `${result.base.surplus >= 0 ? "+" : ""}${(result.base.surplus * 100).toFixed(1)}pp` : "—";
+      const gapClass = result ? (result.base.surplus >= 0 ? "cell-up" : "cell-down") : "";
+      return `<a class="ranking-row" href="stock.html?code=${stock.code}"><span class="rank-number">${String(index + 1).padStart(2, "0")}</span><span class="rank-company"><strong>${stock.name}</strong><small>${stock.code} · ${stock.industry}</small></span><span class="rank-scenarios"><strong>${pct(bearOf(stock))} / <em class="rank-base">${pct(irrOf(stock))}</em> / ${pct(result ? result.scenarios[2].irr : null)}</strong><small>悲观 / 基准 / 乐观 · 回报要求 ${(stock.model.requiredReturn * 100).toFixed(1)}%</small><small>基准价 ${displayPrice(stock)}（${stock.priceDate} 收盘）</small></span><span class="rank-surplus ${gapClass}"><strong>${gap}</strong><small>基准 IRR − 回报要求</small></span></a>`;
     }).join("");
+  }
+
+  function rankingControls() {
+    const total = rankedBy(homeSort).length;
+    const button = (mode, label) => `<button type="button" class="toggle" data-sort="${mode}" aria-pressed="${homeSort === mode}">${label}</button>`;
+    return `<div class="ranking-controls"><span class="control-label">排序</span>${button("surplus", "按回报差额")}${button("irr", "按基准 IRR")}<button type="button" class="toggle" id="toggle-all" aria-pressed="${homeAll}">${homeAll ? "只看前十" : `查看全部 ${total} 只`}</button></div>`;
+  }
+
+  function renderRanking() {
+    const list = document.querySelector("#ranking .ranking-list");
+    const controls = document.querySelector("#ranking .ranking-controls");
+    if (list) list.innerHTML = rankingRows();
+    if (controls) controls.outerHTML = rankingControls();
+    bindRanking();
+  }
+
+  function bindRanking() {
+    const box = document.querySelector("#ranking");
+    if (!box) return;
+    box.querySelectorAll("[data-sort]").forEach(button => button.addEventListener("click", () => { homeSort = button.dataset.sort; renderRanking(); }));
+    const all = box.querySelector("#toggle-all");
+    if (all) all.addEventListener("click", () => { homeAll = !homeAll; renderRanking(); });
   }
 
   function reportRows() {
-    return db.stocks.map(stock => `<a class="report-row" href="stock.html?code=${stock.code}"><div class="report-main"><div class="report-kicker">${stock.market} · ${stock.code} · ${stock.industry}</div><h3>${stock.name}</h3><p>${stock.thesis}</p></div><dl class="report-metrics"><div><dt>${isIRR(stock) ? "十年IRR" : "复投基准年化"}</dt><dd>${stockReturn(stock)}</dd></div><div><dt>收盘基准</dt><dd>${displayPrice(stock)}</dd></div><div><dt>研究结论</dt><dd>${stock.valuation}</dd></div></dl><span class="report-action">阅读报告 <b>↗</b></span></a>`).join("");
+    return db.stocks.map(stock => `<a class="report-row" href="stock.html?code=${stock.code}"><div class="report-main"><div class="report-kicker">${stock.market} · ${stock.code} · ${stock.industry}</div><h3>${stock.name}</h3><p>${stock.thesis}</p></div><dl class="report-metrics"><div><dt>十年IRR</dt><dd>${stockReturn(stock)}</dd></div><div><dt>收盘基准</dt><dd>${displayPrice(stock)}</dd></div><div><dt>研究结论</dt><dd>${stock.valuation}</dd></div></dl><span class="report-action">阅读报告 <b>↗</b></span></a>`).join("");
   }
 
   function industryReportLink() {
@@ -177,7 +165,8 @@
   function renderHome() {
     document.body.className = "home-page";
     document.title = `收益率排行 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准情景排序，点击公司查看假设与风险。</p></div><div class="ranking-list">${rankingRows()}</div><p class="ranking-note">本榜单暂保留未迁移个股的原分红复投口径。泸州老窖已改用现金流IRR，暂不参与此榜单，请到个股页查看；全池迁移后再统一排序。</p></div></section></main>${footer()}`;
+    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}<div class="ranking-list">${rankingRows()}</div><p class="ranking-note">全池已统一为十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
+    bindRanking();
   }
 
   function renderReports() {
@@ -230,7 +219,7 @@
   function renderStock(stock) {
     document.body.className = "stock-page";
     document.title = `${stock.name}完整研究报告 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("reports")}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">${stock.status} · ${stock.industry}</div><div class="title-row"><h1>${stock.name}</h1><span class="ticker">${stock.market} / ${stock.code}</span></div><div class="ticker ticker-sub">价格基准 ${stock.priceDate} · 完整个股研究报告</div></div><aside class="price-panel"><span>${stock.priceDate} 收盘</span><strong>${displayPrice(stock)}</strong><small>${stock.marketCap}</small></aside></div>${stock.evidenceTracking ? reportNav() : reportNav().replace('<a href="#tracking">跟踪</a>', "")}</div></section><div class="shell report-body"><section class="section lead-panel" id="summary"><div class="section-label">01 / 投资结论</div><h2>${stock.valuation}</h2><p class="lede">${stock.conclusion}</p><div class="verdict-grid">${summaryMetrics(stock)}</div></section><section class="section" id="status"><div class="section-head"><h2>行业与企业现状</h2><p>先看生意，再看价格</p></div><div class="status-stack"><section class="status-block"><div class="status-side"><span class="section-label">行业</span></div><div class="status-text">${paragraphs(stock.industryStatus)}</div></section><section class="status-block"><div class="status-side"><span class="section-label">公司</span></div><div class="status-text">${paragraphs(stock.companyStatus)}</div></section></div></section><section class="section"><div class="section-head"><h2>关键事实</h2><p>最新实际披露与行情</p></div>${factTable(stock.facts)}</section>${evidenceTracking(stock)}<section class="section"><div class="section-head"><h2>关键争议</h2><p>结论与反证分开</p></div><div class="debate-grid">${stock.debate.map(item => `<article class="panel"><h3>${item.title}</h3><p>${item.body}</p></article>`).join("")}</div></section><section class="section" id="forecast"><div class="section-head"><h2>2026年利润预测</h2><p>不把半年数据简单乘二</p></div><article class="model-intro"><p>${stock.profitForecast.note}</p></article>${forecastTable(stock)}</section>${isIRR(stock) ? irrSection(stock) : `<section class="section" id="valuation"><div class="section-head"><h2>十年分红复投与现金流折现</h2><p>${stock.model.period} · 起始价 ${stock.model.price}</p></div><article class="model-intro"><div class="section-label">计算口径</div><p>${stock.model.method}</p></article>${scenarioChart(stock)}${scenarioCards(stock)}<article class="dividend-view"><div class="section-label">分红判断</div><p>${stock.dividendView}</p></article>${modelChart(stock)}<details class="projection"><summary>展开基准情景逐年现金流</summary>${modelTable(stock)}</details></section>`}<section class="section"><div class="section-head"><h2>护城河与商业质量</h2><p>优势必须转化为所有者现金流</p></div><article class="panel">${bullets(stock.moat)}</article></section><section class="section" id="framework"><div class="section-head"><h2>五种独立研究视角</h2><p>同一家公司，五套独立判断</p></div><div class="view-grid">${stock.masterViews.map((view, index) => `<article class="panel view-card"><div class="view-head"><span class="view-num">${String(index + 1).padStart(2, "0")}</span><span class="section-label">${view.name}</span></div><h3>${view.verdict}</h3><p>${view.text}</p></article>`).join("")}</div></section><section class="section evidence-grid" id="risks"><article><div class="section-label">后续验证</div><h2>什么会提高置信度</h2>${bullets(stock.questions)}</article><article class="danger"><div class="section-label">失效条件</div><h2>什么会推翻判断</h2>${bullets(stock.risks)}</article></section><section class="section sources" id="sources"><div class="section-head"><h2>来源与方法</h2><p>公开来源可直接打开</p></div><div class="source-list">${stock.sources.map(source => `<a href="${source[2]}" target="_blank" rel="noopener"><span>${source[0]}</span><time>${source[1]}</time><b>↗</b></a>`).join("")}</div><p class="method-note">研究框架参考巴菲特股东信、芒格决策清单、段永平投资问答、散户乙历史发言及杰克·韦尔奇管理框架。相关材料仅用于方法论推演；五位视角不等于其本人对当前价格的公开评级。</p></section></div></main>${footer()}`;
+    document.body.innerHTML = `${header("reports")}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">${stock.status} · ${stock.industry}</div><div class="title-row"><h1>${stock.name}</h1><span class="ticker">${stock.market} / ${stock.code}</span></div><div class="ticker ticker-sub">价格基准 ${stock.priceDate} · 完整个股研究报告</div></div><aside class="price-panel"><span>${stock.priceDate} 收盘</span><strong>${displayPrice(stock)}</strong><small>${stock.marketCap}</small></aside></div>${stock.evidenceTracking ? reportNav() : reportNav().replace('<a href="#tracking">跟踪</a>', "")}</div></section><div class="shell report-body"><section class="section lead-panel" id="summary"><div class="section-label">01 / 投资结论</div><h2>${stock.valuation}</h2><p class="lede">${stock.conclusion}</p><div class="verdict-grid">${summaryMetrics(stock)}</div></section><section class="section" id="status"><div class="section-head"><h2>行业与企业现状</h2><p>先看生意，再看价格</p></div><div class="status-stack"><section class="status-block"><div class="status-side"><span class="section-label">行业</span></div><div class="status-text">${paragraphs(stock.industryStatus)}</div></section><section class="status-block"><div class="status-side"><span class="section-label">公司</span></div><div class="status-text">${paragraphs(stock.companyStatus)}</div></section></div></section><section class="section"><div class="section-head"><h2>关键事实</h2><p>最新实际披露与行情</p></div>${factTable(stock.facts)}</section>${evidenceTracking(stock)}<section class="section"><div class="section-head"><h2>关键争议</h2><p>结论与反证分开</p></div><div class="debate-grid">${stock.debate.map(item => `<article class="panel"><h3>${item.title}</h3><p>${item.body}</p></article>`).join("")}</div></section><section class="section" id="forecast"><div class="section-head"><h2>2026年利润预测</h2><p>不把半年数据简单乘二</p></div><article class="model-intro"><p>${stock.profitForecast.note}</p></article>${forecastTable(stock)}</section>${irrSection(stock)}<section class="section"><div class="section-head"><h2>护城河与商业质量</h2><p>优势必须转化为所有者现金流</p></div><article class="panel">${bullets(stock.moat)}</article></section><section class="section" id="framework"><div class="section-head"><h2>五种独立研究视角</h2><p>同一家公司，五套独立判断</p></div><div class="view-grid">${stock.masterViews.map((view, index) => `<article class="panel view-card"><div class="view-head"><span class="view-num">${String(index + 1).padStart(2, "0")}</span><span class="section-label">${view.name}</span></div><h3>${view.verdict}</h3><p>${view.text}</p></article>`).join("")}</div></section><section class="section evidence-grid" id="risks"><article><div class="section-label">后续验证</div><h2>什么会提高置信度</h2>${bullets(stock.questions)}</article><article class="danger"><div class="section-label">失效条件</div><h2>什么会推翻判断</h2>${bullets(stock.risks)}</article></section><section class="section sources" id="sources"><div class="section-head"><h2>来源与方法</h2><p>公开来源可直接打开</p></div><div class="source-list">${stock.sources.map(source => `<a href="${source[2]}" target="_blank" rel="noopener"><span>${source[0]}</span><time>${source[1]}</time><b>↗</b></a>`).join("")}</div><p class="method-note">研究框架参考巴菲特股东信、芒格决策清单、段永平投资问答、散户乙历史发言及杰克·韦尔奇管理框架。相关材料仅用于方法论推演；五位视角不等于其本人对当前价格的公开评级。</p></section></div></main>${footer()}`;
   }
 
   const isStock = location.pathname.endsWith("stock.html");
