@@ -2,6 +2,8 @@
 
 无需数据库或构建工具的个股与行业研究静态网站。首页按个股报告中的基准十年年化收益率展示 Top 10，个股和行业报告分别有独立页面。收益率是带假设的研究情景，不是收益承诺。
 
+模型迁移中：泸州老窖（000568）已采用十年股东现金流 IRR，2026-09-28 收盘价、2026H1 财报及 2026-09-29 假设复核；其余个股仍沿用原分红复投口径。首页暂仅对未迁移标的按旧口径排序，已迁移标的可从个股报告列表进入。全池迁移完成后再切换统一 IRR 排序。
+
 ## 本地预览
 
 ```bash
@@ -14,6 +16,7 @@ python3 -m http.server 8080
 
 ```bash
 node docs/validate.mjs
+node docs/check-shareholder-model.mjs
 node docs/render-archive.mjs --check
 git diff --check
 ```

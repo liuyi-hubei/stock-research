@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const dataFiles = ['data/stocks.js', 'data/additional-stocks.js', 'data/industries.js'];
+const modelFile = 'assets/shareholder-model.js';
 const app = read('assets/app.js');
 function context(pathname, search = '') {
   const body = { innerHTML: '', className: '' };
@@ -13,6 +14,7 @@ function context(pathname, search = '') {
   const scope = { window: {}, document: { body, title: '', querySelector: selector => selector === '#summary' ? summary : null, createElement: () => ({}) }, location: { pathname, search, hash: '' }, URLSearchParams, Intl };
   vm.createContext(scope);
   for (const file of dataFiles) vm.runInContext(read(file), scope, { filename: file });
+  vm.runInContext(read(modelFile), scope, { filename: modelFile });
   return scope;
 }
 function localLinks(html, filename) {
@@ -45,13 +47,14 @@ for (const file of ['index.html', 'reports.html', 'stock.html', 'industry.html']
   const html = read(file);
   localLinks(html, file);
   const scripts = [...html.matchAll(/<script src="([^"?]+)/g)].map(m => m[1]);
-  for (const required of [...dataFiles.slice(0, 2), 'assets/app.js']) assert(scripts.includes(required), `${file}: missing script ${required}`);
-  assert(scripts.indexOf(dataFiles[0]) < scripts.indexOf(dataFiles[1]) && scripts.indexOf(dataFiles[1]) < scripts.indexOf('assets/app.js'), `${file}: invalid script order`);
+  for (const required of [...dataFiles.slice(0, 2), modelFile, 'assets/app.js']) assert(scripts.includes(required), `${file}: missing script ${required}`);
+  assert(scripts.indexOf(dataFiles[0]) < scripts.indexOf(dataFiles[1]) && scripts.indexOf(dataFiles[1]) < scripts.indexOf(modelFile) && scripts.indexOf(modelFile) < scripts.indexOf('assets/app.js'), `${file}: invalid script order`);
 }
 localLinks(read('report-600863-20260921.html'), 'report-600863-20260921.html');
 // Regression: negative returns extend left from zero, positive returns right.
-const graph = context('/stock.html', `?code=${stocks[0].code}`);
-graph.window.STOCK_RESEARCH.stocks[0].model.scenarios.forEach((s, i) => { s.cagr = ['-5%', '0%', '10%'][i]; });
+const legacyStock = stocks.find(s => s.model.version !== 'shareholder-irr-v1');
+const graph = context('/stock.html', `?code=${legacyStock.code}`);
+graph.window.STOCK_RESEARCH.stocks.find(s => s.code === legacyStock.code).model.scenarios.forEach((s, i) => { s.cagr = ['-5%', '0%', '10%'][i]; });
 vm.runInContext(app, graph);
 const bars = [...graph.document.body.innerHTML.matchAll(/<g class="chart-row[^>]+>(.*?)<\/g>/g)].map(m => m[1]);
 const zero = Number(bars[0].match(/<line x1="([^"]+)"/)[1]);

@@ -166,6 +166,14 @@ tbody tr:last-child td { border-bottom: 0; }
 tbody tr:nth-child(even) { background: #fafbfc; }
 tbody tr:hover { background: #f2f4f7; }
 .model-intro, .dividend-view { margin-top: 23px; max-width: 980px; padding-left: 20px; border-left: 2px solid #bdc4cf; color: #586371; }
+.irr-verdict { margin-top: 23px; padding: 18px 22px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 10px; background: var(--accent-soft); color: var(--text); line-height: 1.8; }
+.irr-verdict strong { color: var(--accent); font-variant-numeric: tabular-nums; }
+.irr-section caption { padding: 12px 14px; color: var(--muted); font-size: 12px; text-align: left; }
+.irr-section tbody th { background: transparent; }
+.irr-explanation { padding: 0 2px 18px; color: #586371; }
+.irr-explanation p + p { margin-top: 10px; }
+.irr-equation { overflow-wrap: anywhere; font: 13px/1.8 var(--mono); }
+.irr-formula summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .scenario-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 28px; }
 .scenario { box-shadow: inset 0 2px var(--accent); }
 .scenario.base { background: var(--accent-soft); }
