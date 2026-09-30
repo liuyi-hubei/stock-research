@@ -32,7 +32,7 @@
 
 ## 新增个股
 
-新增股票默认写入 `data/additional-stocks.js`，基础股票仍在 `data/stocks.js`；按既有数据结构补齐事实、来源和模型字段，并同步维护 `reports/stocks/` 归档。首页只展示基准年化排名前十只，全部标的在个股研究列表展示。
+新增股票默认写入 `data/additional-stocks.js`，基础股票仍在 `data/stocks.js`；按既有数据结构补齐事实、来源和模型字段，并同步维护 `reports/stocks/` 归档。首页只展示按基准IRR减研究回报要求排序的前十只已审核标的，全部标的在个股研究列表展示。
 
 页面上的数量全部由数据推导，**不需要为了数量去改页面代码**：首页「跟踪公司」取 `db.stocks.length`，排行按钮「查看全部 N 只」仅计结果有效且未暂停排名的标的，报告列表仍保留全部公司。校验脚本的路由数与港股只数也是数出来的。增删一只标的实际要动的只有下面几项：
 
@@ -40,7 +40,7 @@
 | --- | --- | --- |
 | `data/stocks.js` 或 `data/additional-stocks.js` | 必改 | 唯一的数据源；新增标的必须有 `model.version = "shareholder-irr-v1"`，否则模型校验脚本会直接失败 |
 | 新增港股标的的 `model.fx` | 仅港股 | 在 `data/additional-stocks.js` 的 `HKD_MODEL_FX` 中登记报表币种、汇率与折算前基准 EPS，漏登记会在加载时抛错 |
-| `reports/stocks/` 归档 | 建议 | 校验会提示缺失归档，但网页报告不受影响 |
+| `reports/stocks/` 归档 | 必改 | 主报告与数据、参数审核、页面同步，缺失归档视为不完整交付 |
 | 入口脚本的 `?v=` 缓存戳 | 必改 | 改完数据后同步提升 `index.html` / `reports.html` / `stock.html` / `industry.html` 中的版本号，否则浏览器会读旧数据 |
 | `node docs/gen-model-explained.mjs` | 必跑 | 重出模型说明文档的参数表与排名表 |
 
@@ -55,3 +55,7 @@ Markdown 归档不会自动成为网页。补充报告须登记阅读入口；�
 详情页显示卖出所得现值占比与EPS十年倍数，并用同一模型做起始EPS上下20%、远期增速上下2个百分点、退出PE上下20%的单项压力测试；回报门槛上下1个百分点仅影响参考价及差额。这些不是概率预测。
 
 运行 `node docs/sync-model-review.mjs` 同步归档的自动审阅区；运行 `node docs/gen-model-explained.mjs` 更新参数说明。自动审阅不覆盖人工正文，改变实际参数时仍须人工核对正文中的结论数值。
+
+排名资格由 `ShareholderModel.eligibility` 读取 `model.rankingDecision`，需明确资格、证据状态（待补证/部分核验/关键假设通过）、理由和审核日；计算有效不等于研究通过，部分核验不得宣称十年资金约束全部验证。新增标的未审默认不入榜。使用`firstDividendParts`拆分首年已知/预测股息时，注明替换比例及除息权利，不能与完整首年覆盖同时使用，不能重复计息。
+
+交付须运行两个生成脚本的`--check`、`docs/check-report-numbers.mjs`和`docs/check-publication.mjs`，连同既有模型、路由及归档检查。数字检查只覆盖明确模型结论，原始金融事实仍需人工核验；真实桌面/窄屏交互另行验证。全部检查通过也不等于授权发布。

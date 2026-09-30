@@ -5,6 +5,7 @@ import fs from 'fs';
 import vm from 'vm';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { generatedFile } from './generated-file.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ctx = vm.createContext({ window: {} });
@@ -54,15 +55,15 @@ out += '```text\n';
 out += '已知（输入）：\n';
 out += '  P0    买入基准价（有明确日期）\n';
 out += '  E0    正常化的起始年度预测 EPS（第一年年初水平）\n';
-out += '  g1    第 1—3 年的 EPS 增速\n';
-out += '  g2    第 4—10 年的 EPS 增速\n';
-out += '  d     可持续分红率\n';
+out += '  g(t)  第 t 年的 EPS 增速（逐年数组优先）\n';
+out += '  d(t)  第 t 年分红率（逐年数组优先）\n';
+out += '  旧数据按 stageYears 展开 early / late / payout\n';
 out += '  M     第十年完整股权口径退出 PE\n';
 out += '  h     研究者设定的必要回报率（研究门槛，不是模型解出的值）\n\n';
 out += '递推（t = 1, 2, …, 10）：\n';
-out += '  g(t)  = g1  (t ≤ 3)，否则 g2\n';
+out += '  g(t)  = growthRates[t-1]，或兼容两阶段路径\n';
 out += '  E(t)  = E(t-1) × [1 + g(t)]\n';
-out += '  D(t)  = E(t-1) × d            分红按【上一年度】EPS 估算\n';
+out += '  D(t)  = E(t-1) × d(t)         分红按【上一年度】EPS 估算\n';
 out += '  P10   = E(10) × M             第十年末卖出所得\n';
 out += '  CF(t) = D(t)          (t < 10)\n';
 out += '  CF(10)= D(10) + P10\n\n';
@@ -76,6 +77,7 @@ out += '```\n\n';
 out += '- 三个情景（悲观 / 基准 / 乐观）各自独立求 IRR，基准是中间那组假设；差额全部以「基准情景」计算。\n';
 out += '- `D(10)` 使用 `E(9)` 是派息滞后一年的时序近似；同年盈利与除息后出售价值可以同时存在，不能将这个约定解释为防止重复计算的必要条件。\n';
 out += '- 首年分红默认用预测起点 `E0 × d`；已公告且买入后仍享有的派息须核对除息日，并替换同一笔预测金额。\n\n';
+out += '- 完整首年覆盖可用 `firstDividend`；单笔部分已知用 `firstDividendParts`，两者互斥。保存已知金额、来源、除息日和被替换预测比例：首年现金 = 原预测 × (1 − 替换比例) + 买入日在除息日前仍享有的已知金额。除息日及之后买入不享有该笔股息，但仍扣除对应预测，防止重复计算。比例是研究近似，须披露依据；实际派息时间仍按年度近似。当前字段不支持多笔已知股息数组，不得擅自叠加。\n\n';
 
 out += '## 3. 七类数字的取数位置\n\n';
 out += '| 参数 | 从哪里来 | 典型做法 |\n';
@@ -114,16 +116,16 @@ for (const r of rows) {
 }
 out += '\n港股模型的 EPS 一律为港元；报表币种与换算关系见第 8 节。原报告中有个别参数的展示值与存储值存在末位舍入差异，本表直接读取存储值，不从页面文案反推。\n\n';
 
-out += '## 6. 计算结果（按基准 IRR − h 降序）\n\n';
-out += '| # | 标的 | 悲观 | 基准 IRR | 乐观 | 差额(pp) | 达标参考价 | 现价 |\n';
+out += '## 6. 经排名资格审核的计算结果（按基准 IRR − h 降序）\n\n';
+out += '| # | 标的 | 悲观 | 基准 IRR | 乐观 | 差额(pp) | 达标参考价 | 基准价 |\n';
 out += '| --- | --- | --- | --- | --- | --- | --- | --- |\n';
-const sorted = rows.filter(r => r.s.model.rankingEligible !== false).sort((a, b) => b.a.surplus - a.a.surplus || b.ev.scenarios[0].irr - a.ev.scenarios[0].irr);
+const sorted = SM.ranked(stocks).map(item => rows.find(r => r.s.code === item.stock.code));
 sorted.forEach((r, i) => {
   const bear = r.ev.scenarios[0].irr, bull = r.ev.scenarios[2].irr;
   out += '| ' + (i + 1) + ' | ' + r.s.name + ' | ' + p1(bear) + '% | ' + p2(r.a.irr) + '% | ' + p1(bull) + '% | ' + (r.a.surplus >= 0 ? '+' : '') + p2(r.a.surplus) + ' | ' + cur(r.s) + n2(r.a.fairPrice) + ' | ' + money(r.s) + ' |\n';
 });
-out += '\n差额 = 基准 IRR − h。红色（正）为达到门槛，绿色（负）为未达门槛；本项目以「达到门槛」为红，与页面 `cell-up` / `cell-down` 一致。\n\n';
-for (const r of rows.filter(r => r.s.model.rankingEligible === false)) out += `- 暂停排名：${r.s.name}，${r.s.model.rankingReason}\n`;
+out += '\n差额 = 基准 IRR − h。达到门槛仅表示条件情景超过主观要求；基准IRR红色用于识别该列，并非买入信号。\n\n';
+for (const r of rows.filter(r => !SM.eligibility(r.s, r.ev).eligible)) out += `- 暂停排名：${r.s.name}，${r.s.model.rankingReason}\n`;
 out += '\n逐年数组 `growthRates` / `payoutRates` 优先于旧两阶段字段；每个数组必须有10个值。未提供数组时按原参数展开，保持历史假设不被自动改写。`stageYears` 可调整分段年限；`fadeGrowth` 用近期逐年增速、成熟增速与收敛年份生成路径，必须在研究说明中记录依据。\n\n';
 
 out += '## 7. 退出 PE 敏感性\n\n';
@@ -149,6 +151,6 @@ out += '- **2026-09-29 修正记录**：腾讯控股与泡泡玛特原先把人�
 out += '- 银行、保险的 EPS 与 PE 是简化情景，须另行检查资本充足率、资产质量与偿付能力。\n';
 out += '- 模型不含红利税、交易费用、未来回购与稀释；港股结果未计未来汇率变化。\n';
 
-fs.writeFileSync(ROOT + '/docs/model-explained.md', out);
-console.log('written', out.length, 'chars;', stocks.length, 'stocks;', hkdStocks.length, 'HKD models');
+generatedFile(ROOT + '/docs/model-explained.md', out);
+console.log(process.argv.includes('--check') ? (process.exitCode ? 'OUT OF DATE' : 'PASS: generated model matches') : 'Generated model', out.length, 'chars;', stocks.length, 'stocks;', hkdStocks.length, 'HKD models');
 console.log('buckets', [...bucket.keys()].sort((a, b) => parseFloat(a) - parseFloat(b)).join(' '));

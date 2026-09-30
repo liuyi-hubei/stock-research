@@ -33,7 +33,7 @@ const jobs = requested.map(code => {
 });
 // 与页面同一计算函数：IRR、差额与达标参考价都由 shareholder-model 求出，不在此重复实现。
 const evaluate = s => {
-  if (s.model.version !== 'shareholder-irr-v1') throw Error(`${s.code}: not on the shareholder cash-flow IRR caliber`);
+  if (s.model?.version !== 'shareholder-irr-v1') throw Error(`${s.code}: not on the shareholder cash-flow IRR caliber`);
   return ShareholderModel.evaluate(s);
 };
 for (const { s, target } of jobs) {
@@ -43,7 +43,7 @@ for (const { s, target } of jobs) {
   const gap = `${base.surplus >= 0 ? '+' : '−'}${(Math.abs(base.surplus) * 100).toFixed(2)}`;
   const scenarioTable = table(
     ['情景', '起始EPS', '第1—10年EPS增速', '第1—10年分红率', '退出PE', '十年 IRR'],
-    result.scenarios.map(v => [v.name, `${v.eps}${s.model.currency}`, v.growthRates.map(pct).join(' / '), v.payoutRates.map(pct).join(' / '), `${v.exitPE}倍`, pct(v.irr)])
+    result.scenarios.map(v => [v.name, `${v.eps.toFixed(4)}${s.model.currency}`, v.growthRates.map(pct).join(' / '), v.payoutRates.map(pct).join(' / '), `${v.exitPE}倍`, pct(v.irr)])
   );
   const cashTable = table(
     ['持有年度', '当年EPS', '领取分红', '卖出所得', '净现金流'],
@@ -53,7 +53,7 @@ for (const { s, target } of jobs) {
   );
   const sections = [
     `# ${s.name}（${s.code}）研究归档`,
-    s.model.rankingEligible === false ? `> 关键假设待核验：${s.model.rankingReason} 下列IRR及参考价仅为原参数的条件演算。` : '> 收益是研究情景结果；增长、分红和资本约束的证据状态以最新参数审阅为准。',
+    !ShareholderModel.eligibility(s, result).eligible ? `> 关键假设待核验：${s.model.rankingReason} 下列IRR及参考价仅为原参数的条件演算。` : '> 收益是研究情景结果；增长、分红和资本约束的证据状态以最新参数审阅为准。',
     `本文件导出自现有网站结构化数据，未进行新一轮研究。行情基准：${s.priceDate}；财报期间：${s.model.financialPeriod}；模型复核日：${s.model.reviewedAt}。`,
     `价格：${money(s)}（${s.market}）；悲观／基准／乐观十年税费前 IRR：${pct(bear.irr)}／${pct(base.irr)}／${pct(bull.irr)}；研究回报要求：${(s.model.requiredReturn * 100).toFixed(1)}%；差额：${gap} 个百分点。`,
     `## 结论\n\n${s.valuation}\n\n${s.thesis}\n\n${s.conclusion}`,
@@ -61,14 +61,14 @@ for (const { s, target } of jobs) {
     `## 公司现状\n\n${s.companyStatus.join('\n\n')}`,
     `## 关键事实\n\n${table(['指标', '数值', '期间', '口径'], s.facts)}`,
     `## 关键争议\n\n${s.debate.map(d => `### ${d.title}\n\n${d.body}`).join('\n\n')}`,
-    `## 利润预测\n\n${s.profitForecast.note}\n\n${table(['情景', '净利润', 'EPS', 'PE', '假设'], s.profitForecast.scenarios.map(v => [v.name, v.profit, v.eps, v.pe, v.reason]))}`,
+    `## ${s.profitForecast.label || '利润预测'}\n\n${s.profitForecast.note}\n\n${table(['情景', '净利润', 'EPS', '基准价对应预测PE', '假设'], s.profitForecast.scenarios.map(v => [v.name, v.profit, v.eps, v.pe, v.reason]))}`,
     `## 十年股东现金流模型\n\n${s.model.method}\n\n${scenarioTable}\n\n${s.model.assumptionNote}\n\n${s.model.requiredReturnReason}\n\n基准 IRR 为 ${pct(base.irr)}，比要求${base.irr >= s.model.requiredReturn ? '高' : '低'} ${(Math.abs(base.surplus) * 100).toFixed(2)} 个百分点；该组基准现金流按 ${(s.model.requiredReturn * 100).toFixed(1)}% 折现的达标参考买入价为 ${money(s, base.fairPrice)}，不是确定目标价。\n\n${cashTable}\n\n${s.model.dividendNote}`,
     `## 分红判断\n\n${s.dividendView}`,
     `## 护城河\n\n${list(s.moat)}`,
     `## 五种研究视角\n\n${s.masterViews.map(v => `### ${v.name}：${v.verdict}\n\n${v.text}`).join('\n\n')}`,
     `## 后续验证\n\n${list(s.questions)}`,
     `## 失效条件\n\n${list(s.risks)}`,
-    `## 来源\n\n${s.sources.map(v => `- [${v[0]}](${v[2]})（${v[1]}）`).join('\n')}`,
+    `## 来源\n\n${s.sources.map(v => `- [${v[0]}](${v[2].startsWith('reports/') ? '../../' + v[2] : v[2]})（${v[1]}）`).join('\n')}`,
     '仅为研究记录，不构成投资建议；研究视角不等于相关投资者本人对当前价格的公开评级。'
   ];
   fs.writeFileSync(target, sections.join('\n\n') + '\n', { encoding: 'utf8', flag: 'wx' });

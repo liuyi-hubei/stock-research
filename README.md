@@ -21,11 +21,19 @@ python3 -m http.server 8080
 ```bash
 node docs/validate.mjs
 node docs/check-shareholder-model.mjs
+node docs/check-report-numbers.mjs
 node docs/render-archive.mjs --check
+node docs/gen-model-explained.mjs --check
+node docs/sync-model-review.mjs --check
+node docs/check-publication.mjs
 git diff --check
 ```
 
 检查覆盖全部个股/行业路由、站内文件与目录锚点、脚本加载顺序、负收益率图、归档不得残留复投口径表述，以及补充报告原文与阅读页是否同步。另需用浏览器检查桌面和手机布局。
+
+排名由共同引擎读取逐股 `model.rankingDecision`，不是计算成功就自动入榜。部分核验的公司明确显示缺口，关键证据未齐者保留条件演算但不参与正式排名。新股默认不获排名资格。生成文件的`--check`只读且失步时非零退出；正文数字核对仅覆盖明确标注的模型结论，不代替原始财报核验。发布检查目前仅本地依赖/类型检查，服务器发布脚本尚未完成审查计划中的改造。
+
+真实浏览器回归脚本为 `docs/browser-regression.js`（Playwright CLI函数，不是网站运行依赖）。启动8080预览和CLI浏览器会话后，执行 `npx --yes --package @playwright/cli playwright-cli --session research run-code --filename docs/browser-regression.js`。首次开会话用同一CLI的 `--session research open http://127.0.0.1:8080/`；截图输出到已忽略的 `output/playwright/`，运行前确保目录存在。测试覆盖两种排序、10/全部切换、新股和分红边界/暂停样本的目录折叠、1440/390宽度、列表及运行时异常；CLI可能以零进程码报告错误，必须检查输出没有`Error`且`failures`/`errors`为空。
 
 华能蒙电新增全面体检报告从个股页顶部进入；原文放在 `reports/stocks/`，修改后运行 `node docs/render-archive.mjs`，并将生成的 `report-600863-20260921.html` 一并保存。该页没有运行时依赖，图表数据也可展开为表格。
 

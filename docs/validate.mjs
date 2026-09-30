@@ -11,7 +11,7 @@ const app = read('assets/app.js');
 function context(pathname, search = '') {
   const body = { innerHTML: '', className: '' };
   const summary = { append(link) { body.innerHTML += `<a href="${link.href}">${link.textContent}</a>`; } };
-  const scope = { window: {}, document: { body, title: '', querySelector: selector => selector === '#summary' ? summary : null, createElement: () => ({}) }, location: { pathname, search, hash: '' }, URLSearchParams, Intl };
+  const scope = { window: {}, console:{warn(){}}, document: { body, title: '', querySelector: selector => selector === '#summary' ? summary : null, createElement: () => ({}) }, location: { pathname, search, hash: '' }, URLSearchParams, Intl };
   vm.createContext(scope);
   for (const file of dataFiles) vm.runInContext(read(file), scope, { filename: file });
   vm.runInContext(read(modelFile), scope, { filename: modelFile });
@@ -71,6 +71,28 @@ const homeHtml = home.document.body.innerHTML;
 assert(/ranking-row/.test(homeHtml), 'Home ranking list is empty');
 assert(!/分红复投/.test(homeHtml), 'Home still references the retired reinvestment caliber');
 assert(!/baseReturn|undefined/.test(homeHtml), 'Home leaked a retired field or undefined value');
+// 数据异常按股隔离，研究资格与计算有效分开。
+const broken=context('/index.html');
+delete broken.window.STOCK_RESEARCH.stocks[0].model;
+vm.runInContext(app,broken);
+assert(/ranking-row/.test(broken.document.body.innerHTML),'One missing model broke the whole ranking');
+const pending=context('/index.html');
+pending.window.STOCK_RESEARCH.stocks.forEach(s=>{s.model.rankingDecision.eligible=false;});
+vm.runInContext(app,pending);
+assert(/暂无证据审核通过/.test(pending.document.body.innerHTML),'Missing no-ranked-stocks state');
+assert(!/class="ranking-row"/.test(pending.document.body.innerHTML),'Paused stock still appears in ranking');
+const negativePool=context('/index.html');
+negativePool.window.STOCK_RESEARCH.stocks.forEach(s=>{s.price*=100;});
+vm.runInContext(app,negativePool);
+assert(/均未达到/.test(negativePool.document.body.innerHTML),'Missing all-below-hurdle state');
+const future=context('/stock.html','?code=300750');
+const futureStock=future.window.STOCK_RESEARCH.stocks.find(s=>s.code==='300750');
+futureStock.profitForecast.year=2027;
+vm.runInContext(app,future);
+assert(/2027年利润预测/.test(future.document.body.innerHTML),'Forecast heading is hard-coded');
+const fiscal=context('/stock.html','?code=09988');
+vm.runInContext(app,fiscal);
+assert(/FY2027正常化利润锚/.test(fiscal.document.body.innerHTML),'Fiscal forecast label missing');
 const archived = fs.readdirSync(path.join(root, 'reports/stocks'));
 const missing = stocks.filter(s => !archived.some(file => file.includes(s.code)));
 // 归档必须与页面同口径：不得残留分红复投、期末持股、折现值等旧口径表述。
@@ -84,4 +106,4 @@ for (const file of archived.filter(name => name.endsWith('.md'))) {
   }
 }
 console.log(`PASS: ${stocks.length} stocks, ${industries.length} industries, ${routes.length} routes, local links and negative-return chart.`);
-if (missing.length) console.log(`Archive coverage warning (web reports remain available): ${missing.map(s => `${s.name} ${s.code}`).join(', ')}`);
+assert.equal(missing.length,0,'Missing primary research archive');

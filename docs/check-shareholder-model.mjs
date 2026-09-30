@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 
-const { irr, pv, scenario, evaluate, fadeGrowth, sensitivity } = createRequire(import.meta.url)('../assets/shareholder-model.js');
+const { irr, pv, scenario, evaluate, fadeGrowth, sensitivity, firstYearDividend, eligibility, ranked } = createRequire(import.meta.url)('../assets/shareholder-model.js');
 const near = (actual, expected, tolerance = 1e-10) => assert(Math.abs(actual - expected) < tolerance, `${actual} differs from ${expected}`);
 
 const couponFlows = Array(9).fill(5).concat(105);
@@ -43,7 +43,12 @@ for (const stock of stocks) {
     assert(Number.isFinite(item.fairPrice) && item.fairPrice >= 0, `${stock.code}: invalid reference price`);
   }
 }
-const stock = stocks.find(item => item.code === '000568');
+// 固定独立夹具，真实公司价格更新不会改变回归基准。
+const stock = { price:69.96, model:{version:'shareholder-irr-v1',requiredReturn:.11,assumptions:[
+  {name:'悲观',eps:4.62,early:-.02,late:0,payout:.7,exitPE:10},
+  {name:'基准',eps:5.16,early:.04,late:.02,payout:.8,exitPE:13},
+  {name:'乐观',eps:5.71,early:.07,late:.04,payout:.8,exitPE:16}
+]}};
 const result = evaluate(stock);
 near(result.base.irr, 0.08291604324606527);
 near(result.base.fairPrice, 57.84628269165934);
@@ -52,6 +57,26 @@ assert(stress.metrics.every(m => m.low < result.base.irr && m.high > result.base
 assert(stress.hurdle[0].fairPrice > stress.hurdle[1].fairPrice && stress.hurdle[1].fairPrice > stress.hurdle[2].fairPrice);
 assert(stress.terminalShare > 0 && stress.terminalShare < 1);
 assert.equal(stocks.find(s => s.code === '01030').model.rankingEligible, false);
+assert.throws(() => evaluate({price:100}), /Unsupported/);
+assert.throws(() => evaluate({...stock,model:{...stock.model,assumptions:[stock.model.assumptions[1],stock.model.assumptions[0],stock.model.assumptions[2]]}}), /labels/);
+assert.throws(() => scenario(100,.1,{eps:10,exitPE:10,growthRates:Array(10),payoutRates:Array(10).fill(0)}), /annual EPS/);
+const staged = scenario(100,.1,{eps:10,early:.1,late:0,payout:.5,exitPE:10,stageYears:2});
+assert.deepEqual(staged.growthRates,[.1,.1,0,0,0,0,0,0,0,0]);
+const parts={known:2.51,replacedFraction:.5,exDate:'2026-09-30',source:'announcement'};
+near(firstYearDividend(4,parts,'2026-09-29'),4.51);
+near(firstYearDividend(4,parts,'2026-09-30'),2);
+const partial = scenario(100,.1,{eps:10,exitPE:10,early:0,late:0,payout:.4,firstDividendParts:parts,priceDate:'2026-09-29'});
+near(partial.rows[0].dividend,4.51); near(partial.rows[1].dividend,4);
+assert.equal(eligibility(stock,result).eligible,false);
+const approved={...stock,code:'test',model:{...stock.model,rankingDecision:{eligible:true,evidenceStatus:'部分核验',reviewedAt:'2026-09-30',reason:'fixture'}}};
+assert.equal(ranked([approved,{...stock,code:'pending'},{code:'bad'}]).length,1);
+assert.equal(ranked([{...approved,model:{...approved.model,rankingEligible:false}}]).length,0);
+for(const s of stocks){
+  assert(s.model.rankingDecision?.reason && s.model.rankingDecision.reviewedAt,`${s.code}: missing eligibility evidence`);
+  const e=evaluate(s);
+  for(const item of e.scenarios) near(pv(item.rows.map(r=>r.cashFlow),item.irr)/s.price,1,1e-8);
+  near(irr(e.base.fairPrice,e.base.rows.map(r=>r.cashFlow)),s.model.requiredReturn);
+}
 
 // 币种口径：模型币种为港元时，价格、EPS、分红与终值都必须是港元，
 // 而经营报表可能是人民币或美元。每只港股模型都要声明换算关系，
