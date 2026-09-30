@@ -77,6 +77,7 @@
     const d = window.ShareholderModel.sensitivity(stock);
     const pct = n => `${(n * 100).toFixed(1)}%`;
     return `<div class="model-review"><div class="section-head"><h3>假设依据与估值依赖</h3><p>${review.status} · 方法审阅 ${review.reviewedAt}</p></div>
+      ${stock.model.rankAssessment ? `<p class="method-note">模型类型：${stock.model.rankAssessment.type} · 情景可信度：${stock.model.rankAssessment.confidence}。这是研究假设的证据分层，不是买入评级、概率或收益保证。</p>` : ''}
       <p>十年后EPS为起点的 <strong>${d.epsMultiple.toFixed(2)} 倍</strong>；第十年卖出所得占模型总现值的 <strong>${pct(d.terminalShare)}</strong>（按研究回报要求折现）。占比越高，结论越依赖远期盈利和退出估值。</p>
       <dl class="assumption-evidence"><div><dt>盈利起点</dt><dd>${stock.profitForecast.note}</dd></div><div><dt>经营路径</dt><dd>${review.operatingCheck}</dd></div><div><dt>资金约束</dt><dd>${review.capitalCheck}</dd></div><div><dt>每股口径</dt><dd>${review.shareCheck}</dd></div><div><dt>退出估值</dt><dd>${review.exitCheck}</dd></div></dl><ul class="bullet-list">${(review.references || []).map(r => `<li><a href="${r.url}" target="_blank" rel="noopener">${r.label}</a>（${r.date}） · ${r.locator} · ${r.status}</li>`).join("")}</ul>
       <details class="projection"><summary>敏感性分析 · 单项假设变化会带来什么影响</summary>
@@ -115,8 +116,11 @@
 
   function rankingControls() {
     const total = rankedBy(homeSort).length;
+    const topCount = Math.min(10, total);
+    const shown = homeAll ? total : topCount;
+    const toggleLabel = total <= 10 ? `全部排行（${total}只）` : homeAll ? `只看前${topCount}（${topCount}只）` : `查看全部排行（${total}只）`;
     const button = (mode, label) => `<button type="button" class="toggle" data-sort="${mode}" aria-pressed="${homeSort === mode}">${label}</button>`;
-    return `<div class="ranking-controls"><span class="control-label">排序</span>${button("surplus", "按回报差额")}${button("irr", "按基准 IRR")}<button type="button" class="toggle" id="toggle-all" aria-pressed="${homeAll}">${homeAll ? "只看前十" : `查看全部 ${total} 只`}</button></div>`;
+    return `<div class="ranking-controls"><span class="control-label">排序</span>${button("surplus", "按回报差额")}${button("irr", "按基准 IRR")}<button type="button" class="toggle" id="toggle-all" aria-pressed="${homeAll}" ${total <= 10 ? "disabled" : ""}>${toggleLabel}</button><span class="ranking-count" aria-live="polite">当前显示 <strong>${shown}</strong> / ${total} 只可排名 · 研究库 ${db.stocks.length} 只</span></div>`;
   }
 
   function renderRanking() {
@@ -191,7 +195,7 @@
   function renderHome() {
     document.body.className = "home-page";
     document.title = `收益率排行 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}<div class="ranking-list">${rankingRows()}</div><p class="ranking-note">研究池 ${db.stocks.length} 只，参与排名 ${rankedBy(homeSort).length} 只；其余因关键假设待核验暂停排名，仍可在报告目录查看。各股行情日不同，细小差额不代表确定优势。统一采用十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
+    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}<div class="ranking-list">${rankingRows()}</div><p class="ranking-note">研究池 ${db.stocks.length} 只，参与排名 ${rankedBy(homeSort).length} 只；其余无法建立明确基准路径，保留演算但不排名。榜单比较的是条件研究情景，不表示未来预测已核实；有限可信度及零股息终值型需额外关注资本约束与终值依赖。各股行情日不同，细小差额不代表确定优势。统一采用十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
     bindRanking();
   }
 

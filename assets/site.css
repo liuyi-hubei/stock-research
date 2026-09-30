@@ -84,6 +84,9 @@ button, input { font: inherit; }
 .rank-surplus strong { font: 500 21px/1.2 var(--mono); font-variant-numeric: tabular-nums; }
 .ranking-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; }
 .control-label { margin-right: 2px; color: var(--muted); font-size: 12px; }
+.ranking-count { margin-left: auto; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.ranking-count strong { color: var(--text); font-weight: 600; }
+@media (max-width: 640px) { .ranking-count { flex-basis: 100%; margin-left: 0; padding-top: 4px; } }
 .toggle { padding: 7px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: #535c69; font-size: 12px; cursor: pointer; transition: border-color .18s, color .18s; }
 .toggle:hover { border-color: #c7cdd6; }
 .toggle[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
