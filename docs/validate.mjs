@@ -15,6 +15,8 @@ function context(pathname, search = '') {
   vm.createContext(scope);
   for (const file of dataFiles) vm.runInContext(read(file), scope, { filename: file });
   vm.runInContext(read(modelFile), scope, { filename: modelFile });
+  vm.runInContext(read('assets/research-freshness.js'), scope);
+  vm.runInContext(read('assets/report-query.js'), scope);
   return scope;
 }
 function localLinks(html, filename) {
@@ -45,12 +47,19 @@ for (const [file, search] of routes) {
   vm.runInContext(app, scope, { filename: 'assets/app.js' });
   assert(scope.document.body.innerHTML.length > 100, `Empty route: ${file}${search}`);
   localLinks(scope.document.body.innerHTML, file);
+  if (file === 'stock.html' && search !== '?code=missing') {
+    const html = scope.document.body.innerHTML;
+    assert(html.includes('id="price-trial-form"') && html.includes('id="price-trial-results"'), `Missing price trial: ${search}`);
+    assert(html.includes('恢复研究基准价') && html.includes('分红领取权沿用'), `Missing trial boundaries: ${search}`);
+  }
 }
 for (const file of ['index.html', 'reports.html', 'stock.html', 'industry.html']) {
   const html = read(file);
   localLinks(html, file);
   const scripts = [...html.matchAll(/<script src="([^"?]+)/g)].map(m => m[1]);
-  for (const required of [...dataFiles.slice(0, 2), modelFile, 'assets/app.js']) assert(scripts.includes(required), `${file}: missing script ${required}`);
+  for (const required of [...dataFiles.slice(0, 2), modelFile, 'assets/research-freshness.js', 'assets/app.js']) assert(scripts.includes(required), `${file}: missing script ${required}`);
+  assert(scripts.indexOf('assets/research-freshness.js') < scripts.indexOf('assets/app.js'), `${file}: invalid freshness script order`);
+  assert(scripts.includes('assets/report-query.js') && scripts.indexOf('assets/report-query.js') < scripts.indexOf('assets/app.js'), `${file}: invalid query script dependency`);
   assert(scripts.indexOf(dataFiles[0]) < scripts.indexOf(dataFiles[1]) && scripts.indexOf(dataFiles[1]) < scripts.indexOf(modelFile) && scripts.indexOf(modelFile) < scripts.indexOf('assets/app.js'), `${file}: invalid script order`);
 }
 localLinks(read('report-600863-20260921.html'), 'report-600863-20260921.html');
@@ -71,6 +80,19 @@ const homeHtml = home.document.body.innerHTML;
 assert(/ranking-row/.test(homeHtml), 'Home ranking list is empty');
 assert(!/分红复投/.test(homeHtml), 'Home still references the retired reinvestment caliber');
 assert(!/baseReturn|undefined/.test(homeHtml), 'Home leaked a retired field or undefined value');
+const chartHTML=homeHtml.match(/<section id="ranking-chart"[\s\S]*?<\/section>/)?.[0];
+assert(chartHTML,'Missing ranking comparison chart');
+assert.equal((chartHTML.match(/data-podium="[123]"/g)||[]).length,Math.min(3,home.window.ShareholderModel.ranked(home.window.STOCK_RESEARCH.stocks,'surplus').length),'Chart top-three highlight count');
+const disclosureTag=homeHtml.match(/<details\b[^>]*id="ranking-details"[^>]*>/)?.[0];
+assert(disclosureTag && !/\bopen(?:\s|=|>)/.test(disclosureTag),'Detailed ranking must be collapsed by default');
+assert(/查看详细排名/.test(homeHtml),'Missing chart-to-list disclosure entry');
+const ranked=home.window.ShareholderModel.ranked(home.window.STOCK_RESEARCH.stocks,'surplus').map(row=>row.stock);
+assert.equal((chartHTML.match(/class="return-chart-row"/g)||[]).length,Math.min(10,ranked.length),'Chart row count differs from ranked pool');
+for(const s of ranked.slice(0,10)){
+ const r=s.returnEvaluation.base;
+ assert(chartHTML.includes(`${s.name}：基准IRR ${(r.irr*100).toFixed(1)}%，回报要求 ${(s.model.requiredReturn*100).toFixed(1)}%`),'Chart binding differs from shared model');
+}
+for(const m of chartHTML.matchAll(/(?:left|width):(-?\d+(?:\.\d+)?)%/g))assert(Number(m[1])>=0 && Number(m[1])<=100,'Chart mark outside scale');
 // 数据异常按股隔离，研究资格与计算有效分开。
 const broken=context('/index.html');
 delete broken.window.STOCK_RESEARCH.stocks[0].model;
@@ -81,10 +103,13 @@ pending.window.STOCK_RESEARCH.stocks.forEach(s=>{s.model.rankingDecision.eligibl
 vm.runInContext(app,pending);
 assert(/暂无证据审核通过/.test(pending.document.body.innerHTML),'Missing no-ranked-stocks state');
 assert(!/class="ranking-row"/.test(pending.document.body.innerHTML),'Paused stock still appears in ranking');
+assert(!/class="return-chart-row"/.test(pending.document.body.innerHTML),'Paused stock still appears in chart');
 const negativePool=context('/index.html');
 negativePool.window.STOCK_RESEARCH.stocks.forEach(s=>{s.price*=100;});
 vm.runInContext(app,negativePool);
 assert(/均未达到/.test(negativePool.document.body.innerHTML),'Missing all-below-hurdle state');
+assert(/return-chart-guide is-zero/.test(negativePool.document.body.innerHTML),'Missing chart zero reference');
+assert(/基准IRR -\d/.test(negativePool.document.body.innerHTML),'Chart omitted negative return');
 const future=context('/stock.html','?code=300750');
 const futureStock=future.window.STOCK_RESEARCH.stocks.find(s=>s.code==='300750');
 futureStock.profitForecast.year=2027;

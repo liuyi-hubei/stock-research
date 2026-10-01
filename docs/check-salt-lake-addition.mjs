@@ -1,0 +1,34 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const c=vm.createContext({window:{}});
+for(const f of ['assets/shareholder-model.js','data/stocks.js','data/additional-stocks.js']) vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+const matches=c.window.STOCK_RESEARCH.stocks.filter(s=>s.code==='000792');
+assert.equal(matches.length,1);
+const s=matches[0];
+assert.equal(s.price,23.83);
+assert.equal(s.market,'深交所 A股');
+assert.equal(s.priceDate,'2026-09-30');
+assert.equal(s.researchDate,'2026-10-01');
+assert.equal(s.model.requiredReturn,.125);
+assert(Math.abs(s.model.assumptions[1].eps-85/52.91572541)<1e-10);
+assert.equal(s.masterViews.length,5);
+assert.equal(new Set(s.masterViews.map(v=>v.text)).size,5);
+assert(s.masterViews.every(v=>v.text.length>200));
+assert.equal(s.model.rankAssessment.type,'零股息终值型');
+assert(s.model.parameterReview.capitalCheck.includes('46.0516'));
+assert(s.dividendView.includes('−40.1621'));
+for(const a of s.model.assumptions){
+ assert.equal(a.growthRates.length,10);
+ assert.equal(a.payoutRates.length,10);
+ assert(a.payoutRates.every(p=>p===0));
+ assert(!a.firstDividend && !a.firstDividendParts);
+}
+const result=c.window.ShareholderModel.evaluate(s);
+assert(Number.isFinite(result.base.irr));
+assert(result.base.rows.every(row=>row.dividend===0));
+for(const suffix of ['','-数据核验']) assert(fs.existsSync(path.join(root,`reports/stocks/盐湖股份-000792${suffix}.md`)));
+console.log('PASS: salt lake research, five views, exact shares, zero dividends, capital constraints and archives.');

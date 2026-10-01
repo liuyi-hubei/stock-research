@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const c=vm.createContext({window:{}});
+for(const f of ['assets/shareholder-model.js','data/stocks.js','data/additional-stocks.js']) vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+const matches=c.window.STOCK_RESEARCH.stocks.filter(s=>s.code==='601336');
+assert.equal(matches.length,1);
+const s=matches[0];
+assert.equal(s.price,56.35);
+assert.equal(s.priceDate,'2026-09-30');
+assert.equal(s.researchDate,'2026-10-01');
+assert.equal(s.model.currency,'元');
+assert.equal(s.model.requiredReturn,.125);
+assert(Math.abs(s.model.assumptions[1].eps-240/31.195466)<1e-10);
+assert.equal(s.masterViews.length,5);
+assert.equal(new Set(s.masterViews.map(v=>v.text)).size,5);
+assert(s.masterViews.every(v=>v.text.length>200));
+assert(s.model.parameterReview.capitalCheck.includes('不采用'));
+assert(s.companyStatus.some(t=>t.includes('待股东会批准')));
+for(const a of s.model.assumptions){
+ assert.equal(a.growthRates.length,10);
+ assert.equal(a.payoutRates.length,10);
+ assert(!a.firstDividend && !a.firstDividendParts);
+}
+assert(Number.isFinite(c.window.ShareholderModel.evaluate(s).base.irr));
+for(const suffix of ['','-数据核验']) assert(fs.existsSync(path.join(root,`reports/stocks/新华保险-601336${suffix}.md`)));
+console.log('PASS: insurance study, five distinct views, share denominator, conditional capital/distribution, dates and archives.');

@@ -79,8 +79,8 @@ if (section) body.push('</section>');
 const html = `<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)} | 长期主义研究室</title>
-<link rel="icon" href="assets/brand-mark.svg"><link rel="stylesheet" href="assets/site.css?v=20260917-orange-3"></head>
-<body class="industry-page"><header class="site-header"><div class="shell nav"><a class="brand" href="index.html"><img class="brand-mark" src="assets/brand-mark.svg" width="32" height="32" alt="">长期主义研究室</a><nav class="nav-links" aria-label="主导航"><a href="index.html">收益率排行</a><a href="reports.html?category=stocks" aria-current="page">个股研究</a><a href="reports.html?category=industries">行业研究</a></nav></div></header>
+<link rel="icon" href="assets/brand-mark-ly-serif.png?v=20261001-ly-serif-1"><link rel="stylesheet" href="assets/site.css?v=20261001-industry-card-1"></head>
+<body class="industry-page"><header class="site-header"><div class="shell nav"><a class="brand" href="index.html"><img class="brand-mark" src="assets/brand-mark-ly-serif.png?v=20261001-ly-serif-1" width="32" height="32" alt="">长期主义研究室</a><nav class="nav-links" aria-label="主导航"><a href="index.html">收益率排行</a><a href="reports.html?category=stocks" aria-current="page">个股研究</a><a href="reports.html?category=industries">行业研究</a></nav></div></header>
 <main><section class="detail-cover"><div class="shell"><a class="back" href="stock.html?code=600863">← 返回华能蒙电个股研究</a><h1>${escape(title)}</h1><p class="ind-p">补充研究 · 报告日期 2026-09-21 · 行情及财务期间以原文各处标注为准</p><nav class="report-nav" aria-label="报告目录">${nav.join('')}</nav></div></section>
 <article class="shell report-body"><p class="method-note">本页按原文归档展示，未重新核验数据，不覆盖原有估值模型。原文中的编号引用未附完整来源索引，须结合原始资料核对。</p><a class="text-link" href="${source}" download>下载 Markdown 原文 ↗</a>
 ${body.join('\n')}</article></main><footer class="site-footer"><div class="shell">研究记录，不构成投资建议。</div></footer></body></html>

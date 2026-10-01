@@ -1,0 +1,31 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const c=vm.createContext({window:{}});
+for(const f of ['assets/shareholder-model.js','data/stocks.js','data/additional-stocks.js']) vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+const matches=c.window.STOCK_RESEARCH.stocks.filter(s=>s.code==='002027');
+assert.equal(matches.length,1);
+const s=matches[0];
+assert.equal(s.market,'深交所 A股');
+assert.equal(s.priceDate,'2026-09-30');
+assert.equal(s.researchDate,'2026-10-01');
+assert(Math.abs(s.model.assumptions[1].eps-48/144.42199726)<1e-10);
+assert.equal(s.masterViews.length,5);
+assert.equal(new Set(s.masterViews.map(v=>v.text)).size,5);
+assert(s.masterViews.every(v=>v.text.length>200));
+assert(s.model.parameterReview.capitalCheck.includes('12.1773'));
+assert(s.model.parameterReview.shareCheck.includes('14,442,199,726'));
+assert(s.dividendView.includes('9月4日已除息'));
+for(const a of s.model.assumptions){
+ assert.equal(a.growthRates.length,10);
+ assert.equal(a.payoutRates.length,10);
+ assert(!a.firstDividend && !a.firstDividendParts);
+}
+const result=c.window.ShareholderModel.evaluate(s);
+assert(Number.isFinite(result.base.irr));
+assert(result.base.irr<s.model.requiredReturn);
+for(const suffix of ['','-数据核验']) assert(fs.existsSync(path.join(root,`reports/stocks/分众传媒-002027${suffix}.md`)));
+console.log('PASS: Focus Media five independent views, shares, lease constraints, historical dividend boundary and archives.');
