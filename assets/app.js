@@ -390,8 +390,15 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     const tracking = stock.evidenceTracking;
     if (!tracking) return "";
     const cards = tracking.observations.map(item => `<article class="signal-card"><div class="section-label">${item.label}</div><strong>${item.value}</strong><time>${item.date}</time><p>${item.detail}</p><a href="${item.source[1]}" target="_blank" rel="noopener noreferrer">查看原始披露 ↗</a></article>`).join("");
+    const forecasts = tracking.analystForecasts;
+    const forecastRows = (forecasts?.rows || []).map(item => {
+      const growth = (item.profits[1] / item.profits[0] - 1) * 100;
+      const link = /^https:\/\//.test(item.url || '') ? `<a href="${escapeText(item.url)}" target="_blank" rel="noopener noreferrer">原件 · 第${escapeText(item.page)}页 ↗</a>` : '来源待核';
+      return `<tr><th scope="row">${escapeText(item.institution)}</th><td><time>${escapeText(item.reportDate)}</time></td><td><time>${escapeText(item.indexedDate)}</time></td>${item.profits.map(value => `<td>${value.toFixed(2)}</td>`).join('')}<td>${growth >= 0 ? '+' : ''}${growth.toFixed(2)}%</td><td>${link}</td></tr>`;
+    }).join('');
+    const comparison = forecastRows ? `<div class="tracking-price-head" id="analyst-forecasts"><h3>${escapeText(forecasts.title)}</h3><p>${escapeText(forecasts.note)}</p></div><div class="table-wrap"><table class="tracking-table"><caption>${escapeText(forecasts.title)} · 归母净利润（亿元）</caption><thead><tr>${['机构','报告日期','平台入库日期','2026E','2027E','2028E','2027增速','来源'].map(label => `<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${forecastRows}</tbody></table></div>` : '';
     const rows = tracking.prices.rows.map(([date, guojiao, wuliangye, url]) => `<tr><td><time>${date}</time></td><td>¥${guojiao}</td><td>¥${wuliangye}</td><td>¥${guojiao - wuliangye}</td><td><a href="${url}" target="_blank" rel="noopener noreferrer">原始价格记录 ↗</a></td></tr>`).join("");
-    return `<section class="section tracking-section" id="tracking"><div class="section-head"><h2>经营证据跟踪</h2><p>最近核对 ${tracking.updatedAt} · 每项保留披露日期和口径</p></div><p class="tracking-intro">${tracking.intro}</p><div class="signal-grid">${cards}</div><div class="tracking-price-head"><h3>国窖1573与普五价格记录</h3><p>${tracking.prices.note}</p></div><div class="table-wrap"><table class="tracking-table"><thead><tr><th scope="col">日期</th><th scope="col">高度国窖</th><th scope="col">普五八代</th><th scope="col">价差</th><th scope="col">数据来源</th></tr></thead><tbody>${rows}</tbody></table></div><p class="footnote">价格稳定只能验证价格表现；判断去库存是否完成，还需后续开瓶、渠道库存和回款数据交叉核对。</p></section>`;
+    return `<section class="section tracking-section" id="tracking"><div class="section-head"><h2>经营证据跟踪</h2><p>最近核对 ${tracking.updatedAt} · 每项保留披露日期和口径</p></div><p class="tracking-intro">${tracking.intro}</p><div class="signal-grid">${cards}</div>${comparison}<div class="tracking-price-head"><h3>国窖1573与普五价格记录</h3><p>${tracking.prices.note}</p></div><div class="table-wrap"><table class="tracking-table"><thead><tr><th scope="col">日期</th><th scope="col">高度国窖</th><th scope="col">普五八代</th><th scope="col">价差</th><th scope="col">数据来源</th></tr></thead><tbody>${rows}</tbody></table></div><p class="footnote">价格稳定只能验证价格表现；判断去库存是否完成，还需后续开瓶、渠道库存和回款数据交叉核对。</p></section>`;
   }
 
   function renderStock(stock) {

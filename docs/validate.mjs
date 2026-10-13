@@ -69,6 +69,8 @@ const negative = context('/stock.html', `?code=${sample.code}`);
 const target = negative.window.STOCK_RESEARCH.stocks.find(s => s.code === sample.code);
 target.model.assumptions[0].early = -0.6;
 target.model.assumptions[0].late = -0.6;
+// 显式年度数组优先于兼容分段字段，夹具必须扰动实际生效路径。
+target.model.assumptions[0].growthRates = Array(10).fill(-0.6);
 vm.runInContext(app, negative);
 const negativeHtml = negative.document.body.innerHTML;
 const bearRow = negativeHtml.match(/悲观<\/th>([\s\S]{0,600}?)<\/tr>/);
