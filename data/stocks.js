@@ -1,5 +1,5 @@
 window.STOCK_RESEARCH = {
-  meta: { siteName: "长期主义研究室", updatedAt: "2026-10-11", priceDate: "各报告标注收盘日", dataMode: "2026年中报 · 固定情景模型" },
+  meta: { siteName: "长期主义研究室", updatedAt: "2026-10-18", priceDate: "各报告标注收盘日", dataMode: "2026年中报 · 固定情景模型" },
   stocks: [
     {
       "code": "000568",
@@ -119,7 +119,7 @@ window.STOCK_RESEARCH = {
         ]
       ],
       "evidenceTracking": {
-        "updatedAt": "2026-10-13",
+        "updatedAt": "2026-10-18",
         "intro": "按公司开瓶、出厂财报、券商动销样本、回款和研报预测分层核验。H1与双节不同时间、全品项与高度单品不同产品范围、厂内存货与渠道库存不同边界，不能相减后称为控货影响的准确值。扫码覆盖变化未披露，真实消费金额和稳态盈利尚未识别。",
         "observations": [
           {
@@ -184,7 +184,7 @@ window.STOCK_RESEARCH = {
           }
         ],
         "prices": {
-          "note": "以下为新浪财经「酒价内参」同一采集口径的终端零售均价，单位元/瓶；价差=国窖－普五。不是批发价、厂商打款价或所有消费者的实际成交价。 最近同口径零售记录仍为10月11日，未取得10月13日新记录，不以复核日冒充采价日。",
+          "note": "以下为新浪财经「酒价内参」同一采集口径的终端零售均价，单位元/瓶；价差=国窖－普五。不是批发价、厂商打款价或所有消费者的实际成交价。 截至10月17日为本轮最新同口径记录；10月17日为采价日，不以复核日冒充采价日。",
           "rows": [
             [
               "2026-09-26",
@@ -203,6 +203,12 @@ window.STOCK_RESEARCH = {
               876,
               805,
               "https://finance.sina.com.cn/chanjing/jync/2026-10-11/doc-iniuvhuq0528018.shtml"
+            ],
+            [
+              "2026-10-17",
+              892,
+              801,
+              "https://finance.sina.com.cn/chanjing/jync/2026-10-17/doc-inivnvku1419407.shtml"
             ]
           ]
         },
