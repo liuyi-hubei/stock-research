@@ -22,7 +22,7 @@ async (page) => {
     check(await page.locator('.return-chart-row').count() === Math.min(10,total), 'chart top ten '+width);
     const chartDimensions = await page.evaluate(() => ({width:innerWidth, scroll:document.documentElement.scrollWidth}));
     check(chartDimensions.scroll <= chartDimensions.width + 1, 'chart overflow '+width);
-    for (const code of ['01810','300750','600941','01030','002594','600809','002304','09988','600873','600585','300760','000568']) {
+    for (const code of ['01810','300750','600941','01030','002594','600809','002304','09988','600873','600585','300760','000568','002352']) {
       await page.goto('http://127.0.0.1:8080/stock.html?code=' + code);
       check(await page.locator('h1').count() === 1, code + ' heading');
       await page.getByRole('navigation', {name:'报告目录'}).getByRole('link', {name:'估值',exact:true}).click();
@@ -51,14 +51,21 @@ async (page) => {
       if (await detail.count()) { await detail.locator('summary').click(); check(await detail.getAttribute('open') !== null, code + ' expand details'); }
       const dimensions = await page.evaluate(() => ({width:innerWidth, scroll:document.documentElement.scrollWidth}));
       check(dimensions.scroll <= dimensions.width + 1, code + ' overflow ' + width);
-      if (['01810','300750','002594','600809','002304','09988','600873','600585','300760','000568'].includes(code)) await page.screenshot({path:'output/playwright/' + code + '-' + width + '.png',fullPage:true});
+      if (['01810','300750','002594','600809','002304','09988','600873','600585','300760','000568','002352'].includes(code)) await page.screenshot({path:'output/playwright/' + code + '-' + width + '.png',fullPage:true});
     }
     await page.goto('http://127.0.0.1:8080/reports.html?category=stocks');
     check(await page.getByText('小米集团', {exact:true}).count() > 0, 'xiaomi listing');
     check(await page.getByText('宁德时代', {exact:true}).count() > 0, 'catl listing');
-    for (const name of ['比亚迪','山西汾酒','洋河股份','阿里巴巴','梅花生物','海螺水泥','迈瑞医疗']) check(await page.getByText(name, {exact:true}).count() > 0, name + ' listing');
+    for (const name of ['比亚迪','山西汾酒','洋河股份','阿里巴巴','梅花生物','海螺水泥','迈瑞医疗','顺丰控股']) check(await page.getByText(name, {exact:true}).count() > 0, name + ' listing');
     const dimensions = await page.evaluate(() => ({width:innerWidth, scroll:document.documentElement.scrollWidth}));
     check(dimensions.scroll <= dimensions.width + 1, 'listing overflow');
+    await page.goto('http://127.0.0.1:8080/reports.html?category=industries');
+    const industryLink=page.locator('a.industry-report-row').first();
+    check(await industryLink.count()===1,'industry listing');
+    await industryLink.click();
+    check(await page.locator('h1').count()===1,'industry heading');
+    const industryDimensions=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));
+    check(industryDimensions.scroll<=industryDimensions.width+1,'industry overflow '+width);
   }
   if (failures.length || errors.length) throw new Error(JSON.stringify({failures,errors}));
   return {initial,expanded,failures,errors};
