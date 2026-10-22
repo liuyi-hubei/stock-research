@@ -4296,7 +4296,7 @@
     rankAssessment: conchResearch.assessment
   });
   stocks.push(conch);
-  window.STOCK_RESEARCH.meta.updatedAt = "2026-10-13";
+  if (window.STOCK_RESEARCH.meta.updatedAt < "2026-10-13") window.STOCK_RESEARCH.meta.updatedAt = "2026-10-13";
   // 顺丰A股独立新增：置于历史审核补丁之后，保留原有51股全部数据。
   const sfHolding = studyModel({
   "code": "002352",
@@ -4687,6 +4687,6 @@
   "dividendNote": "2025末期0.43元（5月19日除息）及2026中期0.49元（9月17日除息）均不属于10月16日新买入权利。基准/乐观采用拟45%/50%/不低于50%的兑现条件，而非已公告未来金额；2029年后50%/55%完全为研究假设。悲观35%假设规划未获批或调整。首年按2026年度每股预算减已除息0.49元，只替代一次完整预测。日历年度近似不模拟未来中期实际支付日期，不另加存量现金。"
 });
   stocks.push(sfHolding);
-  window.STOCK_RESEARCH.meta.updatedAt = "2026-10-19";
+  if (window.STOCK_RESEARCH.meta.updatedAt < "2026-10-19") window.STOCK_RESEARCH.meta.updatedAt = "2026-10-19";
   stocks.find(stock => stock.code === "600863").supplementaryReport = "report-600863-20260921.html";
 })();
