@@ -13,6 +13,21 @@ let count = 0;
 for (const file of fs.readdirSync(path.join(root, 'reports/stocks')).filter(f => f.endsWith('.md'))) {
   const stock = db.stocks.find(s => file.includes(`-${s.code}`));
   if (!stock?.model.parameterReview) continue;
+  const target = path.join(root, 'reports/stocks', file), original = fs.readFileSync(target, 'utf8');
+  const pattern = /<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/;
+  if (model.isPending(stock)) {
+    const r = stock.model.parameterReview, decision = stock.model.rankingDecision;
+    const block = ['<!-- MODEL_REVIEW_START -->', '## 参数审阅与敏感性（自动同步）',
+      `方法审阅：${r.reviewedAt}；行情日：${stock.priceDate}；财报期：${stock.model.financialPeriod}。本节不代表重新核验了财务来源。`,
+      '> 待重新评估；参考买入价暂不提供。暂停收益计算、价格试算与敏感性演算。',
+      `待评估原因：${stock.model.pendingReason || decision.reason}`,
+      `排名审核：${decision.evidenceStatus}（${decision.reviewedAt}）。${decision.reason}`,
+      (r.references || []).map(ref => `- [${ref.label}](${ref.url})（${ref.date}）：${ref.locator}；${ref.status}`).join('\n'),
+      '<!-- MODEL_REVIEW_END -->'].join('\n\n');
+    const updated = pattern.test(original) ? original.replace(pattern, block) : `${original.trimEnd()}\n\n${block}\n`;
+    if (generatedFile(target, updated)) count++;
+    continue;
+  }
   let evaluation;
   try { evaluation = model.evaluate(stock); } catch (error) { throw Error(`${stock.code}: ${error.message}`); }
   const r = stock.model.parameterReview, d = model.sensitivity(stock), b = evaluation.base;
@@ -30,8 +45,6 @@ for (const file of fs.readdirSync(path.join(root, 'reports/stocks')).filter(f =>
     '| 单项变化 | 扰动 | 下调后IRR | 原基准IRR | 上调后IRR |\n| --- | --- | --- | --- | --- |\n' + d.metrics.map(m => `| ${m.label} | ${m.change} | ${pct(m.low)} | ${pct(b.irr)} | ${pct(m.high)} |`).join('\n'),
     '| 回报门槛 | 达标参考价 | IRR与门槛差额 |\n| --- | --- | --- |\n' + d.hurdle.map(h => `| ${pct(h.rate)} | ${cash(h.fairPrice)} | ${(h.surplus * 100).toFixed(2)}个百分点 |`).join('\n'),
     '以上逐项扰动保持其他条件不变，属于敏感性演算，不代表概率区间；改变回报门槛不会改变同一组现金流的IRR。', '<!-- MODEL_REVIEW_END -->'].join('\n\n');
-  const target = path.join(root, 'reports/stocks', file), original = fs.readFileSync(target, 'utf8');
-  const pattern = /<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/;
   const updated = pattern.test(original) ? original.replace(pattern, block) : `${original.trimEnd()}\n\n${block}\n`;
   if (generatedFile(target, updated)) count++;
 }

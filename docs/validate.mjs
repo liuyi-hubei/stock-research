@@ -3,6 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
+import { loadFramework, frameworkFiles } from './research-framework-files.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const dataFiles = ['data/stocks.js', 'data/additional-stocks.js', 'data/industries.js'];
@@ -17,6 +18,7 @@ function context(pathname, search = '') {
   vm.runInContext(read(modelFile), scope, { filename: modelFile });
   vm.runInContext(read('assets/research-freshness.js'), scope);
   vm.runInContext(read('assets/report-query.js'), scope);
+  loadFramework(root,scope);
   return scope;
 }
 function localLinks(html, filename) {
@@ -49,6 +51,13 @@ for (const [file, search] of routes) {
   localLinks(scope.document.body.innerHTML, file);
   if (file === 'stock.html' && search !== '?code=missing') {
     const html = scope.document.body.innerHTML;
+    const stock=scope.window.STOCK_RESEARCH.stocks.find(s=>search===`?code=${s.code}`);
+    if(scope.window.ShareholderModel.isPending(stock)){
+      assert(html.includes('待重新评估') && /参考买入价[：:\s]*暂不提供/.test(html),`Missing pending disclosure: ${search}`);
+      assert(!/id="(?:price-trial-form|price-trial-results|trial-price)"/.test(html),`Pending price trial rendered: ${search}`);
+      assert(!/下调后IRR|上调后IRR|第1—10年EPS增速|<caption>三情景|<th>起始EPS<\/th>/.test(html),`Pending scenario or sensitivity rendered: ${search}`);
+      continue;
+    }
     assert(html.includes('id="price-trial-form"') && html.includes('id="price-trial-results"'), `Missing price trial: ${search}`);
     assert(html.includes('恢复研究基准价') && html.includes('分红领取权沿用'), `Missing trial boundaries: ${search}`);
   }
@@ -60,11 +69,12 @@ for (const file of ['index.html', 'reports.html', 'stock.html', 'industry.html']
   for (const required of [...dataFiles.slice(0, 2), modelFile, 'assets/research-freshness.js', 'assets/app.js']) assert(scripts.includes(required), `${file}: missing script ${required}`);
   assert(scripts.indexOf('assets/research-freshness.js') < scripts.indexOf('assets/app.js'), `${file}: invalid freshness script order`);
   assert(scripts.includes('assets/report-query.js') && scripts.indexOf('assets/report-query.js') < scripts.indexOf('assets/app.js'), `${file}: invalid query script dependency`);
+  for(const dependency of [...frameworkFiles(root),'assets/research-framework.js']) assert(scripts.includes(dependency) && scripts.indexOf(dependency)<scripts.indexOf('assets/app.js'),`${file}: missing research dependency ${dependency}`);
   assert(scripts.indexOf(dataFiles[0]) < scripts.indexOf(dataFiles[1]) && scripts.indexOf(dataFiles[1]) < scripts.indexOf(modelFile) && scripts.indexOf(modelFile) < scripts.indexOf('assets/app.js'), `${file}: invalid script order`);
 }
 localLinks(read('report-600863-20260921.html'), 'report-600863-20260921.html');
 // Regression: a negative pessimistic IRR must render as a negative value, never truncated to zero.
-const sample = stocks.find(s => s.model.version === 'shareholder-irr-v1');
+const sample = stocks.find(s => !initial.window.ShareholderModel.isPending(s) && s.model.version === 'shareholder-irr-v1');
 const negative = context('/stock.html', `?code=${sample.code}`);
 const target = negative.window.STOCK_RESEARCH.stocks.find(s => s.code === sample.code);
 target.model.assumptions[0].early = -0.6;

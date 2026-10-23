@@ -66,7 +66,11 @@
     const start = nearTerm[nearTerm.length - 1];
     return Array.from({ length: 10 }, (_, i) => i < nearTerm.length ? nearTerm[i] : start + (target - start) * Math.min(1, (i + 1 - nearTerm.length) / (endYear - nearTerm.length)));
   }
+  function isPending(stock) {
+    return stock?.model?.version === "shareholder-irr-v1" && stock.model.status === "pending";
+  }
   function sensitivity(stock) {
+    if (isPending(stock)) return null;
     const a = { ...stock.model.assumptions[1], priceDate: stock.priceDate }, h = stock.model.requiredReturn;
     const base = scenario(stock.price, h, a);
     const test = patch => scenario(stock.price, h, { ...a, ...patch }).irr;
@@ -81,6 +85,7 @@
       hurdle: [-0.01, 0, 0.01].map(delta => ({ rate: h + delta, fairPrice: pv(base.rows.map(r => r.cashFlow), h + delta), surplus: base.irr - h - delta })) };
   }
   function evaluate(stock) {
+    if (isPending(stock)) return null;
     if (!stock?.model || stock.model.version !== "shareholder-irr-v1" || !Array.isArray(stock.model.assumptions) || stock.model.assumptions.length !== 3) throw new Error("Unsupported shareholder model");
     if (stock.model.assumptions.some((a, i) => a?.name !== ["悲观", "基准", "乐观"][i])) throw new Error("Invalid scenario labels/order");
     const scenarios = stock.model.assumptions.map(a => scenario(stock.price, stock.model.requiredReturn, { ...a, priceDate: stock.priceDate }));
@@ -95,6 +100,7 @@
     return predicted * (1 - parts.replacedFraction) + (priceDate < parts.exDate ? parts.known : 0);
   }
   function eligibility(stock, evaluation) {
+    if (isPending(stock)) return { eligible: false, reason: stock.model.pendingReason || "收益模型待重新评估，暂停排名" };
     if (!evaluation) return { eligible: false, reason: "计算未通过核验" };
     const decision = stock.model?.rankingDecision;
     if (!decision || !["部分核验", "关键假设通过"].includes(decision.evidenceStatus) || decision.eligible !== true || stock.model.rankingEligible === false) return { eligible: false, reason: decision?.reason || stock.model?.rankingReason || "排名证据尚未审核" };
@@ -107,7 +113,7 @@
       catch { return { stock, evaluation: null }; }
     }).filter(r => eligibility(r.stock, r.evaluation).eligible).sort((a, b) => mode === "irr" ? b.evaluation.base.irr - a.evaluation.base.irr : b.evaluation.base.surplus - a.evaluation.base.surplus || b.evaluation.scenarios[0].irr - a.evaluation.scenarios[0].irr);
   }
-  const api = { pv, irr, scenario, evaluate, fadeGrowth, sensitivity, firstYearDividend, eligibility, ranked };
+  const api = { pv, irr, scenario, evaluate, fadeGrowth, sensitivity, firstYearDividend, eligibility, ranked, isPending };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.ShareholderModel = api;
 })(typeof window !== "undefined" ? window : globalThis);

@@ -27,7 +27,7 @@
     catch (error) { stock.modelError = `${stock.code}: ${error.message}`; console.warn(stock.modelError); }
   }
   const eligible = stock => window.ShareholderModel.eligibility(stock, stock.returnEvaluation).eligible;
-  const stockReturn = stock => stock.returnEvaluation ? `${(stock.returnEvaluation.base.irr * 100).toFixed(1)}%${eligible(stock) ? "" : "（条件）"}` : "待核验";
+  const stockReturn = stock => window.ShareholderModel.isPending(stock) ? "待重新评估" : stock.returnEvaluation ? `${(stock.returnEvaluation.base.irr * 100).toFixed(1)}%${eligible(stock) ? "" : "（条件）"}` : "待核验";
   const irrOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.base.irr : null);
   const surplusOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.base.surplus : null);
   const bearOf = stock => (stock.returnEvaluation ? stock.returnEvaluation.scenarios[0].irr : null);
@@ -36,7 +36,7 @@
   let homeAll = false;
 
   const navigation = [
-    { id: "ranking", label: "收益率排行", href: "index.html" },
+    { id: "ranking", label: "条件收益比较", href: "index.html" },
     { id: "reports", label: "个股研究", href: "reports.html?category=stocks" },
     { id: "industries", label: "行业研究", href: "reports.html?category=industries" }
   ];
@@ -61,10 +61,12 @@
   }
 
   function forecastTable(stock) {
+    if (window.ShareholderModel.isPending(stock)) return `<p class="method-note">盈利预测待重新评估。旧情景已撤回，尚未建立可复核的跨周期盈利与股东现金流路径，不展示预测利润、EPS或预测PE。</p>`;
     return `<div class="table-wrap"><table><thead><tr><th>情景</th><th>${stock.profitForecast.label || `${stock.profitForecast.year}正常化归母净利润`}</th><th>EPS</th><th>基准价对应预测PE</th><th>核心假设</th></tr></thead><tbody>${stock.profitForecast.scenarios.map(scenario => `<tr><td><strong>${scenario.name}</strong></td><td>${scenario.profit}</td><td>${scenario.eps}</td><td>${scenario.pe}</td><td>${scenario.reason}</td></tr>`).join("")}</tbody></table></div>`;
   }
 
   function summaryMetrics(stock) {
+    if (window.ShareholderModel.isPending(stock)) return `<div><span>十年 IRR</span><strong>待重新评估</strong></div><div><span>参考买入价</span><strong>暂不提供</strong></div><div><span>研究状态</span><strong>暂停排名</strong></div>`;
     const base = stock.returnEvaluation?.base;
     const hurdle = Number.isFinite(stock.model?.requiredReturn) ? `${(stock.model.requiredReturn * 100).toFixed(1)}%` : "待核验";
     return `<div><span>基准十年 IRR${eligible(stock) ? "" : " · 条件演算"}</span><strong>${stockReturn(stock)}</strong></div><div><span>研究回报要求</span><strong>${hurdle}</strong></div><div><span>${eligible(stock) ? "达标参考价" : "条件参考价"}</span><strong>${base ? `${currencySymbol(stock)}${formatPrice(base.fairPrice)}` : "待核验"}</strong></div>`;
@@ -136,6 +138,10 @@
   }
 
   function irrSection(stock) {
+    if (window.ShareholderModel.isPending(stock)) {
+      const r = stock.model.parameterReview;
+      return `<section class="section irr-section" id="valuation"><div class="section-head"><h2>十年股东现金流收益</h2><p>待重新评估 · 暂停排名</p></div><p class="irr-verdict"><strong>旧估算已撤回</strong> · ${escapeText(stock.model.pendingReason)}</p><p>十年 IRR：待重新评估。参考买入价：暂不提供。未确定未来分红不等于十年不分红，零股息压力测试不能作为基准预期收益。旧盈利情景、参考价格、敏感性及买入价试算已停用。</p><div class="model-review"><h3>重新评估需要解决的问题</h3>${r ? `<dl class="assumption-evidence"><div><dt>经营路径</dt><dd>${escapeText(r.operatingCheck)}</dd></div><div><dt>资金约束</dt><dd>${escapeText(r.capitalCheck)}</dd></div><div><dt>每股口径</dt><dd>${escapeText(r.shareCheck)}</dd></div><div><dt>退出估值</dt><dd>${escapeText(r.exitCheck)}</dd></div></dl><ul class="bullet-list">${(r.references || []).map(ref => `<li><a href="${escapeText(ref.url)}" target="_blank" rel="noopener">${escapeText(ref.label)}</a>（${escapeText(ref.date)}） · ${escapeText(ref.locator)}</li>`).join('')}</ul>` : ''}</div><article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${escapeText(stock.dividendView)}</p></article><p class="method-note">本次修正撤回模型结论，不代表刷新财务事实。行情日 ${escapeText(stock.priceDate)}；实际财报期 ${escapeText(stock.model.financialPeriod)}；方法审阅日 ${escapeText(stock.model.reviewedAt)}。</p></section>`;
+    }
     const result = stock.returnEvaluation;
     if (!result) return `<section class="section" id="valuation"><h2>十年模型待核验</h2><p>参数未通过检查，暂不展示收益率。</p></section>`;
     const percent = value => `${(value * 100).toFixed(1)}%`;
@@ -290,7 +296,13 @@
   }
 
   function industryBlock(block) {
+    if (block.image) {
+      const picture = block.image;
+      if (!/^assets\/industry-reports\/(?:[a-zA-Z0-9_-]+\/)+[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp)$/.test(picture.src || '')) return '';
+      return `<figure class="report-figure"><a href="${escapeText(picture.src)}" target="_blank" rel="noopener noreferrer"><img src="${escapeText(picture.src)}" alt="${escapeText(picture.alt || '')}" loading="lazy"></a><figcaption>${escapeText(picture.caption || '')}</figcaption>${picture.note ? `<p class="fig-note">${escapeText(picture.note)}</p>` : ''}</figure>`;
+    }
     if (block.h3) return `<h3 class="ind-h3">${escapeText(block.h3)}</h3>`;
+    if (block.h4) return `<h4 class="ind-h4">${escapeText(block.h4)}</h4>`;
     if (block.p) return `<p class="ind-p">${escapeText(block.p)}</p>`;
     if (block.bullets) return bullets(block.bullets.map(escapeText));
     if (block.numbered) return `<ol class="ind-numbered">${block.numbered.map(item => `<li>${escapeText(item)}</li>`).join("")}</ol>`;
@@ -305,21 +317,23 @@
   }
 
   function renderIndustry(report) {
-    document.body.className = "industry-page";
+    const paper = report.layout === 'research-paper';
+    const hasReferences = Boolean(report.referencesSectionId && report.sections.some(s => s.id === report.referencesSectionId));
+    document.body.className = `industry-page${paper ? ' industry-paper' : ''}`;
     document.title = `${report.title} | ${db.meta.siteName}`;
-    const sections = report.sections.map((section, index) => `<section class="section" id="${escapeText(section.id)}"><div class="section-head"><span class="section-label">${String(index + 2).padStart(2, "0")} / 研究正文</span><h2>${escapeText(section.title)}</h2>${section.sub ? `<p>${escapeText(section.sub)}</p>` : ''}</div>${section.blocks.map(industryBlock).join("")}</section>`).join("");
+    const sections = report.sections.map((section, index) => `<section class="section" id="${escapeText(section.id)}"><div class="section-head">${paper ? '' : `<span class="section-label">${String(index + 2).padStart(2, "0")} / 研究正文</span>`}<h2>${escapeText(section.title)}</h2>${section.sub ? `<p>${escapeText(section.sub)}</p>` : ''}</div>${section.blocks.map(industryBlock).join("")}</section>`).join("");
     const rawSource = report.sourceFile || (report.pdf ? { href: report.pdf, format: 'PDF' } : null);
     const source = rawSource && /^(?:https:\/\/|reports\/)/.test(rawSource.href || '') ? rawSource : null;
-    const download = source ? `<a class="industry-download" href="${escapeText(source.href)}" target="_blank" rel="noopener noreferrer"${/^reports\//.test(source.href) ? ' download' : ''}>下载原始 ${escapeText(source.format || '报告')} ↗</a>` : '';
+    const download = source ? `<a class="industry-download" href="${escapeText(source.href)}" target="_blank" rel="noopener noreferrer"${/^reports\//.test(source.href) ? ' download' : ''}>${escapeText(report.downloadLabel || `下载原始 ${source.format || '报告'}`)} ↗</a>` : '';
     const navItems = [['summary', '摘要'], ...(report.nav || report.sections.map(s => [s.id, s.title])), ['sources', '来源']].filter(([id], i, all) => all.findIndex(item => item[0] === id) === i);
-    const sourceLinks = (report.sources || []).filter(item => Array.isArray(item) && /^https:\/\//.test(item[2] || '')).map(item => `<a href="${escapeText(item[2])}" target="_blank" rel="noopener noreferrer"><span>${escapeText(item[0])}</span><time>${escapeText(item[1] || '')}</time><b aria-hidden="true">↗</b></a>`).join('');
-document.body.innerHTML = `${header("industries")}<main><section class="detail-cover industry-cover"><div class="shell"><a class="back" href="reports.html?category=industries">← 返回行业报告</a><div class="industry-title"><span class="eyebrow">${escapeText(report.kicker || "行业研究")} </span><h1>${escapeText(report.title)}</h1><p>${escapeText(report.subject || "")}</p><div class="industry-meta"><span>数据截至 ${escapeText(report.date)}</span>${report.author ? `<span>来源 / ${escapeText(report.author)}</span>` : ""}${download}</div></div>${report.aside?.length ? `<dl class="industry-market-strip">${report.aside.map(item => `<div><dt>${escapeText(item.label)}</dt><dd>${escapeText(item.value)}</dd>${item.note ? `<small>${escapeText(item.note)}</small>` : ""}</div>`).join("")}</dl>` : ""}<nav class="report-nav" aria-label="报告目录">${navItems.map(([id,label]) => `<a href="#${escapeText(id)}">${escapeText(label)}</a>`).join("")}</nav></div></section><div class="shell report-body industry-reading"><section class="section industry-summary" id="summary"><span class="section-label">01 / 报告摘要</span><h2>${escapeText(report.summaryTitle || "核心观点")}</h2><p class="lede">${escapeText(report.coreConclusion || "")}</p>${report.stats?.length ? `<dl class="industry-summary-stats">${report.stats.map(stat => `<div><dt>${escapeText(stat.label)}</dt><dd>${escapeText(stat.value)}</dd>${stat.note ? `<small>${escapeText(stat.note)}</small>` : ""}</div>`).join("")}</dl>` : ""}</section>${sections}<section class="section sources" id="sources"><div class="section-head"><h2>来源与原文</h2><p>网页统一排版，原始报告保留溯源</p></div>${sourceLinks ? `<div class="source-list">${sourceLinks}</div>` : ''}${report.sourcesNote ? `<p class="method-note">${escapeText(report.sourcesNote)}</p>` : ""}${report.disclaimer ? `<p class="method-note">${escapeText(report.disclaimer)}</p>` : ""}${download}</section></div></main>${footer()}`;
+    const sourceLinks = hasReferences ? '' : (report.sources || []).filter(item => Array.isArray(item) && /^https:\/\//.test(item[2] || '')).map(item => `<a href="${escapeText(item[2])}" target="_blank" rel="noopener noreferrer"><span>${escapeText(item[0])}</span><time>${escapeText(item[1] || '')}</time><b aria-hidden="true">↗</b></a>`).join('');
+document.body.innerHTML = `${header("industries")}<main><section class="detail-cover industry-cover"><div class="shell"><a class="back" href="reports.html?category=industries">← 返回行业报告</a><div class="industry-title"><span class="eyebrow">${escapeText(report.kicker || "行业研究")} </span><h1>${escapeText(report.title)}</h1><p>${escapeText(report.subject || "")}</p><div class="industry-meta"><span>${paper ? "资料范围" : "数据截至"} ${escapeText(report.date)}</span>${report.author ? `<span>来源 / ${escapeText(report.author)}</span>` : ""}${download}</div></div>${report.aside?.length ? `<dl class="industry-market-strip">${report.aside.map(item => `<div><dt>${escapeText(item.label)}</dt><dd>${escapeText(item.value)}</dd>${item.note ? `<small>${escapeText(item.note)}</small>` : ""}</div>`).join("")}</dl>` : ""}<nav class="report-nav" aria-label="报告目录">${navItems.map(([id,label]) => `<a href="#${escapeText(id)}">${escapeText(label)}</a>`).join("")}</nav></div></section><div class="shell report-body industry-reading"><section class="section industry-summary" id="summary"><span class="section-label">01 / 报告摘要</span><h2>${escapeText(report.summaryTitle || "核心观点")}</h2><p class="lede">${escapeText(report.coreConclusion || "")}</p>${report.stats?.length ? `<dl class="industry-summary-stats">${report.stats.map(stat => `<div><dt>${escapeText(stat.label)}</dt><dd>${escapeText(stat.value)}</dd>${stat.note ? `<small>${escapeText(stat.note)}</small>` : ""}</div>`).join("")}</dl>` : ""}</section>${sections}<section class="section sources" id="sources"><div class="section-head"><h2>${escapeText(report.sourceSectionTitle || "来源与原文")}</h2><p>网页统一排版，原始报告保留溯源</p></div>${sourceLinks ? `<div class="source-list">${sourceLinks}</div>` : ''}${report.sourcesNote ? `<p class="method-note">${escapeText(report.sourcesNote)}</p>` : ""}${report.disclaimer ? `<p class="method-note">${escapeText(report.disclaimer)}</p>` : ""}${download}</section></div></main>${footer()}`;
   }
 
   function renderHome() {
     document.body.className = "home-page";
-    document.title = `收益率排行 | ${db.meta.siteName}`;
-    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较十年基准情景下的预期收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>预期收益率排行</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}${rankingChart()}${rankingDisclosure()}<p class="ranking-note">研究池 ${db.stocks.length} 只，参与排名 ${rankedBy(homeSort).length} 只；其余无法建立明确基准路径，保留演算但不排名。榜单比较的是条件研究情景，不表示未来预测已核实；有限可信度及零股息终值型需额外关注资本约束与终值依赖。各股行情日不同，细小差额不代表确定优势。统一采用十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
+    document.title = `条件收益比较 | ${db.meta.siteName}`;
+    document.body.innerHTML = `${header("ranking")}<main><section class="home-intro"><div class="shell"><div class="intro-copy"><span class="eyebrow">长期研究 · 固定情景模型</span><h1>把判断放在数据前面</h1><p>从企业质量、估值和风险出发，比较有明确假设的十年条件收益。每个数字都能回到完整报告。</p><a class="primary-link" href="reports.html?category=stocks">浏览研究报告 <span aria-hidden="true">↗</span></a></div><div class="intro-facts"><div><span>跟踪公司</span><strong>${db.stocks.length}</strong><small>份个股研究</small></div><div><span>研究库更新</span><strong class="fact-date">${db.meta.updatedAt}</strong><small>查看报告中的口径与来源</small></div></div></div></section><section class="ranking-section" id="ranking"><div class="shell"><div class="list-heading"><div><span class="eyebrow">研究索引</span><h2>条件收益比较</h2></div><p>按基准 IRR 相对回报要求的差额排序，点击公司查看假设与风险。</p></div>${rankingControls()}${rankingChart()}${rankingDisclosure()}<p class="ranking-note">研究池 ${db.stocks.length} 只，参与排名 ${rankedBy(homeSort).length} 只；其余保留经营研究、暂停排名；已撤回模型显示待重新评估，不提供收益数字。榜单比较的是条件研究情景，不表示未来预测已核实；有限可信度及零股息终值型需额外关注资本约束与终值依赖。各股行情日不同，细小差额不代表确定优势。统一采用十年股东现金流 IRR（税前、交易币种名义回报；港股未计未来汇率变化）。差额 = 基准 IRR − 研究回报要求，单位为百分点，负值表示未达门槛；榜单用于安排研究优先级，不构成买入建议。</p></div></section></main>${footer()}`;
     bindRanking();
   }
 
@@ -401,7 +415,31 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     return `<section class="section tracking-section" id="tracking"><div class="section-head"><h2>经营证据跟踪</h2><p>最近核对 ${tracking.updatedAt} · 每项保留披露日期和口径</p></div><p class="tracking-intro">${tracking.intro}</p><div class="signal-grid">${cards}</div>${comparison}<div class="tracking-price-head"><h3>国窖1573与普五价格记录</h3><p>${tracking.prices.note}</p></div><div class="table-wrap"><table class="tracking-table"><thead><tr><th scope="col">日期</th><th scope="col">高度国窖</th><th scope="col">普五八代</th><th scope="col">价差</th><th scope="col">数据来源</th></tr></thead><tbody>${rows}</tbody></table></div><p class="footnote">价格稳定只能验证价格表现；判断去库存是否完成，还需后续开瓶、渠道库存和回款数据交叉核对。</p></section>`;
   }
 
+  function renderEvidenceStock(stock, plan) {
+    const framework = window.ResearchFramework;
+    framework.validate(plan, stock);
+    const blocks = framework.renderBlocks(plan, stock, escapeText);
+    const metrics = plan.reviewState==='conditional' ? summaryMetrics(stock).replace('基准十年 IRR','原参数条件 IRR').replace('达标参考价','条件参考价') : summaryMetrics(stock);
+    document.body.className = 'stock-page evidence-first-page';
+    document.title = `${stock.name}完整研究报告 | ${db.meta.siteName}`;
+    const navLabels = ['结论','生意','盈利','路径','估值','跟踪'];
+    const nav = `<nav class="report-nav" aria-label="报告目录">${plan.sections.map((s,i)=>`<a href="#${escapeText(s.id)}">${navLabels[i]}</a>`).join('')}<a href="#sources">来源</a></nav>`;
+    const sections = plan.sections.map(s => {
+      const head = `<div class="section-head"><h2>${escapeText(s.title)}</h2><p>${escapeText(s.intro)}</p></div>`;
+      let extra = '';
+      if(s.id==='summary')extra=`<p class="research-state">${escapeText(framework.labels[plan.reviewState])} · ${escapeText(plan.businessType)}</p><p class="research-copy">${escapeText(plan.summary)}</p><div class="research-metrics">${metrics}</div><p class="method-note">本轮是框架整理，沿用原有行情、财报及模型参数，不代表已完成新的经营预测或资金预算核验。方法整理日 ${escapeText(plan.methodReviewedAt)}。${plan.reviewState==='conditional'?'下列收益数字仍是旧参数的条件演算，不是经概率校准的预期收益。':''}</p>`;
+      if(s.id==='status')extra=`<div id="framework" class="research-anchor" aria-label="统一商业质量检查"></div><details class="projection"><summary>展开原有行业与公司事实</summary>${paragraphs(stock.industryStatus)}${paragraphs(stock.companyStatus)}</details>`;
+      if(s.id==='forecast')extra=`<h3>原有盈利起点与事实口径</h3><p class="research-copy">${escapeText(stock.profitForecast.note)}</p>${forecastTable(stock)}<details class="projection"><summary>展开原有关键事实表</summary>${factTable(stock.facts)}</details>`;
+      if(s.id==='valuation')extra=(plan.reviewState==='conditional'?'<p class="research-state">原参数条件演算 · 经营驱动和联合资金预算尚待补证</p>':'')+irrSection(stock).replace('id="valuation"','id="cashflow-model"');
+      if(s.id==='risks')extra=evidenceTracking(stock);
+      return `<section class="section research-section" id="${escapeText(s.id)}">${head}${s.id==='summary'?extra:''}${blocks(s)}${s.id==='summary'?'':extra}</section>`;
+    }).join('');
+    document.body.innerHTML=`${header('reports')}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">证据优先 · 结构试点</div><div class="title-row"><h1>${escapeText(stock.name)}</h1><span class="ticker">${escapeText(stock.market)} / ${stock.code}</span></div><p>${escapeText(framework.labels[plan.reviewState])}</p></div><aside class="price-panel"><span>${stock.priceDate} 收盘 · 非实时行情</span><strong>${displayPrice(stock)}</strong><small>${escapeText(stock.marketCap)}</small></aside></div>${nav}</div></section><div class="shell report-body">${freshness(stock,true)}${sections}<section class="section sources" id="sources"><div class="section-head"><h2>来源与研究边界</h2><p>历史来源沿用；方法整理不等于重新取证</p></div><div class="source-list">${stock.sources.map((source,i)=>`<a id="research-source-${i}" href="${escapeText(source[2])}" target="_blank" rel="noopener noreferrer"><span>[S${i+1}] ${escapeText(source[0])}</span><time>${escapeText(source[1])}</time><b aria-hidden="true">↗</b></a>`).join('')}</div><p class="method-note">统一检查商业质量、盈利起点、经营驱动、资本与分配约束及判断失效条件，不以模拟大师口吻替代证据；不表示任何投资者本人对该公司的意见。</p></section></div></main>${footer()}`;
+  }
+
   function renderStock(stock) {
+    const plan=window.RESEARCH_FRAMEWORK?.[stock.code];
+    if(plan){renderEvidenceStock(stock,plan);return;}
     document.body.className = "stock-page";
     document.title = `${stock.name}完整研究报告 | ${db.meta.siteName}`;
     document.body.innerHTML = `${header("reports")}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">${stock.status} · ${stock.industry}</div><div class="title-row"><h1>${stock.name}</h1><span class="ticker">${stock.market} / ${stock.code}</span></div><div class="ticker ticker-sub">价格基准 ${stock.priceDate} · 完整个股研究报告</div></div><aside class="price-panel"><span>${stock.priceDate} 收盘</span><strong>${displayPrice(stock)}</strong><small>${stock.marketCap}</small></aside></div>${stock.evidenceTracking ? reportNav() : reportNav().replace('<a href="#tracking">跟踪</a>', "")}</div></section><div class="shell report-body">${freshness(stock,true)}<section class="section lead-panel" id="summary"><div class="section-label">01 / 投资结论</div><h2>${stock.valuation}</h2><p class="lede">${stock.conclusion}</p><div class="verdict-grid">${summaryMetrics(stock)}</div></section><section class="section" id="status"><div class="section-head"><h2>行业与企业现状</h2><p>先看生意，再看价格</p></div><div class="status-stack"><section class="status-block"><div class="status-side"><span class="section-label">行业</span></div><div class="status-text">${paragraphs(stock.industryStatus)}</div></section><section class="status-block"><div class="status-side"><span class="section-label">公司</span></div><div class="status-text">${paragraphs(stock.companyStatus)}</div></section></div></section><section class="section"><div class="section-head"><h2>关键事实</h2><p>最新实际披露与行情</p></div>${factTable(stock.facts)}</section>${evidenceTracking(stock)}<section class="section"><div class="section-head"><h2>关键争议</h2><p>结论与反证分开</p></div><div class="debate-grid">${stock.debate.map(item => `<article class="panel"><h3>${item.title}</h3><p>${item.body}</p></article>`).join("")}</div></section><section class="section" id="forecast"><div class="section-head"><h2>${stock.profitForecast.label || `${stock.profitForecast.year}年利润预测`}</h2><p>不把半年数据简单乘二</p></div><article class="model-intro"><p>${stock.profitForecast.note}</p></article>${forecastTable(stock)}</section>${irrSection(stock)}<section class="section"><div class="section-head"><h2>护城河与商业质量</h2><p>优势必须转化为所有者现金流</p></div><article class="panel">${bullets(stock.moat)}</article></section><section class="section" id="framework"><div class="section-head"><h2>五种独立研究视角</h2><p>同一家公司，五套独立判断</p></div><div class="view-grid">${stock.masterViews.map((view, index) => `<article class="panel view-card"><div class="view-head"><span class="view-num">${String(index + 1).padStart(2, "0")}</span><span class="section-label">${view.name}</span></div><h3>${view.verdict}</h3><p>${view.text}</p></article>`).join("")}</div></section><section class="section evidence-grid" id="risks"><article><div class="section-label">后续验证</div><h2>什么会提高置信度</h2>${bullets(stock.questions)}</article><article class="danger"><div class="section-label">失效条件</div><h2>什么会推翻判断</h2>${bullets(stock.risks)}</article></section><section class="section sources" id="sources"><div class="section-head"><h2>来源与方法</h2><p>公开来源可直接打开</p></div><div class="source-list">${stock.sources.map(source => `<a href="${source[2]}" target="_blank" rel="noopener"><span>${source[0]}</span><time>${source[1]}</time><b>↗</b></a>`).join("")}</div><p class="method-note">研究框架参考巴菲特股东信、芒格决策清单、段永平投资问答、散户乙历史发言及杰克·韦尔奇管理框架。相关材料仅用于方法论推演；五位视角不等于其本人对当前价格的公开评级。</p></section></div></main>${footer()}`;

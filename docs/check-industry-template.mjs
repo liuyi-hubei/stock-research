@@ -30,3 +30,18 @@ html = render({...report,sources:[['来源 <script>','日期','https://example.o
 assert(html.includes('https://example.org/verified') && html.includes('来源 &lt;script&gt;'));
 assert(!html.includes('javascript:') && !html.includes('无效链接'));
 console.log('PASS: generic industry template, optional metadata, Markdown/PDF source links, narrow tables and text escaping');
+const imageReport={...report,sections:[{id:'chart',title:'原图',blocks:[{image:{src:'assets/industry-reports/media-film-content/test.png',alt:'<img onerror=x>',caption:'原图标题',note:'仅恢复原件'}}]}]};
+html=render(imageReport);
+assert(html.includes('loading="lazy"') && html.includes('原图标题') && html.includes('&lt;img onerror=x&gt;'));
+for(const src of ['javascript:alert(1)','https://example.org/track.png','assets/industry-reports/../secret.png','assets/industry-reports/x/chart.svg']){
+  html=render({...imageReport,sections:[{id:'chart',title:'原图',blocks:[{image:{src,alt:'blocked-picture'}}]}]});
+  assert(!html.includes('blocked-picture'),`Unsafe image source: ${src}`);
+}
+console.log('PASS: original report image, escaped metadata and safe local-image paths');
+const paperReport={...report,layout:'research-paper',referencesSectionId:'refs',sourceSectionTitle:'原稿说明',downloadLabel:'下载整理版 Markdown',sources:[['独有来源','','https://example.org/only-once']],sections:[{id:'body',title:'1. 第一章',blocks:[{h3:'1.1 小节'},{h4:'<script>小标题</script>'}]},{id:'refs',title:'参考文献',blocks:[{p:'完整来源'}]}]};
+html=render(paperReport);
+assert(html.includes('<h4 class="ind-h4">&lt;script&gt;小标题&lt;/script&gt;</h4>'));
+assert(!html.includes('/ 研究正文') && !html.includes('独有来源') && html.includes('原稿说明') && html.includes('下载整理版 Markdown'));
+html=render({...paperReport,referencesSectionId:'missing'});
+assert(html.includes('独有来源'),'Missing references section must not hide sources');
+console.log('PASS: paper heading hierarchy, one references section and fallback sources');

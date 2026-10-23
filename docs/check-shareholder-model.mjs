@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 
-const { irr, pv, scenario, evaluate, fadeGrowth, sensitivity, firstYearDividend, eligibility, ranked } = createRequire(import.meta.url)('../assets/shareholder-model.js');
+const { irr, pv, scenario, evaluate, fadeGrowth, sensitivity, firstYearDividend, eligibility, ranked, isPending } = createRequire(import.meta.url)('../assets/shareholder-model.js');
 const near = (actual, expected, tolerance = 1e-10) => assert(Math.abs(actual - expected) < tolerance, `${actual} differs from ${expected}`);
 
 const couponFlows = Array(9).fill(5).concat(105);
@@ -35,6 +35,16 @@ assert(stocks.length > 1, 'Expected the full research pool');
 for (const stock of stocks) {
   assert(stock.model.version === 'shareholder-irr-v1', `${stock.code}: not on the unified IRR caliber`);
   const evaluation = evaluate(stock);
+  if (isPending(stock)) {
+    assert.equal(evaluation, null, `${stock.code}: pending evaluation`);
+    assert.equal(sensitivity(stock), null, `${stock.code}: pending sensitivity`);
+    assert.equal(eligibility(stock, evaluation).eligible, false);
+    assert.equal(stock.model.requiredReturn, null);
+    for (const values of [stock.model.assumptions, stock.assumptions, stock.profitForecast.scenarios]) {
+      assert(Array.isArray(values) && values.length === 0, `${stock.code}: pending parameters must be empty`);
+    }
+    continue;
+  }
   const [bear, base, bull] = evaluation.scenarios;
   assert(bear.irr <= base.irr && base.irr <= bull.irr, `${stock.code}: scenario order needs review`);
   near(pv(base.rows.map(row => row.cashFlow), base.irr) / stock.price, 1, 1e-8);
@@ -50,6 +60,15 @@ const stock = { price:69.96, model:{version:'shareholder-irr-v1',requiredReturn:
   {name:'乐观',eps:5.71,early:.07,late:.04,payout:.8,exitPE:16}
 ]}};
 const result = evaluate(stock);
+const pendingFixture = {...stock, model:{...stock.model,status:'pending',requiredReturn:null,assumptions:[],rankingDecision:{eligible:true}}};
+assert.equal(isPending(pendingFixture),true);
+assert.equal(evaluate(pendingFixture),null);
+assert.equal(sensitivity(pendingFixture),null);
+assert.equal(eligibility(pendingFixture,result).eligible,false,'Pending overrides approval and stale evaluation');
+assert.equal(ranked([pendingFixture]).length,0);
+assert.equal(isPending({...stock,model:{...stock.model,status:'ready'}}),false);
+assert.throws(()=>evaluate({...stock,model:{...stock.model,assumptions:[]}}),'Missing assumptions without pending must fail');
+assert.throws(()=>sensitivity({...stock,model:{...stock.model,assumptions:[]}}));
 near(result.base.irr, 0.08291604324606527);
 near(result.base.fairPrice, 57.84628269165934);
 const stress = sensitivity(stock);
@@ -74,6 +93,7 @@ assert.equal(ranked([{...approved,model:{...approved.model,rankingEligible:false
 for(const s of stocks){
   assert(s.model.rankingDecision?.reason && s.model.rankingDecision.reviewedAt,`${s.code}: missing eligibility evidence`);
   const e=evaluate(s);
+  if(isPending(s)) { assert.equal(e,null); continue; }
   for(const item of e.scenarios) near(pv(item.rows.map(r=>r.cashFlow),item.irr)/s.price,1,1e-8);
   near(irr(e.base.fairPrice,e.base.rows.map(r=>r.cashFlow)),s.model.requiredReturn);
 }
@@ -83,7 +103,7 @@ for(const s of stocks){
 // 并校验「模型 EPS × 汇率 ≈ 报表口径 EPS」，防止再把报表币种的每股盈利当作港元使用。
 // 港股只数不写死：增删港股只改 data/*.js。漏写 model.fx 的港股模型会在
 // data/additional-stocks.js 加载阶段直接抛错，这里只保证校验循环确实跑到了标的。
-const hkdStocks = stocks.filter(item => item.model.currency === '港元');
+const hkdStocks = stocks.filter(item => !isPending(item) && item.model.currency === '港元');
 assert(hkdStocks.length > 0, '港股模型数量异常：0');
 for (const item of hkdStocks) {
   const fx = item.model.fx;
@@ -95,5 +115,5 @@ for (const item of hkdStocks) {
   const tolerance = Math.max(0.01, fx.baseEpsInReportCurrency * 0.005);
   assert(drift < tolerance, `${item.code}: 港元 EPS ${item.model.assumptions[1].eps} × ${fx.unitsPerModelCurrency} = ${reporting.toFixed(4)}，与报表口径 ${fx.baseEpsInReportCurrency} 相差 ${drift.toFixed(4)}，疑似把${fx.reportCurrency}每股盈利当作港元使用`);
 }
-console.log(`PASS: shareholder cash-flow IRR across ${stocks.length} stocks, plus discounting, validation, and Luzhou Laojiao assumptions.`);
+console.log(`PASS: ${stocks.filter(s=>!isPending(s)).length} calculated models; ${stocks.filter(isPending).length} explicit pending; discounting, invalid-data and pending fixtures.`);
 console.log(`PASS: ${hkdStocks.length} HKD models declare a reporting-currency conversion and reconcile with it.`);

@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { loadFramework } from './research-framework-files.mjs';
+import { researchMarkdown } from './research-framework-markdown.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const scope = { window: {} };
 vm.createContext(scope);
@@ -11,6 +13,7 @@ for (const file of ['assets/shareholder-model.js', 'data/stocks.js', 'data/addit
   vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), scope);
 }
 const { ShareholderModel } = scope.window;
+loadFramework(root,scope);
 const stocks = scope.window.STOCK_RESEARCH.stocks;
 const cell = value => String(value).replace(/\|/g, '\\|').replace(/\n/g, '<br>');
 const table = (head, rows) => `| ${head.map(cell).join(' | ')} |\n| ${head.map(() => '---').join(' | ')} |\n${rows.map(row => `| ${row.map(cell).join(' | ')} |`).join('\n')}`;
@@ -34,9 +37,40 @@ const jobs = requested.map(code => {
 // 与页面同一计算函数：IRR、差额与达标参考价都由 shareholder-model 求出，不在此重复实现。
 const evaluate = s => {
   if (s.model?.version !== 'shareholder-irr-v1') throw Error(`${s.code}: not on the shareholder cash-flow IRR caliber`);
-  return ShareholderModel.evaluate(s);
+  try { return ShareholderModel.evaluate(s); } catch (error) { throw Error(`${s.code}: ${error.message}`); }
 };
 for (const { s, target } of jobs) {
+  const plan=scope.window.RESEARCH_FRAMEWORK?.[s.code];
+  if(plan){
+    scope.window.ResearchFramework.validate(plan,s);
+    fs.writeFileSync(target,researchMarkdown(s,plan,ShareholderModel),{encoding:'utf8',flag:'wx'});
+    console.log(`Exported evidence-first research ${s.name} ${s.code}`);
+    continue;
+  }
+  if (ShareholderModel.isPending(s)) {
+    const sections = [
+      `# ${s.name}（${s.code}）研究归档`,
+      '> 待重新评估；参考买入价暂不提供。暂停收益计算、价格试算与敏感性演算。',
+      `本文件为现有结构化事实归档，未进行新一轮研究。行情基准：${s.priceDate}；财报期间：${s.model.financialPeriod}；研究复核日：${s.model.reviewedAt}。`,
+      `价格：${money(s)}（${s.market}）。`,
+      `## 待评估原因\n\n${s.model.pendingReason || s.model.rankingDecision.reason}`,
+      `## 结论\n\n${s.valuation}\n\n${s.thesis}\n\n${s.conclusion}`,
+      `## 关键事实\n\n${table(['指标', '数值', '期间', '口径'], s.facts)}`,
+      `## 行业现状\n\n${s.industryStatus.join('\n\n')}`,
+      `## 公司现状\n\n${s.companyStatus.join('\n\n')}`,
+      `## 关键争议\n\n${s.debate.map(d => `### ${d.title}\n\n${d.body}`).join('\n\n')}`,
+      `## 分红判断\n\n${s.dividendView}`,
+      `## 护城河\n\n${list(s.moat)}`,
+      `## 五种研究视角\n\n${s.masterViews.map(v => `### ${v.name}：${v.verdict}\n\n${v.text}`).join('\n\n')}`,
+      `## 后续验证\n\n${list(s.questions)}`,
+      `## 失效条件\n\n${list(s.risks)}`,
+      `## 来源\n\n${s.sources.map(v => `- [${v[0]}](${v[2].startsWith('reports/') ? '../../' + v[2] : v[2]})（${v[1]}）`).join('\n')}`,
+      '仅为研究记录，不构成投资建议。'
+    ];
+    fs.writeFileSync(target, sections.join('\n\n') + '\n', { encoding: 'utf8', flag: 'wx' });
+    console.log(`Exported pending facts ${s.name} ${s.code}`);
+    continue;
+  }
   const result = evaluate(s);
   const base = result.base;
   const [bear, , bull] = result.scenarios;

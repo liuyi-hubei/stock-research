@@ -17,8 +17,13 @@ assert(target.startsWith(path.join(root,'reports/industries')+path.sep) && targe
 const cell = value => String(value).replaceAll('|','\\|').replaceAll('\n','<br>');
 const table = t => [t.caption || '', '| '+t.head.map(cell).join(' | ')+' |','| '+t.head.map(()=> '---').join(' | ')+' |',...t.rows.map(row=>'| '+row.map(cell).join(' | ')+' |'),t.note ? '\n口径：'+t.note : ''].filter(Boolean).join('\n');
 function block(b){
+  if(b.image){
+    assert(/^assets\/industry-reports\/(?:[a-zA-Z0-9_-]+\/)+[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp)$/.test(b.image.src || ''),'非法原图路径');
+    return `![${b.image.alt || ''}](../../${b.image.src})\n\n${b.image.caption || ''}\n\n${b.image.note || ''}`;
+  }
   if(b.p)return b.p;
   if(b.h3)return '### '+b.h3;
+  if(b.h4)return '#### '+b.h4;
   if(b.bullets)return b.bullets.map(item=>'- '+item).join('\n');
   if(b.numbered)return b.numbered.map((item,i)=>(i+1)+'. '+item).join('\n');
   if(b.table)return table(b.table);
@@ -33,7 +38,9 @@ function block(b){
   if(b.evidence)return b.evidence.map(e=>'### '+e.label+'：'+e.heading+'\n\n'+e.items.map(item=>'- '+item).join('\n')).join('\n\n');
   throw new Error('存在未支持的归档块；不能静默漏掉内容');
 }
-const md = ['# '+report.title,report.subject,'研究日期与口径：'+report.date,'作者：'+report.author,'## '+report.summaryTitle,report.coreConclusion,...report.sections.flatMap(s=>['## '+s.title,s.sub,...s.blocks.map(block)]),'## 来源与研究边界',...report.sources.map(s=>'- ['+s[0]+']('+s[2]+') · '+s[1]),report.sourcesNote,report.disclaimer,'<!-- 由 docs/export-industry-archive.mjs 从结构源导出；内容修改后重新导出。 -->',''].join('\n\n');
+const hasReferences = report.referencesSectionId && report.sections.some(s=>s.id===report.referencesSectionId);
+const sourceRows = hasReferences ? [] : (report.sources || []).map(s=>'- ['+s[0]+']('+s[2]+') · '+s[1]);
+const md = ['# '+report.title,report.subject,'研究日期与口径：'+report.date,'作者：'+report.author,'## '+report.summaryTitle,report.coreConclusion,...report.sections.flatMap(s=>['## '+s.title,s.sub,...s.blocks.map(block)]),'## '+(report.sourceSectionTitle || '来源与研究边界'),...sourceRows,report.sourcesNote,report.disclaimer,'<!-- 由 docs/export-industry-archive.mjs 从结构源导出；内容修改后重新导出。 -->',''].join('\n\n');
 if(process.argv.includes('--check')){
   assert(fs.existsSync(target) && fs.readFileSync(target,'utf8')===md,'行业Markdown与网页结构源不一致');
   console.log('PASS: 行业网页与Markdown完整一致');

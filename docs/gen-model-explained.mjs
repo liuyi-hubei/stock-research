@@ -14,7 +14,9 @@ vm.runInContext(fs.readFileSync(ROOT + '/data/stocks.js', 'utf8'), ctx);
 vm.runInContext(fs.readFileSync(ROOT + '/data/additional-stocks.js', 'utf8'), ctx);
 const SM = ctx.window.ShareholderModel;
 const stocks = ctx.window.STOCK_RESEARCH.stocks;
-const hkdStocks = stocks.filter(s => s.model.currency === '港元');
+const pendingStocks = stocks.filter(s => SM.isPending(s));
+const activeStocks = stocks.filter(s => !SM.isPending(s));
+const hkdStocks = activeStocks.filter(s => s.model.currency === '港元');
 
 const p1 = v => (v * 100).toFixed(1);
 const p2 = v => (v * 100).toFixed(2);
@@ -24,8 +26,9 @@ const cur = s => (s.model.currency === '港元' ? 'HK$' : '¥');
 
 const money = s => cur(s) + (Math.abs(s.price) < 10 ? s.price.toFixed(3) : s.price.toFixed(2));
 
-const rows = stocks.map(s => {
-  const ev = SM.evaluate(s);
+const rows = activeStocks.map(s => {
+  let ev;
+  try { ev = SM.evaluate(s); } catch (error) { throw Error(`${s.code}: ${error.message}`); }
   const a = ev.base;
   let reason = s.requiredReturnReason || '';
   if (!reason) {
@@ -91,7 +94,7 @@ out += '| 必要回报率 h | 风险分档（见第 4 节） | 主观投资门�
 out += '| 币种 | 与股价同一币种 | 港股标的须把报表币种利润按固定汇率折成港元再算 EPS，并在 `model.fx` 中声明（见第 8 节） |\n\n';
 
 out += '## 4. 必要回报率 h 的分档依据\n\n';
-const requiredReturns = stocks.map(s => s.model.requiredReturn);
+const requiredReturns = activeStocks.map(s => s.model.requiredReturn);
 out += `\`h\` 不是由 CAPM 或 WACC 算出来的，是按「生意可预测性 + 现金流波动 + 资产负债表风险」主观分档；当前标的取值 ${p1(Math.min(...requiredReturns))}%—${p1(Math.max(...requiredReturns))}%。\n`;
 out += '`h` 在数据文件中以 `requiredReturn` 保存，由 `requiredReturnReason` 记录该档理由。档位只为安排研究优先级，不是对生意质量的评分，也不得为提高排名而下调。\n\n';
 const bucket = new Map();
@@ -108,6 +111,9 @@ for (const [k, list] of [...bucket.entries()].sort((x, y) => parseFloat(x[0]) - 
 out += '\n档位越高，表示研究者要求越高的风险补偿。同一档内各标的理由不同，档位只是门槛高低的标识，不是对生意质量的评分。\n\n';
 
 out += '## 5. 参数快照（基准情景）\n\n';
+out += `可计算模型 ${activeStocks.length} 只；待重新评估 ${pendingStocks.length} 只。pending 标的不计算收益、参考价或敏感性，也不进入参数与排名表。\n\n`;
+for (const s of pendingStocks) out += `- 待重新评估：${s.name}（${s.code}）；${s.model.pendingReason || s.model.rankingDecision?.reason || '模型研究尚未完成'}；参考买入价暂不提供。\n`;
+out += '\n';
 out += '| 标的 | 代码 | 币种 | 基准价 | 起点 EPS | 第1—10年EPS增速 | 第1—10年分红率 | 退出 PE | h |\n';
 out += '| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n';
 for (const r of rows) {
