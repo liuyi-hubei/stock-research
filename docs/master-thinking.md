@@ -1,0 +1,36 @@
+# 大师思维：项目统一版本
+
+本项目只维护一个主版本：[项目技能](../.agents/skills/master-thinking/SKILL.md)。六位模型、段永平三关落地步骤、鹿鼎公模块、来源索引和框架校验清单均在同一目录。当前 Work 的个人技能只是调用镜像；修改后必须同步主仓库，不能只改聊天或镜像。
+
+## 不同电脑如何使用
+
+第一次把同一仓库克隆到电脑，例如：
+
+```bash
+git clone https://github.com/liuyi-hubei/stock-research.git
+cd stock-research
+```
+
+以后先检查本地状态；没有未提交工作且准备同步时运行：
+
+```bash
+git status --short
+git pull --ff-only origin main
+git rev-parse HEAD
+```
+
+有未提交工作先保留并处理，不 reset、不覆盖，也不强行拉取。打开该项目后，在支持项目技能的 Codex 中输入：`用 $master-thinking 从段永平视角分析这家公司`。若技能列表尚未刷新，新开项目会话；也可明确让 agent 读取 `.agents/skills/master-thinking/SKILL.md`。无需在用户全局目录另复制一套。
+
+换电脑不会自动同步文件；先拉取相同 main 提交。相同提交下的框架文件一致，但模型、可用工具、提问与当期证据仍可能让研究结论不同。技能本身不提供妙想连接或数据凭据。
+
+## Work 如何使用同一版
+
+每个新会话通过 GitHub 工具核对本仓库的技能清单及所需文件，镜像落后时读取主版本。无法联网时明确使用快照、未验证与 main 一致，不声称自动同步成功。框架变更先在仓库提交，再把完全相同的公开框架文件同步到 Work skill；不将两边都作为可独立修改的主版本。
+
+## 文件与资料边界
+
+`references/framework-manifest.json` 保存公开框架文件的 SHA-256，不包含清单自身和个人全文资料；可以逐文件验证镜像是否一致。公开版本不包含 `references/documents/` 的书籍、问答集和文章全文；来源索引中的 `bundled_text_path` 是可选个人资料位置，不能据路径存在就声称文件已经同步或读过。没有个人资料时，关键历史归因改查公开原文；拿不到就说明缺项。
+
+段永平新增框架来源见 [来源记录](../.agents/skills/master-thinking/references/duan-framework-source.md)。公开版本使用研究性归纳，不复制第三方文章全文。
+
+网站研究继续按 [证据优先规范](research-framework.md) 和 [研究规则](research-method.md) 组织。安装本技能不改网页、行情、盈利参数、收益模型或排名。服务器可能按既有计划拉取 main；本次只保存技能与说明，不改部署配置或手动启动发布。

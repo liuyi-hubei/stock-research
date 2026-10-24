@@ -1,0 +1,1712 @@
+[
+  {
+    "id": "DOC-001",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/001-1997-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 78545,
+    "sha256": "a07711a22308c1f463c7058d12a28c6073e70ba5d0bf880403d04e0af06e592d",
+    "extracted_text_sha256": "b7bb6f63a5c898df3a60a1f7d0856880ab0c5cce30e6d7dcd91681161970de96",
+    "character_count": 27478,
+    "status": "ok",
+    "metadata": {
+      "pages": 9,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：was from ownership of the Wesco headquarters oce building, primarily leased to outside tenants, interest and dividend catastrophe risks it can’t safely pass on to others sure to remain solvent if a large",
+    "bundled_text_path": "references/documents/DOC-001.txt"
+  },
+  {
+    "id": "DOC-002",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/002-1998-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 77376,
+    "sha256": "02e2f3d873ba55118aa12a0dc57fc6a11e1500c099a52cf31d4a670fa2f2f7bb",
+    "extracted_text_sha256": "a6e5764cbc8cff974b775b101e26ea522251fcc175996d46c1fcef7d5fb7295f",
+    "character_count": 25425,
+    "status": "ok",
+    "metadata": {
+      "pages": 9,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：of the Wesco headquarters oce building, primarily leased to outside tenants, interest and dividend income from cash catastrophe risks it can’t safely pass on to others sure to remain solvent if a large",
+    "bundled_text_path": "references/documents/DOC-002.txt"
+  },
+  {
+    "id": "DOC-003",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/003-1999-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 78488,
+    "sha256": "c41110f71d51c04e6be83914da5d07f9d0b6ab9e2dc671a9ad364a7cb980774c",
+    "extracted_text_sha256": "b130b31680943f59dd2bf0678cf19c5d7ef2275ce5c0a21d3f4d399295f6a1f9",
+    "character_count": 22736,
+    "status": "ok",
+    "metadata": {
+      "pages": 7,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：of the Wesco headquarters oce building, primarily leased to outside tenants, interest and dividend income from cash Manager of Precision Steel's Precision Brand Products subsidiary for the last thirteen",
+    "bundled_text_path": "references/documents/DOC-003.txt"
+  },
+  {
+    "id": "DOC-004",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/004-2000-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 53970,
+    "sha256": "d3f6a5d294d355364826d4cdfbfc0633d234826d4ffd1baa2c5a4985fe6695b4",
+    "extracted_text_sha256": "6343f640dfb2f2ce495ce93cc190c56a429bace796b82fc13c11bf2f1e7b9d38",
+    "character_count": 18256,
+    "status": "ok",
+    "metadata": {
+      "pages": 7,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：of the Wesco headquarters oÇce building, primarily leased to outside tenants, and interest and dividend income from cash net investment income, representing dividends and interest earned on its portfolio of",
+    "bundled_text_path": "references/documents/DOC-004.txt"
+  },
+  {
+    "id": "DOC-005",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/005-2001-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 60193,
+    "sha256": "047193b31c6c18df5ffadbadff3e009844965d05d17049f1f5f1f6116333a7fb",
+    "extracted_text_sha256": "d0e6d081c1fe2de6831b3c1d531fa1fe3acec5b36440bdbd9816d291d3776650",
+    "character_count": 20695,
+    "status": "ok",
+    "metadata": {
+      "pages": 8,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：of the Wesco headquarters oÇce building, primarily leased to outside tenants, and interest and dividend income from cash representing dividends and interest earned from marketable securities.",
+    "bundled_text_path": "references/documents/DOC-005.txt"
+  },
+  {
+    "id": "DOC-006",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/006-2002-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 58947,
+    "sha256": "d8a26d205a5b73735754f1cd1312ebfc3844395765b12a51b29c503c5c5c1315",
+    "extracted_text_sha256": "b5c3d6325bddb0a40cad58f1f75326989d8e445b7f1f35d137c3e73b2f1b2d78",
+    "character_count": 23927,
+    "status": "ok",
+    "metadata": {
+      "pages": 9,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：interest and dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, representing dividends and interest earned from marketable securities.",
+    "bundled_text_path": "references/documents/DOC-006.txt"
+  },
+  {
+    "id": "DOC-007",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/007-2003-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 68487,
+    "sha256": "a14723dff7c5bed9b6d8fdc3950e456ddd6e73ebf14720eb58139fcf0b56ccdb",
+    "extracted_text_sha256": "625f3c5acd0cba3f9c355a79c9ca7201d47bdfbd2952a232f800679a59005a85",
+    "character_count": 22649,
+    "status": "ok",
+    "metadata": {
+      "pages": 8,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：interest and dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, Dividend and interest incomeÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏ 44,118 70,007",
+    "bundled_text_path": "references/documents/DOC-007.txt"
+  },
+  {
+    "id": "DOC-008",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/008-2004-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 64197,
+    "sha256": "caf45a3e82e1c17ad8384a79311c67c04f5147668199a5173f85769997c2815d",
+    "extracted_text_sha256": "651ed6662445740575a0de9f970e87cfe39ffea47a1f830fff0d14872f02c93a",
+    "character_count": 25637,
+    "status": "ok",
+    "metadata": {
+      "pages": 8,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：interest and dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, Dividend and interest income ÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏ 36,035 44,118",
+    "bundled_text_path": "references/documents/DOC-008.txt"
+  },
+  {
+    "id": "DOC-009",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/009-2005-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 64101,
+    "sha256": "bce657bde27ec76cdb94367fbd44c9b1fe27599cbdb8aba35a658422e5106e74",
+    "extracted_text_sha256": "a5c0833a1fd0ed4ec13f2c72afc58ba926bbb1c964d8ed06ed765c082e86bccc",
+    "character_count": 25955,
+    "status": "ok",
+    "metadata": {
+      "pages": 8,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：interest and dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, less Dividend and interest income ÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏ 55,889 36,058",
+    "bundled_text_path": "references/documents/DOC-009.txt"
+  },
+  {
+    "id": "DOC-010",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/010-2006-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 56805,
+    "sha256": "05f538fa2af8815f28ab861351dfb2c7d9c566a2dc9aca3a7b7f49ab7e0df96e",
+    "extracted_text_sha256": "503f455a7774fb566ac25110419eb246f2c1a3f5b7d692f4a0320f943a0b1f1a",
+    "character_count": 24390,
+    "status": "ok",
+    "metadata": {
+      "pages": 8,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：interest and dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, less Dividend and interest income ÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏÏ 83,441 55,889",
+    "bundled_text_path": "references/documents/DOC-010.txt"
+  },
+  {
+    "id": "DOC-011",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/011-2007-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 64093,
+    "sha256": "3665126089ea1f6de9f95bd705f2850d2c9bb1c1e158d6cfebdbdf0bfc6cd17f",
+    "extracted_text_sha256": "053e0dc4fb79bc961c579c210ae5c51dd42caea66b533bcb0e023ffba36ec7ae",
+    "character_count": 23336,
+    "status": "ok",
+    "metadata": {
+      "pages": 7,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, less interest and other representing dividends and interest earned from marketable securities.",
+    "bundled_text_path": "references/documents/DOC-011.txt"
+  },
+  {
+    "id": "DOC-012",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/012-2008-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 60771,
+    "sha256": "992bb5390e82c575141d7e308db933be5fcb4daa83f296f2a476ab7638e5b24c",
+    "extracted_text_sha256": "945d28fabfa88d562a91e8371bf3700f13aa0082bf7a4521e677654136ca4418",
+    "character_count": 26101,
+    "status": "ok",
+    "metadata": {
+      "pages": 8,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, less interest and other representing dividends and interest earned from marketable securities.",
+    "bundled_text_path": "references/documents/DOC-012.txt"
+  },
+  {
+    "id": "DOC-013",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/013-2009-letters.pdf",
+    "extension": ".pdf",
+    "size_bytes": 51023,
+    "sha256": "2bf3895cda5601ab1e9b1b4a66b76cd7dee68e543a31a29c3bb86e12c4fbde03",
+    "extracted_text_sha256": "38f6798e2ec0b59248dc2d16131a15f2ae101ba2deebee823b70e447f7eb348e",
+    "character_count": 24221,
+    "status": "ok",
+    "metadata": {
+      "pages": 7,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：dividend income from cash equivalents and marketable securities owned outside the insurance subsidiaries, less interest and other Dividend and interest income .",
+    "bundled_text_path": "references/documents/DOC-013.txt"
+  },
+  {
+    "id": "DOC-014",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/014-1999-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 9887,
+    "sha256": "f8deb78bb5e0ef321ca3b1f6de8be02eb232798ba4fdc879217ad0cf75ad55cc",
+    "extracted_text_sha256": "5ae09ccfb1441d893d956ff892d559b25ad29cf25ff1113d0c1248950704dda8",
+    "character_count": 9883,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：In the 1920's it was the over-leveraged stock market and the Florida land speculation. In the 60's it was junk stocks, overvaluations and efficient market theorists.",
+    "bundled_text_path": "references/documents/DOC-014.txt"
+  },
+  {
+    "id": "DOC-015",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/015-2000-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 14704,
+    "sha256": "1f619f054667145d7945d14ab2b0c6b2927c6b1158ae3e6b782feb783991b3b7",
+    "extracted_text_sha256": "2bf9c421a8dc4faebdc69a65ce2b5f7e5e08ac6a25e30d5fbd32edb74ac9e8be",
+    "character_count": 14703,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：Risks to Berkshire Hathaway from Large Super Cat Losses The real risk is borne by insurers who write, for example, basic homeowner's policies against a storm or earthquake and don't lay off some of that risk.",
+    "bundled_text_path": "references/documents/DOC-015.txt"
+  },
+  {
+    "id": "DOC-016",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/016-2001-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 23594,
+    "sha256": "b7dfbb4ef23d242c88f618a70a10d219b9abe63d40e62bf6989447291ef78f36",
+    "extracted_text_sha256": "bd591e42ad2fdfaab40e3dba3804d74b95f21f9b08fdf1085e5f576ca19c88c4",
+    "character_count": 23587,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：\"We don't have automatic competitive advantages. We don't have enough critical mass and momentum in place at Wesco, so investors are betting on management.\"",
+    "bundled_text_path": "references/documents/DOC-016.txt"
+  },
+  {
+    "id": "DOC-017",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/017-2002-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 22632,
+    "sha256": "c6e6b14fd3cb087bdc3f1b53f64877665e7704b197f2af9d3534d5baf7f2a4f6",
+    "extracted_text_sha256": "2f1f057f15fb67e634546f133f2eb1359850ff5212849ec25286321cf037d185",
+    "character_count": 22628,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：Berkshire's competitive advantages in reinsurance \"It's a finite and very competitive world.",
+    "bundled_text_path": "references/documents/DOC-017.txt"
+  },
+  {
+    "id": "DOC-018",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/018-2003-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 46332,
+    "sha256": "39c642efee83561f6cc3cf396214021a7b6af30e76ec72e145021cc58c4e47ba",
+    "extracted_text_sha256": "54ed3158fa72f4e5192946d2b2f239b7cb8d2eb38d0ff351bc73f1ce7e3452ab",
+    "character_count": 46328,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：[A major acquisition that Wesco made under Munger and Buffett's leadership in the 1970s.] We've only bought two or three companies and made a few big stock purchases. The danger is that you have more risk of operating outside of your circle of competency.",
+    "bundled_text_path": "references/documents/DOC-018.txt"
+  },
+  {
+    "id": "DOC-019",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/019-2004-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 58904,
+    "sha256": "c1572d3c1160011adb3396955bac3c7715fe18a8abe1523ffce125a978251895",
+    "extracted_text_sha256": "4740c36ecd265f6f72a3de4e4c3813eb03f4f9fafaedcf46aa2bdca760bc83d8",
+    "character_count": 57712,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、风险与杠杆、管理与组织。要点摘录：But IBM made more money for shareholders back in its heyday from [the stock’s] bottom to top, yet people didn’t flock to its meetings, even though it had a widely admired culture. We’re trying to buy businesses with sustainable competitive advantages at a low – or even a fair price.",
+    "bundled_text_path": "references/documents/DOC-019.txt"
+  },
+  {
+    "id": "DOC-020",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/020-2005-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 46232,
+    "sha256": "3a737754f697410956553390457ea89193db66f920a2670a16ac5b418216ce1c",
+    "extracted_text_sha256": "ed50a1c4694d39f846dec1fef4748a5c1aeaaaa7ae1e8df7a56e5d2e341383ad",
+    "character_count": 45321,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：This shows how permissive and evil a culture can become. Now they wear tailored suits, but there’s a good bit of the old Mark Twain culture in those suits.",
+    "bundled_text_path": "references/documents/DOC-020.txt"
+  },
+  {
+    "id": "DOC-021",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/021-2006-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 45411,
+    "sha256": "b4b0e6edccbf4c241b4f9dd2b8aceb2785f9dd2f0c63352dba31da45dddbd100",
+    "extracted_text_sha256": "02ed568b7d19edc4a317e3f2512aca1a1d3232b1e3e233e334e09f9a18ce5555",
+    "character_count": 44555,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为、管理与组织。要点摘录：I don’t think every corporation in America that could be, on a short-term basis, made to give shareholders a little jump in value…I don’t think every single instance like that ought to be seized by the management or whether shareholders ought to have the power to run around and do it, particularly if they’re the [wrong kind of people?]. Corporate Management and Governance",
+    "bundled_text_path": "references/documents/DOC-021.txt"
+  },
+  {
+    "id": "DOC-022",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/022-2007-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 53857,
+    "sha256": "118ddb5d93d40dcac8a14204a58a221db425cdde51593e0e7284ab7595251ddd",
+    "extracted_text_sha256": "5fba7aeef94b40401df8e2ebe4a075e6ec877fc03d7da0030a63d894a3c2eadb",
+    "character_count": 52762,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：There are two factors in interplay a) you need currency and b) you need to set up a system in which it’s not easy for human beings to cheat or delude themselves, despite the presence of incentives to do so. I just had breakfast with Joe Brandon.",
+    "bundled_text_path": "references/documents/DOC-022.txt"
+  },
+  {
+    "id": "DOC-023",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/023-2008-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 40375,
+    "sha256": "0ae356e365c0e47143ebb944c1de0d5b712d606b094cf3f2499fc0bb4fbb6784",
+    "extracted_text_sha256": "92e81270f58d41b8f7265344c11dd4ff123a37ac70d8e8f1e5bc20bc7f2b2e08",
+    "character_count": 39989,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：Many claim alpha – but really they are just taking earthquake risk. What is buried in those books is dangerous, with clearance risks with optimistic assumptions that the accountants allowed.",
+    "bundled_text_path": "references/documents/DOC-023.txt"
+  },
+  {
+    "id": "DOC-024",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/024-2009-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 21832,
+    "sha256": "83f85c29a873fca1e13a4179f18991249544a1d00a39b6de70d73a0554c08f39",
+    "extracted_text_sha256": "8598475263b18547cdd9b86bead443a48c2eaed397275241c34083b70a835e1a",
+    "character_count": 21298,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：• The “scum of the earth” in mortgage credit who “rejoiced in rooking” their borrowers. In the end, “We had to save a lot of these people whether we liked it or not.” To nationalize Fannieand Freddie and then lower interest rates so good borrowers could buy houses was “very smart government.” In the old days, regulators kept silent about banks until they had to act, then announced a fait accompli; “put me down as dub",
+    "bundled_text_path": "references/documents/DOC-024.txt"
+  },
+  {
+    "id": "DOC-025",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/025-2010-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 47470,
+    "sha256": "51d80ad9abb8db262f07ba4d73c85dbf11b1ea6705adf7340bb34558683fe0a9",
+    "extracted_text_sha256": "e51516184d4755728f7ba660e47be435e61f714947d35762843229e90958d253",
+    "character_count": 47202,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：They tried to live off of a modest spread between their loans and their costs of debt. This whole process leads to a competitive deterioration of asset quality and leads the system to ruin.",
+    "bundled_text_path": "references/documents/DOC-025.txt"
+  },
+  {
+    "id": "DOC-026",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/026-2011-Wesco-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 6112,
+    "sha256": "35cbc8fb9aa5872d933cfac221c6cd6214a45dfa05dc52969385888a05292eb2",
+    "extracted_text_sha256": "c201cdc054ab73ee43f14494e1fd3bc904294ec404088e9d9aef71f9d1ad1f43",
+    "character_count": 6064,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：economics, finance, and psychology. It became orthodoxy from aKeynesian point of view that you can borrow and print money to ameliorate recessions.",
+    "bundled_text_path": "references/documents/DOC-026.txt"
+  },
+  {
+    "id": "DOC-027",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2014-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 56898,
+    "sha256": "108f1d00641281030369f58ba805c1da40e49ae8b0c47fee4068e30c66f7a245",
+    "extracted_text_sha256": "451d9b3ef40d4f8b760652715d6f280b897dfca87eb9fc031aab6bf1f8d0f3bb",
+    "character_count": 56431,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：Imagine taking an economy from subsistence agriculture to what they have done at these enormous rates of growth, and doing it not by borrowing from the rich world – which is what we did in the United States – they did it by saving the money. *Q: What is the Daily Journal (ticker: DJCO) doing about pricing and other competitive issues?*",
+    "bundled_text_path": "references/documents/DOC-027.txt"
+  },
+  {
+    "id": "DOC-028",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2015-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 75034,
+    "sha256": "3ffd73eb6ece58839c474a2ce44af850349bc5bd8967c52c7ce9e4bac36af909",
+    "extracted_text_sha256": "5282d185582f0b3c8daa92b7b5143377096d5b5f10c578129663aacc4322cc52",
+    "character_count": 74932,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、管理与组织。要点摘录：What's happened, of course, is that we have a business where the technology and the culture is changing. Munger:** Of course, I'm so old I remember coffee at five cents, and all-you-can-eat cafeterias at 25 cents, and brand new automobiles for $600.",
+    "bundled_text_path": "references/documents/DOC-028.txt"
+  },
+  {
+    "id": "DOC-029",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2016-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 58789,
+    "sha256": "e25ac3e29d64f81c1d73b8447a8eb8e5fc0c72b612c5132ba248fda1ae9703bf",
+    "extracted_text_sha256": "bb9182ab556b26a6deeab411a774122d53c118d377830208fbf544dfd4fa0ba9",
+    "character_count": 57866,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：It required some management, but it was fool proof. Now the product that they’ve chosen to back is this…I call it an “automated checklist”.",
+    "bundled_text_path": "references/documents/DOC-029.txt"
+  },
+  {
+    "id": "DOC-030",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2017-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 102251,
+    "sha256": "1113ce02aa9545696d07ef63b2539707ecf3ecb4f17cc7418797146f449d8028",
+    "extracted_text_sha256": "3bfff1b1894eeb044cf5b7fcb5081a2320ceacb67099412c3223545b37df6f12",
+    "character_count": 100239,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、决策与行为。要点摘录：[Cornelius Vanderbilt](http://bigthink.com/videos/what-todays-ceos-could-learn-from-cornelius-vanderbilt) didn’t take any, of course he owned the whole place, practically, and he would have considered it beneath him, he lived on the dividends like the shareholders did. How do you think your competitive position versus Tyler is doing.",
+    "bundled_text_path": "references/documents/DOC-030.txt"
+  },
+  {
+    "id": "DOC-031",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2018-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 87765,
+    "sha256": "ef527eb877f2b207e3147bfa327c504f7a61ac41fc922cfe587d4fba9527e0ed",
+    "extracted_text_sha256": "92c6ad62ceb4f92b80f1e9f27aa85288e4fdc3bf587d71a6e2a78f64d116d6a7",
+    "character_count": 86211,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：([link](https://www.fs.blog/2017/10/bias-incentives-reinforcement/)) It’s a very competitive business, and it’s difficult.",
+    "bundled_text_path": "references/documents/DOC-031.txt"
+  },
+  {
+    "id": "DOC-032",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2019-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 85041,
+    "sha256": "04670c5aa5fa2f93a300c45dae0f73387f10decdcb4a5d82d19cd771481ce107",
+    "extracted_text_sha256": "30ae283d2392fb51d384863b2dec21f28c310fa3aa0f03289354e6a525bcb9cd",
+    "character_count": 83539,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：管理与组织。要点摘录：Think what would happen to Manhattan if there weren’t any fees for investment management or trading spreads and so on. So if your game is money management you have a serious problem.",
+    "bundled_text_path": "references/documents/DOC-032.txt"
+  },
+  {
+    "id": "DOC-033",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Letters/2020-DJCO-meetingnotes.md",
+    "extension": ".md",
+    "size_bytes": 147372,
+    "sha256": "128ab6adf723072fff5c3276aa3afb738106ca2819af232ec038298ef829b6ec",
+    "extracted_text_sha256": "518c59ee273d058799f212e65b44e75f459c836bb3570f0f23413f05d691f90a",
+    "character_count": 100834,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、管理与组织。要点摘录：我们的导演彼得 · 考夫曼是大教堂管理委员会的成员，如果你想和格里高利 · 派克葬在一起，他可以给你10万美元。 当然，坦率地说，我们现在有美国每一家大公司的主要股东，就像某种指数基金一样，奇怪的是，美国的投票权竟然如此大地转移到指数基金运营商手中。",
+    "bundled_text_path": "references/documents/DOC-033.txt"
+  },
+  {
+    "id": "DOC-034",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/README.md",
+    "extension": ".md",
+    "size_bytes": 14380,
+    "sha256": "b18ddcf22db31c1365ea80440a71aad9849e7ca7f8136823485342c6d2eea654",
+    "extracted_text_sha256": "d7d18512a575d9c82ba15f5745244600e850e6292c5e6a800ff1ee4d633bc059",
+    "character_count": 12495,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "决策与行为",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、决策与行为、管理与组织、宏观与人口。要点摘录：芒格，1924 年1月1日出生于美国内布拉斯加州的奥马哈，至今已 94 岁高龄。详细生平介绍可参见 [查理·芒格—维基百科](https://en.wikipedia.org/wiki/Charlie_Munger) or [关于查理·芒格 ](https://fs.blog/charlie-munger/)  他热爱阅读，以至于孩子们觉得他是一本长了两条腿的书。 - [1994年4月14日 南加州大学马歇尔商学院 论基本的、普世的智慧，及其与投资管理和商业的关系](http://mungerisms.blogspot.com/2009/08/lesson-on-elementary-worldly-wisdom-as.html)   [中文版](http://www.daocaorenshuwu.com/book/qiongchalibaodian/1379962.html)",
+    "bundled_text_path": "references/documents/DOC-034.txt"
+  },
+  {
+    "id": "DOC-035",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1986-Harvard-School-Commencement-Speech-zh.md",
+    "extension": ".md",
+    "size_bytes": 13670,
+    "sha256": "5d49778fa2bb8116d7ce79d7aac9f612cb370ef03fda319edf83c171b77b8897",
+    "extracted_text_sha256": "600d8a09477f43ff4b6e6a8ae82ac46c86eb9864e9ba414be25ff8885306162d",
+    "character_count": 4671,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：管理与组织。要点摘录：第二、我必须警告你们，如果不服用我开出的第一味药，即使你们最初的条件并不好，你们也可能会难以过上痛苦的日子。我有个大学的室友，他以前患有严重的阅读障碍症，现在也是。但他算得上我认识的人中最可靠的。他的生活到目前为止很美满，拥有出色的太太和子女，掌管着某个数十亿美元的企业。如果你们想要避免这种传统的、主流文化的、富有成就的生活，却又坚持不懈地做到为人可靠，那么就算有其他再多的缺点，你们这个愿望恐怕也会落空。",
+    "bundled_text_path": "references/documents/DOC-035.txt"
+  },
+  {
+    "id": "DOC-036",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1994-A-Lesson-on-Elementary-Worldly-Wisdom-As-It-Relates-To-Investment-Management-Business-zh.md",
+    "extension": ".md",
+    "size_bytes": 77457,
+    "sha256": "5aac9785e32d2891d7561cf7d3fd686105e3605a0349fd9114e4be2bafc384c8",
+    "extracted_text_sha256": "6ab05b59d9cc2dba7a70f3e4d72c6ecb809c7688db4cfa4784865f3d87b84a44",
+    "character_count": 26688,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、资本配置与股东回报、决策与行为、管理与组织、宏观与人口。要点摘录：title: 南加州大学马歇尔商学院 论基本的、普世的智慧，及其与投资管理和商业的关系 # 第二讲：论基本的、普世的智慧，及其与投资管理和商业的关系",
+    "bundled_text_path": "references/documents/DOC-036.txt"
+  },
+  {
+    "id": "DOC-037",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1994-A-Lesson-on-Elementary-Worldly-Wisdom-As-It-Relates-To-Investment-Management-Business.md",
+    "extension": ".md",
+    "size_bytes": 76632,
+    "sha256": "a3eb8f2229972c252377dc960751dfebc97e6e0289ff87eb193ae664438f6449",
+    "extracted_text_sha256": "cff8a136387eef07e27cbef932e0a1c6bacf7f9381bc2d5c13592acb2db017ba",
+    "character_count": 76305,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为、管理与组织。要点摘录：title: A Lesson on Elementary, Worldly Wisdom As It Relates To Investment Management & Business # A Lesson on Elementary, Worldly Wisdom As It Relates To Investment Management & Business",
+    "bundled_text_path": "references/documents/DOC-037.txt"
+  },
+  {
+    "id": "DOC-038",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1996-A-Lesson-on-Elementary-Worldly-Wisdom-Revisited-Stanford-Law-School-Practical-Thought-About-Practical-Thought-zh.md",
+    "extension": ".md",
+    "size_bytes": 76778,
+    "sha256": "c514525092c60f7de5fa79a35fc7c4fcd2ab2f59373b03a8e2efe416ea5c996c",
+    "extracted_text_sha256": "4d8b756a3ba34dbd420936988ea6019c0afa1769f067e3141fabe2c9d84cab38",
+    "character_count": 26709,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：你们今天的阅读任务就是回家读读通用电器公司的杰克•韦尔奇和伯克夏•哈撒韦的巴菲特分别给股东写的最新的年度报告。杰克•韦尔奇拿到了工程学的博士学位，如果沃伦立志在某一个领域深造的话，博士学位对他而言是不成问题的。 在今天的美国，合约桥牌已经落伍了，真实悲哀。中国人在这方面就比我们略高一筹，他们在中小学的课堂上传授桥牌知识，引进资本主义的文化。对桥牌一窍不通的美国人如果跟精于桥牌的中国人竞争，显然将处于劣势中。",
+    "bundled_text_path": "references/documents/DOC-038.txt"
+  },
+  {
+    "id": "DOC-039",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1996-Practical-Thought-About-Practical-Thought-zh.md",
+    "extension": ".md",
+    "size_bytes": 23609,
+    "sha256": "76ec324e3b31e154fc649df401b2135938d11d2678db9390e532ce754f4a40f3",
+    "extracted_text_sha256": "0a485989675ee96e63ce4864efbe8f4b05b9ee4827270253ff79f2bb3a03bc88",
+    "character_count": 8161,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为、管理与组织。要点摘录：首先，通过销售普通的饮料永远不能创造出这2万亿美元，所以，我们会把你以“可口可乐”命名的饮料打造成强势且合法的商标品牌。 经过进一步简化问题，我们得出最佳且最简单的决策是应依赖一个强劲的品牌，这个结论自然而然地让我们从基础学术概念来理解企业的本质。从本质上来说，企业必须能够创造并维持一种条件反射，把“可口可乐”的商标和外观作为刺激物，购买和饮用我们的产品将产生我们希望出现的反应。",
+    "bundled_text_path": "references/documents/DOC-039.txt"
+  },
+  {
+    "id": "DOC-040",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1998-Investment-Practices-of-Leading-Charitable-Foundations-zh.md",
+    "extension": ".md",
+    "size_bytes": 16026,
+    "sha256": "14c5da0fc43774ed0ec559fba6f1bd0d92334decb7292d1ae6b88cf692c6fbfc",
+    "extracted_text_sha256": "2308167c0464da2e0cb0783e249e1bb5f8a154289ab1fb87e58a98714a0be258",
+    "character_count": 5622,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：长久以来，大型慈善基金的常规做法是在不借债的情况下把大部分资金投在那些可流通的美国证券上，主要就是股票。这些股票是由一家或很有限的几家投资顾问公司帮助挑选出来的。但近年来出现了一种越来越复杂的倾向。有些基金会追随像耶鲁大学这样的基金会，努力向伯尼-康非德式的“基金中的基金”靠拢。这是一种令人吃惊的发展。很少有人能够预料到，在康非德锒铛入狱之后很久，一些主流大学仍然用康非德式的方法来管理慈善基金会。 现在有些基金会聘请的顾问不是少数几个，而是许许多多。这些基金会先请一批顾问，然后再让他们来挑选最好的投资顾问，帮忙把资金配置到各个不同的领域，确保不会因为偏好国内证券而忽略了外国证券，复核那些投资顾问声称的业绩是否真实有效，保证原定的投资风格得到严格的执行，还有就是，根据公司理财教授有关波动-性-和“beta”系数的最新理论，进一步提高本来就已经很分散的投资多元化程度。",
+    "bundled_text_path": "references/documents/DOC-040.txt"
+  },
+  {
+    "id": "DOC-041",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/1998-The-Need-for-More-Multidisciplinary-Skills-from-Professionals-Educational-Implications-zh.md",
+    "extension": ".md",
+    "size_bytes": 21233,
+    "sha256": "e435752e7d697aed00e0151765b76ec455bcf7c507739c03336a4e6764cafe1e",
+    "extracted_text_sha256": "3bbd0fc3cfe2f96c1cb4de218ac38e5a5a53e86623211e32b1595025964b734a",
+    "character_count": 7506,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "决策与行为"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、决策与行为。要点摘录：​    （1）动机引起的偏见（incentive-caused bias），一种先天的认知倾向，认为对职业有利的东西必将对客户或者广域文明有利。 ​    纠正锤子倾向有一个对策，如果一个人拥有多学科技能，也就是说，在掌握多种工具后，将会限制由于锤子倾向带来的认知倾向度。此外，如果他能从实践心理学中学到一个道理——不管是自己还是其他人，若为了避免人生走上偏离的轨道，毕生都必须跟上面提到的两种倾向做斗争——那么，在通往生活智慧的道路上，他就跨出了建设新的一步。",
+    "bundled_text_path": "references/documents/DOC-041.txt"
+  },
+  {
+    "id": "DOC-042",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2000-Philanthropy-Roundtable-zh.md",
+    "extension": ".md",
+    "size_bytes": 17229,
+    "sha256": "66cbe8963cc2a8580daeea854dd433b78939f705ca0c6e8a0734da97e08db651",
+    "extracted_text_sha256": "37a698cb4e10460478a921b737745a017e59ffed21b7f3c6d987ee63caafecba",
+    "character_count": 5953,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、管理与组织。要点摘录：有两个原因使得目前美国股票价格上升造成的“财富效应”特别有趣。第一，当前大量上市公司的股价突飞猛进，而且股价上涨的速度比国民生产总值快多了，这种情况是史无前例的，所以相关的“财富效应”肯定也是前所未有的惊人。第二，日本过去10年来的情况让经济学界感到震惊，使得人们极其担心“财富效应”反向作用引发的经济衰退。 日本的金融界非常腐败，该国的股票和地产价格在很长一段时间内涨幅极大，和美国相比，其实体经济增长的幅度也很大。但随后资产的价格急剧下跌，日本的经济一蹶不振。在此之后，日本这个现代经济体开始努力地、长时间地将它学到的各种貌似正确的凯恩斯理论和货币政策派上用场。许多年来，日本政府不但背负了巨额的财政赤字，而且还将利率一直保持在接近零的水平线上。尽管如此，年复一年，日本的经济依然没有起色，因为日本人的消费意愿对经济学家们的任何招数都无动于衷。日本的股票价格也始终低迷。日本这种前车之鉴足以让每个人坐立不安，假如同样的事情在美国发生，财",
+    "bundled_text_path": "references/documents/DOC-042.txt"
+  },
+  {
+    "id": "DOC-043",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2001-2006-Mungerisms.md",
+    "extension": ".md",
+    "size_bytes": 78561,
+    "sha256": "7ad7588f911ab3bdbff1b535d523a8547f0e011b6edacb0ac502ec46b53c0723",
+    "extracted_text_sha256": "49f64785ba245a691d5cb417d7731f4e1ba5283f84f9c27300f1b39ed2f84153",
+    "character_count": 27356,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：由于这个原因，许多人并不知道查理本人是个天才，而且他对沃伦的投资哲学产生了深刻的影响，这一点沃伦是公开承认的。他们之间的互动会让观者忍俊不禁。在伯克希尔年会的主席台上，沃伦一般会率先回答提问，但然后往往会转过身说：“查理，你说呢？”查理的典型反应是一动不动、面无表情地（人们很容易用一个假人来代替他，在大多数情况下保管没有人会发现）说：“我没有什么要补充的。”这九个字已经变成了查理的标志，通常让沃伦和听众会心一笑。（实际上，1998年9月，在为收购通用再保险公司而召开的特别大会上，沃伦真的用一个硬纸板做成的查理人像和一段查理说“我没有什么要补充的”的录音出现在主席台上。我的一个朋友参加了该大会，据他说，“沃伦大概播了六次这段录音，每次都会露出顽皮的神色。”）这几个字也反映了查理古怪的脾气——至少他的公众形象是这样的——以及这两个心灵相通的杰出生意人“合二为一”的关系。 因为在伯克希尔年会上，大多数讲话都是由沃伦来发表，所以我总是喜",
+    "bundled_text_path": "references/documents/DOC-043.txt"
+  },
+  {
+    "id": "DOC-044",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2003-Academic-Economics-zh.md",
+    "extension": ".md",
+    "size_bytes": 12573,
+    "sha256": "1a10e9f385009c85cb2107f40ebc6a91378cfd989e55a62f7025388f4dcc11f9",
+    "extracted_text_sha256": "07776573f847152b85b54917eed5b265b2cf8efe79aeb6d3c68262025cbda22c",
+    "character_count": 4479,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、管理与组织。要点摘录：我一直很清楚股票市场的运作不可能还是100%有效，因为我十几岁时就去过奥马哈的赛马场，哪里就有赛马赌金同注分彩计算器系统。对我来说，赌场、赌场上 的管理人得到17%的收益，那么很显然就会有一些人总是输掉少于他们总赌注的17%，而另外一些人总是会输掉比他们总赌注的17%多一些的赌金，所以，奥 马哈赛马场的赛马赌金同注分彩计算器系统就不存在完美的效率。我也不认同股票市场在产生理智价格贩卖你是完美有效的说法。 接下来我讲一下我个人的有趣的教育经历，因为我在经济学方面的匮乏和其他方面的特有能力最终成就了我的优势。由于某种特殊的原因，我很早就有极强的跨学科 的意识，但越过潘篱从别的学科能得到更宏观的观念时，我无法拘泥于自己学科的狭隘观念。并没人教我那样做，我只是天生有这样的欲望。天生还喜欢组合，但遇 到难题时——当然这是常事，我会琢磨那个问题。如果失败了，我就会先搁置一边，过段时间再去琢磨。我曾花了20年时间弄清楚了宗教信仰改变方式是怎样",
+    "bundled_text_path": "references/documents/DOC-044.txt"
+  },
+  {
+    "id": "DOC-045",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2003-Academic-Economics.pdf",
+    "extension": ".pdf",
+    "size_bytes": 260950,
+    "sha256": "5327e8c73e496794b69ea4ef74a02fc083901a36db4713252825813e0807a11e",
+    "extracted_text_sha256": "545a02d8903f5768dddc726814eb0990732123ffef58a835cc1c127d1f6f501e",
+    "character_count": 75519,
+    "status": "ok",
+    "metadata": {
+      "pages": 25,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、管理与组织。要点摘录：four sigmas, and when he finally got to six sigmas of luck, people were laughing so hard he He said, “No, it was still six sigmas, but is was",
+    "bundled_text_path": "references/documents/DOC-045.txt"
+  },
+  {
+    "id": "DOC-046",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2005-The-Psychology-of-Human-Misjudgment-zh.md",
+    "extension": ".md",
+    "size_bytes": 154772,
+    "sha256": "03548f03f88478ac0aa837aedce5ec8c2f10cc435a57c92b5faf7a5e2010a8ec",
+    "extracted_text_sha256": "16afe7c0d32b57d950e367a21e70f38d392bad41df8a2ff64be5950aa66cd576",
+    "character_count": 54280,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：当我阅读我在15年前做过的心理学讲座的讲稿时，我觉得我现在可以写一篇逻辑性更强但是篇幅也更长的“讲稿”，将我以前讲过的大部分内容都囊括在内。 第一，由于我在撰写这篇更长的“讲稿”时更为追求逻辑的完整性，所以在许多人看来，和早前的讲稿相比，它会显得更加枯燥和难懂。这是因为我给那些心理倾向所下的定义会让人想起心理学教科书和欧几里德。谁会在阅读教科书或者重读欧几里德中找到乐趣呢？",
+    "bundled_text_path": "references/documents/DOC-046.txt"
+  },
+  {
+    "id": "DOC-047",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2007-USC-Gould-School-of-Law-Commencement-Address-zh.md",
+    "extension": ".md",
+    "size_bytes": 28978,
+    "sha256": "88afcfc758635d1b20d2fcf637f26dcd7e35dfa3dd3491a9d68e82e637289092",
+    "extracted_text_sha256": "8ec37ce8c5452494ca8de78ac55181a143131f936c69ce1ec84df4351db0170e",
+    "character_count": 9937,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、管理与组织、宏观与人口。要点摘录：这种习惯帮了我很多忙，它让生活更有乐趣，让我能做更多的事情，让我变得更有建设性，让我变得非常富有，而这无法用天分来解释。我的思维习惯只要得到正确的实践，真的很有帮助。但这种习惯也会带来危险，因为它太有用了，如果你们使用它，当你们和其他学科的专家——也许这位专家甚至是你们的老板，能够轻而易举地伤害你们——在一起时，你们会常常发现，原来你们的知识比他更丰富，更能够解决他所遇到的问题，当他束手无策的时候，你们有时会知道正确的答案。遇到这样的情况是非常危险的，如果你们的正确让有身份有地位的人觉得没面子，可能会引发极大的报复心理。我还没有找到避免受这个严重问题伤害的完美方法。 我想进一步解释为什么人们必须拥有跨科学的心态，才能高效而成熟地生活。在这里，我想引用古代最伟大的律师马尔库斯·图鲁斯·西塞罗的一个重要思想。西塞罗有句话很著名，他说，如果一个人不知道他出生之前发生过什么事情，在生活中就会像一个无知的孩童。这个道理非常正确，西塞罗正确",
+    "bundled_text_path": "references/documents/DOC-047.txt"
+  },
+  {
+    "id": "DOC-048",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2007-USC-Gould-School-of-Law-Commencement-Address.pdf",
+    "extension": ".pdf",
+    "size_bytes": 103412,
+    "sha256": "c0114036d857d049ca4b0f0b612f4fdb35735fdb374f8eeaec27c20ef5d24716",
+    "extracted_text_sha256": "1250b62c96e926ae86123371f5d03397438b18e1e0a02439be3a926654af1d86",
+    "character_count": 14860,
+    "status": "ok",
+    "metadata": {
+      "pages": 5,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为。要点摘录：In life, unless you’re more gifted than Einstein, inversion will help you solve problems. Let me use a little inversion now.",
+    "bundled_text_path": "references/documents/DOC-048.txt"
+  },
+  {
+    "id": "DOC-049",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2010-Munger-Talk-at-Harvard-Westlake.pdf",
+    "extension": ".pdf",
+    "size_bytes": 395682,
+    "sha256": "a85a8f0fbb6ee471441c0bfc7e267694c3373d06c738f992f03071e580eb646d",
+    "extracted_text_sha256": "47162acd1e314a7173d77ace5b464525c5e0ad3bea1a3febacaa244517c2ce0d",
+    "character_count": 50292,
+    "status": "ok",
+    "metadata": {
+      "pages": 10,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：决策与行为、风险与杠杆、管理与组织。要点摘录：do if you sit in a leadership position in psychology professors who invented",
+    "bundled_text_path": "references/documents/DOC-049.txt"
+  },
+  {
+    "id": "DOC-050",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2011-charlie-mungers-thoughts-on-the-world.md",
+    "extension": ".md",
+    "size_bytes": 22589,
+    "sha256": "e9fad03ec293b68c814787f44de5c7faf46a22d44664e2b8c8b092e7a7097294",
+    "extracted_text_sha256": "f4cd89fd7bf85077b42c784adda5284f94f539eff5365ad633872abc22c837fb",
+    "character_count": 22552,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：**On Berkshire's valuation:** Berkshire's stock is at a point Buffett and I never anticipated it would go to. When banks are borrowing the government's credit rating [FDIC insurance, etc.], you need rules to prevent stupid things.",
+    "bundled_text_path": "references/documents/DOC-050.txt"
+  },
+  {
+    "id": "DOC-051",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/2017-Charlie-Munger-talk-about-Bitcoin.md",
+    "extension": ".md",
+    "size_bytes": 43047,
+    "sha256": "07934d561ab7c0d2016e8f4279966e46e7329bc056cb7c10bcfe7b92f52852b9",
+    "extracted_text_sha256": "a9466474b4cad44134bad339937d3ba626a2c7084e1ffcc6bbbc72f1eaffed88",
+    "character_count": 43033,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：Very interesting and Hitler had fixed the Great Depression in Germany by the deliberate Keynesianism but he wasn't doing to stimulate the economy he wanted to get even with all the people he hated but he borrowed all this money and created all these armaments in Hitler's Germany by 1939 was the strongest economic power in Europe, but nobody else was close. He moved to California and he lived for several years and he ",
+    "bundled_text_path": "references/documents/DOC-051.txt"
+  },
+  {
+    "id": "DOC-052",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Speeches/The-Best-of-Charlie-Munger-1994-2011.pdf",
+    "extension": ".pdf",
+    "size_bytes": 3201336,
+    "sha256": "3ffb612839d9294e2a851fbabc0266fb320fac99e153e565dbb4b1c77a45a314",
+    "extracted_text_sha256": "cafbb56feda649c4496b377025035e44bfaf578511362ff1b56bba142d361b14",
+    "character_count": 855316,
+    "status": "ok",
+    "metadata": {
+      "pages": 349,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、决策与行为、管理与组织。要点摘录：1994 Munger on “The Psychology of Human Misjudgment” Page 9 How do lotteries and slot machines prey on human psychology?",
+    "bundled_text_path": "references/documents/DOC-052.txt"
+  },
+  {
+    "id": "DOC-053",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Writings/001-The-Munger-Network-of-Mental-Models.pdf",
+    "extension": ".pdf",
+    "size_bytes": 185240,
+    "sha256": "c46361ac45124e2678ecc86faf0273348422fb6129e8e4558d76a54238113f03",
+    "extracted_text_sha256": "298af808e6570b966fba3940636df90b081c1efae532cfd94e88ed669930c62c",
+    "character_count": 61410,
+    "status": "ok",
+    "metadata": {
+      "pages": 22,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：The Focus Investing Series Part 3: The Munger Network of Mental Models FocusInvestor.com  Focus Investing Series Part 3: Mental Models",
+    "bundled_text_path": "references/documents/DOC-053.txt"
+  },
+  {
+    "id": "DOC-054",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Writings/002-The-Great-Financial-Scandal-of-2003.md",
+    "extension": ".md",
+    "size_bytes": 24299,
+    "sha256": "b7596fb8b5f2c5177589cc881d8f971a5a251de7b918f0cfa75283af6cf4e012",
+    "extracted_text_sha256": "67a5d6095f61851cc9afe56ebda711b77d7dcb458d0f0837a841bf41e095326f",
+    "character_count": 24023,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：Much good continued after 1982, and serious evil had existed for many years prior to 1982 in the financial culture in which Quant Tech had to operate. Of this 70%, 30% was base salaries and 40% was incentive bonuses being paid out under an elaborate system designed by the founder.",
+    "bundled_text_path": "references/documents/DOC-054.txt"
+  },
+  {
+    "id": "DOC-055",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Writings/003-2009-How-We-Can-Restore-Confidence.md",
+    "extension": ".md",
+    "size_bytes": 6192,
+    "sha256": "f42f8c4475159f7a989c31104328a492cb5d13e570703f0aaae867b36d7f7ebc",
+    "extracted_text_sha256": "3640dc5ecc3d0727453968b7e2275ef0345f2b70ce9632148bcb9ffd60a746db",
+    "character_count": 6192,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "风险与杠杆"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：风险与杠杆。要点摘录：They include insufficient controls over morality and prudence in banks and investment banks; undesirable conduct among investment banks; greatly expanded financial leverage, aided by direct or implied use of government credit; and extreme excess, sometimes amounting to fraud, in the promotion of consumer credit. There was also great excess in highly leveraged speculation of all kinds.",
+    "bundled_text_path": "references/documents/DOC-055.txt"
+  },
+  {
+    "id": "DOC-056",
+    "relative_path": "inputs/text_files/CharlieMungerTalk-master/Writings/004-Munger's checklist-zh.md",
+    "extension": ".md",
+    "size_bytes": 29614,
+    "sha256": "f33cb850f2be51d1b854158c1376bd0e1630619c6d4333450a90bd2981c1dcf6",
+    "extracted_text_sha256": "e5ad9bfe089c7a3f6a23164e24572474003d9097855e7965b4a484eba2fabcd9",
+    "character_count": 11378,
+    "status": "ok",
+    "metadata": {},
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：价值与估值、商业质量与护城河、决策与行为、风险与杠杆、管理与组织。要点摘录：这是一个从未被回答过的问题，但与巴菲特合作40年的查理·芒格可能需要思考492个问题。《寻找智慧：从达尔文到芒格》（Seeking Wisdom: From Darwin to Munger）一书的作者彼得·贝弗林（Peter Bevelin）通过模仿芒格思考问题的方式而列出的这个“问题清单”，向我们展示了人类思维与所面临环境的复杂性，也反过来说明一般人在问题面前的思考是多么轻率而浮浅——很少有人会思考如此多的问题，即便这些问题价值连城或生死攸关。 不过，这并非完全是我们的过错。芒格与巴菲特所秉持的价值投资理念，及其一生坚持的简单智慧并不容易把握，看上去更像接近真理却极为抽象的“大道理”。因此，当贝弗林将芒格的思考方法分解成更容易理解的问题时，我们终于可以学着像“投资之神”一样思考。实际上，这份清单不仅可以用于决定购买哪只股票，当你在生活的十字路口前犹豫不决时，也可以把这些问题作为权衡的准则。",
+    "bundled_text_path": "references/documents/DOC-056.txt"
+  },
+  {
+    "id": "DOC-057",
+    "relative_path": "inputs/text_files/《杰克韦尔奇自传》杰克·韦尔奇(完美版).pdf",
+    "extension": ".pdf",
+    "size_bytes": 5077788,
+    "sha256": "f0eff67f2cb1034180d33703787276248b557a3e088d774833aa8b249b50be33",
+    "extracted_text_sha256": "5b4c6b190eaf225d55a5c02070cb0db3db100283f7213e9bc344883b168aeda2",
+    "character_count": 480862,
+    "status": "ok",
+    "metadata": {
+      "pages": 837,
+      "failed_pages": 0
+    },
+    "author": "Jack Welch",
+    "kind": "management_memoir",
+    "themes": [
+      "决策与行为",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Jack Welch / management_memoir。主题：决策与行为、管理与组织、宏观与人口。要点摘录：Jack) ， 近 年来 ， 又成了 “六 西格玛 杰克 ”(Six Sigma 的桥港(Bridgeport) ，向集团公 司的一 位执行 官查",
+    "bundled_text_path": "references/documents/DOC-057.txt"
+  },
+  {
+    "id": "DOC-058",
+    "relative_path": "inputs/text_files/《穷查理宝典查理·芒格的智慧箴言录》125.pdf",
+    "extension": ".pdf",
+    "size_bytes": 4598847,
+    "sha256": "d374c8d8ace0b64947fd8406508cd8c55765ebd7efced4c37dbe88331db369ec",
+    "extracted_text_sha256": "08705a234839be2aff877179c44cd434e98aea2acb4e70be968f9ce0dd643c3c",
+    "character_count": 322950,
+    "status": "ok",
+    "metadata": {
+      "pages": 204,
+      "failed_pages": 0
+    },
+    "author": "Charlie Munger",
+    "kind": "talk_or_letter",
+    "themes": [
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Charlie Munger / talk_or_letter。主题：资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：果问题很难解决，利用反向证明往往就能迎刃而解。生活的情况跟代数一样 或邪恶的行为辩解，那是一种可怕的思考方式。你们要让自己摆脱这种心理",
+    "bundled_text_path": "references/documents/DOC-058.txt"
+  },
+  {
+    "id": "DOC-059",
+    "relative_path": "inputs/text_files/人口.xlsx",
+    "extension": ".xlsx",
+    "size_bytes": 32406,
+    "sha256": "cc0eedeec4b5f8aa387ada0996a7f6926bc3e6764af00c00020093f447cffcb7",
+    "extracted_text_sha256": "da7726fbfe6b6437542ff6b9795d54370c2499df5eada515fdedf68013710c09",
+    "character_count": 5788,
+    "status": "ok",
+    "metadata": {
+      "sheets": [
+        "Sheet2"
+      ],
+      "nonempty_rows": 101
+    },
+    "author": "Macro reference",
+    "kind": "demographic_dataset",
+    "themes": [
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Macro reference / demographic_dataset。主题：宏观与人口。要点摘录：99 | 1921 | 25948 | 53522 | 79470 | =(C2-D2)/C2 98 | 1922 | 32835 | 67781 | 100616 | =(C3-D3)/C3",
+    "bundled_text_path": "references/documents/DOC-059.txt"
+  },
+  {
+    "id": "DOC-060",
+    "relative_path": "inputs/text_files/大道：段永平投资问答录 .pdf",
+    "extension": ".pdf",
+    "size_bytes": 28948207,
+    "sha256": "f396ae2abdc6209a8347435626906b54b56fa0b13462e3c74980a89bc2c612ff",
+    "extracted_text_sha256": "190292f45dc286f4caacfd4796d37e8103537dc4fcecd4a80db7bea9834e6796",
+    "character_count": 334156,
+    "status": "ok",
+    "metadata": {
+      "pages": 511,
+      "failed_pages": 0
+    },
+    "author": "Duan Yongping",
+    "kind": "investment_qa",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Duan Yongping / investment_qa。主题：价值与估值、商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：著名企业家、投资家，1961年出生于江西南昌，先后毕业于浙江大 将全书编为\"投资大道\"\"商业模式和企业文化”\"公司点评\"\"人生箴",
+    "bundled_text_path": "references/documents/DOC-060.txt"
+  },
+  {
+    "id": "DOC-173",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2019年巴菲特致股东信.pdf",
+    "extension": ".pdf",
+    "size_bytes": 1054010,
+    "sha256": "b61d8f24234ecc78d87ca6d44decbe5bab62b715a0053ceceb3d593a0bdf12ba",
+    "extracted_text_sha256": "84e4159ef04480782262a283673ec671ae082f2396ee7f47378d622170136dd1",
+    "character_count": 14052,
+    "status": "ok",
+    "metadata": {
+      "pages": 23,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：致伯克希尔哈撒⻙公司股东： 基于公认会计准则(GAAP)，伯克希尔在2018年盈利40亿美元。该数字的组成部分是：经营利润248亿美元，⽆形资产减值(⼏乎完全来⾃我们在卡夫亨 事实是，伯克希尔账⾯价值的年度变化——这是它在第2⻚告别演出——是⼀个已经失去它曾经具有的相关性的指标。有三种情况使这⼀点成为现实。⾸先，伯克希尔已经逐渐从⼀家资产集中于可流通股票的公司转变为⼀家主要价值在于经营业务的公司。查理和我预计这种重塑将以⼀种不规则的⽅式继续下去。其次，尽管我们持有的股权价值是按市场价格计算的，但会计准则要求我们收购的经营公司按照帐⾯价值计算，这低于其当前价值，这些差异在近⼏年⽇趋增⻓。第三，随着时间的推移，伯克希尔很可能会成为其股票的重要回购者，这些交易的价格将⾼于账⾯价值，但低于我们对其内在价值的估计。这种收购的数学原理很简单：每笔交易都使每股内在价值上升，⽽每股账⾯价值下降。这种情况⼀起导致账⾯价值记分卡越来越脱离其经济现实",
+    "bundled_text_path": "references/documents/DOC-173.txt"
+  },
+  {
+    "id": "DOC-174",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2020年巴菲特致股东的信.pdf",
+    "extension": ".pdf",
+    "size_bytes": 1055521,
+    "sha256": "28f05d04002b62e53e2a880c1a30d0fad7ac1af6a8a9bbe3bf1b2d44784730fa",
+    "extracted_text_sha256": "6f5eaba656464b8e803b5d9528a8527aad4dbacd0116d45096888831808e6ec3",
+    "character_count": 83225,
+    "status": "ok",
+    "metadata": {
+      "pages": 75,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "资本配置与股东回报"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：资本配置与股东回报。要点摘录：巴 菲 特 ： 以 前 我 都 习 惯 和 查 理 在 这 里 讲 话 ， 但 是 查 理 今 年 已 经96 岁 了 ，他 的 生 命 还 挺 强 健 ，但 是 今 年 可 能 最 好 的 选 择 就 是 让 芒 格 先 生",
+    "bundled_text_path": "references/documents/DOC-174.txt"
+  },
+  {
+    "id": "DOC-175",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2021年巴菲特致股东的信.pdf",
+    "extension": ".pdf",
+    "size_bytes": 811564,
+    "sha256": "ec7a7b5f9b934e4ef5dc5ae33fa40aa1b5b513d8594de877fcd25dcc1077f676",
+    "extracted_text_sha256": "49e3cc7d69e954ca9c120553856605ccc1477405350a747d45a0a0f39da10e92",
+    "character_count": 14489,
+    "status": "ok",
+    "metadata": {
+      "pages": 14,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织、宏观与人口。要点摘录：巴菲特2021年致股东公开信（全文版） 以下由新浪美股团队/编译,编者就部分做了修改。 伯克希尔哈撒韦公司致股东： 根据美国公认会计准则（GAAP），伯克希尔2020年的盈利为425亿美元。这一数字的四个组成部分是219亿美元的营业利润，49亿美元的实现资本利得，我们持有的股票中存在的净未实现资本利得增加所带来的267亿美元收益，最后，我们拥有的一些子公司和附属公司的价值减记导致的110亿美元损失。所有项目均在税后基础上列示。",
+    "bundled_text_path": "references/documents/DOC-175.txt"
+  },
+  {
+    "id": "DOC-176",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2022年巴菲特股东信中文.pdf",
+    "extension": ".pdf",
+    "size_bytes": 660911,
+    "sha256": "a0992037f380cfce9a8e534657596117be0c9f81c366ec36759f6c581a672b4e",
+    "extracted_text_sha256": "f42d2cba5643dcfdb354390e7e0f7c2582664b9ba1729c94fe690990fddd5687",
+    "character_count": 10608,
+    "status": "ok",
+    "metadata": {
+      "pages": 24,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：K-1 至 K-119 页上进行了复制。一些股东会觉得这个细节很 ※※ 由 BHE 持有；因此，伯克希尔股东仅持有该头寸 91.1%",
+    "bundled_text_path": "references/documents/DOC-176.txt"
+  },
+  {
+    "id": "DOC-177",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2022年巴菲特致股东信英文.pdf",
+    "extension": ".pdf",
+    "size_bytes": 403527,
+    "sha256": "5dda8979725e8bb390ea78d3821ee783a4ee44f71f220c5344d4134eda2db8cd",
+    "extracted_text_sha256": "818a054bb1a451c1856fefd4bdc182636a8edaafbfbb888457a03a5c6286ae0b",
+    "character_count": 29015,
+    "status": "ok",
+    "metadata": {
+      "pages": 29,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：theintrinsic value of your shares. “The combination of the resources andmanagements will",
+    "bundled_text_path": "references/documents/DOC-177.txt"
+  },
+  {
+    "id": "DOC-178",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2023年巴菲特股东信中文.pdf",
+    "extension": ".pdf",
+    "size_bytes": 887031,
+    "sha256": "4ad036d3e734b576d8a0fce5fdccc0b123b56596eb1d14073776ba84834303cf",
+    "extracted_text_sha256": "c0c5f0ecd081e068eb153b32c7d626ead8453d243aecf6fddf718ead0f5aa722",
+    "character_count": 6902,
+    "status": "ok",
+    "metadata": {
+      "pages": 14,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：归属于伯克希尔·哈撒韦股东的净利润为 181.64 亿美元，",
+    "bundled_text_path": "references/documents/DOC-178.txt"
+  },
+  {
+    "id": "DOC-179",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2024年巴菲特股东信中文.pdf",
+    "extension": ".pdf",
+    "size_bytes": 400417,
+    "sha256": "1e101895b05e72c67d8900a6d019cf4865a5a72caa773ec985bc93e2fddef755",
+    "extracted_text_sha256": "a721981d8857f9309c82c45f6b03af96dc5039006d497df868df75e17f3c33ca",
+    "character_count": 13643,
+    "status": "ok",
+    "metadata": {
+      "pages": 12,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织",
+      "宏观与人口"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织、宏观与人口。要点摘录：伯克希尔拥有超过三百万的股东账户，我负责每年写一封信，这封信对这样一个多样化且不 查理·芒格是我几十年来管理伯克希尔的合作伙伴，他对这一项义务的看法与我是一致的，",
+    "bundled_text_path": "references/documents/DOC-179.txt"
+  },
+  {
+    "id": "DOC-180",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/2024年巴菲特致股东信英文.pdf",
+    "extension": ".pdf",
+    "size_bytes": 55589,
+    "sha256": "a99f263003295b177e8c50ec34f2307093857a357276527e98d5a6205e21a908",
+    "extracted_text_sha256": "460d05b2c74b07732eb177fb0dd741020aa5fa20ef87325db5c5ee204ab2427e",
+    "character_count": 26656,
+    "status": "ok",
+    "metadata": {
+      "pages": 10,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、商业质量与护城河、资本配置与股东回报、风险与杠杆、管理与组织。要点摘录：capital allocation at these subsidiaries and selects the CEOs who make day-by-day operating Holding these investments, we have no say in management.",
+    "bundled_text_path": "references/documents/DOC-180.txt"
+  },
+  {
+    "id": "DOC-181",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/bft.txt",
+    "extension": ".txt",
+    "size_bytes": 3292097,
+    "sha256": "ceb99b78c3c9f5779ccc89be864f215c4d47a751e44629f023d2efb63cf7b875",
+    "extracted_text_sha256": "98eb6caf54033f67edc5c415b47befcd270ffea9761e0e5380550547b9d88cec",
+    "character_count": 3211023,
+    "status": "ok",
+    "metadata": {},
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "价值与估值",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：价值与估值、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：My view of the general market level is that it is priced above intrinsic value. general issues and perhaps some borrowed money would be used in this operation at that time.",
+    "bundled_text_path": "references/documents/DOC-181.txt"
+  },
+  {
+    "id": "DOC-182",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/巴菲特50年评论-伯克希尔：过去现在和未来.pdf",
+    "extension": ".pdf",
+    "size_bytes": 995443,
+    "sha256": "6793537770d1f393d9358e8a664c4ce5715f5361a193872f166152e70c344ceb",
+    "extracted_text_sha256": "841682fbeeb16487a691ca7b352ad599bba9d96a8abf0b673920521bb7a5f97f",
+    "character_count": 115599,
+    "status": "ok",
+    "metadata": {
+      "pages": 84,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "资本配置与股东回报",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：资本配置与股东回报、管理与组织。要点摘录：与此同时，公司关闭了九个工厂，有时候用清偿的收入去回购股票，这个模式 在股东的层面，税收和摩擦成本，对于个人投资者具有重要作用，当他们打算",
+    "bundled_text_path": "references/documents/DOC-182.txt"
+  },
+  {
+    "id": "DOC-185",
+    "relative_path": "inputs/text_files/巴菲特致股东的信WarrenBuffettLetter/芒格_伯克希尔50周年评论.pdf",
+    "extension": ".pdf",
+    "size_bytes": 500244,
+    "sha256": "37de0f02e28510df0e9f9921f1610cb97f8f098c730345da75b9c4ab06d1674e",
+    "extracted_text_sha256": "a7b073755825890f11bdf7bbf7db14ca96367091f8a2a9425e63c21004b43084",
+    "character_count": 33693,
+    "status": "ok",
+    "metadata": {
+      "pages": 25,
+      "failed_pages": 0
+    },
+    "author": "Warren Buffett",
+    "kind": "commentary_or_compilation",
+    "themes": [
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Warren Buffett / commentary_or_compilation。主题：商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：）描述其管理系统和政策，使得一个小型的，注定要失败的纺织商品企业， ）没有显著的，系统性的人员系统，股票期权系统，其他激励系统，退休系",
+    "bundled_text_path": "references/documents/DOC-185.txt"
+  },
+  {
+    "id": "DOC-186",
+    "relative_path": "inputs/text_files/散户乙.docx",
+    "extension": ".docx",
+    "size_bytes": 1372029,
+    "sha256": "caef8add17095bf9582e03b4f45f11c75f10d4f88aae78686d492ffa18449fc2",
+    "extracted_text_sha256": "a07546f5ce6a8b880af8faa50b8b216a43f4ad06b3b131365c194e39962cb032",
+    "character_count": 535453,
+    "status": "ok",
+    "metadata": {
+      "paragraphs": 10282,
+      "tables": 0
+    },
+    "author": "Sanhuyi",
+    "kind": "investment_notes",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "风险与杠杆",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "Sanhuyi / investment_notes。主题：价值与估值、商业质量与护城河、资本配置与股东回报、决策与行为、风险与杠杆、管理与组织。要点摘录：在雪球上，无意中读到了很多球友分享的散户乙前辈的发言，深受启发。为了更好的学习、理解散户乙前辈的投资理念，遂萌发了整理散户乙发言的想法，希望将网络上散落在各处的发言根据发言时间汇总、整理到一起，便于自己反复阅读和系统学习。经过大概半年时间的收集、整理、校对，时至今日基本完成。主要以球友“汇编室、十年分红收回成本”分享的内容，一位公众号网友收集的部分，和自己收藏的2023年的部分为主体，又根据雪球上众多热心朋友分享的内容进行了校对、补充，形成此文。在此，非常感谢散户乙前辈的分享，也对各位热心分享的朋友们一并表示感谢。虽然希望将散户乙前辈的发言都整理起来，但限于精力和时间，难免还有遗漏的发言或错误之处，还请朋友们指正。 2013年，在白酒行业黑天鹅之际，散户乙用股权思维买入泸州老窖，用公司分红创造现金流预期十年收回成本，期间坚持分红再买入,一直持有到2021年3月，获得了巨大的回报，这期间经历了白酒塑化剂事件,2015年的股灾、20",
+    "bundled_text_path": "references/documents/DOC-186.txt"
+  },
+  {
+    "id": "DOC-187",
+    "relative_path": "outputs/investment_masters_knowledge/complete_corpus/documents/DOC-187.txt",
+    "extension": ".txt",
+    "size_bytes": 6516,
+    "sha256": "a57802fb2723025a9e0d52e894d23ae12bf778b5b1091d5656b152900981d977",
+    "extracted_text_sha256": "a57802fb2723025a9e0d52e894d23ae12bf778b5b1091d5656b152900981d977",
+    "character_count": 3380,
+    "status": "ok",
+    "metadata": {
+      "source_post_count": 39,
+      "selected_investment_post_count": 20,
+      "source_account_id": "1247347556",
+      "source_window": "2025-08-13 至 2026-07-19"
+    },
+    "author": "Duan Yongping",
+    "kind": "xueqiu_original_posts_curated",
+    "themes": [
+      "价值与估值",
+      "商业质量与护城河",
+      "资本配置与股东回报",
+      "决策与行为",
+      "管理与组织"
+    ],
+    "duplicate_of": null,
+    "abstract": "从 39 条独立原帖中筛选 20 条投资相关内容，保留日期、编号和原帖链接。作为近期实践与案例补充，不替代基础原则或构成对读者的买卖建议。",
+    "bundled_text_path": "references/documents/DOC-187.txt"
+  }
+]
