@@ -2,11 +2,11 @@
   "canonical_repository": "https://github.com/liuyi-hubei/stock-research",
   "canonical_branch": "main",
   "canonical_path": ".agents/skills/master-thinking",
-  "scope": "project",
+  "scope": "shared-global-and-project",
   "updated_at": "2026-10-24",
   "private_corpus_included": false,
   "files": {
-    "SKILL.md": "20f28babb508167f20de47f3491d4482864dd18bcfe951639bc13d57a8226353",
+    "SKILL.md": "4f2b9aec757c4a897f30edb7101be86d4ca5923d2d98e8f6bc34ba5037c7d231",
     "agents/openai.yaml": "b9fbc439a911b1b737bbc2ad58b0c9ef7c665568227aef6a2a438da14754f541",
     "assets/icon.svg": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b",
     "references/corpus_inventory.json": "5865de415d068565fd2ebfbf14c17cca1ae66f095d08de85e75e37db84fad0e4",
