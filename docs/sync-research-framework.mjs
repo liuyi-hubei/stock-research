@@ -17,7 +17,7 @@ for(const plan of plans){
   const stock=c.window.STOCK_RESEARCH.stocks.find(s=>s.code===plan.code);
   c.window.ResearchFramework.validate(plan,stock);
   const target=path.join(root,`reports/stocks/${stock.name}-${stock.code}.md`),original=fs.readFileSync(target,'utf8');
-  assert(patchMode || original.includes('<!-- RESEARCH_FRAMEWORK: evidence-first-v1 -->'),'Refuse to replace manual report: first back it up and review --patch CODE');
+  assert(patchMode || /<!-- RESEARCH_FRAMEWORK: (?:evidence-first-v1|company-study-v2) -->/.test(original),'Refuse to replace manual report: first back it up and review --patch CODE');
   const review=original.match(/<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/)?.[0] || '';
   const updated=researchMarkdown(stock,plan,c.window.ShareholderModel,review);
   if(patchMode){patch+='*** Update File: '+target.replaceAll('\\','/')+'\n@@\n'+original.trimEnd().split(/\r?\n/).map(l=>'-'+l).join('\n')+'\n'+updated.trimEnd().split('\n').map(l=>'+'+l).join('\n')+'\n';}

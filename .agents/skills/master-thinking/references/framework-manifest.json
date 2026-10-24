@@ -6,26 +6,28 @@
   "updated_at": "2026-10-24",
   "private_corpus_included": false,
   "files": {
-    "SKILL.md": "4f2b9aec757c4a897f30edb7101be86d4ca5923d2d98e8f6bc34ba5037c7d231",
+    "SKILL.md": "3b9a8114ba451552549f7aeca6f8252d3ec972ef8f9ec26d37a339e252e74776",
     "agents/openai.yaml": "b9fbc439a911b1b737bbc2ad58b0c9ef7c665568227aef6a2a438da14754f541",
     "assets/icon.svg": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b",
     "references/corpus_inventory.json": "5865de415d068565fd2ebfbf14c17cca1ae66f095d08de85e75e37db84fad0e4",
     "references/data-sourcing.md": "89e5ee6df6c823364260956da3f87907559d08edeabc7d3c4c12fc2e612190a1",
     "references/deep_models/charlie_munger.md": "20d073caa3bfd037d730127115007fa157cb1c4cb83ef83bf77781a81e4c42fd",
-    "references/deep_models/combined_framework.md": "85712d325e46da99ae656cc25f52e1096d374d076aa4ca50492a15df7f7bf230",
-    "references/deep_models/duan_yongping.md": "5719ffd09d46c03cf0d50c3b6711f6f65cf5c2cd058895b52ffc3c1e25f72a99",
+    "references/deep_models/combined_framework.md": "9a77577ebbefcf8769f9bbdd55a60a6928a1439dd8dd84668ed6b27a9f5fa155",
+    "references/deep_models/duan_yongping.md": "07cb34b46456aef6f8a853be166879fab05534f1f94827e49d8d97e57a38a80d",
     "references/deep_models/jack_welch.md": "b88b22f5f0dd721d0d2db14bc7d3009af57344f50cd70895e2ca5ba10a54078e",
     "references/deep_models/ludinggong.md": "86b8198c56e38c1cbf718298db45c9d927dcc68100b4ce2848be6ea944398db7",
     "references/deep_models/sanhuyi.md": "b0ef9b2adb870ff3ca2a4f3d3f6bfb30636bab7b32868da8bcf9572b8f8b6ae6",
     "references/deep_models/warren_buffett.md": "d92ee8025340ff61ad46cac912daf1db31256f5fd42a656c66122f8abfe4f7aa",
     "references/document_abstracts.md": "37e7274e7e4611ecab5fb4c29afbc04ede47b5b637fd79b8d2cfccf81b54cbcd",
-    "references/duan-framework-source.md": "a119af5d7ecdc4bdfa651a4d8dddaf3178fac9875210eab6b89cc31547a4e607",
+    "references/duan-framework-source.md": "782fdb6e7abf95cac8fc5d6a7b6c2bb7f8c088f435956221ae75ab26ff1ef03c",
     "references/ludinggong/analysis.md": "39415a2e7e1c4d5e6be71fb18ba7d36e75926c45522b167100e431beb58cdb16",
     "references/ludinggong/archive-urls.json": "840087ba9b6108c4e6a0d0e3c67c52ead4f129e3f14aab24224d7f823776e1a2",
     "references/ludinggong/cases.md": "f43d0be37ec95e61c0b56ae6335b11039e58f150e2307051312316e598286c3d",
     "references/ludinggong/coverage.md": "d8c3cade63f134b0a5ec8a85d83b6aa48f5b65d5d5a25455a0f6bfbc8ee30261",
     "references/ludinggong/evidence.md": "8c9adf3ceb27a21caf4977f555687f67a46a7c3b449fc357002c8e6ba3b1446b",
     "references/ludinggong/operations.md": "3abaddeef826636aa650e09d514772e9ec03984563f2c2ffd9594b5bdbb790b2",
-    "references/topic_index.md": "96e07d0b3b156cdbd20eff10b8c5fc425e5511812ef972637bd39ceb0d0a6e9f"
-  }
+    "references/topic_index.md": "96e07d0b3b156cdbd20eff10b8c5fc425e5511812ef972637bd39ceb0d0a6e9f",
+    "references/个股研究规范.md": "028fa97f6782ee56e598de0f5f39319531c5f84835f520e512aa736380cb06ad"
+  },
+  "writing_rules_version": "2026-10-24-r2"
 }

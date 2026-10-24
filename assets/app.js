@@ -137,7 +137,7 @@
     });
   }
 
-  function irrSection(stock) {
+  function irrSection(stock, compact = false) {
     if (window.ShareholderModel.isPending(stock)) {
       const r = stock.model.parameterReview;
       return `<section class="section irr-section" id="valuation"><div class="section-head"><h2>十年股东现金流收益</h2><p>待重新评估 · 暂停排名</p></div><p class="irr-verdict"><strong>旧估算已撤回</strong> · ${escapeText(stock.model.pendingReason)}</p><p>十年 IRR：待重新评估。参考买入价：暂不提供。未确定未来分红不等于十年不分红，零股息压力测试不能作为基准预期收益。旧盈利情景、参考价格、敏感性及买入价试算已停用。</p><div class="model-review"><h3>重新评估需要解决的问题</h3>${r ? `<dl class="assumption-evidence"><div><dt>经营路径</dt><dd>${escapeText(r.operatingCheck)}</dd></div><div><dt>资金约束</dt><dd>${escapeText(r.capitalCheck)}</dd></div><div><dt>每股口径</dt><dd>${escapeText(r.shareCheck)}</dd></div><div><dt>退出估值</dt><dd>${escapeText(r.exitCheck)}</dd></div></dl><ul class="bullet-list">${(r.references || []).map(ref => `<li><a href="${escapeText(ref.url)}" target="_blank" rel="noopener">${escapeText(ref.label)}</a>（${escapeText(ref.date)}） · ${escapeText(ref.locator)}</li>`).join('')}</ul>` : ''}</div><article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${escapeText(stock.dividendView)}</p></article><p class="method-note">本次修正撤回模型结论，不代表刷新财务事实。行情日 ${escapeText(stock.priceDate)}；实际财报期 ${escapeText(stock.model.financialPeriod)}；方法审阅日 ${escapeText(stock.model.reviewedAt)}。</p></section>`;
@@ -151,10 +151,10 @@
       ${!eligible(stock) ? `<p class="irr-verdict"><strong>关键假设待核验</strong> · ${window.ShareholderModel.eligibility(stock, stock.returnEvaluation).reason} 以下仅保留所列假设的条件演算。</p>` : `<p class="irr-verdict">基准 IRR <strong>${percent(base.irr)}</strong>，相对回报要求 <strong>${delta} 个百分点</strong>。达标参考价 <strong>${currencySymbol(stock)}${formatPrice(base.fairPrice)}</strong>，仅在下述假设成立时有效。</p>`}
       ${priceTrial(stock)}
       <div class="table-wrap"><table><caption>三情景${!eligible(stock) ? "条件演算" : "假设与结果"} · 起始 EPS 为研究预测值</caption><thead><tr><th>情景</th><th>起始EPS</th><th>EPS年增长路径</th><th>逐年分红率</th><th>退出PE</th><th>十年IRR</th></tr></thead><tbody>${result.scenarios.map(s => `<tr><th scope="row">${s.name}</th><td>${price.format(s.eps)}${stock.model.currency}</td><td>${annualPath(s.growthRates)}</td><td>${annualPath(s.payoutRates)}</td><td>${s.exitPE}倍</td><td><strong>${percent(s.irr)}</strong></td></tr>`).join("")}</tbody></table></div>
-      <p class="method-note">${stock.model.assumptionNote} 行情日 ${stock.priceDate}；财务报告期 ${stock.model.financialPeriod}；模型复核日 ${stock.model.reviewedAt}。${stock.model.requiredReturnReason}</p>
+      ${compact?'<details class="projection"><summary>展开模型依据、股息口径与敏感性</summary>':''}<p class="method-note">${stock.model.assumptionNote} 行情日 ${stock.priceDate}；财务报告期 ${stock.model.financialPeriod}；模型复核日 ${stock.model.reviewedAt}。${stock.model.requiredReturnReason}</p>
       <details class="projection irr-formula"><summary>展开计算公式与基准逐年现金流</summary><div class="irr-explanation"><p>${stock.model.method}</p><p>EPS<sub>t</sub> = EPS<sub>t−1</sub> × (1 + g<sub>t</sub>)；分红 D<sub>t</sub> = EPS<sub>t−1</sub> × 分红率；卖出价 P<sub>10</sub> = EPS<sub>10</sub> × 退出 PE。</p><p class="irr-equation">P<sub>0</sub> = Σ<sub>t=1…10</sub> D<sub>t</sub> / (1 + r)<sup>t</sup> + P<sub>10</sub> / (1 + r)<sup>10</sup></p><p>求出的 r 为 IRR。达标参考价是这些现金流按 ${(stock.model.requiredReturn * 100).toFixed(1)}% 回报要求折现之和。${base.firstDividend !== undefined ? "首年采用已核定年度金额" : base.firstDividendParts ? "首年已知金额替代对应预测部分，详见分红说明" : "首年分红为预测"}，第十年同时收到分红和卖出价。IRR 不等于领取分红后实际财富的复合增长率。</p></div>
       <div class="table-wrap"><table><caption>每买入1股的现金流 · 单位${stock.model.currency}</caption><thead><tr><th>持有年度</th><th>EPS增速</th><th>当年EPS</th><th>分红率</th><th>领取分红</th><th>卖出所得</th><th>净现金流</th></tr></thead><tbody><tr><th scope="row">买入</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>−${formatPrice(stock.price)}</td></tr>${base.rows.map(r => `<tr><th scope="row">第${r.year}年</th><td>${percent(r.growth)}</td><td>${price.format(r.eps)}</td><td>${percent(r.payoutRate)}</td><td>${price.format(r.dividend)}</td><td>${r.sale ? price.format(r.sale) : "—"}</td><td>${price.format(r.cashFlow)}</td></tr>`).join("")}</tbody></table></div><p class="footnote">按未四舍五入数值计算；买入价按行情精度展示，年度预测现金流保留两位小数。不计个人税费、通胀和未来股本变化；情景范围不代表统计置信区间。</p></details>
-      <article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${stock.model.dividendNote}</p><p>${stock.dividendView}</p></article>${modelReview(stock)}<p class="method-note">第十年基准卖出所得：${currencySymbol(stock)}${formatPrice(base.rows[9].sale)}；由第十年EPS和退出PE生成。</p></section>`;
+      <article class="dividend-view"><div class="section-label">分红与现金口径</div><p>${stock.model.dividendNote}</p><p>${stock.dividendView}</p></article>${modelReview(stock)}<p class="method-note">第十年基准卖出所得：${currencySymbol(stock)}${formatPrice(base.rows[9].sale)}；由第十年EPS和退出PE生成。</p>${compact?'</details>':''}</section>`;
   }
 
   function rankingRows() {
@@ -370,6 +370,21 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     const nav = document.querySelector(".report-nav");
     if (!nav) return;
     document.body.classList.add('has-report-nav');
+    const dock = nav.closest('.research-nav-dock');
+    if (dock) {
+      const header = document.querySelector('.site-header');
+      const syncReadingOffset = () => {
+        if (header) document.documentElement.style.setProperty('--reading-header-height', `${header.getBoundingClientRect().height}px`);
+        document.documentElement.style.setProperty('--report-nav-offset', window.matchMedia('(max-width: 680px)').matches ? '0px' : `${dock.getBoundingClientRect().height}px`);
+      };
+      syncReadingOffset();
+      window.addEventListener('resize', syncReadingOffset);
+      if ('ResizeObserver' in window) {
+        const sizeObserver = new ResizeObserver(syncReadingOffset);
+        sizeObserver.observe(dock);
+        if (header) sizeObserver.observe(header);
+      }
+    }
     const links = [...nav.querySelectorAll('a[href^="#"]')];
     const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
     const setCurrent = id => {
@@ -378,7 +393,7 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
         else link.removeAttribute("aria-current");
       });
       const current = links.find(link => link.hash === `#${id}`);
-      if (current && window.matchMedia?.('(max-width: 680px)').matches) {
+      if (current) {
         const left = current.offsetLeft;
         if (left < nav.scrollLeft || left + current.offsetWidth > nav.scrollLeft + nav.clientWidth) {
           nav.scrollTo({ left: Math.max(0, left - (nav.clientWidth - current.offsetWidth) / 2), behavior: 'auto' });
@@ -400,7 +415,7 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     }
   }
 
-  function evidenceTracking(stock) {
+  function evidenceTracking(stock, part = 'all') {
     const tracking = stock.evidenceTracking;
     if (!tracking) return "";
     const cards = tracking.observations.map(item => `<article class="signal-card"><div class="section-label">${item.label}</div><strong>${item.value}</strong><time>${item.date}</time><p>${item.detail}</p><a href="${item.source[1]}" target="_blank" rel="noopener noreferrer">查看原始披露 ↗</a></article>`).join("");
@@ -412,6 +427,8 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     }).join('');
     const comparison = forecastRows ? `<div class="tracking-price-head" id="analyst-forecasts"><h3>${escapeText(forecasts.title)}</h3><p>${escapeText(forecasts.note)}</p></div><div class="table-wrap"><table class="tracking-table"><caption>${escapeText(forecasts.title)} · 归母净利润（亿元）</caption><thead><tr>${['机构','报告日期','平台入库日期','2026E','2027E','2028E','2027增速','来源'].map(label => `<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${forecastRows}</tbody></table></div>` : '';
     const rows = tracking.prices.rows.map(([date, guojiao, wuliangye, url]) => `<tr><td><time>${date}</time></td><td>¥${guojiao}</td><td>¥${wuliangye}</td><td>¥${guojiao - wuliangye}</td><td><a href="${url}" target="_blank" rel="noopener noreferrer">原始价格记录 ↗</a></td></tr>`).join("");
+    if(part==='forecasts')return comparison;
+    if(part==='prices')return `<details class="projection"><summary>历史零售价记录与采价口径</summary><p>${escapeText(tracking.prices.note)}</p><div class="table-wrap"><table><thead><tr>${['采价日','高度国窖','普五八代','价差','来源'].map(x=>`<th scope="col">${x}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></details>`;
     return `<section class="section tracking-section" id="tracking"><div class="section-head"><h2>经营证据跟踪</h2><p>最近核对 ${tracking.updatedAt} · 每项保留披露日期和口径</p></div><p class="tracking-intro">${tracking.intro}</p><div class="signal-grid">${cards}</div>${comparison}<div class="tracking-price-head"><h3>国窖1573与普五价格记录</h3><p>${tracking.prices.note}</p></div><div class="table-wrap"><table class="tracking-table"><thead><tr><th scope="col">日期</th><th scope="col">高度国窖</th><th scope="col">普五八代</th><th scope="col">价差</th><th scope="col">数据来源</th></tr></thead><tbody>${rows}</tbody></table></div><p class="footnote">价格稳定只能验证价格表现；判断去库存是否完成，还需后续开瓶、渠道库存和回款数据交叉核对。</p></section>`;
   }
 
@@ -422,19 +439,18 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     const metrics = plan.reviewState==='conditional' ? summaryMetrics(stock).replace('基准十年 IRR','原参数条件 IRR').replace('达标参考价','条件参考价') : summaryMetrics(stock);
     document.body.className = 'stock-page evidence-first-page';
     document.title = `${stock.name}完整研究报告 | ${db.meta.siteName}`;
-    const navLabels = ['结论','生意','盈利','路径','估值','跟踪'];
-    const nav = `<nav class="report-nav" aria-label="报告目录">${plan.sections.map((s,i)=>`<a href="#${escapeText(s.id)}">${navLabels[i]}</a>`).join('')}<a href="#sources">来源</a></nav>`;
+    const nav = `<nav class="report-nav" aria-label="报告目录">${plan.sections.map(s=>`<a href="#${escapeText(s.id)}">${escapeText(s.title)}</a>`).join('')}<a href="#sources">来源与研究边界</a></nav>`;
     const sections = plan.sections.map(s => {
-      const head = `<div class="section-head"><h2>${escapeText(s.title)}</h2><p>${escapeText(s.intro)}</p></div>`;
+      const head = `<div class="section-head"><h2>${escapeText(s.title)}</h2>${s.intro?`<p>${escapeText(s.intro)}</p>`:''}</div>`;
       let extra = '';
-      if(s.id==='summary')extra=`<p class="research-state">${escapeText(framework.labels[plan.reviewState])} · ${escapeText(plan.businessType)}</p><p class="research-copy">${escapeText(plan.summary)}</p><div class="research-metrics">${metrics}</div><p class="method-note">本轮是框架整理，沿用原有行情、财报及模型参数，不代表已完成新的经营预测或资金预算核验。方法整理日 ${escapeText(plan.methodReviewedAt)}。${plan.reviewState==='conditional'?'下列收益数字仍是旧参数的条件演算，不是经概率校准的预期收益。':''}</p>`;
-      if(s.id==='status')extra=`<div id="framework" class="research-anchor" aria-label="统一商业质量检查"></div><details class="projection"><summary>展开原有行业与公司事实</summary>${paragraphs(stock.industryStatus)}${paragraphs(stock.companyStatus)}</details>`;
-      if(s.id==='forecast')extra=`<h3>原有盈利起点与事实口径</h3><p class="research-copy">${escapeText(stock.profitForecast.note)}</p>${forecastTable(stock)}<details class="projection"><summary>展开原有关键事实表</summary>${factTable(stock.facts)}</details>`;
-      if(s.id==='valuation')extra=(plan.reviewState==='conditional'?'<p class="research-state">原参数条件演算 · 经营驱动和联合资金预算尚待补证</p>':'')+irrSection(stock).replace('id="valuation"','id="cashflow-model"');
-      if(s.id==='risks')extra=evidenceTracking(stock);
+      if(s.id==='summary')extra=`<p class="research-state">${escapeText(framework.labels[plan.reviewState])} · ${escapeText(plan.businessType)}</p><p class="research-copy">${escapeText(plan.summary)}</p><div class="research-metrics">${metrics}</div>${plan.version==='company-study-v2'?'':`<p class="method-note">本轮是框架整理，沿用原有行情、财报及模型参数，不代表已完成新的经营预测或资金预算核验。方法整理日 ${escapeText(plan.methodReviewedAt)}。${plan.reviewState==='conditional'?'下列收益数字仍是旧参数的条件演算，不是经概率校准的预期收益。':''}</p>`}`;
+      if(s.id==='status')extra=`<div id="framework" class="research-anchor" aria-label="统一商业质量检查"></div>${plan.integratedNarrative?'':`<details class="projection"><summary>展开原有行业与公司事实</summary>${paragraphs(stock.industryStatus)}${paragraphs(stock.companyStatus)}</details>`}`;
+      if(s.id==='forecast')extra=plan.integratedNarrative?`${forecastTable(stock)}${evidenceTracking(stock,'forecasts')}`:`<h3>原有盈利起点与事实口径</h3><p class="research-copy">${escapeText(stock.profitForecast.note)}</p>${forecastTable(stock)}<details class="projection"><summary>展开原有关键事实表</summary>${factTable(stock.facts)}</details>`;
+      if(s.id==='valuation')extra=(plan.version==='company-study-v2'?evidenceTracking(stock,'forecasts'):'')+(plan.reviewState==='conditional'?'<p class="research-state">条件演算 · 经营路径与分配资金须持续验证</p>':'')+irrSection(stock,plan.integratedNarrative).replace('id="valuation"','id="cashflow-model"');
+      if(s.id==='risks')extra=evidenceTracking(stock,plan.integratedNarrative?'prices':'all');
       return `<section class="section research-section" id="${escapeText(s.id)}">${head}${s.id==='summary'?extra:''}${blocks(s)}${s.id==='summary'?'':extra}</section>`;
     }).join('');
-    document.body.innerHTML=`${header('reports')}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">证据优先 · 结构试点</div><div class="title-row"><h1>${escapeText(stock.name)}</h1><span class="ticker">${escapeText(stock.market)} / ${stock.code}</span></div><p>${escapeText(framework.labels[plan.reviewState])}</p></div><aside class="price-panel"><span>${stock.priceDate} 收盘 · 非实时行情</span><strong>${displayPrice(stock)}</strong><small>${escapeText(stock.marketCap)}</small></aside></div>${nav}</div></section><div class="shell report-body">${freshness(stock,true)}${sections}<section class="section sources" id="sources"><div class="section-head"><h2>来源与研究边界</h2><p>历史来源沿用；方法整理不等于重新取证</p></div><div class="source-list">${stock.sources.map((source,i)=>`<a id="research-source-${i}" href="${escapeText(source[2])}" target="_blank" rel="noopener noreferrer"><span>[S${i+1}] ${escapeText(source[0])}</span><time>${escapeText(source[1])}</time><b aria-hidden="true">↗</b></a>`).join('')}</div><p class="method-note">统一检查商业质量、盈利起点、经营驱动、资本与分配约束及判断失效条件，不以模拟大师口吻替代证据；不表示任何投资者本人对该公司的意见。</p></section></div></main>${footer()}`;
+    document.body.innerHTML=`${header('reports')}<main><section class="detail-cover dark-band"><div class="shell"><a class="back" href="reports.html?category=stocks">← 返回个股报告</a><div class="detail-hero"><div><div class="eyebrow">${plan.version==='company-study-v2'?'个股研究':'证据优先 · 结构试点'}</div><div class="title-row"><h1>${escapeText(stock.name)}</h1><span class="ticker">${escapeText(stock.market)} / ${stock.code}</span></div><p>${escapeText(framework.labels[plan.reviewState])}</p></div><aside class="price-panel"><span>${stock.priceDate} 收盘 · 非实时行情</span><strong>${displayPrice(stock)}</strong><small>${escapeText(stock.marketCap)}</small></aside></div></div></section><div class="research-nav-dock"><div class="shell">${nav}</div></div><div class="shell report-body">${freshness(stock,true)}${sections}<section class="section sources" id="sources"><div class="section-head"><h2>来源与研究边界</h2><p>${plan.version==='company-study-v2'?'行情与财报各按注明时点使用，预测与披露事实分开':'历史来源沿用；方法整理不等于重新取证'}</p></div><div class="source-list">${stock.sources.map((source,i)=>`<a id="research-source-${i}" href="${escapeText(source[2])}" target="_blank" rel="noopener noreferrer"><span>[S${i+1}] ${escapeText(source[0])}</span><time>${escapeText(source[1])}</time><b aria-hidden="true">↗</b></a>`).join('')}</div><p class="method-note">统一检查商业质量、盈利起点、经营驱动、资本与分配约束及判断失效条件，不以模拟大师口吻替代证据；不表示任何投资者本人对该公司的意见。</p></section></div></main>${footer()}`;
   }
 
   function renderStock(stock) {

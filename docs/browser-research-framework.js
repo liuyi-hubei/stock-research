@@ -11,8 +11,13 @@ async(page)=>{
    check(await page.locator('.view-card').count()===0,code+' no five persona cards');
    check(await page.locator('.research-evidence').count()>=4,code+' evidence and counterpoint');
    const heading=await page.locator('h1').innerText();check(heading.length>0,code+' heading');
-   await page.getByRole('navigation',{name:'报告目录'}).getByRole('link',{name:'路径',exact:true}).click();
-   check(page.url().endsWith('#path'),code+' driver navigation');
+   const nav=page.getByRole('navigation',{name:'报告目录'});
+   const labels=await nav.locator('a[href^="#"]').evaluateAll(links=>links.every(a=>document.querySelector(a.hash)?.querySelector('h2')?.textContent.trim()===a.textContent.trim()));
+   check(labels,code+' navigation matches chapter titles');
+   const jump=code==='000568'?'valuation':'path';
+   await nav.locator('a[href="#'+jump+'"]').click();
+   check(page.url().endsWith('#'+jump),code+' chapter navigation');
+   check(await nav.evaluate(n=>{const r=n.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;}),code+' navigation remains visible after jump '+width);
    if(code==='002714'){
     check(await page.locator('#price-trial-form').count()===0,'pending trial absent');
     check((await page.locator('#valuation').innerText()).includes('参考买入价：暂不提供'),'pending disclosure');

@@ -25,7 +25,13 @@ for(const [code,p] of Object.entries(plans)){
  const clone=JSON.parse(JSON.stringify(p));clone.sections[1].blocks.push({evidence:{claim:'x',basis:'x',counterpoint:'x',state:'已披露事实',sourceRefs:[stock.sources.length]}});assert.throws(()=>framework.validate(clone,stock),/evidence/);
  const escaped=framework.renderBlocks({...p,sections:p.sections.map((s,i)=>i? s:{...s,blocks:[{p:'<script>unsafe</script>'}]})},stock,x=>String(x).replaceAll('<','&lt;').replaceAll('>','&gt;'));
  assert(escaped({...p.sections[0],blocks:[{p:'<script>unsafe</script>'}]}).includes('&lt;script&gt;'));
- const original=read(`reports/stocks/${stock.name}-${code}.md`);assert(original.includes('<!-- RESEARCH_FRAMEWORK: evidence-first-v1 -->'),`${code}: archive not migrated`);
+ const original=read(`reports/stocks/${stock.name}-${code}.md`);assert(original.includes(`<!-- RESEARCH_FRAMEWORK: ${p.version} -->`),`${code}: archive not migrated`);
+ if(p.integratedNarrative){
+  assert(!original.includes('### 原有行业与公司事实') && !original.includes('### 原有盈利起点与口径') && !original.includes('### 原有经营证据跟踪'),`${code}: legacy narrative duplicated`);
+  const forecasts=stock.evidenceTracking?.analystForecasts;
+  if(forecasts)assert.equal(original.split('### '+forecasts.title).length-1,1,`${code}: forecasts must appear once`);
+  const invalid=JSON.parse(JSON.stringify(p));invalid.integratedNarrative='true';assert.throws(()=>framework.validate(invalid,stock),/narrative/);
+ }
  for(const section of p.sections)assert(original.includes('## '+section.title),`${code}: missing archive section`);
  for(const file of ['index.html','stock.html','reports.html','industry.html']){
   const html=read(file),src=`data/research/${code}.js`;

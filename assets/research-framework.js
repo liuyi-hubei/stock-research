@@ -2,12 +2,15 @@
 (function(root){
   'use strict';
   const ids=['summary','status','forecast','path','valuation','risks'];
+  const companyIds=['summary','business','culture','valuation','perspectives','risks'];
   const states=['已披露事实','研究推导','情景假设','待补证'];
   function validate(plan,stock){
-    if(!plan || plan.version!=='evidence-first-v1' || plan.code!==stock.code)throw Error('Unsupported research framework');
+    if(!plan || !['evidence-first-v1','company-study-v2'].includes(plan.version) || plan.code!==stock.code)throw Error('Unsupported research framework');
+    const sectionIds=plan.version==='company-study-v2'?companyIds:ids;
+    if(plan.integratedNarrative!==undefined && typeof plan.integratedNarrative!=='boolean')throw Error('Invalid integrated narrative mode');
     if(!['ready','conditional','pending'].includes(plan.reviewState))throw Error('Invalid research state');
     if(!/^\d{4}-\d{2}-\d{2}$/.test(plan.methodReviewedAt || '') || !plan.businessType || !plan.summary)throw Error('Missing research metadata');
-    if(!Array.isArray(plan.sections) || plan.sections.length!==6 || plan.sections.some((s,i)=>s.id!==ids[i] || !s.title || !s.intro || !Array.isArray(s.blocks) || !s.blocks.length))throw Error('Expected six research sections in order');
+    if(!Array.isArray(plan.sections) || plan.sections.length!==6 || plan.sections.some((s,i)=>s.id!==sectionIds[i] || !s.title || typeof s.intro!=='string' || (s.id!=='summary' && !s.intro) || !Array.isArray(s.blocks) || !s.blocks.length))throw Error('Expected six research sections in order');
     for(const section of plan.sections)for(const b of section.blocks){
       if(Object.keys(b).length!==1)throw Error('Expected exactly one research block type');
       if(b.p || b.h3){if(typeof (b.p || b.h3)!=='string')throw Error('Invalid research text');continue;}
