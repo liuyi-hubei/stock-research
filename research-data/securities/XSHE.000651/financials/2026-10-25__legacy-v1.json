@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000651__financials__20261025-legacy-v1",
+  "securityId": "XSHE.000651",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_eed106c2ec5a","metric":"fact_eed106c2ec5a","value":"89400000000","rawValue":"894.0亿元 / 约-8.1%","textValue":"894.0亿元 / 约-8.1%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000651-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"营业收入","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"营业收入\",\"894.0亿元 / 约-8.1%\",\"2026H1\",\"半年报\"]","scopeNote":"半年报","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_f4491f29e41d","metric":"fact_f4491f29e41d","value":"13280000000","rawValue":"132.8亿元 / -7.9%","textValue":"132.8亿元 / -7.9%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000651-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"归母净利润","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"归母净利润\",\"132.8亿元 / -7.9%\",\"2026H1\",\"半年报\"]","scopeNote":"半年报","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_802e04b56ac3","metric":"fact_802e04b56ac3","value":"18810000000","rawValue":"188.1亿元，去年同期283.3亿元","textValue":"188.1亿元，去年同期283.3亿元","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000651-20261025","locator":"/facts/5"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"经营现金流","periodLabel":"2026H1","originalIndex":"5","originalRow":"[\"经营现金流\",\"188.1亿元，去年同期283.3亿元\",\"2026H1\",\"妙想财务数据\"]","scopeNote":"妙想财务数据","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_f498b16bcb52","metric":"fact_f498b16bcb52","value":"74070000000","rawValue":"740.7亿元，占约82.6%","textValue":"740.7亿元，占约82.6%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000651-20261025","locator":"/facts/6"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"消费电器收入","periodLabel":"2026H1","originalIndex":"6","originalRow":"[\"消费电器收入\",\"740.7亿元，占约82.6%\",\"2026H1\",\"主营构成\"]","scopeNote":"主营构成","kind":"fact_row","reportedUnit":"亿元","scale":"8"}}
+  ]
+}

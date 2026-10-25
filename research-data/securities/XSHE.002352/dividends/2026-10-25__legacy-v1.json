@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.002352__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.002352",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025末期0.43元（5月19日除息）及2026中期0.49元（9月17日除息）均不属于10月16日新买入权利。基准/乐观采用拟45%/50%/不低于50%的兑现条件，而非已公告未来金额；2029年后50%/55%完全为研究假设。悲观35%假设规划未获批或调整。首年按2026年度每股预算减已除息0.49元，只替代一次完整预测。日历年度近似不模拟未来中期实际支付日期，不另加存量现金。","textValue":"2025末期0.43元（5月19日除息）及2026中期0.49元（9月17日除息）均不属于10月16日新买入权利。基准/乐观采用拟45%/50%/不低于50%的兑现条件，而非已公告未来金额；2029年后50%/55%完全为研究假设。悲观35%假设规划未获批或调整。首年按2026年度每股预算减已除息0.49元，只替代一次完整预测。日历年度近似不模拟未来中期实际支付日期，不另加存量现金。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.002352-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1（截至2026-06-30）","kind":"research_commentary"}}
+  ]
+}

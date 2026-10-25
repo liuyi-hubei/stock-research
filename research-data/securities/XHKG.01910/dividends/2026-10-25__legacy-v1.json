@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.01910__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.01910",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_0b6100e10291","metric":"fact_0b6100e10291","value":null,"rawValue":"约0.8012 / 0.6810港元","textValue":"约0.8012 / 0.6810港元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01910-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"已付每股股息","periodLabel":"2026-07-15","originalIndex":"8","originalRow":"[\"已付每股股息\",\"约0.8012 / 0.6810港元\",\"2026-07-15\",\"分别为税前 / 扣公告预扣税后\"]","scopeNote":"分别为税前 / 扣公告预扣税后","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2026-07-15已派约0.8012港元税前股息，按13.29港元为约6.03%的历史税前股息率；扣公告列明预扣税后的0.6810港元约为5.12%。这是历史分配而非未来保证。模型35%/50%/55%为未来年度税前派息假设；公司注册地预扣税会降低实际到手分红，个人最终税负取决于适用安排。分红、并购和降债须由持续现金流共同支持。","textValue":"2026-07-15已派约0.8012港元税前股息，按13.29港元为约6.03%的历史税前股息率；扣公告列明预扣税后的0.6810港元约为5.12%。这是历史分配而非未来保证。模型35%/50%/55%为未来年度税前派息假设；公司注册地预扣税会降低实际到手分红，个人最终税负取决于适用安排。分红、并购和降债须由持续现金流共同支持。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01910-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

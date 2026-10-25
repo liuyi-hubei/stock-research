@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.00902__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.00902",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_688ab5eff233","metric":"fact_688ab5eff233","value":"5428000000","rawValue":"54.28亿元人民币","textValue":"54.28亿元人民币","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.00902-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"利息及其他权益工具派息现金","periodLabel":"2026H1","originalIndex":"7","originalRow":"[\"利息及其他权益工具派息现金\",\"54.28亿元人民币\",\"2026H1\",\"融资现金流；与应计利息不是同一时点口径\"]","scopeNote":"融资现金流；与应计利息不是同一时点口径","kind":"fact_row","reportedUnit":"亿元人民币","scale":"8"}},
+    {"id":"fact_2c66af6be54b","metric":"fact_2c66af6be54b","value":"0.45475","rawValue":"0.45475港元/股，含税","textValue":"0.45475港元/股，含税","unit":"currency","currency":"HKD","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.00902-20261025","locator":"/facts/10"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2025年度H股末期股息","periodLabel":"2026-08-14派息安排","originalIndex":"10","originalRow":"[\"2025年度H股末期股息\",\"0.45475港元/股，含税\",\"2026-08-14派息安排\",\"人民币0.40元按公告历史汇率折算\"]","scopeNote":"人民币0.40元按公告历史汇率折算","kind":"fact_row","reportedUnit":"港元","scale":"0"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025年度末期人民币0.40元，公告按历史汇率折合H股0.45475港元，派息安排为2026年8月14日；已除净分红不再计入未来收益。历史含税股息率约8.06%，不等于未来承诺。模型以普通股EPS计40%/50%/60%分红，基准起点每股人民币0.325元，折港元约0.378。模型为税前、固定汇率结果，实际到手金额取决于持有人身份、交易渠道、适用扣税及派息汇率，不统一假定税率。","textValue":"2025年度末期人民币0.40元，公告按历史汇率折合H股0.45475港元，派息安排为2026年8月14日；已除净分红不再计入未来收益。历史含税股息率约8.06%，不等于未来承诺。模型以普通股EPS计40%/50%/60%分红，基准起点每股人民币0.325元，折港元约0.378。模型为税前、固定汇率结果，实际到手金额取决于持有人身份、交易渠道、适用扣税及派息汇率，不统一假定税率。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.00902-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

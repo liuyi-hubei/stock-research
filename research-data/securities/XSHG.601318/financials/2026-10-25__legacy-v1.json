@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601318__financials__20261025-legacy-v1",
+  "securityId": "XSHG.601318",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_f4491f29e41d","metric":"fact_f4491f29e41d","value":"92585000000","rawValue":"925.85亿元 / +36.06%","textValue":"925.85亿元 / +36.06%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601318-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"归母净利润","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"归母净利润\",\"925.85亿元 / +36.06%\",\"2026H1\",\"中期报告\"]","scopeNote":"中期报告","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_cffa59f82c01","metric":"fact_cffa59f82c01","value":"24850000000","rawValue":"约248.5亿元","textValue":"约248.5亿元","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601318-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"寿险新业务价值","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"寿险新业务价值\",\"约248.5亿元\",\"2026H1\",\"公司披露口径\"]","scopeNote":"公司披露口径","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_1b403a5f0129","metric":"fact_1b403a5f0129","value":"0.951","rawValue":"95.1%","textValue":"95.1%","unit":"ratio","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601318-20261025","locator":"/facts/5"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"产险综合成本率","periodLabel":"2026H1","originalIndex":"5","originalRow":"[\"产险综合成本率\",\"95.1%\",\"2026H1\",\"公司披露口径\"]","scopeNote":"公司披露口径","kind":"fact_row","reportedUnit":"%","scale":"-2"}},
+    {"id":"fact_4049a3bde63f","metric":"fact_4049a3bde63f","value":"1.981","rawValue":"198.1%","textValue":"198.1%","unit":"ratio","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601318-20261025","locator":"/facts/6"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"偿付能力充足率","periodLabel":"2026H1","originalIndex":"6","originalRow":"[\"偿付能力充足率\",\"198.1%\",\"2026H1\",\"妙想财务数据\"]","scopeNote":"妙想财务数据","kind":"fact_row","reportedUnit":"%","scale":"-2"}}
+  ]
+}

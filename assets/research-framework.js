@@ -36,4 +36,11 @@
     }).join('');
   }
   root.ResearchFramework={validate,renderBlocks,labels,ids};
+  if(root.RESEARCH_FRAMEWORK&&root.ResearchBindings){
+    root.RESEARCH_SOURCE_PLANS=root.RESEARCH_FRAMEWORK;
+    root.RESEARCH_FRAMEWORK=Object.fromEntries(Object.entries(root.RESEARCH_SOURCE_PLANS).map(([code,plan])=>{
+      const stock=root.STOCK_RESEARCH.stocks.find(s=>s.code===code);
+      return [code,root.ResearchBindings.resolvePlan(plan,stock)];
+    }));
+  }
 })(typeof window!=='undefined'?window:globalThis);

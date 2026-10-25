@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601298__financials__20261025-legacy-v1",
+  "securityId": "XSHG.601298",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_cd17818e960d","metric":"fact_cd17818e960d","value":"10460000000","rawValue":"104.6亿元 / 约+10.9%","textValue":"104.6亿元 / 约+10.9%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601298-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"收入","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"收入\",\"104.6亿元 / 约+10.9%\",\"2026H1\",\"半年报\"]","scopeNote":"半年报","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_f4491f29e41d","metric":"fact_f4491f29e41d","value":"2762000000","rawValue":"27.62亿元 / 约-2.8%","textValue":"27.62亿元 / 约-2.8%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601298-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"归母净利润","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"归母净利润\",\"27.62亿元 / 约-2.8%\",\"2026H1\",\"半年报\"]","scopeNote":"半年报","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_802e04b56ac3","metric":"fact_802e04b56ac3","value":"3295000000","rawValue":"32.95亿元，去年同期27.59亿元","textValue":"32.95亿元，去年同期27.59亿元","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601298-20261025","locator":"/facts/5"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"经营现金流","periodLabel":"2026H1","originalIndex":"5","originalRow":"[\"经营现金流\",\"32.95亿元，去年同期27.59亿元\",\"2026H1\",\"妙想财务数据\"]","scopeNote":"妙想财务数据","kind":"fact_row","reportedUnit":"亿元","scale":"8"}}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600863__financials__20261025-legacy-v1",
+  "securityId": "XSHG.600863",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_cd17818e960d","metric":"fact_cd17818e960d","value":"9030000000","rawValue":"90.30亿元 / -15.04%","textValue":"90.30亿元 / -15.04%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600863-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"收入","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"收入\",\"90.30亿元 / -15.04%\",\"2026H1\",\"半年报\"]","scopeNote":"半年报","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_f4491f29e41d","metric":"fact_f4491f29e41d","value":"1490000000","rawValue":"14.90亿元 / -22.34%","textValue":"14.90亿元 / -22.34%","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600863-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"归母净利润","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"归母净利润\",\"14.90亿元 / -22.34%\",\"2026H1\",\"半年报\"]","scopeNote":"半年报","kind":"fact_row","reportedUnit":"亿元","scale":"8"}}
+  ]
+}

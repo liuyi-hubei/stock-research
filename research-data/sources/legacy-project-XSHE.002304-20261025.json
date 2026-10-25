@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "legacy-project-XSHE.002304-20261025",
+  "provider": "本项目已有报告及数据文件",
+  "type": "legacy_project_archive",
+  "publishedAt": null,
+  "collectedAt": "2026-10-25",
+  "evidence": {
+    "file": "evidence/legacy-project-XSHE.002304-20261025.json",
+    "sha256": "6046d73c848a147695b9258c270e08284d62f787b488af54f91a2d898e791981"
+  },
+  "notes": "collectedAt为本次本地归档日；原取数日未逐条确认。原报告链接保存在证据sources中，保留线索但不声称本次已阅读原件。"
+}

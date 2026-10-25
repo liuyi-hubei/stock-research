@@ -71,7 +71,7 @@ for (const file of ['index.html', 'reports.html', 'stock.html', 'industry.html']
   assert(scripts.includes('assets/report-query.js') && scripts.indexOf('assets/report-query.js') < scripts.indexOf('assets/app.js'), `${file}: invalid query script dependency`);
   // 研究正文（54 份，约 1.4MB）只在个股详情页加载；其余页面只加载渲染框架本身。
   if (file === 'stock.html') {
-    for (const dependency of [...frameworkFiles(root), 'assets/research-framework.js']) assert(scripts.includes(dependency) && scripts.indexOf(dependency) < scripts.indexOf('assets/app.js'), `${file}: missing research dependency ${dependency}`);
+    for (const dependency of ['data/research-facts.js','assets/research-bindings.js',...frameworkFiles(root), 'assets/research-framework.js']) assert(scripts.includes(dependency) && scripts.indexOf(dependency) < scripts.indexOf('assets/app.js'), `${file}: missing research dependency ${dependency}`);
   } else {
     assert(!html.includes('data/research/'), `${file}: research payload must load only on stock.html`);
     assert(scripts.includes('assets/research-framework.js') && scripts.indexOf('assets/research-framework.js') < scripts.indexOf('assets/app.js'), `${file}: missing research framework runtime`);

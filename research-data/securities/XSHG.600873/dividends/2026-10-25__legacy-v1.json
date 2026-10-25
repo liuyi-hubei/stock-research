@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600873__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.600873",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_65d77f777008","metric":"fact_65d77f777008","value":"0.4285","rawValue":"0.4285元/股，已除息","textValue":"0.4285元/股，已除息","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600873-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"历史现金分红","periodLabel":"2026-07-22","originalIndex":"8","originalRow":"[\"历史现金分红\",\"0.4285元/股，已除息\",\"2026-07-22\",\"妙想实施记录；非未来承诺\"]","scopeNote":"妙想实施记录；非未来承诺","kind":"fact_row","reportedUnit":"元","scale":"0"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"本次没有把历史每股0.4285元固定为未来年度股息。基准初期30%与成熟50%均为利润和现金回收改善后的条件路径，未由当前负的现金-购建差额证明；未来确定方案公布后替换对应预测，不计已除息金额。","textValue":"本次没有把历史每股0.4285元固定为未来年度股息。基准初期30%与成熟50%均为利润和现金回收改善后的条件路径，未由当前负的现金-购建差额证明；未来确定方案公布后替换对应预测，不计已除息金额。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600873-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

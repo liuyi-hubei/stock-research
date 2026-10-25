@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601058__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.601058",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_ef452762880e","metric":"fact_ef452762880e","value":"0.15","rawValue":"0.15元，9月11日已除息","textValue":"0.15元，9月11日已除息","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601058-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"中期股息","periodLabel":"2026H1","originalIndex":"7","originalRow":"[\"中期股息\",\"0.15元，9月11日已除息\",\"2026H1\",\"不进入买入后未来现金\"]","scopeNote":"不进入买入后未来现金","kind":"fact_row","reportedUnit":"元","scale":"0"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"基准年度起点25%对应10亿元现金分配，项目成熟后条件上升至35%；不是已承诺政策。H1投资后现金为负，分红与扩产同时进行需母公司现金及融资安排支持。已除息0.15元不叠加未来收益；回购不当股息。","textValue":"基准年度起点25%对应10亿元现金分配，项目成熟后条件上升至35%；不是已承诺政策。H1投资后现金为负，分红与扩产同时进行需母公司现金及融资安排支持。已除息0.15元不叠加未来收益；回购不当股息。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601058-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

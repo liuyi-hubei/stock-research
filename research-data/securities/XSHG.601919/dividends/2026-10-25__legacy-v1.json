@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601919__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.601919",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_2a0404408345","metric":"fact_2a0404408345","value":null,"rawValue":"拟每股0.43元，总额约65.65亿元","textValue":"拟每股0.43元，总额约65.65亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/facts/5"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"中期现金分红","periodLabel":"2026H1","originalIndex":"5","originalRow":"[\"中期现金分红\",\"拟每股0.43元，总额约65.65亿元\",\"2026H1\",\"董事会方案，非已到账\"]","scopeNote":"董事会方案，非已到账","kind":"fact_row"}},
+    {"id":"fact_bba34317dddb","metric":"fact_bba34317dddb","value":"15267000000","rawValue":"约152.67亿股","textValue":"约152.67亿股","unit":"shares","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/facts/6"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"派息基准股本","periodLabel":"2026H1","originalIndex":"6","originalRow":"[\"派息基准股本\",\"约152.67亿股\",\"2026H1\",\"股权登记仍待完成\"]","scopeNote":"股权登记仍待完成","kind":"fact_row","reportedUnit":"亿股","scale":"8"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2026中期拟派0.43元仍需按最终除权安排确认。模型首年按正常化EPS×情景派息率估算，不在年度预测外再加这笔中期股息；若实际派付，应在后续复核中替换同一期间预测而非叠加。","textValue":"2026中期拟派0.43元仍需按最终除权安排确认。模型首年按正常化EPS×情景派息率估算，不在年度预测外再加这笔中期股息；若实际派付，应在后续复核中替换同一期间预测而非叠加。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

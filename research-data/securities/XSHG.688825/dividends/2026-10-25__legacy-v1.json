@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.688825__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.688825",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"公司章程有附条件现金分红政策：符合年度盈利、累计可分利润及经营资金等条件时，现金分配不低于当年可供分配利润10%，不是无条件10%归母派息承诺。中期未分配，未来具体方案尚未确定。旧十年零股息路径已撤回；未来零分红只能作为压力测试，不能作为基准。须取得母公司可分利润、可上划现金与实际分红路径证据后重评，不猜恢复年份。","textValue":"公司章程有附条件现金分红政策：符合年度盈利、累计可分利润及经营资金等条件时，现金分配不低于当年可供分配利润10%，不是无条件10%归母派息承诺。中期未分配，未来具体方案尚未确定。旧十年零股息路径已撤回；未来零分红只能作为压力测试，不能作为基准。须取得母公司可分利润、可上划现金与实际分红路径证据后重评，不猜恢复年份。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.688825-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

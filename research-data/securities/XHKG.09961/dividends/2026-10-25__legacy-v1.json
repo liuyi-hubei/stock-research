@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.09961__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.09961",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"公司2025年宣布每普通股/ADS 0.30美元现金股息，年度资本回报政策允许董事会自行选择分红或回购，并非固定派息承诺。2026—2036模型的5%/10%/15%派息率纯属假设；未将历史股息再次计入收益，也没有把回购金额直接当作现金股息。港股投资者税费与实际派息汇率另计。","textValue":"公司2025年宣布每普通股/ADS 0.30美元现金股息，年度资本回报政策允许董事会自行选择分红或回购，并非固定派息承诺。2026—2036模型的5%/10%/15%派息率纯属假设；未将历史股息再次计入收益，也没有把回购金额直接当作现金股息。港股投资者税费与实际派息汇率另计。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.09961-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

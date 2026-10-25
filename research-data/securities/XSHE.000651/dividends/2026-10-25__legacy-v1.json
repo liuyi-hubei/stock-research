@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000651__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.000651",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_b2a60a01d1d0","metric":"fact_b2a60a01d1d0","value":null,"rawValue":"每股2.00元，已实施","textValue":"每股2.00元，已实施","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000651-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2025年度现金分红","periodLabel":"2025年度","originalIndex":"7","originalRow":"[\"2025年度现金分红\",\"每股2.00元，已实施\",\"2025年度\",\"妙想分红数据\"]","scopeNote":"妙想分红数据","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025年度每股派息2.00元，相对37.23元的历史股息率约5.37%；但2026H1收入、利润和经营现金流下降，模型70%分红率仅是假设。2026中期不分配，不能把历史股息当未来保证。","textValue":"2025年度每股派息2.00元，相对37.23元的历史股息率约5.37%；但2026H1收入、利润和经营现金流下降，模型70%分红率仅是假设。2026中期不分配，不能把历史股息当未来保证。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000651-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

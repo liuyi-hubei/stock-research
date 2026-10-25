@@ -48,7 +48,8 @@ export function readStore(){
      assert(!ids.has(o.id),'Duplicate observation id');ids.add(o.id);date(o.period.end);assert(o.period.end<=s.asOf,'Period follows snapshot asOf');
      if(o.period.kind==='duration'){date(o.period.start);assert(o.period.start<=o.period.end,'Invalid duration');}
      else assert.equal(o.period.start,null,'Non-duration start must be null');
-     if(o.value===null)assert(o.missingReason&&o.verification==='missing','Null requires explicit missing state');
+     if(o.value===null&&o.unit==='source_text')assert(o.textValue&&o.nature==='legacy_claim'&&o.verification==='unreviewed'&&o.missingReason===null,'Text archive requires explicit unreviewed claim state');
+     else if(o.value===null)assert(o.missingReason&&o.verification==='missing','Null requires explicit missing state');
      else {assert.equal(o.missingReason,null);assert(o.verification!=='missing','Missing state must have null value');}
      if(o.nature==='derived'){assert(o.derivation?.formula&&o.derivation.inputs.length,'Derived fact requires input lineage');assert.equal(o.precision,'derived');}
      if(o.verification==='cross_checked')assert(o.sourceRefs.length>=2,'Cross-check requires explicit corroboration');
@@ -81,11 +82,11 @@ export function readStore(){
  }
  return {registry,securities,sources,snapshots,currents};
 }
-export function selectSnapshot(store,id,dataset,asOf,knownOn){
+export function selectSnapshot(store,id,dataset,asOf,knownOn,allowUnreviewed=false){
  date(asOf);date(knownOn);assert(store.securities.has(id),'Unknown securityId');
  const all=[...store.snapshots.values()].filter(s=>s.securityId===id&&s.dataset===dataset&&s.acceptance==='accepted'&&s.asOf<=asOf&&s.collectedAt<=knownOn);
  const superseded=new Set(all.map(s=>s.supersedes).filter(Boolean));
- const choices=all.filter(s=>!superseded.has(s.snapshotId)&&!s.observations.some(o=>['missing','conflicted'].includes(o.verification))).sort((a,b)=>b.asOf.localeCompare(a.asOf)||b.collectedAt.localeCompare(a.collectedAt)||b.snapshotId.localeCompare(a.snapshotId));
+ const choices=all.filter(s=>!superseded.has(s.snapshotId)&&!s.observations.some(o=>['missing','conflicted',...allowUnreviewed?[]:['unreviewed']].includes(o.verification))).sort((a,b)=>b.asOf.localeCompare(a.asOf)||b.collectedAt.localeCompare(a.collectedAt)||b.snapshotId.localeCompare(a.snapshotId));
  return choices[0]||null;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
@@ -94,13 +95,15 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   if(command==='validate')console.log(`PASS: ${store.securities.size} securities, ${store.snapshots.size} snapshots, ${store.sources.size} sources; evidence/pointer hashes valid. Not a financial audit.`);
   else if(command==='inventory'){
    const coverage={};for(const d of ['quotes','financials','dividends','operating','events'])coverage[d]=[...store.currents.values()].filter(p=>p.datasets[d]).length;
-   console.log(JSON.stringify({asOf:today,securities:store.securities.size,acceptedCurrentCoverage:coverage,missingCoverageIsNotZero:true},null,2));
+   const unreviewedCoverage={};for(const d of Object.keys(coverage))unreviewedCoverage[d]=[...store.currents.values()].filter(p=>p.datasets[d]&&store.snapshots.get(p.datasets[d].snapshotId).observations.some(o=>o.verification==='unreviewed')).length;
+   console.log(JSON.stringify({asOf:today,securities:store.securities.size,acceptedCurrentCoverage:coverage,containsUnreviewedLegacyCoverage:unreviewedCoverage,missingCoverageIsNotZero:true},null,2));
   }else if(command==='show'){
    const option=(flag,fallback)=>{const i=args.indexOf(flag);return i<0?fallback:args[i+1];};
    const id=args[1],dataset=option('--dataset','quotes'),asOf=option('--as-of',today),knownOn=option('--known-on',today);
    const current=store.currents.get(id)?.datasets[dataset];
-   const s=args.includes('--as-of')||args.includes('--known-on')?selectSnapshot(store,id,dataset,asOf,knownOn):current?store.snapshots.get(current.snapshotId):null;
+   const s=args.includes('--as-of')||args.includes('--known-on')?selectSnapshot(store,id,dataset,asOf,knownOn,args.includes('--allow-unreviewed')):current?store.snapshots.get(current.snapshotId):null;
    assert(s,'No usable snapshot for requested cutoff and knowledge date');
+   assert(args.includes('--allow-unreviewed')||!s.observations.some(o=>o.verification==='unreviewed'),'Legacy archive is unreviewed; pass --allow-unreviewed to inspect, not to certify it');
    const age=Math.round((Date.parse(today)-Date.parse(s.asOf))/86400000),ttl={quotes:30,financials:240,dividends:240,operating:60,events:7}[dataset];
    const stale=age>ttl;assert(!stale||args.includes('--allow-stale'),'Snapshot needs refresh; explicitly pass --allow-stale for historical use');
    console.log(JSON.stringify({cache:{ageDays:age,stale,latestAnnouncementChecked:false,warning:'缓存可读不等于最新；明确要求最新时须核对目标交易日及新公告。'},snapshot:s},null,2));

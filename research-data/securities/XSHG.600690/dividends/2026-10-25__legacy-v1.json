@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600690__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.600690",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"基准55%起点对应全年104.5亿元，参考2025实际分配量级；后期60%取决于资本和区域现金上缴，并非长期承诺。H1没有新分红方案；已实施2025末期不进入9月30日买入后的未来现金。回购单列资本预算，不当现金股息。","textValue":"基准55%起点对应全年104.5亿元，参考2025实际分配量级；后期60%取决于资本和区域现金上缴，并非长期承诺。H1没有新分红方案；已实施2025末期不进入9月30日买入后的未来现金。回购单列资本预算，不当现金股息。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600690-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

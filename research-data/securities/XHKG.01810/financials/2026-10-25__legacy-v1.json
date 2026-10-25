@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.01810__financials__20261025-legacy-v1",
+  "securityId": "XHKG.01810",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_a0c3af3e066a","metric":"fact_a0c3af3e066a","value":null,"rawValue":"141.86 / 122.91亿元人民币","textValue":"141.86 / 122.91亿元人民币","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01810-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"归母 / 调整净利","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"归母 / 调整净利\",\"141.86 / 122.91亿元人民币\",\"2026H1\",\"法定与非IFRS口径不同\"]","scopeNote":"法定与非IFRS口径不同","kind":"fact_row"}},
+    {"id":"fact_b9cd09a6213b","metric":"fact_b9cd09a6213b","value":null,"rawValue":"20.50 / 37.74亿元人民币","textValue":"20.50 / 37.74亿元人民币","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01810-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"经营现金流 / 购建长期资产支付","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"经营现金流 / 购建长期资产支付\",\"20.50 / 37.74亿元人民币\",\"2026H1\",\"公司中报印刷页63\"]","scopeNote":"公司中报印刷页63","kind":"fact_row"}},
+    {"id":"fact_8b7eda6b6760","metric":"fact_8b7eda6b6760","value":null,"rawValue":"6,500万部 / 185,055辆","textValue":"6,500万部 / 185,055辆","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01810-20261025","locator":"/facts/5"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"手机出货 / 汽车交付","periodLabel":"2026H1","originalIndex":"5","originalRow":"[\"手机出货 / 汽车交付\",\"6,500万部 / 185,055辆\",\"2026H1\",\"中报印刷页7—9\"]","scopeNote":"中报印刷页7—9","kind":"fact_row"}},
+    {"id":"fact_a272487c87ee","metric":"fact_a272487c87ee","value":"25790000000","rawValue":"257.9亿股 / 0.86015人民币每港元","textValue":"257.9亿股 / 0.86015人民币每港元","unit":"shares","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01810-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"模型股数 / 固定汇率","periodLabel":"2026-09-29 / 09-23","originalIndex":"7","originalRow":"[\"模型股数 / 固定汇率\",\"257.9亿股 / 0.86015人民币每港元\",\"2026-09-29 / 09-23\",\"股数取妙想；汇率为固定研究基准\"]","scopeNote":"股数取妙想；汇率为固定研究基准","kind":"fact_row","reportedUnit":"亿股","scale":"8"}}
+  ]
+}

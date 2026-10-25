@@ -2,6 +2,8 @@
 
 数据协作入口：[数据链路规范](research-data/数据链路规范.md)。跨设备和agent共用`research-data/`的结构化快照与无敏感证据；先读取库存，缺失或过期再定向取数。事实入库不自动改变研究假设或发布网站。库存：`node docs/research-data.mjs inventory`；验证：`node docs/research-data.mjs validate`。
 
+现有54只股票资料已归档，迁入声明仍保留`unreviewed`，不等于原件重核。报告数据版本由`research-data/publication.json`指定；正文使用数据/模型引用，`data/research-facts.js`由`node docs/build-research-facts.mjs --patch`生成投影补丁，不手改。校验：`node docs/build-research-facts.mjs --check`、`node docs/check-research-bindings.mjs`。不同季度不盲目替换，详见数据链路规范第10节。
+
 协作入口：[个股研究报告规范建议](docs/个股研究报告规范建议.md)。写作主版本为Skill内中文规范（2026-10-24-r2），本地与Work读取同一文件；未来利润与增速不是事实，历史只作参考，无可信现金量级不强给估值或买点。泸州老窖无依据的生命周期估值已撤回，旧十年模型仅作条件对照。历史实施记录已从AGENTS移至docs/历史实施记录.md，不能当现行待办。
 
 2026-10-24：泸州老窖已按用户确认的六章重写：投资结论、商业模式、企业文化、安全边际与估值、其他思维观点、关键风险与后续验证。使用company-study-v2，目录与标题一致；10月23日69.99元收盘、实际2026H1，年报现金冲突回原表纠正。原情景及唯一IRR引擎不变，其他股票未刷新；下方旧结构说明继续适用于未迁移标的。最新写作要求见[个股研究报告规范建议](docs/个股研究报告规范建议.md)。

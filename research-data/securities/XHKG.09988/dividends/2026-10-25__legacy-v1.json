@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.09988__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.09988",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"FY2026董事会批准每普通股0.13125美元、每ADS1.05美元，登记日2026-06-11，普通股预计2026-07-06支付；妙想状态为已实施，但未取得银行或派付确认，不将预计日期独立证明为实际到账。2026-09-29买入不享该已过除息权益，模型不重复计入。未来首年基准派息为532.58亿元×30%=159.774亿元人民币，折每股约0.934港元，是研究预测；没有新的首年已知股息覆盖。当前经营现金扣投资不足覆盖该分红，须验证存量现金可用性、债务到期与后续融资。","textValue":"FY2026董事会批准每普通股0.13125美元、每ADS1.05美元，登记日2026-06-11，普通股预计2026-07-06支付；妙想状态为已实施，但未取得银行或派付确认，不将预计日期独立证明为实际到账。2026-09-29买入不享该已过除息权益，模型不重复计入。未来首年基准派息为532.58亿元×30%=159.774亿元人民币，折每股约0.934港元，是研究预测；没有新的首年已知股息覆盖。当前经营现金扣投资不足覆盖该分红，须验证存量现金可用性、债务到期与后续融资。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.09988-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"FY2026（2025-04-01至2026-03-31）；最新FY2027 Q1（2026-04-01至2026-06-30）","kind":"research_commentary"}}
+  ]
+}

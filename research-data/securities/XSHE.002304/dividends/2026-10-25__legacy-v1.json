@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.002304__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.002304",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_8e0d29bd935e","metric":"fact_8e0d29bd935e","value":null,"rawValue":"每股1.47元，合计22.14亿元","textValue":"每股1.47元，合计22.14亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.002304-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2025年度分红","periodLabel":"2026-06-30实施日","originalIndex":"8","originalRow":"[\"2025年度分红\",\"每股1.47元，合计22.14亿元\",\"2026-06-30实施日\",\"妙想分派公告及半年报交叉\"]","scopeNote":"妙想分派公告及半年报交叉","kind":"fact_row"}},
+    {"id":"fact_5e92e8221882","metric":"fact_5e92e8221882","value":null,"rawValue":"2025—2027至少100%当年归母净利，旧70亿元年度保底已修订","textValue":"2025—2027至少100%当年归母净利，旧70亿元年度保底已修订","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.002304-20261025","locator":"/facts/11"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红政策","periodLabel":"2026-02-13股东会通过","originalIndex":"11","originalRow":"[\"分红政策\",\"2025—2027至少100%当年归母净利，旧70亿元年度保底已修订\",\"2026-02-13股东会通过\",\"修订规划及股东会决议\"]","scopeNote":"修订规划及股东会决议","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025年度1.47元已支付，不再加入未来现金。新规划2025—2027现金分红不低于100%归母利润，前两次模型分红率100%体现2026/2027政策期，其后60%—65%只是基准假设。首次预计1.50元、总额22.60亿元须由资金储备补充，未得到持续经营现金验证。未来回购比例独立为0；历史4.65元及70亿元保底不得外推。","textValue":"2025年度1.47元已支付，不再加入未来现金。新规划2025—2027现金分红不低于100%归母利润，前两次模型分红率100%体现2026/2027政策期，其后60%—65%只是基准假设。首次预计1.50元、总额22.60亿元须由资金储备补充，未得到持续经营现金验证。未来回购比例独立为0；历史4.65元及70亿元保底不得外推。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.002304-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1（财务截至2026-06-30；2025年报检验全年现金）","kind":"research_commentary"}}
+  ]
+}

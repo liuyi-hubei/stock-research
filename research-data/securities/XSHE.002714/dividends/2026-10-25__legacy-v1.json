@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.002714__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.002714",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2024—2026规划在年度盈利、累计可分利润正及保障经营等条件下，现金不少于当年可供分配利润40%，不是无条件40%归母派息，更不是十年承诺。2026中期实际未派；5月27日已除息0.4269999元属2025末期，10月买入无权再领。旧十年零股息路径已撤回；未来零分红只能作为压力测试，不能作为基准。实际分红路径待取得法律可分利润、母公司现金、债务及投资共同覆盖证据，不猜恢复年份。","textValue":"2024—2026规划在年度盈利、累计可分利润正及保障经营等条件下，现金不少于当年可供分配利润40%，不是无条件40%归母派息，更不是十年承诺。2026中期实际未派；5月27日已除息0.4269999元属2025末期，10月买入无权再领。旧十年零股息路径已撤回；未来零分红只能作为压力测试，不能作为基准。实际分红路径待取得法律可分利润、母公司现金、债务及投资共同覆盖证据，不猜恢复年份。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.002714-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

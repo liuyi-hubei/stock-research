@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.300750__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.300750",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_ee4dacb83aa1","metric":"fact_ee4dacb83aa1","value":"1.411","rawValue":"1.411元/A股，8月10日已除息","textValue":"1.411元/A股，8月10日已除息","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.300750-20261025","locator":"/facts/12"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"历史中期派息","periodLabel":"2026中期","originalIndex":"12","originalRow":"[\"历史中期派息\",\"1.411元/A股，8月10日已除息\",\"2026中期\",\"本次买入无领取权；首年年度预算扣除该部分\"]","scopeNote":"本次买入无领取权；首年年度预算扣除该部分","kind":"fact_row","reportedUnit":"元","scale":"0"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"已核2026中期A股每股1.411元，2026-08-10除息；原2025末期约6.957元于4月22日除息为继承历史记录，本次不重新赋予领取权。首年以2026正常化EPS×研究派息率减已除息中期1.411元，仅计剩余预算；未来实际方案可能不同。长期30%—50%仍是情景，不是公司承诺。前三季度经营减购建194.58亿元低于基准全年320亿元分配预算，九个月与全年不能直接判全年不足，但Q4现金、债务、海外投入和供应链支持必须联合验证。","textValue":"已核2026中期A股每股1.411元，2026-08-10除息；原2025末期约6.957元于4月22日除息为继承历史记录，本次不重新赋予领取权。首年以2026正常化EPS×研究派息率减已除息中期1.411元，仅计剩余预算；未来实际方案可能不同。长期30%—50%仍是情景，不是公司承诺。前三季度经营减购建194.58亿元低于基准全年320亿元分配预算，九个月与全年不能直接判全年不足，但Q4现金、债务、海外投入和供应链支持必须联合验证。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.300750-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026Q3（截至2026-09-30）","kind":"research_commentary"}}
+  ]
+}

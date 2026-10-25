@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600585__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.600585",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"9月30日已除息0.13元不属于新买入现金：三情景firstDividendParts用已除息部分替换全年对应预测，首年仅计剩余。基准/乐观假设董事会拟0.90元规划完成批准并兑现，2026剩余0.77元、2027全年0.90元；二者不是已公告末期方案。悲观按30%现金分配减去已派0.13元，政策期后基准50%、乐观60%均为研究条件。未取得规划股东会决议；股利未批准前不得显示为已知到账，回购金额不视为现金股息。","textValue":"9月30日已除息0.13元不属于新买入现金：三情景firstDividendParts用已除息部分替换全年对应预测，首年仅计剩余。基准/乐观假设董事会拟0.90元规划完成批准并兑现，2026剩余0.77元、2027全年0.90元；二者不是已公告末期方案。悲观按30%现金分配减去已派0.13元，政策期后基准50%、乐观60%均为研究条件。未取得规划股东会决议；股利未批准前不得显示为已知到账，回购金额不视为现金股息。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600585-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

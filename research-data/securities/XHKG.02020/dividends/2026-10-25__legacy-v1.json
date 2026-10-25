@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.02020__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.02020",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_b242a6ab52b6","metric":"fact_b242a6ab52b6","value":null,"rawValue":"每股1.51港元","textValue":"每股1.51港元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.02020-20261025","locator":"/facts/9"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"中期股息","periodLabel":"2026H1；9月22日前后派发","originalIndex":"9","originalRow":"[\"中期股息\",\"每股1.51港元\",\"2026H1；9月22日前后派发\",\"占公司定义经调整股东应占溢利50.3%\"]","scopeNote":"占公司定义经调整股东应占溢利50.3%","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2026中期股息每股1.51港元，相对75.30港元约2.01%，已经派发安排明确，但不能简单翻倍成年化股息率。公司以不含联营公司损益及相关一次性项目的经调整利润计算50.3%派息率；模型采用40%/50%/55%分红率。PUMA现金支付与可转债安排可能改变未来分红和回购的优先级。","textValue":"2026中期股息每股1.51港元，相对75.30港元约2.01%，已经派发安排明确，但不能简单翻倍成年化股息率。公司以不含联营公司损益及相关一次性项目的经调整利润计算50.3%派息率；模型采用40%/50%/55%分红率。PUMA现金支付与可转债安排可能改变未来分红和回购的优先级。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.02020-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

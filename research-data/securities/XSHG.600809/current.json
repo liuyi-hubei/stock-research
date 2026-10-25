@@ -6,6 +6,26 @@
       "snapshotId": "XSHG.600809__quotes__20261023__20261024-mx-v1",
       "file": "securities/XSHG.600809/quotes/2026-10-23__2026-10-24__mx-v1.json",
       "sha256": "b635df2329a4c0bee17bbfccefa3bc2bf3f52086ee5503154ea3eb669a6f5755"
+    },
+    "financials": {
+      "snapshotId": "XSHG.600809__financials__20261025-legacy-v1",
+      "file": "securities/XSHG.600809/financials/2026-10-25__legacy-v1.json",
+      "sha256": "a2afcbfe101a477d3dfe53847bebe86de1c60c784974bd15c2b4ef552da52e54"
+    },
+    "dividends": {
+      "snapshotId": "XSHG.600809__dividends__20261025-legacy-v1",
+      "file": "securities/XSHG.600809/dividends/2026-10-25__legacy-v1.json",
+      "sha256": "8e1f313d57667f3c8819eac78b20fb2eae348eb4dd027fa06b2605b5ab7b3a17"
+    },
+    "operating": {
+      "snapshotId": "XSHG.600809__operating__20261025-legacy-v1",
+      "file": "securities/XSHG.600809/operating/2026-10-25__legacy-v1.json",
+      "sha256": "e0cb1bd82e70d1c311e8c9d2e796361eecbf4ff8eb88ae1981ed48d23ac0a9ad"
+    },
+    "events": {
+      "snapshotId": "XSHG.600809__events__20261025-legacy-v1",
+      "file": "securities/XSHG.600809/events/2026-10-25__legacy-v1.json",
+      "sha256": "79d0bfc080809c3f35ba100454cd98bed7d42fc6e386e2b28ad4a70ce527ad2d"
     }
   }
 }

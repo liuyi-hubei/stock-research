@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.01030__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.01030",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_ef452762880e","metric":"fact_ef452762880e","value":null,"rawValue":"不派发","textValue":"不派发","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01030-20261025","locator":"/facts/11"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"中期股息","periodLabel":"2026H1","originalIndex":"11","originalRow":"[\"中期股息\",\"不派发\",\"2026H1\",\"2025H1同样不派发\"]","scopeNote":"2025H1同样不派发","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"原研究记录显示2026年中期及2025年中期均不派息。商业租金需先承担利息、交付、税费和偿债；在恢复年份及现金覆盖尚未核验前，不预设第三年或其他任意年份恢复派息。","textValue":"原研究记录显示2026年中期及2025年中期均不派息。商业租金需先承担利息、交付、税费和偿债；在恢复年份及现金覆盖尚未核验前，不预设第三年或其他任意年份恢复派息。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.01030-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

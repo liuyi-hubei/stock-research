@@ -1,0 +1,3218 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000568__events__20261025-legacy-v1",
+  "securityId": "XSHE.000568",
+  "dataset": "events",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {
+      "id": "claim_2a18c1eb168e",
+      "metric": "claim_2a18c1eb168e",
+      "value": null,
+      "rawValue": "company-study-v2",
+      "textValue": "company-study-v2",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/version"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_369c6586567e",
+      "metric": "claim_369c6586567e",
+      "value": null,
+      "rawValue": "000568",
+      "textValue": "000568",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/code"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_2664570c5452",
+      "metric": "claim_2664570c5452",
+      "value": null,
+      "rawValue": "2026-10-24",
+      "textValue": "2026-10-24",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/methodReviewedAt"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_336bb24721f9",
+      "metric": "claim_336bb24721f9",
+      "value": null,
+      "rawValue": "按2026年10月23日收盘69.99元，当前研究暂不支持新建仓，而非已证明股票高估。泸州老窖有品牌差异化和持续创造现金的基础，但需求、实际净价、渠道利益与必要投入尚不足以支持可信的长期现金量级判断。生命周期折现估值已撤回，暂不给可靠价值区间或建议买入价；页面十年IRR及达标价格仅为旧假设下的条件演算，不是已验证的预期收益或买点。",
+      "textValue": "按2026年10月23日收盘69.99元，当前研究暂不支持新建仓，而非已证明股票高估。泸州老窖有品牌差异化和持续创造现金的基础，但需求、实际净价、渠道利益与必要投入尚不足以支持可信的长期现金量级判断。生命周期折现估值已撤回，暂不给可靠价值区间或建议买入价；页面十年IRR及达标价格仅为旧假设下的条件演算，不是已验证的预期收益或买点。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/summary"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_6e9d94bc9750",
+      "metric": "claim_6e9d94bc9750",
+      "value": null,
+      "rawValue": "公司主要通过经销商销售国窖1573、特曲等品牌白酒，同时发展线上渠道。2025年报列示经销结算以先款后货为主；消费者为饮用体验、品牌信任及特定消费场景付费，经销商负责终端触达与流通。其经济优势在于品牌酒的售价不只由粮食和酿造成本决定，但只有消费者持续认可、渠道能够合理获利，这种溢价才能变成股东所得。",
+      "textValue": "公司主要通过经销商销售国窖1573、特曲等品牌白酒，同时发展线上渠道。2025年报列示经销结算以先款后货为主；消费者为饮用体验、品牌信任及特定消费场景付费，经销商负责终端触达与流通。其经济优势在于品牌酒的售价不只由粮食和酿造成本决定，但只有消费者持续认可、渠道能够合理获利，这种溢价才能变成股东所得。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/0/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_1c3b37e31863",
+      "metric": "claim_1c3b37e31863",
+      "value": null,
+      "rawValue": "1. 长期护城河：品牌认知有积累，但不等于需求不可替代",
+      "textValue": "1. 长期护城河：品牌认知有积累，但不等于需求不可替代",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/1/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_e77c717d362e",
+      "metric": "claim_e77c717d362e",
+      "value": null,
+      "rawValue": "公司的窖池、酿造经验与国窖/老窖品牌构成供给和认知积累。新竞争者可以生产浓香酒，却难在短期复制同样的历史信任与消费识别；这使企业并非只能靠低价抢订单。2025中高档酒收入约229.68亿元，占总收入89.26%，说明盈利仍高度依赖品牌溢价较强的产品，而不是靠扩大低价销量。",
+      "textValue": "公司的窖池、酿造经验与国窖/老窖品牌构成供给和认知积累。新竞争者可以生产浓香酒，却难在短期复制同样的历史信任与消费识别；这使企业并非只能靠低价抢订单。2025中高档酒收入约229.68亿元，占总收入89.26%，说明盈利仍高度依赖品牌溢价较强的产品，而不是靠扩大低价销量。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/2/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_422fcd2edfa4",
+      "metric": "claim_422fcd2edfa4",
+      "value": null,
+      "rawValue": "2025年报第11、16—17页：授权经销与先款后货、中高档酒收入及90.94%产品毛利；2026半年报第11—12页列公司资源、销量与库存。",
+      "textValue": "2025年报第11、16—17页：授权经销与先款后货、中高档酒收入及90.94%产品毛利；2026半年报第11—12页列公司资源、销量与库存。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/4/evidence/basis"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_b071381295da",
+      "metric": "claim_b071381295da",
+      "value": null,
+      "rawValue": "2. 长期毛利率：产品经济性仍强，利润压力并非原材料生意的薄利问题",
+      "textValue": "2. 长期毛利率：产品经济性仍强，利润压力并非原材料生意的薄利问题",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/5/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_5ba2c2d50b00",
+      "metric": "claim_5ba2c2d50b00",
+      "value": null,
+      "rawValue": "2023全年",
+      "textValue": "2023全年",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/0/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_0b5ece06db36",
+      "metric": "claim_0b5ece06db36",
+      "value": null,
+      "rawValue": "88.30%",
+      "textValue": "88.30%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/0/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_09605a41935f",
+      "metric": "claim_09605a41935f",
+      "value": null,
+      "rawValue": "132.46",
+      "textValue": "132.46",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/0/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_226a5c5d6a64",
+      "metric": "claim_226a5c5d6a64",
+      "value": null,
+      "rawValue": "2024全年",
+      "textValue": "2024全年",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/1/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_8905b3109197",
+      "metric": "claim_8905b3109197",
+      "value": null,
+      "rawValue": "87.54%",
+      "textValue": "87.54%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/1/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_56241dbc22e2",
+      "metric": "claim_56241dbc22e2",
+      "value": null,
+      "rawValue": "134.73",
+      "textValue": "134.73",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/1/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_8734ec366332",
+      "metric": "claim_8734ec366332",
+      "value": null,
+      "rawValue": "2025全年",
+      "textValue": "2025全年",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/2/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_d589c305b631",
+      "metric": "claim_d589c305b631",
+      "value": null,
+      "rawValue": "86.62%",
+      "textValue": "86.62%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/2/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_9d78c2d0f688",
+      "metric": "claim_9d78c2d0f688",
+      "value": null,
+      "rawValue": "108.31",
+      "textValue": "108.31",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/2/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_9283d2f721fe",
+      "metric": "claim_9283d2f721fe",
+      "value": null,
+      "rawValue": "2026H1",
+      "textValue": "2026H1",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/3/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_8173450aa5a4",
+      "metric": "claim_8173450aa5a4",
+      "value": null,
+      "rawValue": "85.35%",
+      "textValue": "85.35%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/3/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_6dd99537faf3",
+      "metric": "claim_6dd99537faf3",
+      "value": null,
+      "rawValue": "43.39",
+      "textValue": "43.39",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/rows/3/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_d0b4d959b550",
+      "metric": "claim_d0b4d959b550",
+      "value": null,
+      "rawValue": "毛利率来自2026-10-24妙想查询；2023—2025归母复核2025年报第7页，H1复核原半年报。年度与半年度分列，不能直接据此认定同季趋势。",
+      "textValue": "毛利率来自2026-10-24妙想查询；2023—2025归母复核2025年报第7页，H1复核原半年报。年度与半年度分列，不能直接据此认定同季趋势。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/6/table/note"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_27c1b8673eaf",
+      "metric": "claim_27c1b8673eaf",
+      "value": null,
+      "rawValue": "毛利连续处于较高水平，支持公司存在售价相对制造成本的优势。2025中高档酒毛利90.94%，2026H1仍为90.74%，与利润的大幅下滑并不等比例：当前更关键的是发货量、产品组合、税费和销售投入，而不只是生产端毛利。2026H1整体销售费用率12.7%，收入减少时费用摊薄变差；保住毛利并不代表保住了全部经营经济性。",
+      "textValue": "毛利连续处于较高水平，支持公司存在售价相对制造成本的优势。2025中高档酒毛利90.94%，2026H1仍为90.74%，与利润的大幅下滑并不等比例：当前更关键的是发货量、产品组合、税费和销售投入，而不只是生产端毛利。2026H1整体销售费用率12.7%，收入减少时费用摊薄变差；保住毛利并不代表保住了全部经营经济性。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/7/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_f74bf3215c07",
+      "metric": "claim_f74bf3215c07",
+      "value": null,
+      "rawValue": "因此，这项判断是“仍具有较好的产品经济性，经营杠杆与营销成本需要约束”，不是因一次下滑否定模式，也不是因90%以上产品毛利就认定可长期躺赢。需要观察品牌维护和渠道投入能否带来真实复购，而非只推迟降价。",
+      "textValue": "因此，这项判断是“仍具有较好的产品经济性，经营杠杆与营销成本需要约束”，不是因一次下滑否定模式，也不是因90%以上产品毛利就认定可长期躺赢。需要观察品牌维护和渠道投入能否带来真实复购，而非只推迟降价。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/8/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_2ea98e8781f6",
+      "metric": "claim_2ea98e8781f6",
+      "value": null,
+      "rawValue": "3. 长期净现金流：判断未来持续创造现金的能力",
+      "textValue": "3. 长期净现金流：判断未来持续创造现金的能力",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/1/blocks/9/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_01d880fcc055",
+      "metric": "claim_01d880fcc055",
+      "value": null,
+      "rawValue": "2026-08-27公司交流称控量、库存总量回落",
+      "textValue": "2026-08-27公司交流称控量、库存总量回落",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/2/blocks/1/table/rows/0/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_9121374fdd5d",
+      "metric": "claim_9121374fdd5d",
+      "value": null,
+      "rawValue": "2025年度分配及2026年1月、8月实施公告",
+      "textValue": "2025年度分配及2026年1月、8月实施公告",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/2/blocks/1/table/rows/1/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_19cf632d79d4",
+      "metric": "claim_19cf632d79d4",
+      "value": null,
+      "rawValue": "2026-10-19互动答复转载重申分红规划基础",
+      "textValue": "2026-10-19互动答复转载重申分红规划基础",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/2/blocks/1/table/rows/2/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_6bce0ef429ba",
+      "metric": "claim_6bce0ef429ba",
+      "value": null,
+      "rawValue": "公司活动记录与分派公告为既有原始来源；10月19日答复仅核转载。未据此认定所有文化与诚信事项已经查全。",
+      "textValue": "公司活动记录与分派公告为既有原始来源；10月19日答复仅核转载。未据此认定所有文化与诚信事项已经查全。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/2/blocks/1/table/note"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_685c617ea255",
+      "metric": "claim_685c617ea255",
+      "value": null,
+      "rawValue": "公司已实施的2025中期与末期分配、8月经营交流及分红规划可核；2025年报第11页披露先款后货经销制度。",
+      "textValue": "公司已实施的2025中期与末期分配、8月经营交流及分红规划可核；2025年报第11页披露先款后货经销制度。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/2/blocks/2/evidence/basis"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_a2cc3d43589b",
+      "metric": "claim_a2cc3d43589b",
+      "value": null,
+      "rawValue": "1. 盈利清晰度与必要回报率",
+      "textValue": "1. 盈利清晰度与必要回报率",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/0/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_b8a67bff30cf",
+      "metric": "claim_b8a67bff30cf",
+      "value": null,
+      "rawValue": "继续采用11%的主观必要回报率，理由是品牌优势减轻纯同质化竞争风险，但渠道恢复、利润下降、现金波动及分红资金仍需补偿。这不是段永平的固定要求，也不是无风险利率。未重新取得同币种、同期限的无风险与其他标的完整对照，不声称已完成机会成本排序；如果生意结构受损，不能仅提高折现率后继续买入。",
+      "textValue": "继续采用11%的主观必要回报率，理由是品牌优势减轻纯同质化竞争风险，但渠道恢复、利润下降、现金波动及分红资金仍需补偿。这不是段永平的固定要求，也不是无风险利率。未重新取得同币种、同期限的无风险与其他标的完整对照，不声称已完成机会成本排序；如果生意结构受损，不能仅提高折现率后继续买入。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/2/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_ad47832488ae",
+      "metric": "claim_ad47832488ae",
+      "value": null,
+      "rawValue": "2. 旧盈利情景与待复核假设",
+      "textValue": "2. 旧盈利情景与待复核假设",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/3/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_68d9ff982f34",
+      "metric": "claim_68d9ff982f34",
+      "value": null,
+      "rawValue": "2026归母条件锚",
+      "textValue": "2026归母条件锚",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/head/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_31848e3770e1",
+      "metric": "claim_31848e3770e1",
+      "value": null,
+      "rawValue": "2027／2028／2029归母",
+      "textValue": "2027／2028／2029归母",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/head/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_3d4dc40a9e15",
+      "metric": "claim_3d4dc40a9e15",
+      "value": null,
+      "rawValue": "2030年后假设",
+      "textValue": "2030年后假设",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/head/3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_2df15add9c9a",
+      "metric": "claim_2df15add9c9a",
+      "value": null,
+      "rawValue": "64亿元",
+      "textValue": "64亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/0/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_db8aa9155aa7",
+      "metric": "claim_db8aa9155aa7",
+      "value": null,
+      "rawValue": "64／68／68亿元",
+      "textValue": "64／68／68亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/0/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_66b723e41582",
+      "metric": "claim_66b723e41582",
+      "value": null,
+      "rawValue": "利润平台，年增长0%",
+      "textValue": "利润平台，年增长0%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/0/3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_d3b43b246d00",
+      "metric": "claim_d3b43b246d00",
+      "value": null,
+      "rawValue": "70亿元",
+      "textValue": "70亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/1/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_4b1eb2fc493c",
+      "metric": "claim_4b1eb2fc493c",
+      "value": null,
+      "rawValue": "74／80／82亿元",
+      "textValue": "74／80／82亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/1/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_2f79f342d2c1",
+      "metric": "claim_2f79f342d2c1",
+      "value": null,
+      "rawValue": "成熟增速1%",
+      "textValue": "成熟增速1%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/1/3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_b2beb55c6aee",
+      "metric": "claim_b2beb55c6aee",
+      "value": null,
+      "rawValue": "80亿元",
+      "textValue": "80亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/2/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_42f34e6bde4f",
+      "metric": "claim_42f34e6bde4f",
+      "value": null,
+      "rawValue": "86／94／98亿元",
+      "textValue": "86／94／98亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/2/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_ce38177dda7b",
+      "metric": "claim_ce38177dda7b",
+      "value": null,
+      "rawValue": "成熟增速2%",
+      "textValue": "成熟增速2%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/rows/2/3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_87997252b6ed",
+      "metric": "claim_87997252b6ed",
+      "value": null,
+      "rawValue": "沿用10月13日已建立路径，本次核验未得到足以改写它的新经营实绩。2026不是已识别正常盈利，三档不是概率分布、公司指引或利润保底。",
+      "textValue": "沿用10月13日已建立路径，本次核验未得到足以改写它的新经营实绩。2026不是已识别正常盈利，三档不是概率分布、公司指引或利润保底。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/4/table/note"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_91802ac950ca",
+      "metric": "claim_91802ac950ca",
+      "value": null,
+      "rawValue": "H1实际归母43.39亿元并不意味着全年可直接翻倍。基准70亿元要求H2约26.61亿元，在减少发货、费用投入与旺淡季变化后仍能落地；2027—2029的恢复来自发货逐步贴近持续动销、产品组合及费用摊薄，而不是额外叠加一轮补库峰值。若动销和净价持续变弱，恢复路径应下修。",
+      "textValue": "H1实际归母43.39亿元并不意味着全年可直接翻倍。基准70亿元要求H2约26.61亿元，在减少发货、费用投入与旺淡季变化后仍能落地；2027—2029的恢复来自发货逐步贴近持续动销、产品组合及费用摊薄，而不是额外叠加一轮补库峰值。若动销和净价持续变弱，恢复路径应下修。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/5/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_9b125057ad06",
+      "metric": "claim_9b125057ad06",
+      "value": null,
+      "rawValue": "五份已核中报后研报的2026预测为64.15—76.00亿元，70亿元处于样本内，80亿元乐观高于上沿，需要更强证据。太平洋还预计2027利润略降，是快速恢复叙事的反证。研报只用来检查本研究假设是否遗漏分歧，不以均值、评级或目标价代替判断。",
+      "textValue": "五份已核中报后研报的2026预测为64.15—76.00亿元，70亿元处于样本内，80亿元乐观高于上沿，需要更强证据。太平洋还预计2027利润略降，是快速恢复叙事的反证。研报只用来检查本研究假设是否遗漏分歧，不以均值、评级或目标价代替判断。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/6/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_510cf140b52d",
+      "metric": "claim_510cf140b52d",
+      "value": null,
+      "rawValue": "3. 经营买入代价与股东所得",
+      "textValue": "3. 经营买入代价与股东所得",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/7/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_fe756f6c2121",
+      "metric": "claim_fe756f6c2121",
+      "value": null,
+      "rawValue": "以69.99元和14.71901463亿普通股计算，整体股权代价约1,030.18亿元。账上现金不能全当多余资产：6月末母公司现金235.18亿元是历史余额，8月末期分配约65.02亿元随后支付，不能再当作10月可立即提走的现金。集团和母公司不相加，不在完整股权终值上额外重复加净现金。",
+      "textValue": "以69.99元和14.71901463亿普通股计算，整体股权代价约1,030.18亿元。账上现金不能全当多余资产：6月末母公司现金235.18亿元是历史余额，8月末期分配约65.02亿元随后支付，不能再当作10月可立即提走的现金。集团和母公司不相加，不在完整股权终值上额外重复加净现金。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/8/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_566e539e274a",
+      "metric": "claim_566e539e274a",
+      "value": null,
+      "rawValue": "首年85亿元仍是规划兑现条件，不是已经核定可领取的年度股息。",
+      "textValue": "首年85亿元仍是规划兑现条件，不是已经核定可领取的年度股息。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/9/evidence/claim"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_c80f71b7b4d6",
+      "metric": "claim_c80f71b7b4d6",
+      "value": null,
+      "rawValue": "2024—2026分红规划与股东会议案，以及10月19日答复转载支持分配意愿；尚未取得具体2026年度金额、派付日方案。2025年股息已于2026年1月30日、8月28日除息。",
+      "textValue": "2024—2026分红规划与股东会议案，以及10月19日答复转载支持分配意愿；尚未取得具体2026年度金额、派付日方案。2025年股息已于2026年1月30日、8月28日除息。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/9/evidence/basis"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_00719ba5d153",
+      "metric": "claim_00719ba5d153",
+      "value": null,
+      "rawValue": "85亿元超过70亿元条件利润，首年需留存储备支持；之后75%—80%研究分配路径必须有经营与资本预算支撑。不能永久复制85亿元，也不能把已除息股息再加到未来收益。",
+      "textValue": "85亿元超过70亿元条件利润，首年需留存储备支持；之后75%—80%研究分配路径必须有经营与资本预算支撑。不能永久复制85亿元，也不能把已除息股息再加到未来收益。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/9/evidence/counterpoint"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_ad508f9c4262",
+      "metric": "claim_ad508f9c4262",
+      "value": null,
+      "rawValue": "共同模型不变：买入1股、逐年领取现金分红、第十年末按EPS×退出PE卖出，分红不复投。基准/乐观首年以85亿元÷14.71901463亿股替代比例预测，悲观按其原条件；退出PE仍为10／13／16倍。它是将经营假设转成价格的工具，不是承诺十年一定按这个倍数退出。",
+      "textValue": "共同模型不变：买入1股、逐年领取现金分红、第十年末按EPS×退出PE卖出，分红不复投。基准/乐观首年以85亿元÷14.71901463亿股替代比例预测，悲观按其原条件；退出PE仍为10／13／16倍。它是将经营假设转成价格的工具，不是承诺十年一定按这个倍数退出。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/10/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_8d4c9e0aba81",
+      "metric": "claim_8d4c9e0aba81",
+      "value": null,
+      "rawValue": "4. 旧价格试算与当前判断边界",
+      "textValue": "4. 旧价格试算与当前判断边界",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/11/h3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_83c86ea81e47",
+      "metric": "claim_83c86ea81e47",
+      "value": null,
+      "rawValue": "69.99元",
+      "textValue": "69.99元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/0/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_f50afd9e7ef2",
+      "metric": "claim_f50afd9e7ef2",
+      "value": null,
+      "rawValue": "约7.32%",
+      "textValue": "约7.32%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/0/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_eb356a64e540",
+      "metric": "claim_eb356a64e540",
+      "value": null,
+      "rawValue": "低于11%研究门槛，现价不建议新建仓",
+      "textValue": "低于11%研究门槛，现价不建议新建仓",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/0/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_a7b55eca82f6",
+      "metric": "claim_a7b55eca82f6",
+      "value": null,
+      "rawValue": "60元",
+      "textValue": "60元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/1/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_729cd31611ee",
+      "metric": "claim_729cd31611ee",
+      "value": null,
+      "rawValue": "约9.53%",
+      "textValue": "约9.53%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/1/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_e95082fa9147",
+      "metric": "claim_e95082fa9147",
+      "value": null,
+      "rawValue": "54.35元",
+      "textValue": "54.35元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/2/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_e8b3330043be",
+      "metric": "claim_e8b3330043be",
+      "value": null,
+      "rawValue": "约11.00%",
+      "textValue": "约11.00%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/2/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_213e309665a5",
+      "metric": "claim_213e309665a5",
+      "value": null,
+      "rawValue": "50元",
+      "textValue": "50元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/3/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_fd41916f5497",
+      "metric": "claim_fd41916f5497",
+      "value": null,
+      "rawValue": "约12.28%",
+      "textValue": "约12.28%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/3/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_e51ce0a99366",
+      "metric": "claim_e51ce0a99366",
+      "value": null,
+      "rawValue": "对基准多留余地，但悲观仍仅约5.79%",
+      "textValue": "对基准多留余地，但悲观仍仅约5.79%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/12/table/rows/3/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_a0a117b278ac",
+      "metric": "claim_a0a117b278ac",
+      "value": null,
+      "rawValue": "暂不提供综合建议买入价。上述达标价格和IRR仅回答“如果旧利润、分红和退出PE都成立，会得到什么结果”，不证明假设成立。原恢复路径、远期增长及退出PE均需经营证据复核；11%也只是旧主观门槛，不是本轮校准出的准确资本成本。现金流折现是理解企业价值的原则，不要求强填每年的利润、增长率或企业寿命；无法形成可信现金量级时，保留定性判断，等待更充分依据，不另造折现价与旧阈值并列。",
+      "textValue": "暂不提供综合建议买入价。上述达标价格和IRR仅回答“如果旧利润、分红和退出PE都成立，会得到什么结果”，不证明假设成立。原恢复路径、远期增长及退出PE均需经营证据复核；11%也只是旧主观门槛，不是本轮校准出的准确资本成本。现金流折现是理解企业价值的原则，不要求强填每年的利润、增长率或企业寿命；无法形成可信现金量级时，保留定性判断，等待更充分依据，不另造折现价与旧阈值并列。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/3/blocks/13/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_5ac2a2426f1c",
+      "metric": "claim_5ac2a2426f1c",
+      "value": null,
+      "rawValue": "品牌与较少直接制造成本具有吸引力，但高端产品毛利不是所有者收益。应扣清维持品牌、库存和产能所需投入，再检查留存资本是否创造增量每股价值。2025经营现金明显低于利润，要求对利润倍数打折看待；不能把所有账上现金一笔扣除后宣布便宜。",
+      "textValue": "品牌与较少直接制造成本具有吸引力，但高端产品毛利不是所有者收益。应扣清维持品牌、库存和产能所需投入，再检查留存资本是否创造增量每股价值。2025经营现金明显低于利润，要求对利润倍数打折看待；不能把所有账上现金一笔扣除后宣布便宜。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/1/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_9df38772ba85",
+      "metric": "claim_9df38772ba85",
+      "value": null,
+      "rawValue": "风险可能不是单一需求下滑，而是消费预算收缩、竞品让价、渠道利润变薄与销售考核压力相互强化。反向检验应问：什么会让70亿元利润恢复假设失败？若维持表面价格必须不断增加补贴，历史高毛利和管理口号都不能挡住经济性恶化。",
+      "textValue": "风险可能不是单一需求下滑，而是消费预算收缩、竞品让价、渠道利润变薄与销售考核压力相互强化。反向检验应问：什么会让70亿元利润恢复假设失败？若维持表面价格必须不断增加补贴，历史高毛利和管理口号都不能挡住经济性恶化。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/3/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_a21819e51c72",
+      "metric": "claim_a21819e51c72",
+      "value": null,
+      "rawValue": "基准路径十年累计预测股息约45.77元，第十年卖出所得约77.65元，原价投入69.99元的回报仍明显依赖企业十年后的价值。十年分红未回本并不自动否决，但不能只拿首年规划股息率当作整个回报。分配若依赖消耗储备而经营不能恢复，就不能将它当稳定果树。",
+      "textValue": "基准路径十年累计预测股息约45.77元，第十年卖出所得约77.65元，原价投入69.99元的回报仍明显依赖企业十年后的价值。十年分红未回本并不自动否决，但不能只拿首年规划股息率当作整个回报。分配若依赖消耗储备而经营不能恢复，就不能将它当稳定果树。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/5/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_05cbaa468d2f",
+      "metric": "claim_05cbaa468d2f",
+      "value": null,
+      "rawValue": "趋势选时：9月社零同比仅增1.1%，烟酒类回升不代表高端白酒反转；股价仍低于5/10/20日均价，属于弱势反弹，现阶段等待。",
+      "textValue": "趋势选时：9月社零同比仅增1.1%，烟酒类回升不代表高端白酒反转；股价仍低于5/10/20日均价，属于弱势反弹，现阶段等待。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/9/bullets/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_b1e592136e81",
+      "metric": "claim_b1e592136e81",
+      "value": null,
+      "rawValue": "估值定仓：当前建议新增仓位为0%；已有持仓不等于必须清仓，应比较机会成本。价格与经营证据同时支持后再小额分批，不因54.35元的旧模型阈值自动加仓。",
+      "textValue": "估值定仓：当前建议新增仓位为0%；已有持仓不等于必须清仓，应比较机会成本。价格与经营证据同时支持后再小额分批，不因54.35元的旧模型阈值自动加仓。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/9/bullets/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_13a4fb2596ad",
+      "metric": "claim_13a4fb2596ad",
+      "value": null,
+      "rawValue": "波动降本：不为做T新开仓。已有持仓若需交易，可观察先卖后买的3—4元价差，观察窗口3—10个交易日；不到价不强做，单边走强允许卖飞，基本面恶化则停止。",
+      "textValue": "波动降本：不为做T新开仓。已有持仓若需交易，可观察先卖后买的3—4元价差，观察窗口3—10个交易日；不到价不强做，单边走强允许卖飞，基本面恶化则停止。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/9/bullets/3"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_444cbda62267",
+      "metric": "claim_444cbda62267",
+      "value": null,
+      "rawValue": "截至2026-10-24；上述为研究者按四步法推演，非本人当期意见。价差参考14日平均真实波幅约2.05元的1.5—2倍；周期是观察窗口，未经回测，不是预测或最优参数，须覆盖费用与滑点。",
+      "textValue": "截至2026-10-24；上述为研究者按四步法推演，非本人当期意见。价差参考14日平均真实波幅约2.05元的1.5—2倍；周期是观察窗口，未经回测，不是预测或最优参数，须覆盖费用与滑点。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/4/blocks/10/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_935ef6a2228c",
+      "metric": "claim_935ef6a2228c",
+      "value": null,
+      "rawValue": "H1全品项扫码基本持平，双节高度样本约−20%",
+      "textValue": "H1全品项扫码基本持平，双节高度样本约−20%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/0/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_5abc2400c3bb",
+      "metric": "claim_5abc2400c3bb",
+      "value": null,
+      "rawValue": "随经营交流与节后样本；S4第3页、S8动销段",
+      "textValue": "随经营交流与节后样本；S4第3页、S8动销段",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/0/4"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_d769b25702fe",
+      "metric": "claim_d769b25702fe",
+      "value": null,
+      "rawValue": "公司称库存回落；有限样本1.5—2个月",
+      "textValue": "公司称库存回落；有限样本1.5—2个月",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/1/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_c4a07e76ddc6",
+      "metric": "claim_c4a07e76ddc6",
+      "value": null,
+      "rawValue": "随公司交流与公告；S4、S8，样本权重缺失",
+      "textValue": "随公司交流与公告；S4、S8，样本权重缺失",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/1/4"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_4004ed010c66",
+      "metric": "claim_4004ed010c66",
+      "value": null,
+      "rawValue": "2025购建后观察差额约51.90亿元；H1约13.68亿元",
+      "textValue": "2025购建后观察差额约51.90亿元；H1约13.68亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/2/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_6b272789e688",
+      "metric": "claim_6b272789e688",
+      "value": null,
+      "rawValue": "每期财报；2025年报82—83页、H1第44—46页",
+      "textValue": "每期财报；2025年报82—83页、H1第44—46页",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/2/4"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_711a5b99df25",
+      "metric": "claim_711a5b99df25",
+      "value": null,
+      "rawValue": "85亿元仅为首年规划兑现条件，2026具体方案未取得",
+      "textValue": "85亿元仅为首年规划兑现条件，2026具体方案未取得",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/3/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_098d4b500c0c",
+      "metric": "claim_098d4b500c0c",
+      "value": null,
+      "rawValue": "随分配决议与三季/年报原文；S10、S11、S19",
+      "textValue": "随分配决议与三季/年报原文；S10、S11、S19",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/rows/3/4"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_ec740910a061",
+      "metric": "claim_ec740910a061",
+      "value": null,
+      "rawValue": "截至2026-10-24未取得2026三季报实际原文；10月30日预约不是实绩。不同渠道样本与扫码口径不拼接为全国趋势。",
+      "textValue": "截至2026-10-24未取得2026三季报实际原文；10月30日预约不是实绩。不同渠道样本与扫码口径不拼接为全国趋势。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/0/table/note"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_26c9fcddd0ae",
+      "metric": "claim_26c9fcddd0ae",
+      "value": null,
+      "rawValue": "10月13日64/70/80亿元与恢复路径",
+      "textValue": "10月13日64/70/80亿元与恢复路径",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/2/table/rows/0/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_b93086d41608",
+      "metric": "claim_b93086d41608",
+      "value": null,
+      "rawValue": "旧版引用研报2024/2025经营现金178.86/64.71亿元",
+      "textValue": "旧版引用研报2024/2025经营现金178.86/64.71亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/2/table/rows/1/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_7bc698c09da9",
+      "metric": "claim_7bc698c09da9",
+      "value": null,
+      "rawValue": "10月24日重核年报，应为191.8177/71.2322亿元",
+      "textValue": "10月24日重核年报，应为191.8177/71.2322亿元",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/2/table/rows/1/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_9591da63da4a",
+      "metric": "claim_9591da63da4a",
+      "value": null,
+      "rawValue": "10月21日69.18元及约7.49%基准IRR",
+      "textValue": "10月21日69.18元及约7.49%基准IRR",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/2/table/rows/2/0"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_06175043ee98",
+      "metric": "claim_06175043ee98",
+      "value": null,
+      "rawValue": "10月23日69.99元，基准约7.32%",
+      "textValue": "10月23日69.99元，基准约7.32%",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/2/table/rows/2/1"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_74ddc57472eb",
+      "metric": "claim_74ddc57472eb",
+      "value": null,
+      "rawValue": "只由买入价变化重算；11%门槛及情景不变",
+      "textValue": "只由买入价变化重算；11%门槛及情景不变",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/2/table/rows/2/2"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    },
+    {
+      "id": "claim_b1f31bdb5121",
+      "metric": "claim_b1f31bdb5121",
+      "value": null,
+      "rawValue": "研究边界：2026-10-24妙想先查行情、财务与公告，财务广查询出现覆盖警告后缩小重试；冲突数字回到已保存2025年报及2026半年报原件。已核原表不等于查全所有负面事件；研报预测、渠道样本及规划与披露实绩分别使用。",
+      "textValue": "研究边界：2026-10-24妙想先查行情、财务与公告，财务广查询出现覆盖警告后缩小重试；冲突数字回到已保存2025年报及2026半年报原件。已核原表不等于查全所有负面事件；研报预测、渠道样本及规划与披露实绩分别使用。",
+      "unit": "source_text",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-25"
+      },
+      "basis": {
+        "scope": "legacy_as_stated",
+        "accountingStandard": "unknown",
+        "adjustment": "unknown",
+        "shareBasis": "unknown"
+      },
+      "nature": "legacy_claim",
+      "verification": "unreviewed",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "legacy-project-XSHE.000568-20261025",
+          "locator": "/plan/sections/5/blocks/3/p"
+        }
+      ],
+      "notes": "归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。",
+      "dimensions": {
+        "label": "报告中的数值声明（可能含假设，非公告认证）",
+        "periodLabel": "2026H1（截至2026-06-30）",
+        "kind": "report_claim"
+      }
+    }
+  ]
+}

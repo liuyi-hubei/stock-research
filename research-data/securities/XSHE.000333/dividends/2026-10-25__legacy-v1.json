@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000333__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.000333",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_ccefb9710db5","metric":"fact_ccefb9710db5","value":null,"rawValue":"每10股5元","textValue":"每10股5元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000333-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"中期分红","periodLabel":"2026H1方案","originalIndex":"7","originalRow":"[\"中期分红\",\"每10股5元\",\"2026H1方案\",\"约37.24亿元\"]","scopeNote":"约37.24亿元","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"以基准EPS和60%分红率估算，初始股息率约4.3%。美的的回报仍主要来自盈利增长、分红和回购共同作用，而非单靠高股息；可转债和并购扩张要求更严格的每股价值考核。","textValue":"以基准EPS和60%分红率估算，初始股息率约4.3%。美的的回报仍主要来自盈利增长、分红和回购共同作用，而非单靠高股息；可转债和并购扩张要求更严格的每股价值考核。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000333-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

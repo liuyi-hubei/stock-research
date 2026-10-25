@@ -18,7 +18,8 @@ for(const s of db.stocks){
 }
 assert.equal(selectSnapshot(store,'XHKG.00700','quotes','2026-10-23','2026-10-23'),null,'No lookahead across collection date');
 const tx=selectSnapshot(store,'XHKG.00700','quotes','2026-10-23','2026-10-24');assert(tx);
-assert.equal(selectSnapshot(store,'XHKG.00700','financials','2026-10-25','2026-10-25'),null,'Missing financials must not be fabricated');
+assert.equal(selectSnapshot(store,'XHKG.00700','financials','2026-10-25','2026-10-25'),null,'Unreviewed legacy claims must not silently become verified data');
+assert(selectSnapshot(store,'XHKG.00700','financials','2026-10-25','2026-10-25',true),'Explicit inspection may read the legacy archive');
 const small=selectSnapshot(store,'XHKG.01030','quotes','2026-10-23','2026-10-24');assert.equal(small.observations.find(o=>o.metric==='close').value,'1.355');
 const corrected=structuredClone(tx);corrected.snapshotId+='-correction';corrected.collectedAt='2026-10-25';corrected.supersedes=tx.snapshotId;
 store.snapshots.set(corrected.snapshotId,corrected);

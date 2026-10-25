@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000538__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.000538",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_c69dae517337","metric":"fact_c69dae517337","value":"1.038","rawValue":"1.038元，9月24日已除息","textValue":"1.038元，9月24日已除息","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000538-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"特别股息","periodLabel":"2026特别分红","originalIndex":"8","originalRow":"[\"特别股息\",\"1.038元，9月24日已除息\",\"2026特别分红\",\"不重复计入未来现金\"]","scopeNote":"不重复计入未来现金","kind":"fact_row","reportedUnit":"元","scale":"0"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"基准80%对应44亿元年度分配，低于2025累计46.43亿元但仍需完整年度现金覆盖。特别分红1.038元9月24日已除息，不加入未来；不假设每年固定特别分红，也不同时额外加存量现金。","textValue":"基准80%对应44亿元年度分配，低于2025累计46.43亿元但仍需完整年度现金覆盖。特别分红1.038元9月24日已除息，不加入未来；不假设每年固定特别分红，也不同时额外加存量现金。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000538-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

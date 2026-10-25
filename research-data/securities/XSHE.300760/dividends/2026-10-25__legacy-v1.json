@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.300760__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.300760",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_71d253ff4109","metric":"fact_71d253ff4109","value":"3618700000","rawValue":"36.1870亿元","textValue":"36.1870亿元","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.300760-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"租赁后、少数股息及债务支付后现金观察差额","periodLabel":"2026H1","originalIndex":"8","originalRow":"[\"租赁后、少数股息及债务支付后现金观察差额\",\"36.1870亿元\",\"2026H1\",\"合并OCF减购建、筹资租赁付款及保证金、少数股息及债务本金；未扣普通股息/回购/所有投资，不是完整归母FCF\"]","scopeNote":"合并OCF减购建、筹资租赁付款及保证金、少数股息及债务本金；未扣普通股息/回购/所有投资，不是完整归母FCF","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_cd7ec524f6a3","metric":"fact_cd7ec524f6a3","value":"1.25","rawValue":"1.25元 + 1.33元 = 2.58元","textValue":"1.25元 + 1.33元 = 2.58元","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.300760-20261025","locator":"/facts/9"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"两次2026中期股息","periodLabel":"5月28日、9月8日已除息","originalIndex":"9","originalRow":"[\"两次2026中期股息\",\"1.25元 + 1.33元 = 2.58元\",\"5月28日、9月8日已除息\",\"首年2026全年分红预算须扣除，不重复加入\"]","scopeNote":"首年2026全年分红预算须扣除，不重复加入","kind":"fact_row","reportedUnit":"元","scale":"0"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025—2027规划在具备条件时原则上现金分配不少于当年可供分配利润65%；分母是可供分配利润，不机械等同合并归母。原35%/50%/55%留作低于政策示意比例的保守现金情景，不冒称公司实际未来派息或政策下限。已付2026中期2.58元从首年年度预算扣除，2025末期0.31元另已除息。三情景首年剩余预算为0/约1.1335/约2.1856元，不因悲观余量为零说公司整年零分红。无新增第三次中期分配原公告，不虚构金额或恢复日期。","textValue":"2025—2027规划在具备条件时原则上现金分配不少于当年可供分配利润65%；分母是可供分配利润，不机械等同合并归母。原35%/50%/55%留作低于政策示意比例的保守现金情景，不冒称公司实际未来派息或政策下限。已付2026中期2.58元从首年年度预算扣除，2025末期0.31元另已除息。三情景首年剩余预算为0/约1.1335/约2.1856元，不因悲观余量为零说公司整年零分红。无新增第三次中期分配原公告，不虚构金额或恢复日期。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.300760-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1（截至2026-06-30）","kind":"research_commentary"}}
+  ]
+}

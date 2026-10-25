@@ -57,6 +57,8 @@
   const bullets = items => `<ul class="bullet-list">${items.map(item => `<li>${item}</li>`).join("")}</ul>`;
 
   function factTable(rows) {
+    const stock=db.stocks.find(s=>s.facts===rows),published=window.RESEARCH_FACTS?.[stock?.code];
+    if(published)rows=[...rows.slice(0,3),...published.rows];
     return `<div class="table-wrap"><table><thead><tr><th>指标</th><th>数值</th><th>期间 / 时点</th><th>口径</th></tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
   }
 
@@ -436,7 +438,7 @@ document.body.innerHTML = `${header("industries")}<main><section class="detail-c
     const framework = window.ResearchFramework;
     framework.validate(plan, stock);
     const blocks = framework.renderBlocks(plan, stock, escapeText);
-    const metrics = plan.reviewState==='conditional' ? summaryMetrics(stock).replace('基准十年 IRR','原参数条件 IRR').replace('达标参考价','条件参考价') : summaryMetrics(stock);
+    const metrics = summaryMetrics(stock).replace('基准十年 IRR','线性测算 IRR').replace('达标参考价',plan.reviewState==='conditional'?'条件参考价':'达标参考价');
     document.body.className = 'stock-page evidence-first-page';
     document.title = `${stock.name}完整研究报告 | ${db.meta.siteName}`;
     const nav = `<nav class="report-nav" aria-label="报告目录">${plan.sections.map(s=>`<a href="#${escapeText(s.id)}">${escapeText(s.title)}</a>`).join('')}<a href="#sources">来源与研究边界</a></nav>`;

@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {loadFramework,frameworkFiles} from './research-framework-files.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),c=vm.createContext({window:{}});
+for(const f of ['assets/shareholder-model.js','data/stocks.js','data/additional-stocks.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+loadFramework(root,c);
+const {ResearchBindings:bindings,RESEARCH_FACTS:facts,RESEARCH_SOURCE_PLANS:raw,RESEARCH_FRAMEWORK:resolved,STOCK_RESEARCH:db}=c.window;
+let tokens=0,factTokens=0;
+for(const s of db.stocks){
+ const text=JSON.stringify(raw[s.code]),matches=text.match(/\{\{[^}]+\}\}/g)||[];tokens+=matches.length;factTokens+=matches.filter(x=>x.startsWith('{{fact.')).length;
+ assert(!JSON.stringify(resolved[s.code]).includes('{{'),s.code+' unresolved bindings');
+ assert.equal(JSON.stringify(facts[s.code].rows),JSON.stringify(s.facts.slice(3)),s.code+' fact projection changed legacy display during migration');
+}
+const tx=db.stocks.find(s=>s.code==='00700'),oldQuote=facts['00700'].quote.values.pe_ttm;
+const before=JSON.stringify(bindings.resolvePlan(raw['00700'],tx));
+facts['00700'].quote.values.pe_ttm=String(Number(oldQuote)+1);
+assert.notEqual(JSON.stringify(bindings.resolvePlan(raw['00700'],tx)),before,'Quote changes must flow into bound narrative');
+facts['00700'].quote.values.pe_ttm=oldQuote;
+const eps=tx.model.assumptions[1].eps;tx.model.assumptions[1].eps=eps*1.01;
+assert.notEqual(JSON.stringify(bindings.resolvePlan(raw['00700'],tx)),before,'Model changes must flow into bound narrative');tx.model.assumptions[1].eps=eps;
+const stock=db.stocks.find(s=>JSON.stringify(raw[s.code]).includes('{{fact.')),template=JSON.stringify(raw[stock.code]);
+const key=template.match(/\{\{fact\.([a-z0-9_]+)\|/)[1],old=facts[stock.code].records[key].value;
+const original=JSON.stringify(bindings.resolvePlan(raw[stock.code],stock));facts[stock.code].records[key].value=String(Number(old)*1.01);
+assert.notEqual(JSON.stringify(bindings.resolvePlan(raw[stock.code],stock)),original,'Fact changes must flow into bound narrative');facts[stock.code].records[key].value=old;
+assert.throws(()=>bindings.text('{{fact.missing|n2}}',tx),/missing numeric fact/);
+assert.throws(()=>bindings.resolvePlan({p:'{{unknown|invalid}}'},tx),/unresolved/);
+const pending=db.stocks.find(s=>c.window.ShareholderModel.isPending(s));assert.throws(()=>bindings.text('{{base.irr|p2}}',pending),/pending/);
+assert(tokens>500&&factTokens>100,'Missing report data binding coverage');
+for(const file of frameworkFiles(root))assert(fs.readFileSync(path.join(root,file),'utf8').includes('{{'),file+' expected data/model references');
+console.log(`PASS: ${db.stocks.length} reports, ${tokens} numeric references (${factTokens} fact references); quote/fact/model mutation fixtures, pending guard and unchanged migration display.`);

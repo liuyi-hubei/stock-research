@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601919__financials__20261025-legacy-v1",
+  "securityId": "XSHG.601919",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_0f89ab871f8a","metric":"fact_0f89ab871f8a","value":null,"rawValue":"约1,119 / 134.19亿元","textValue":"约1,119 / 134.19亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2026H1收入 / 归母","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"2026H1收入 / 归母\",\"约1,119 / 134.19亿元\",\"2026H1\",\"中报与妙想交叉\"]","scopeNote":"中报与妙想交叉","kind":"fact_row"}},
+    {"id":"fact_5baed33bc62b","metric":"fact_5baed33bc62b","value":"23330000000","rawValue":"约233.3亿元","textValue":"约233.3亿元","unit":"currency","currency":"CNY","period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"H1经营现金","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"H1经营现金\",\"约233.3亿元\",\"2026H1\",\"未扣造船/租赁付款\"]","scopeNote":"未扣造船/租赁付款","kind":"fact_row","reportedUnit":"亿元","scale":"8"}},
+    {"id":"fact_050cdf300249","metric":"fact_050cdf300249","value":null,"rawValue":"606艘 / 约366万TEU","textValue":"606艘 / 约366万TEU","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"船队运力","periodLabel":"2026-07末","originalIndex":"7","originalRow":"[\"船队运力\",\"606艘 / 约366万TEU\",\"2026-07末\",\"公司中报\"]","scopeNote":"公司中报","kind":"fact_row"}},
+    {"id":"fact_7ffc5f5ea734","metric":"fact_7ffc5f5ea734","value":"0.4101","rawValue":"约41.01%","textValue":"约41.01%","unit":"ratio","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601919-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"资产负债率","periodLabel":"2026H1","originalIndex":"8","originalRow":"[\"资产负债率\",\"约41.01%\",\"2026H1\",\"不能代替租船承诺分析\"]","scopeNote":"不能代替租船承诺分析","kind":"fact_row","reportedUnit":"%","scale":"-2"}}
+  ]
+}

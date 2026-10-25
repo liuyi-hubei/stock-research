@@ -18,6 +18,7 @@
 - 本地、其他agent和Work共同维护同一Git仓库。开始先检查dirty tree与远端，不覆盖用户或其他agent变更；无冲突才快进，不自动重置或解决冲突。
 - 先明确股票、范围、写集合与参数权限。一股同轮一个写入者；data/additional-stocks.js、共享渲染/样式和生成文件由集成人串行修改。并行是可选手段，不强制启动子agent。
 - 正文源为data/research/CODE.js，按CODE运行node docs/sync-research-framework.mjs CODE生成reports/stocks中文Markdown；不要手改生成归档。每只股票的结构重写按其自身材料进行，不因一次改动顺手改写其他标的。
+- 正文数字采用`{{quote.pe_ttm|n2}}`、`{{base.irr|p2}}`、`{{fact.观测ID|n2e8}}`等只读引用；不得复制数值替换已建立的引用。`research-data/publication.json`固定报告使用的资料版本，`data/research-facts.js`为生成投影，不手改。改事实后先审阅`node docs/build-research-facts.mjs --patch`，应用补丁再运行`--check`及`node docs/check-research-bindings.mjs`。新季度财报不可直接替换旧期间引用，先更新研究与版本映射。迁入旧报告的声明保留unreviewed，不冒充原件核验。
 - **归档定位（2026-10-24确定）**：`reports/stocks/*.md` 是离线存档与校验锚点，不是交付物。重写报告只需更新 `data/research/CODE.js` 与页面（页面只读结构化源，不读 md），md 由 sync 脚本自动同步，不必向用户展示、不必作为成果提交。仅在两种情况下手工维护 md：标的尚无结构化源（此时 md 是该股唯一完整正文载体），或需要保留历史快照。
 - integratedNarrative报告不再拼接旧介绍、方法摘要和重复跟踪卡片。目录采用实际章节标题，桌面吸顶、手机可滑动固定目录。
 - 改行情、财报、股数、参数、资格或模型状态必须有任务授权和证据；结构/方法修订不冒充数据刷新。模型检查通过不等于预测可靠。
@@ -52,6 +53,8 @@
 5. 不凭空补充行情、财务数据或投资者观点；结论应明确这是研究记录，不构成个人投资建议。
 
 ## 前端修改规则
+
+- 个股投资结论区的收益标签统一为“线性测算 IRR”，不使用“原参数条件 IRR”等版本标签。该名称仅为展示文案，仍沿用共同IRR引擎及假设说明，不把IRR计算改成线性插值，不取消研究状态或风险说明。
 
 - 页面视觉保持当前暖白背景、橙色强调色及统一栅格、间距、圆角和文字层级。
 - 优先复用现有组件和 CSS 变量，避免为单个页面堆叠一次性样式。
@@ -168,6 +171,9 @@ node docs/validate.mjs
 node docs/check-shareholder-model.mjs
 node docs/check-report-numbers.mjs
 node docs/audit-research-content.mjs
+node docs/check-perspective-numbers.mjs
+node docs/build-research-facts.mjs --check
+node docs/check-research-bindings.mjs
 node docs/research-data.mjs validate
 node docs/check-research-data.mjs
 node docs/check-research-framework.mjs
@@ -182,6 +188,8 @@ git diff --check
 并手动检查首页、至少一只股票详情页、移动端窄屏，以及浏览器控制台是否有错误。
 
 全池内容复核采用 `docs/audit-research-content.mjs`：检查行情日期和原始价格精度、报告与页面摘要、当前PE/PB、市值口径、价格/IRR表及现金分配算术。供应商近似股数不得覆盖模型精确股数。历史数据核验底稿须保留原取数日与价格；人工正文校验锚点见 `docs/historical-snapshot-manifest.json`，校验和只防止未审阅覆盖，不证明旧财报或旧IRR正确。更新快照正文时必须说明原因并重新审阅锚点，不能为让测试通过而自动接受变化。检查通过不等于未来盈利或54家公司全部原始财报已经重核。
+
+任何行情、参数或报告数字更新必须检查全部六章，特别是“其他思维观点”，不能只改摘要和估值表。运行`node docs/check-perspective-numbers.mjs`核对辅助观点中的TTM PE/PB、基准与悲观IRR、十年累计分红、首年股息、期末卖出及更高回报要求的参考价。正常化倍数与行情倍数分别标注，历史对比注明日期，现金回收占比不得冒充IRR构成；不同参考价须解释回报门槛或经营假设差异。
 
 ## Git 协作流程
 

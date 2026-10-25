@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600519__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.600519",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025年度现金分红650.33亿元，约占归母净利润79%，另有约60亿元回购注销。若未来维持75%左右分红率，2026年基准利润820亿元对应每股股息约49.2元、当前价格股息率约3.69%。茅台的十年回报需要“分红＋低个位数增长＋估值稳定”共同贡献，历史或条件股息率不能直接推出十年IRR，仍须结合未来分配与退出价值判断。","textValue":"2025年度现金分红650.33亿元，约占归母净利润79%，另有约60亿元回购注销。若未来维持75%左右分红率，2026年基准利润820亿元对应每股股息约49.2元、当前价格股息率约3.69%。茅台的十年回报需要“分红＋低个位数增长＋估值稳定”共同贡献，历史或条件股息率不能直接推出十年IRR，仍须结合未来分配与退出价值判断。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.600519-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

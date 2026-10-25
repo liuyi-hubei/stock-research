@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.001286__financials__20261025-legacy-v1",
+  "securityId": "XSHE.001286",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_174db1ded262","metric":"fact_174db1ded262","value":null,"rawValue":"107.09 / 13.48 / 13.36亿元","textValue":"107.09 / 13.48 / 13.36亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.001286-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"收入 / 归母 / 扣非","periodLabel":"2026H1","originalIndex":"3","originalRow":"[\"收入 / 归母 / 扣非\",\"107.09 / 13.48 / 13.36亿元\",\"2026H1\",\"原始半年报\"]","scopeNote":"原始半年报","kind":"fact_row"}},
+    {"id":"fact_f29cdb81c1fa","metric":"fact_f29cdb81c1fa","value":null,"rawValue":"44.89 / 31.08亿元","textValue":"44.89 / 31.08亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.001286-20261025","locator":"/facts/6"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"经营现金 / 购建现金","periodLabel":"2026H1","originalIndex":"6","originalRow":"[\"经营现金 / 购建现金\",\"44.89 / 31.08亿元\",\"2026H1\",\"合并现金流\"]","scopeNote":"合并现金流","kind":"fact_row"}},
+    {"id":"fact_5ac9eaf934b6","metric":"fact_5ac9eaf934b6","value":null,"rawValue":"约301.5 / 51.60亿元","textValue":"约301.5 / 51.60亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.001286-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"有息债务 / 货币资金","periodLabel":"2026H1","originalIndex":"7","originalRow":"[\"有息债务 / 货币资金\",\"约301.5 / 51.60亿元\",\"2026H1\",\"妙想及中报\"]","scopeNote":"妙想及中报","kind":"fact_row"}}
+  ]
+}

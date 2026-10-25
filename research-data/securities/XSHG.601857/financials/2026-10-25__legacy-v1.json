@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601857__financials__20261025-legacy-v1",
+  "securityId": "XSHG.601857",
+  "dataset": "financials",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_4beebf52224a","metric":"fact_4beebf52224a","value":null,"rawValue":"2.864万亿 / 1,573亿 / 1,617亿元","textValue":"2.864万亿 / 1,573亿 / 1,617亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601857-20261025","locator":"/facts/3"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2025收入 / 归母 / 扣非","periodLabel":"2025A","originalIndex":"3","originalRow":"[\"2025收入 / 归母 / 扣非\",\"2.864万亿 / 1,573亿 / 1,617亿元\",\"2025A\",\"2025年报\"]","scopeNote":"2025年报","kind":"fact_row"}},
+    {"id":"fact_86d61f05b0af","metric":"fact_86d61f05b0af","value":null,"rawValue":"1.527万亿 / 1,039亿 / 1,055亿元","textValue":"1.527万亿 / 1,039亿 / 1,055亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601857-20261025","locator":"/facts/4"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2026H1收入 / 归母 / 扣非","periodLabel":"2026H1","originalIndex":"4","originalRow":"[\"2026H1收入 / 归母 / 扣非\",\"1.527万亿 / 1,039亿 / 1,055亿元\",\"2026H1\",\"归母同比+22.03%\"]","scopeNote":"归母同比+22.03%","kind":"fact_row"}},
+    {"id":"fact_10a043dbfbac","metric":"fact_10a043dbfbac","value":null,"rawValue":"87.60美元/桶","textValue":"87.60美元/桶","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601857-20261025","locator":"/facts/5"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2026H1布伦特均价","periodLabel":"2026H1","originalIndex":"5","originalRow":"[\"2026H1布伦特均价\",\"87.60美元/桶\",\"2026H1\",\"同比+23.7%；公司半年报\"]","scopeNote":"同比+23.7%；公司半年报","kind":"fact_row"}},
+    {"id":"fact_269fc514b20c","metric":"fact_269fc514b20c","value":null,"rawValue":"2,513 / 1,124.62亿元","textValue":"2,513 / 1,124.62亿元","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601857-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"经营现金流 / 资本开支现金支付","periodLabel":"2026H1","originalIndex":"7","originalRow":"[\"经营现金流 / 资本开支现金支付\",\"2,513 / 1,124.62亿元\",\"2026H1\",\"公司报告；与预算资本开支不同\"]","scopeNote":"公司报告；与预算资本开支不同","kind":"fact_row"}}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000792__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.000792",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_8c478ff49008","metric":"fact_8c478ff49008","value":null,"rawValue":"2026中期不分配；不猜恢复年份，十年零股息","textValue":"2026中期不分配；不猜恢复年份，十年零股息","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000792-20261025","locator":"/facts/13"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"股息路径","originalIndex":"13","originalRow":"[\"股息路径\",\"2026中期不分配；不猜恢复年份，十年零股息\"]","scopeNote":"","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2026中期明确不派息，母公司未分配利润仍−40.1621亿元；不预测某年恢复，不把集团45.6351亿元未分配利润当母公司法律分配能力。三个情景十年均零现金股息，不代表永不分红，而是当前证据不足以预测恢复时点。股东现金回报完全来自第十年出售，不能称十年分红回本或高股息资产；回购不加为现金股息。","textValue":"2026中期明确不派息，母公司未分配利润仍−40.1621亿元；不预测某年恢复，不把集团45.6351亿元未分配利润当母公司法律分配能力。三个情景十年均零现金股息，不代表永不分红，而是当前证据不足以预测恢复时点。股东现金回报完全来自第十年出售，不能称十年分红回本或高股息资产；回购不加为现金股息。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.000792-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

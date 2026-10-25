@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.09992__dividends__20261025-legacy-v1",
+  "securityId": "XHKG.09992",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_4c40a2ccb87a","metric":"fact_4c40a2ccb87a","value":null,"rawValue":"不建议派付","textValue":"不建议派付","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.09992-20261025","locator":"/facts/9"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"中期股息","periodLabel":"2026中期","originalIndex":"9","originalRow":"[\"中期股息\",\"不建议派付\",\"2026中期\",\"未来年度分配比例为研究假设\"]","scopeNote":"未来年度分配比例为研究假设","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2026中期不建议派息；H1已付人民币2.3817元/股属于既往年度现金，不属于本次买入收益。首年仍按2026正常化盈利×研究比例预计未来年度分配，不将未派中期另加或倒扣2025利润年度股息。20%/30%/35%并非承诺；经营现金扣设备、无形与租赁后24.10亿元，基准全年33.9亿元预算需H2与后续现金支持，不能拿半年直接判全年缺口。","textValue":"2026中期不建议派息；H1已付人民币2.3817元/股属于既往年度现金，不属于本次买入收益。首年仍按2026正常化盈利×研究比例预计未来年度分配，不将未派中期另加或倒扣2025利润年度股息。20%/30%/35%并非承诺；经营现金扣设备、无形与租赁后24.10亿元，基准全年33.9亿元预算需H2与后续现金支持，不能拿半年直接判全年缺口。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XHKG.09992-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1（截至2026-06-30）","kind":"research_commentary"}}
+  ]
+}

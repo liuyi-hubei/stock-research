@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.001286__dividends__20261025-legacy-v1",
+  "securityId": "XSHE.001286",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_4a7241dcadfd","metric":"fact_4a7241dcadfd","value":"3750000000","rawValue":"37.5亿股 / 每股0.41元已实施","textValue":"37.5亿股 / 每股0.41元已实施","unit":"shares","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.001286-20261025","locator":"/facts/8"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"普通股本 / 历史分红","periodLabel":"2026-09-30 / 2025年度","originalIndex":"8","originalRow":"[\"普通股本 / 历史分红\",\"37.5亿股 / 每股0.41元已实施\",\"2026-09-30 / 2025年度\",\"不重复计入未来现金\"]","scopeNote":"不重复计入未来现金","kind":"fact_row","reportedUnit":"亿股","scale":"8"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"基准45%起点分配对应全年12.6亿元，参考2025实际51.09%分配及母公司上缴；先留资金支持扩产，成熟后条件提高至55%。公司H1不分红，6月26日已实施0.41元不属于9月30日买入后的现金。若扩产及偿债占用持续，必须下调分配，不以新增借款证明长期派息。","textValue":"基准45%起点分配对应全年12.6亿元，参考2025实际51.09%分配及母公司上缴；先留资金支持扩产，成熟后条件提高至55%。公司H1不分红，6月26日已实施0.41元不属于9月30日买入后的现金。若扩产及偿债占用持续，必须下调分配，不以新增借款证明长期派息。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHE.001286-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

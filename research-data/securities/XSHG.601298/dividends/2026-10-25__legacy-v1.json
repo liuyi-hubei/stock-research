@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601298__dividends__20261025-legacy-v1",
+  "securityId": "XSHG.601298",
+  "dataset": "dividends",
+  "asOf": "2026-10-25",
+  "collectedAt": "2026-10-25",
+  "acceptance": "accepted",
+  "createdBy": "codex/legacy-archive",
+  "supersedes": null,
+  "notes": "仅接受归档结构及可追溯性；所有观测仍unreviewed。period是归档观察日而非财务期；原期间见dimensions，未经原件复核不得称新事实。",
+  "observations": [
+    {"id":"fact_2c68de485e7c","metric":"fact_2c68de485e7c","value":null,"rawValue":"每股0.1399元，尚未实施","textValue":"每股0.1399元，尚未实施","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601298-20261025","locator":"/facts/7"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"2026中期分红预案","periodLabel":"2026H1","originalIndex":"7","originalRow":"[\"2026中期分红预案\",\"每股0.1399元，尚未实施\",\"2026H1\",\"妙想分红数据\"]","scopeNote":"妙想分红数据","kind":"fact_row"}},
+    {"id":"dividend_commentary","metric":"dividend_commentary","value":null,"rawValue":"2025年度每股0.1988元已实施，按9.49元静态股息率约2.1%；2026中期每股0.1399元仍是预案，不计作已实现回报。模型45%分红率要服从扩建和财务安排。","textValue":"2025年度每股0.1988元已实施，按9.49元静态股息率约2.1%；2026中期每股0.1399元仍是预案，不计作已实现回报。模型45%分红率要服从扩建和财务安排。","unit":"source_text","currency":null,"period":{"kind":"instant","start":null,"end":"2026-10-25"},"basis":{"scope":"legacy_as_stated","accountingStandard":"unknown","adjustment":"unknown","shareBasis":"unknown"},"nature":"legacy_claim","verification":"unreviewed","precision":"as_reported","missingReason":null,"sourceRefs":[{"sourceId":"legacy-project-XSHG.601298-20261025","locator":"/dividendView"}],"notes":"归档截止日不是财务报告期；实际期间原文见dimensions.periodLabel。未复核原件，不自动用作估值参数。","dimensions":{"label":"分红口径与研究说明","periodLabel":"2026H1","kind":"research_commentary"}}
+  ]
+}

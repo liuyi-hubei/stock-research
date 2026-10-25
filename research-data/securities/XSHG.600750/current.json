@@ -11,6 +11,21 @@
       "snapshotId": "XSHG.600750__financials__20260930__20261025-mx-v1",
       "file": "securities/XSHG.600750/financials/2026-09-30__2026-10-25__mx-v1.json",
       "sha256": "4779b704d0eee598a471b3fa9a177eec1c20ed3b1b7e5cfc13251491e1ad3c6d"
+    },
+    "dividends": {
+      "snapshotId": "XSHG.600750__dividends__20261025-legacy-v1",
+      "file": "securities/XSHG.600750/dividends/2026-10-25__legacy-v1.json",
+      "sha256": "cb15ab1ca83762b741c5e8147ed5e64470ef4299642e3f77c23d1bb53cf5f4bf"
+    },
+    "operating": {
+      "snapshotId": "XSHG.600750__operating__20261025-legacy-v1",
+      "file": "securities/XSHG.600750/operating/2026-10-25__legacy-v1.json",
+      "sha256": "da0c7f6f256f8e2e15ca95a20e7cf63ca7806dff7058b65f094d7946cf5b8fcd"
+    },
+    "events": {
+      "snapshotId": "XSHG.600750__events__20261025-legacy-v1",
+      "file": "securities/XSHG.600750/events/2026-10-25__legacy-v1.json",
+      "sha256": "c16db3a8ca4bd1463cd85639e66beef10e09b2b2a25b0b2dcac284ad3b92f498"
     }
   }
 }
