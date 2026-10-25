@@ -1,0 +1,438 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-25",
+  "securities": [
+    {
+      "securityId": "XSHE.000568",
+      "code": "000568",
+      "name": "泸州老窖",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000568"
+    },
+    {
+      "securityId": "XSHG.600519",
+      "code": "600519",
+      "name": "贵州茅台",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600519"
+    },
+    {
+      "securityId": "XHKG.00700",
+      "code": "00700",
+      "name": "腾讯控股",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "00700"
+    },
+    {
+      "securityId": "XSHE.000333",
+      "code": "000333",
+      "name": "美的集团",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000333"
+    },
+    {
+      "securityId": "XSHG.601899",
+      "code": "601899",
+      "name": "紫金矿业",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601899"
+    },
+    {
+      "securityId": "XHKG.09992",
+      "code": "09992",
+      "name": "泡泡玛特",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "09992"
+    },
+    {
+      "securityId": "XSHE.000858",
+      "code": "000858",
+      "name": "五粮液",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000858"
+    },
+    {
+      "securityId": "XSHG.600900",
+      "code": "600900",
+      "name": "长江电力",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600900"
+    },
+    {
+      "securityId": "XSHG.600863",
+      "code": "600863",
+      "name": "华能蒙电",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600863"
+    },
+    {
+      "securityId": "XSHG.600036",
+      "code": "600036",
+      "name": "招商银行",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600036"
+    },
+    {
+      "securityId": "XSHG.601318",
+      "code": "601318",
+      "name": "中国平安",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601318"
+    },
+    {
+      "securityId": "XSHG.600750",
+      "code": "600750",
+      "name": "华润江中",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600750"
+    },
+    {
+      "securityId": "XSHE.000651",
+      "code": "000651",
+      "name": "格力电器",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000651"
+    },
+    {
+      "securityId": "XSHG.600660",
+      "code": "600660",
+      "name": "福耀玻璃",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600660"
+    },
+    {
+      "securityId": "XSHG.601298",
+      "code": "601298",
+      "name": "青岛港",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601298"
+    },
+    {
+      "securityId": "XSHE.002555",
+      "code": "002555",
+      "name": "三七互娱",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002555"
+    },
+    {
+      "securityId": "XHKG.00902",
+      "code": "00902",
+      "name": "华能国际电力股份",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "00902"
+    },
+    {
+      "securityId": "XHKG.02020",
+      "code": "02020",
+      "name": "安踏体育",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "02020"
+    },
+    {
+      "securityId": "XHKG.01030",
+      "code": "01030",
+      "name": "新城发展",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "01030"
+    },
+    {
+      "securityId": "XHKG.01378",
+      "code": "01378",
+      "name": "中国宏桥",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "01378"
+    },
+    {
+      "securityId": "XSHE.000807",
+      "code": "000807",
+      "name": "云铝股份",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000807"
+    },
+    {
+      "securityId": "XSHE.002223",
+      "code": "002223",
+      "name": "鱼跃医疗",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002223"
+    },
+    {
+      "securityId": "XHKG.09961",
+      "code": "09961",
+      "name": "携程集团",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "09961"
+    },
+    {
+      "securityId": "XSHE.300760",
+      "code": "300760",
+      "name": "迈瑞医疗",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "300760"
+    },
+    {
+      "securityId": "XSHG.601857",
+      "code": "601857",
+      "name": "中国石油",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601857"
+    },
+    {
+      "securityId": "XSHG.600941",
+      "code": "600941",
+      "name": "中国移动",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600941"
+    },
+    {
+      "securityId": "XHKG.01910",
+      "code": "01910",
+      "name": "新秀丽",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "01910"
+    },
+    {
+      "securityId": "XHKG.01810",
+      "code": "01810",
+      "name": "小米集团",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "01810"
+    },
+    {
+      "securityId": "XSHE.300750",
+      "code": "300750",
+      "name": "宁德时代",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "300750"
+    },
+    {
+      "securityId": "XSHE.002594",
+      "code": "002594",
+      "name": "比亚迪",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002594"
+    },
+    {
+      "securityId": "XSHG.600809",
+      "code": "600809",
+      "name": "山西汾酒",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600809"
+    },
+    {
+      "securityId": "XSHE.002304",
+      "code": "002304",
+      "name": "洋河股份",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002304"
+    },
+    {
+      "securityId": "XHKG.09988",
+      "code": "09988",
+      "name": "阿里巴巴",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "09988"
+    },
+    {
+      "securityId": "XSHG.600873",
+      "code": "600873",
+      "name": "梅花生物",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600873"
+    },
+    {
+      "securityId": "XHKG.01179",
+      "code": "01179",
+      "name": "华住集团",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "01179"
+    },
+    {
+      "securityId": "XSHE.300059",
+      "code": "300059",
+      "name": "东方财富",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "300059"
+    },
+    {
+      "securityId": "XSHG.601919",
+      "code": "601919",
+      "name": "中远海控",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601919"
+    },
+    {
+      "securityId": "XSHG.605499",
+      "code": "605499",
+      "name": "东鹏饮料",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "605499"
+    },
+    {
+      "securityId": "XSHG.601058",
+      "code": "601058",
+      "name": "赛轮轮胎",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601058"
+    },
+    {
+      "securityId": "XSHG.600690",
+      "code": "600690",
+      "name": "海尔智家",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600690"
+    },
+    {
+      "securityId": "XSHG.600887",
+      "code": "600887",
+      "name": "伊利股份",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600887"
+    },
+    {
+      "securityId": "XSHE.001286",
+      "code": "001286",
+      "name": "陕西能源",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "001286"
+    },
+    {
+      "securityId": "XSHE.000933",
+      "code": "000933",
+      "name": "神火股份",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000933"
+    },
+    {
+      "securityId": "XSHG.600886",
+      "code": "600886",
+      "name": "国投电力",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600886"
+    },
+    {
+      "securityId": "XSHE.000538",
+      "code": "000538",
+      "name": "云南白药",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000538"
+    },
+    {
+      "securityId": "XSHG.603288",
+      "code": "603288",
+      "name": "海天味业",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "603288"
+    },
+    {
+      "securityId": "XHKG.00883",
+      "code": "00883",
+      "name": "中国海洋石油",
+      "exchange": "XHKG",
+      "currency": "HKD",
+      "reportCode": "00883"
+    },
+    {
+      "securityId": "XSHG.601336",
+      "code": "601336",
+      "name": "新华保险",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "601336"
+    },
+    {
+      "securityId": "XSHE.000792",
+      "code": "000792",
+      "name": "盐湖股份",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "000792"
+    },
+    {
+      "securityId": "XSHE.002027",
+      "code": "002027",
+      "name": "分众传媒",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002027"
+    },
+    {
+      "securityId": "XSHG.600585",
+      "code": "600585",
+      "name": "海螺水泥",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600585"
+    },
+    {
+      "securityId": "XSHE.002352",
+      "code": "002352",
+      "name": "顺丰控股",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002352"
+    },
+    {
+      "securityId": "XSHG.688825",
+      "code": "688825",
+      "name": "长鑫科技",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "688825"
+    },
+    {
+      "securityId": "XSHE.002714",
+      "code": "002714",
+      "name": "牧原股份",
+      "exchange": "XSHE",
+      "currency": "CNY",
+      "reportCode": "002714"
+    }
+  ]
+}

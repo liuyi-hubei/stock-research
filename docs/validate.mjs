@@ -69,7 +69,13 @@ for (const file of ['index.html', 'reports.html', 'stock.html', 'industry.html']
   for (const required of [...dataFiles.slice(0, 2), modelFile, 'assets/research-freshness.js', 'assets/app.js']) assert(scripts.includes(required), `${file}: missing script ${required}`);
   assert(scripts.indexOf('assets/research-freshness.js') < scripts.indexOf('assets/app.js'), `${file}: invalid freshness script order`);
   assert(scripts.includes('assets/report-query.js') && scripts.indexOf('assets/report-query.js') < scripts.indexOf('assets/app.js'), `${file}: invalid query script dependency`);
-  for(const dependency of [...frameworkFiles(root),'assets/research-framework.js']) assert(scripts.includes(dependency) && scripts.indexOf(dependency)<scripts.indexOf('assets/app.js'),`${file}: missing research dependency ${dependency}`);
+  // 研究正文（54 份，约 1.4MB）只在个股详情页加载；其余页面只加载渲染框架本身。
+  if (file === 'stock.html') {
+    for (const dependency of [...frameworkFiles(root), 'assets/research-framework.js']) assert(scripts.includes(dependency) && scripts.indexOf(dependency) < scripts.indexOf('assets/app.js'), `${file}: missing research dependency ${dependency}`);
+  } else {
+    assert(!html.includes('data/research/'), `${file}: research payload must load only on stock.html`);
+    assert(scripts.includes('assets/research-framework.js') && scripts.indexOf('assets/research-framework.js') < scripts.indexOf('assets/app.js'), `${file}: missing research framework runtime`);
+  }
   assert(scripts.indexOf(dataFiles[0]) < scripts.indexOf(dataFiles[1]) && scripts.indexOf(dataFiles[1]) < scripts.indexOf(modelFile) && scripts.indexOf(modelFile) < scripts.indexOf('assets/app.js'), `${file}: invalid script order`);
 }
 localLinks(read('report-600863-20260921.html'), 'report-600863-20260921.html');
@@ -125,9 +131,13 @@ assert(/基准IRR -\d/.test(negativePool.document.body.innerHTML),'Chart omitted
 const future=context('/stock.html','?code=300750');
 const futureStock=future.window.STOCK_RESEARCH.stocks.find(s=>s.code==='300750');
 futureStock.profitForecast.year=2027;
+// 54 只已全部接入 company-study-v2，此处显式退回无结构化正文的旧版渲染路径，
+// 继续守住「预测标题来自数据而非硬编码」这条回归。
+delete future.window.RESEARCH_FRAMEWORK['300750'];
 vm.runInContext(app,future);
 assert(/2027年利润预测/.test(future.document.body.innerHTML),'Forecast heading is hard-coded');
 const fiscal=context('/stock.html','?code=09988');
+delete fiscal.window.RESEARCH_FRAMEWORK['09988'];
 vm.runInContext(app,fiscal);
 assert(/FY2027正常化利润锚/.test(fiscal.document.body.innerHTML),'Fiscal forecast label missing');
 const archived = fs.readdirSync(path.join(root, 'reports/stocks'));

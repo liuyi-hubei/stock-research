@@ -2,9 +2,11 @@
 
 ## 当前规范与阅读顺序
 
+- 数据读取/采集/更新先读[数据链路规范](research-data/数据链路规范.md)。可复用事实存`research-data/`，先查库存，仅对缺失、过期或事件触发项定向补数；不要每次研究都重新临时抓全量数据。数据层、模型假设与网站投影分开，历史快照不可覆盖。验收运行`node docs/research-data.mjs validate`；库存用`node docs/research-data.mjs inventory`。
+
 - 写作唯一主规则：[大师思维·个股研究规范](.agents/skills/master-thinking/references/个股研究规范.md)，版本2026-10-24-r2；协作入口为[个股研究报告规范建议](docs/个股研究报告规范建议.md)。本文与历史文档不另立第二套写作规则。
 - 方法读[Skill入口](.agents/skills/master-thinking/SKILL.md)及所需深度模型；代码结构读[研究框架协议](docs/research-framework.md)，数据/计算读[研究规则](docs/research-method.md)。多人任务另读[交接规范](docs/multi-agent-workflow.md)。
-- 完整新报告六章：投资结论、商业模式、企业文化、安全边际与估值、其他思维观点、关键风险与后续验证。使用company-study-v2，ID为summary/business/culture/valuation/perspectives/risks。002555、002714等未迁移旧报告继续兼容evidence-first-v1，不批量改版。
+- 完整新报告六章：投资结论、商业模式、企业文化、安全边际与估值、其他思维观点、关键风险与后续验证。使用company-study-v2，ID为summary/business/culture/valuation/perspectives/risks。**2026-10-24 起全部 54 只已统一为 company-study-v2**（含原 evidence-first-v1 的002555、002714），不再存在待迁移标的；旧版本结构只作为无结构化正文时的渲染兜底保留，不用于新写作。
 - 段永平为主线；巴菲特、芒格为第二层检验；散户乙、韦尔奇、超级鹿鼎公辅助。公司研究不写个人不为清单教育，不评价用户的能力圈。鹿鼎公一个小节四条简评。
 - 商业模式和文化先排除实质结构缺陷；不能以低价、好业绩抵消已核诚信或经济性问题。未核不等于通过，也不等于有罪。
 - 未来利润/增速不是事实；历史只作参考。没有可信现金量级不强给估值、买价或IRR，不编转化率、寿命和衰退曲线。原十年模型可保留条件对照，不能包装成可靠买点；价值、买价与IRR须有相容假设，不为统一数值反向调参。
@@ -15,7 +17,8 @@
 
 - 本地、其他agent和Work共同维护同一Git仓库。开始先检查dirty tree与远端，不覆盖用户或其他agent变更；无冲突才快进，不自动重置或解决冲突。
 - 先明确股票、范围、写集合与参数权限。一股同轮一个写入者；data/additional-stocks.js、共享渲染/样式和生成文件由集成人串行修改。并行是可选手段，不强制启动子agent。
-- 正文源为data/research/CODE.js，按CODE运行node docs/sync-research-framework.mjs CODE生成reports/stocks中文Markdown；不要手改生成归档。旧非结构化报告按其当前协议，不顺便重写全库。
+- 正文源为data/research/CODE.js，按CODE运行node docs/sync-research-framework.mjs CODE生成reports/stocks中文Markdown；不要手改生成归档。每只股票的结构重写按其自身材料进行，不因一次改动顺手改写其他标的。
+- **归档定位（2026-10-24确定）**：`reports/stocks/*.md` 是离线存档与校验锚点，不是交付物。重写报告只需更新 `data/research/CODE.js` 与页面（页面只读结构化源，不读 md），md 由 sync 脚本自动同步，不必向用户展示、不必作为成果提交。仅在两种情况下手工维护 md：标的尚无结构化源（此时 md 是该股唯一完整正文载体），或需要保留历史快照。
 - integratedNarrative报告不再拼接旧介绍、方法摘要和重复跟踪卡片。目录采用实际章节标题，桌面吸顶、手机可滑动固定目录。
 - 改行情、财报、股数、参数、资格或模型状态必须有任务授权和证据；结构/方法修订不冒充数据刷新。模型检查通过不等于预测可靠。
 - 凭据、Cookie、个人全文语料、原始工作簿和服务器密钥不得提交。Skill主版本在.agents/skills/master-thinking；镜像按framework-manifest.json核对，不凭账号登录宣称自动同步。
@@ -35,13 +38,14 @@
 - `data/stocks.js`：基础股票清单、站点元数据和更新记录；必须保持为有效 JavaScript。
 - `data/additional-stocks.js`：扩展股票研究数据；在四个动态渲染 HTML 入口中必须位于 `stocks.js` 之后、`app.js` 之前加载。
 - `data/industries.js`：行业报告的结构化正文、表格与图表数据；`industry.html` 为详情入口，原始报告归档在 `reports/industries/`。
-- `reports/`：个股报告 Markdown 归档，文件名建议使用 `股票名称-股票代码.md`；归档与页面同口径，新增标的可用 `docs/export-stock-archive.mjs` 生成初稿。
+- `reports/`：个股报告 Markdown 离线存档与校验锚点，文件名建议使用 `股票名称-股票代码.md`；页面不读取此目录，归档与页面须同口径。已有 `data/research/CODE.js` 的标的由 `node docs/sync-research-framework.mjs CODE` 生成，不手改；尚无结构化源的标的仍是唯一完整正文载体，须手工维护。新增标的可用 `docs/export-stock-archive.mjs` 生成初稿。
+- `data/research/`：个股结构化正文，一码一文件，目前 54 份。**只在 `stock.html` 加载**（其余页面加载会多背约 1.4MB，`validate.mjs` 与 `check-research-framework.mjs` 均断言这一点）；新增标的在 `stock.html` 注册脚本，其余三个入口不得引用。
 - `docs/`：研究方法、模型说明与校验脚本。`docs/model-explained.md` 由 `docs/gen-model-explained.mjs` 生成，不要手工改其中的参数表和数量。
 - `deploy/`：阿里云服务器主动拉取 GitHub 的部署脚本与 systemd 配置。未经项目负责人确认，不要修改服务器部署机制。
 
 ## 内容与数据规则
 
-1. 新增股票默认写入 `data/additional-stocks.js`，原有基础股票仍在 `data/stocks.js`；更新时修改股票实际所在文件，并同步维护对应的 `reports/stocks/*.md`。
+1. 新增股票默认写入 `data/additional-stocks.js`，原有基础股票仍在 `data/stocks.js`；更新时修改股票实际所在文件。对应的 `reports/stocks/*.md` 在标的已有 `data/research/CODE.js` 时由 sync 脚本自动同步，无结构化源时须手工维护以保持同口径。
 2. 首页按 `shareholder-irr-v1` 的「基准 IRR − 研究回报要求」排序，详见下文“十年投资收益模型与页面规范”。不要把排名或数值写死在 HTML 中。
 3. 每只股票都应能通过现有详情页路由打开；更新数据后要检查首页、详情页和各投资者视角页面。
 4. 报告应保留研究日期、数据口径和来源说明；后续更新默认覆盖当前报告内容，除非明确要求保留历史快照。
@@ -163,6 +167,11 @@ node --check data/industries.js
 node docs/validate.mjs
 node docs/check-shareholder-model.mjs
 node docs/check-report-numbers.mjs
+node docs/audit-research-content.mjs
+node docs/research-data.mjs validate
+node docs/check-research-data.mjs
+node docs/check-research-framework.mjs
+node docs/sync-research-framework.mjs --check
 node docs/render-archive.mjs --check
 node docs/gen-model-explained.mjs --check
 node docs/sync-model-review.mjs --check
@@ -171,6 +180,8 @@ git diff --check
 ```
 
 并手动检查首页、至少一只股票详情页、移动端窄屏，以及浏览器控制台是否有错误。
+
+全池内容复核采用 `docs/audit-research-content.mjs`：检查行情日期和原始价格精度、报告与页面摘要、当前PE/PB、市值口径、价格/IRR表及现金分配算术。供应商近似股数不得覆盖模型精确股数。历史数据核验底稿须保留原取数日与价格；人工正文校验锚点见 `docs/historical-snapshot-manifest.json`，校验和只防止未审阅覆盖，不证明旧财报或旧IRR正确。更新快照正文时必须说明原因并重新审阅锚点，不能为让测试通过而自动接受变化。检查通过不等于未来盈利或54家公司全部原始财报已经重核。
 
 ## Git 协作流程
 

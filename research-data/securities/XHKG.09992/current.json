@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "securityId": "XHKG.09992",
+  "datasets": {
+    "quotes": {
+      "snapshotId": "XHKG.09992__quotes__20261023__20261024-mx-v1",
+      "file": "securities/XHKG.09992/quotes/2026-10-23__2026-10-24__mx-v1.json",
+      "sha256": "15ae2ed350cc6499914ad188cc23edc743ae62fb5c8a3fb15df44207baccd2b4"
+    }
+  }
+}

@@ -2,3 +2,4 @@
 .playwright-cli/
 output/playwright/
 __pycache__/
+research-data/raw-local/

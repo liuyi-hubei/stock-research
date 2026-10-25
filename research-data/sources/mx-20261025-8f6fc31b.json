@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-20261025-8f6fc31b",
+  "provider": "妙想金融数据（东方财富数据链，MCP工具 mx_ashare_finance_data）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-25",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/mx_finance_data_8f6fc31b.md",
+    "sha256": "8f6fc31bfa23aeee08c39f085e9640d3ac89ce757881598e4791bbcbd0b722bd"
+  },
+  "notes": "8只已披露三季报公司的扣非归母净利润与经营活动现金流净额（2026三季报/中报/一季报三期）。 证据为按服务商返回整理的表格；重复查询不构成独立核验。"
+}

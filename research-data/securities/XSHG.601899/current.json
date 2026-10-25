@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "securityId": "XSHG.601899",
+  "datasets": {
+    "quotes": {
+      "snapshotId": "XSHG.601899__quotes__20261023__20261024-mx-v1",
+      "file": "securities/XSHG.601899/quotes/2026-10-23__2026-10-24__mx-v1.json",
+      "sha256": "f9960412e74a4320f780312105c73038929ee80d07ea0180a4a9717df640e0f6"
+    },
+    "financials": {
+      "snapshotId": "XSHG.601899__financials__20260930__20261025-mx-v1",
+      "file": "securities/XSHG.601899/financials/2026-09-30__2026-10-25__mx-v1.json",
+      "sha256": "c295bd032b345216a1e1ed7ace81fa05fa988185929495eced2c4d90ed09e04c"
+    }
+  }
+}

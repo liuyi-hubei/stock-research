@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "20261025-q3-financials-mx",
+  "agent": "workbuddy/mx-q3-supplement",
+  "updatedAt": "2026-10-25",
+  "dataset": "financials",
+  "websiteProjectionUpdated": false,
+  "changes": [
+    {
+      "securityId": "XSHG.601899",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601899__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHG.600750",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600750__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHG.600660",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600660__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHE.002223",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002223__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHG.600941",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600941__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHE.300750",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.300750__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHE.300059",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.300059__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    },
+    {
+      "securityId": "XSHE.000933",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000933__financials__20260930__20261025-mx-v1",
+      "change": "首次建立financials：2026年三季报（1-9月）营收、归母净利润、扣非归母净利润、经营现金流净额"
+    }
+  ],
+  "sources": [
+    "mx-20261025-f677c461",
+    "mx-20261025-a220a433",
+    "mx-20261025-8f6fc31b"
+  ],
+  "context": [
+    "行情复查：2026-10-23仍为最新交易日收盘，quotes指针不变",
+    "42只A股中8只已披露2026三季报；其余34只及12只港股（港股无三季报制度）最新仍为中报，未建快照",
+    "鱼跃医疗、东方财富9M经营现金流低于H1累计（Q3单季为负），保留服务商事实，单季推导留研究层"
+  ],
+  "unresolved": [
+    "34只未披露三季报的A股待其披露后定向补数（截止日2026-10-31）",
+    "financials仅含4项核心指标，资产负债表存量与分红、经营数据、事件目录尚未建立",
+    "provider_reported不等于独立核验；vendor_rounded为亿级显示舍入",
+    "网站data/*.js投影未更新，待研究链路另行确认"
+  ]
+}

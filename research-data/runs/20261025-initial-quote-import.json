@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "20261025-initial-quote-import",
+  "agent": "codex/data-migration",
+  "updatedAt": "2026-10-25",
+  "dataset": "quotes",
+  "websiteProjectionUpdated": false,
+  "changes": [
+    {
+      "securityId": "XSHE.000568",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000568__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600519",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600519__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.00700",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.00700__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000333",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000333__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601899",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601899__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.09992",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.09992__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000858",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000858__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600900",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600900__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600863",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600863__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600036",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600036__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601318",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601318__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600750",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600750__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000651",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000651__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600660",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600660__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601298",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601298__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002555",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002555__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.00902",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.00902__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.02020",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.02020__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.01030",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.01030__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.01378",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.01378__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000807",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000807__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002223",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002223__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.09961",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.09961__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.300760",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.300760__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601857",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601857__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600941",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600941__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.01910",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.01910__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.01810",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.01810__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.300750",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.300750__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002594",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002594__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600809",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600809__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002304",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002304__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.09988",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.09988__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600873",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600873__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.01179",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.01179__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.300059",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.300059__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601919",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601919__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.605499",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.605499__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601058",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601058__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600690",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600690__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600887",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600887__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.001286",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.001286__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000933",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000933__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600886",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600886__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000538",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000538__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.603288",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.603288__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XHKG.00883",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XHKG.00883__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.601336",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.601336__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.000792",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.000792__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002027",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002027__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.600585",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.600585__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002352",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002352__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHG.688825",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHG.688825__quotes__20261023__20261024-mx-v1"
+    },
+    {
+      "securityId": "XSHE.002714",
+      "oldSnapshotId": null,
+      "newSnapshotId": "XSHE.002714__quotes__20261023__20261024-mx-v1"
+    }
+  ],
+  "sources": [
+    "mx-20261024-0f510676",
+    "mx-20261024-1b0f9198",
+    "mx-20261024-96945324"
+  ],
+  "unresolved": [
+    "仅迁入行情，financials/dividends/operating/events尚未结构化迁移",
+    "供应商近似股数不可替换模型精确股数",
+    "provider_reported不等于独立核验"
+  ]
+}

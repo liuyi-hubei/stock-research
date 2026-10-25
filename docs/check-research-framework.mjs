@@ -33,10 +33,14 @@ for(const [code,p] of Object.entries(plans)){
   const invalid=JSON.parse(JSON.stringify(p));invalid.integratedNarrative='true';assert.throws(()=>framework.validate(invalid,stock),/narrative/);
  }
  for(const section of p.sections)assert(original.includes('## '+section.title),`${code}: missing archive section`);
- for(const file of ['index.html','stock.html','reports.html','industry.html']){
-  const html=read(file),src=`data/research/${code}.js`;
-  assert(html.includes(src) && html.indexOf(src)<html.indexOf('assets/app.js'),`${file}: missing ${src}`);
- }
+ const html=read('stock.html'),src=`data/research/${code}.js`;
+ assert(html.includes(src) && html.indexOf(src)<html.indexOf('assets/app.js'),`stock.html: missing ${src}`);
+ assert.equal(html.split(src).length-1,1,`stock.html: ${src} registered more than once`);
+}
+// 研究正文只在个股详情页加载：其余页面不得背上全部研究数据（54 份约 1.4MB）。
+for(const file of ['index.html','reports.html','industry.html']){
+ const html=read(file);
+ assert(!html.includes('data/research/'),`${file}: research payload must load only on stock.html`);
 }
 assert.equal(JSON.stringify(db),before,'Tests mutated financial source');
 console.log(`PASS: ${Object.keys(plans).length} evidence-first plans, six sections, source bounds, pending consistency, archives and safe rendering. Not a financial audit.`);

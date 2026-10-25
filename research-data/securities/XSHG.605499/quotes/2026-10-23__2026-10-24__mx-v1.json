@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.605499__quotes__20261023__20261024-mx-v1",
+  "securityId": "XSHG.605499",
+  "dataset": "quotes",
+  "asOf": "2026-10-23",
+  "collectedAt": "2026-10-24",
+  "acceptance": "accepted",
+  "createdBy": "codex/data-migration-20261025",
+  "supersedes": null,
+  "notes": "迁入已完成的全池行情核验；accepted表示允许复用，不表示独立财务审计；本次迁入不修改网站投影或模型。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "104.48",
+      "rawValue": "104.48",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261024-0f510676",
+          "locator": "东鹏饮料(605499)；2026-10-23；收盘价(不前推)"
+        }
+      ],
+      "notes": "不复权收盘；保留原始小数位。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "15.63",
+      "rawValue": "15.63",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261024-0f510676",
+          "locator": "东鹏饮料(605499)；2026-10-23；市盈率PE(TTM)"
+        }
+      ],
+      "notes": "服务商TTM分母；不替代正常化或退出PE。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "3.939",
+      "rawValue": "3.939",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261024-0f510676",
+          "locator": "东鹏饮料(605499)；2026-10-23；市净率PB"
+        }
+      ],
+      "notes": "服务商净资产分母；不能按价格比例更新。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "76710000000",
+      "rawValue": "767.1亿",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261024-0f510676",
+          "locator": "东鹏饮料(605499)；2026-10-23；总市值"
+        }
+      ],
+      "notes": "按供应商显示量级转基本单位，不代表两地股份实际市值之和。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "734200000",
+      "rawValue": "7.342亿股",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261024-0f510676",
+          "locator": "东鹏饮料(605499)；2026-10-23；总股本"
+        }
+      ],
+      "notes": "服务商近似股数，不能替换模型精确股本或加权/稀释分母。"
+    }
+  ]
+}

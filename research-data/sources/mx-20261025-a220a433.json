@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-20261025-a220a433",
+  "provider": "妙想金融数据（东方财富数据链，MCP工具 mx_ashare_finance_data）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-25",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/mx_finance_data_a220a433.md",
+    "sha256": "a220a433eecbc667d80bb2ad772b1995ce1fcc1654ef36f2eea7dcee271b52d9"
+  },
+  "notes": "42只A股定期报告期识别：8只已披露2026年三季报（营收、归母净利润），34只最新仍为中报。 证据为按服务商返回整理的表格；重复查询不构成独立核验。"
+}

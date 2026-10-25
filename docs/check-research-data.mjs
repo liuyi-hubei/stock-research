@@ -1,0 +1,32 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {readStore,selectSnapshot,shape} from './research-data.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),store=readStore();
+const scope=vm.createContext({window:{}});
+for(const f of ['assets/shareholder-model.js','data/stocks.js','data/additional-stocks.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),scope);
+const db=scope.window.STOCK_RESEARCH;
+for(const s of db.stocks){
+ const registered=[...store.securities.values()].find(x=>x.reportCode===s.code);assert(registered,'Website stock absent from registry: '+s.code);
+ const current=store.currents.get(registered.securityId)?.datasets.quotes;assert(current,'Missing quote inventory: '+s.code);
+ const quote=store.snapshots.get(current.snapshotId);assert.equal(quote.asOf,s.priceDate);
+ const value=metric=>quote.observations.find(o=>o.metric===metric).value;
+ assert.equal(Number(value('close')),s.price);assert.equal(Number(value('pe_ttm')),s.quoteReview.pe);assert.equal(Number(value('pb')),s.quoteReview.pb);
+ assert.equal(value('shares_outstanding').includes('亿'),false);
+}
+assert.equal(selectSnapshot(store,'XHKG.00700','quotes','2026-10-23','2026-10-23'),null,'No lookahead across collection date');
+const tx=selectSnapshot(store,'XHKG.00700','quotes','2026-10-23','2026-10-24');assert(tx);
+assert.equal(selectSnapshot(store,'XHKG.00700','financials','2026-10-25','2026-10-25'),null,'Missing financials must not be fabricated');
+const small=selectSnapshot(store,'XHKG.01030','quotes','2026-10-23','2026-10-24');assert.equal(small.observations.find(o=>o.metric==='close').value,'1.355');
+const corrected=structuredClone(tx);corrected.snapshotId+='-correction';corrected.collectedAt='2026-10-25';corrected.supersedes=tx.snapshotId;
+store.snapshots.set(corrected.snapshotId,corrected);
+assert.equal(selectSnapshot(store,'XHKG.00700','quotes','2026-10-23','2026-10-24').snapshotId,tx.snapshotId);
+assert.equal(selectSnapshot(store,'XHKG.00700','quotes','2026-10-23','2026-10-25').snapshotId,corrected.snapshotId);
+const schema=JSON.parse(fs.readFileSync(path.join(root,'research-data/schema/snapshot.schema.json'),'utf8'));
+const bad=structuredClone(tx);delete bad.file;delete bad.sha256;bad.observations[0].value='1,355';
+assert.throws(()=>shape(bad,schema,'bad'),/pattern/,'Formatted number must be rejected');
+assert.equal(db.stocks.find(s=>s.code==='002714').quoteReview.pe<0,true,'Negative PE preserved');
+const deploy=fs.readFileSync(path.join(root,'deploy/server-pull.sh'),'utf8');assert(deploy.includes("--exclude='/research-data/'"),'Data store must not be copied to web root');
+console.log(`PASS: ${db.stocks.length} website/data-store quote reconciliations; no lookahead, correction history, precision, missing data and deployment boundary.`);

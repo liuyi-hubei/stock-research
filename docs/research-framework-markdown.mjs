@@ -13,7 +13,7 @@ export function researchMarkdown(stock,plan,model,reviewBlock=''){
     return `### ${e.claim}\n\n类别：${e.state}\n\n依据：${e.basis}\n\n反证与缺口：${e.counterpoint}\n\n来源：${e.sourceRefs.length?e.sourceRefs.map(i=>'[S'+(i+1)+'] '+stock.sources[i][0]).join('；'):'待补证，不冒充已核事实'}`;
   };
   const modern=plan.version==='company-study-v2';
-  const content=[`# ${stock.name}（${stock.code}）研究归档`,`<!-- RESEARCH_FRAMEWORK: ${plan.version} -->`,`> ${plan.reviewState==='pending'?'IRR待重新评估、参考买入价暂不提供、旧估算撤回、暂停排名。':modern?'回报为明确假设下的条件演算，不是收益承诺。':'条件模型服务于研究比较，原参数沿用，不是经概率校准的预期收益或新一轮经营预测。'}`,modern?`研究日期：${stock.researchDate}；行情：${stock.priceDate}；实际财报：${stock.model.financialPeriod}。`:`方法整理：${plan.methodReviewedAt}；行情：${stock.priceDate}；实际财报：${stock.model.financialPeriod}（截至${stock.model.financialAsOf || '原报告所列日期'}）。不因结构迁移刷新事实。`];
+  const content=[`# ${stock.name}（${stock.code}）研究归档`,`<!-- RESEARCH_FRAMEWORK: ${plan.version} -->`,`> ${plan.reviewState==='pending'?'IRR待重新评估、参考买入价暂不提供、旧估算撤回、暂停排名。':modern?'回报为明确假设下的条件演算，不是收益承诺。':'条件模型服务于研究比较，原参数沿用，不是经概率校准的预期收益或新一轮经营预测。'}`,modern?`研究日期：${stock.researchDate || plan.methodReviewedAt}；行情：${stock.priceDate}；实际财报：${stock.model.financialPeriod}。`:`方法整理：${plan.methodReviewedAt}；行情：${stock.priceDate}；实际财报：${stock.model.financialPeriod}（截至${stock.model.financialAsOf || '原报告所列日期'}）。不因结构迁移刷新事实。`];
   for(const s of plan.sections){
     content.push('## '+s.title);
     if(s.intro)content.push(s.intro);

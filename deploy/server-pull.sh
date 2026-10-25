@@ -59,6 +59,7 @@ rsync -a --delete --delay-updates \
   --exclude='/.gitignore' \
   --exclude='/deploy/' \
   --exclude='/docs/' \
+  --exclude='/research-data/' \
   --exclude='/README.md' \
   --exclude='/AGENTS.md' \
   --exclude='.DS_Store' \

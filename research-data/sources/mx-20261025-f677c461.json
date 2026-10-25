@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-20261025-f677c461",
+  "provider": "妙想金融数据（东方财富数据链，MCP工具 mx_ashare_finance_data）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-25",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/mx_finance_data_f677c461.md",
+    "sha256": "f677c461dd74b2decf483d9850f23ff2d0c5d31e0f50d3c2c20938b9b1789134"
+  },
+  "notes": "2026-10-25复查：妙想最新收盘仍为2026-10-23（10-24为周六非交易日），已入库行情无需刷新；另含42只A股服务商近似总股本，不替换模型分母。 证据为按服务商返回整理的表格；重复查询不构成独立核验。"
+}

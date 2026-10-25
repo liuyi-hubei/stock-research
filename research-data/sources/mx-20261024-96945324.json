@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-20261024-96945324",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-24",
+  "originalFilename": "mx_finance_data_96945324.md",
+  "originalSha256": "ac67648b33d0efa2999a2838daf41e427fa8f2295306236bf2b96121e96e6660",
+  "evidence": {
+    "file": "evidence/mx_finance_data_96945324.md",
+    "sha256": "cc34f9be0cab9e2e047e55dffa6f8763564612d9801e2ae40d8f7da543eafd25"
+  },
+  "notes": "2026-10-23不复权收盘、PE(TTM)、PB、市值、近似股数定向返回；取数日2026-10-24。证据仅标准化换行及末尾空白，非交易所原始公告；重复查询不构成独立核验。"
+}

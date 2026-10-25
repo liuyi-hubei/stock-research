@@ -3,8 +3,17 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),scope=vm.createContext({window:{}});
+const snapshotManifest=JSON.parse(fs.readFileSync(path.join(root,'docs/historical-snapshot-manifest.json'),'utf8'));
+const historicalBody=text=>text.replace(/\r\n/g,'\n').replace(/<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/g,'').replace(/^> 行情刷新提示：.*\n/gm,'').trim();
+const snapshotFiles=fs.readdirSync(path.join(root,'reports/stocks')).filter(f=>f.includes('数据核验')&&f.endsWith('.md'));
+assert.deepEqual(snapshotManifest.files.map(x=>x.file).sort(),snapshotFiles.sort(),'Historical snapshot manifest must cover every retained snapshot');
+for(const item of snapshotManifest.files){
+ const body=historicalBody(fs.readFileSync(path.join(root,'reports/stocks',item.file),'utf8'));
+ assert.equal(crypto.createHash('sha256').update(body).digest('hex'),item.sha256,`${item.file}: historical manual body changed; review original quote date, price and assumptions before explicitly updating manifest`);
+}
 for(const f of ['assets/shareholder-model.js','data/stocks.js','data/additional-stocks.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),scope);
 // 匹配结果标签与紧邻数值，不能把“暂不提供IRR”或来源日期/页码当成计算结果。
 const pendingResults = text => [
@@ -22,6 +31,13 @@ for(const stock of scope.window.STOCK_RESEARCH.stocks){
   assert(fs.existsSync(path.join(root,`reports/stocks/${stock.name}-${stock.code}.md`)),`${stock.code}: missing primary report`);
   for(const file of fs.readdirSync(path.join(root,'reports/stocks')).filter(f=>f.includes(`-${stock.code}`)&&f.endsWith('.md'))){
     const original=fs.readFileSync(path.join(root,'reports/stocks',file),'utf8');
+    // 「数据核验」是取数时点的工作底稿，文件头已声明该次的行情日期与价格；其中的 IRR 是当时买入价下的结果，
+    // 不应随后续行情刷新被改写。人工正文先由逐文件哈希检查防止覆盖；pending状态继续检查，当前数值由主归档与自动审阅区把关。
+    // 哈希只证明保存锚点未改变；没有原始参数快照时，不声称已重算历史IRR。
+    const snapshot=file.includes('数据核验');
+    if(snapshot){
+      assert(/\d{4}-\d{2}-\d{2}/.test(original.slice(0,600))&&/行情|收盘|研究日期|更新|续核|核验/.test(original.slice(0,600)),`${file}: snapshot must declare its quote date/price in the header`);
+    }
     const text=original.replace(/<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/g,'');
     if(scope.window.ShareholderModel.isPending(stock)){
       assert.equal(result,null,`${stock.code}: pending evaluation must be null`);
@@ -35,6 +51,7 @@ for(const stock of scope.window.STOCK_RESEARCH.stocks){
       assert(!pendingResults(text),`${file}: pending report contains stale model conclusion`);
       continue;
     }
+    if(snapshot)continue;
     const tests=[[/基准\s*IRR\s*为\s*([+-]?\d+(?:\.\d+)?)%/g,result.base.irr*100],[/达标参考买入价为\s*(?:¥|HK\$)?\s*([\d.]+)/g,result.base.fairPrice]];
     for(const [pattern,expected] of tests)for(const match of text.matchAll(pattern)){
       const decimals=match[1].split('.')[1]?.length || 0;
