@@ -1,0 +1,318 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600309__financials__20260630__20261026-v1",
+  "securityId": "XSHG.600309",
+  "dataset": "financials",
+  "asOf": "2026-06-30",
+  "collectedAt": "2026-10-26",
+  "acceptance": "accepted",
+  "createdBy": "codex/github-reconciliation-20261026",
+  "supersedes": null,
+  "notes": "当前报告固定H1与明确标示的2025历史对照；不把公司计划写作实际利润。",
+  "observations": [
+    {
+      "id": "revenue_h1",
+      "metric": "revenue",
+      "value": "119316000000",
+      "rawValue": "119316000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p6—7，人民币，按披露亿元展示数保留精度"
+        }
+      ],
+      "notes": "p6—7，人民币，按披露亿元展示数保留精度",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"营业收入\", \"1193.16亿元\", \"2026H1\", \"p6—7，人民币，按披露亿元展示数保留精度\"]",
+        "originalIndex": "3",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "profit_h1",
+      "metric": "net_profit_parent",
+      "value": "10063000000",
+      "rawValue": "10063000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p6—7，非正常化年度利润"
+        }
+      ],
+      "notes": "p6—7，非正常化年度利润",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母利润",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"归母利润\", \"100.63亿元\", \"2026H1\", \"p6—7，非正常化年度利润\"]",
+        "originalIndex": "4",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "core_h1",
+      "metric": "adjusted_net_profit_parent",
+      "value": "9676000000",
+      "rawValue": "9676000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p6—7，非经常项目单列"
+        }
+      ],
+      "notes": "p6—7，非经常项目单列",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"扣非归母\", \"96.76亿元\", \"2026H1\", \"p6—7，非经常项目单列\"]",
+        "originalIndex": "5",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "cfo_h1",
+      "metric": "operating_cash_flow",
+      "value": "11784141000",
+      "rawValue": "11784141000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p45—46现金表"
+        }
+      ],
+      "notes": "p45—46现金表",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营现金净额",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"经营现金净额\", \"117.841410亿元\", \"2026H1\", \"p45—46现金表\"]",
+        "originalIndex": "6",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "capex_h1",
+      "metric": "ppe_cash_payments",
+      "value": "10739891100",
+      "rawValue": "10739891100",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p45—46，非公司全部资本承诺"
+        }
+      ],
+      "notes": "p45—46，非公司全部资本承诺",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "现金购建长期资产",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"现金购建长期资产\", \"107.398911亿元\", \"2026H1\", \"p45—46，非公司全部资本承诺\"]",
+        "originalIndex": "7",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "lease_h1",
+      "metric": "financing_lease_cash",
+      "value": "1478882200",
+      "rawValue": "1478882200",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p135附注，避免与总租金重复扣"
+        }
+      ],
+      "notes": "p135附注，避免与总租金重复扣",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "融资租赁付款",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"融资租赁付款\", \"14.788822亿元\", \"2026H1\", \"p135附注，避免与总租金重复扣\"]",
+        "originalIndex": "8",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "noncash_h1",
+      "metric": "noncash_asset_purchase_debt",
+      "value": "12540919500",
+      "rawValue": "12540919500",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "p137，非本期现金再扣"
+        }
+      ],
+      "notes": "p137，非本期现金再扣",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "非现金债务购建",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"非现金债务购建\", \"125.409195亿元\", \"2026H1\", \"p137，非本期现金再扣\"]",
+        "originalIndex": "9",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "profit_2025",
+      "metric": "net_profit_parent",
+      "value": "12527000000",
+      "rawValue": "12527000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "source-extract-600309-20261026",
+          "locator": "2025年报p7—8，历史锚不是未来保证"
+        }
+      ],
+      "notes": "2025年报p7—8，历史锚不是未来保证",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "2025归母利润",
+        "periodLabel": "2025全年",
+        "originalRow": "[\"2025归母利润\", \"125.27亿元\", \"2025全年\", \"2025年报p7—8，历史锚不是未来保证\"]",
+        "originalIndex": "10",
+        "scale": "8"
+      }
+    }
+  ]
+}

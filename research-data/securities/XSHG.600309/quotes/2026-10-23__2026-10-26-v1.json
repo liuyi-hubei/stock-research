@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600309__quotes__20261023__20261026-v1",
+  "securityId": "XSHG.600309",
+  "dataset": "quotes",
+  "asOf": "2026-10-23",
+  "collectedAt": "2026-10-26",
+  "acceptance": "accepted",
+  "createdBy": "codex/github-reconciliation-20261026",
+  "supersedes": null,
+  "notes": "补缺；不替换远端54股行情；供应商口径和模型公告股数分开。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "66.9",
+      "rawValue": "66.9",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "unadjusted",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 万华化学 close"
+        }
+      ],
+      "notes": "2026-10-23 万华化学 close"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "12.72",
+      "rawValue": "12.72",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 万华化学 pe_ttm"
+        }
+      ],
+      "notes": "2026-10-23 万华化学 pe_ttm"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "1.844",
+      "rawValue": "1.844",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 万华化学 pb"
+        }
+      ],
+      "notes": "2026-10-23 万华化学 pb"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "209400000000",
+      "rawValue": "209400000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 万华化学 market_cap"
+        }
+      ],
+      "notes": "2026-10-23 万华化学 market_cap"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "3130000000",
+      "rawValue": "3130000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 万华化学 shares_outstanding"
+        }
+      ],
+      "notes": "2026-10-23 万华化学 shares_outstanding"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "source-extract-600406-20261026",
+  "provider": "公司原始披露及妙想数据；本地已读原件的定向迁入",
+  "type": "source_document_extract",
+  "publishedAt": "2026-08-27",
+  "collectedAt": "2026-10-26",
+  "originalFilename": "2026H1.pdf",
+  "originalSha256": "21eb6468cc5e969eb848ae8d17b8fb3e555108185529540106086a69954da8df",
+  "evidence": {
+    "file": "evidence/source-extract-600406-20261026.md",
+    "sha256": "de20c93de28768f2551f5b4ac7860a559d3e3022287efff812e7f485af64c193"
+  },
+  "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225508099.PDF",
+  "notes": "仅对证据中明确所列字段建立事实；不把模型假设或公司计划当实绩，不覆盖远端既有快照。"
+}

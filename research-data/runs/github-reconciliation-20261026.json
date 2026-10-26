@@ -1,0 +1,26 @@
+{
+  "runId": "github-reconciliation-20261026",
+  "date": "2026-10-26",
+  "agent": "codex/integrator",
+  "remoteBase": "f1c5599",
+  "action": "新增600309/600406事实与报告；远端54股所有快照/current/publication项和模型保持，华住仅独立补充报告",
+  "changes": [
+    {
+      "securityId": "XSHG.600309",
+      "oldCurrent": null,
+      "newQuote": "XSHG.600309__quotes__20261023__20261026-v1",
+      "newFinancials": "XSHG.600309__financials__20260630__20261026-v1"
+    },
+    {
+      "securityId": "XSHG.600406",
+      "oldCurrent": null,
+      "newQuote": "XSHG.600406__quotes__20261023__20261026-v1",
+      "newFinancials": "XSHG.600406__financials__20260630__20261026-v1"
+    }
+  ],
+  "unresolved": [
+    "华住新核验保留独立对照，不覆盖远端原报告与模型",
+    "新增两股长期普通股现金量级仍有研究条件"
+  ],
+  "websiteProjection": true
+}

@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.01179__financials__20260630__20261026-report-v1",
+  "securityId": "XHKG.01179",
+  "dataset": "financials",
+  "asOf": "2026-06-30",
+  "collectedAt": "2026-10-26",
+  "acceptance": "accepted",
+  "createdBy": "codex/github-reconciliation",
+  "supersedes": null,
+  "notes": "独立补充版本。原current、原report publication及模型不动；未经核实的季度不自动晋级。",
+  "observations": [
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "3154059870",
+      "rawValue": "3154059870",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "US_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "outstanding_excluding_treasury"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "huazhu-supplement-20261026",
+          "locator": "6-K F-2"
+        }
+      ],
+      "notes": "沿用已核原件事实，正式报告采用此版本；历史快照保留。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "在外普通股",
+        "periodLabel": "2026-06-30",
+        "originalRow": "[\"在外普通股\", \"31.5405987亿股\", \"2026-06-30\", \"6-K F-2\"]",
+        "originalIndex": "3",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "net_profit_parent",
+      "metric": "net_profit_parent",
+      "value": "2394000000",
+      "rawValue": "2394000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "US_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "huazhu-supplement-20261026",
+          "locator": "6-K合并利润/现金表"
+        }
+      ],
+      "notes": "沿用已核原件事实，正式报告采用此版本；历史快照保留。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"归母净利润\", \"23.94亿元人民币\", \"2026H1\", \"6-K合并利润/现金表\"]",
+        "originalIndex": "4",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "operating_cash_flow",
+      "metric": "operating_cash_flow",
+      "value": "3641000000",
+      "rawValue": "3641000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "US_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "huazhu-supplement-20261026",
+          "locator": "6-K合并利润/现金表"
+        }
+      ],
+      "notes": "沿用已核原件事实，正式报告采用此版本；历史快照保留。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营净现金",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"经营净现金\", \"36.41亿元人民币\", \"2026H1\", \"6-K合并利润/现金表\"]",
+        "originalIndex": "5",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "ppe_cash_payments",
+      "metric": "ppe_cash_payments",
+      "value": "349000000",
+      "rawValue": "349000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "US_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "huazhu-supplement-20261026",
+          "locator": "6-K合并利润/现金表"
+        }
+      ],
+      "notes": "沿用已核原件事实，正式报告采用此版本；历史快照保留。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建设备现金付款",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"购建设备现金付款\", \"3.49亿元人民币\", \"2026H1\", \"6-K合并利润/现金表\"]",
+        "originalIndex": "6",
+        "scale": "8"
+      }
+    }
+  ]
+}

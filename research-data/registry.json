@@ -433,6 +433,22 @@
       "exchange": "XSHE",
       "currency": "CNY",
       "reportCode": "002714"
+    },
+    {
+      "securityId": "XSHG.600309",
+      "code": "600309",
+      "name": "万华化学",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600309"
+    },
+    {
+      "securityId": "XSHG.600406",
+      "code": "600406",
+      "name": "国电南瑞",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "600406"
     }
   ]
 }

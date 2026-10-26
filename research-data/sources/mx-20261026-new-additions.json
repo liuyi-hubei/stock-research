@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-20261026-new-additions",
+  "provider": "公司原始披露及妙想数据；本地已读原件的定向迁入",
+  "type": "source_document_extract",
+  "publishedAt": null,
+  "collectedAt": "2026-10-26",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/mx-20261026-new-additions.md",
+    "sha256": "5aaef16a350727408c484a3c6d74b5f4b88e93505e7b70703b03336c5fab8e89"
+  },
+  "url": "https://quote.eastmoney.com/",
+  "notes": "仅对证据中明确所列字段建立事实；不把模型假设或公司计划当实绩，不覆盖远端既有快照。"
+}

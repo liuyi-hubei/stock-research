@@ -8,9 +8,9 @@
       "sha256": "54b5ec952592f02f1c067550110bb0df7d3423793fd691be1ed83b581cf2ceb9"
     },
     "financials": {
-      "snapshotId": "XHKG.01179__financials__20261025-legacy-v1",
-      "file": "securities/XHKG.01179/financials/2026-10-25__legacy-v1.json",
-      "sha256": "401c9cef16afdb750295609db27ef9b025c62a9cfe22a6ff44ef99f2ee1ee3ab"
+      "snapshotId": "XHKG.01179__financials__20260630__20261026-report-v1",
+      "file": "securities/XHKG.01179/financials/2026-06-30__2026-10-26-report-v1.json",
+      "sha256": "f264e0de3449323036f00b10366ffdc8fefc8a9b405f0f7b6083d1ee175bb805"
     },
     "dividends": {
       "snapshotId": "XHKG.01179__dividends__20261025-legacy-v1",

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600406__quotes__20261023__20261026-v1",
+  "securityId": "XSHG.600406",
+  "dataset": "quotes",
+  "asOf": "2026-10-23",
+  "collectedAt": "2026-10-26",
+  "acceptance": "accepted",
+  "createdBy": "codex/github-reconciliation-20261026",
+  "supersedes": null,
+  "notes": "补缺；不替换远端54股行情；供应商口径和模型公告股数分开。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "23.42",
+      "rawValue": "23.42",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "unadjusted",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 国电南瑞 close"
+        }
+      ],
+      "notes": "2026-10-23 国电南瑞 close"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "22.39",
+      "rawValue": "22.39",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 国电南瑞 pe_ttm"
+        }
+      ],
+      "notes": "2026-10-23 国电南瑞 pe_ttm"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "3.612",
+      "rawValue": "3.612",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 国电南瑞 pb"
+        }
+      ],
+      "notes": "2026-10-23 国电南瑞 pb"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "188100000000",
+      "rawValue": "188100000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 国电南瑞 market_cap"
+        }
+      ],
+      "notes": "2026-10-23 国电南瑞 market_cap"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "8032000000",
+      "rawValue": "8032000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-23"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-20261026-new-additions",
+          "locator": "2026-10-23 国电南瑞 shares_outstanding"
+        }
+      ],
+      "notes": "2026-10-23 国电南瑞 shares_outstanding"
+    }
+  ]
+}

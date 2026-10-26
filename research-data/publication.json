@@ -456,10 +456,7 @@
       "securityId": "XHKG.01179",
       "financialPeriod": "2026H1",
       "statementSnapshotIds": [
-        "XHKG.01179__financials__20261025-legacy-v1",
-        "XHKG.01179__dividends__20261025-legacy-v1",
-        "XHKG.01179__operating__20261025-legacy-v1",
-        "XHKG.01179__events__20261025-legacy-v1"
+        "XHKG.01179__financials__20260630__20261026-report-v1"
       ]
     },
     "001286": {
@@ -540,6 +537,20 @@
         "XSHE.002714__dividends__20261025-legacy-v1",
         "XSHE.002714__operating__20261025-legacy-v1",
         "XSHE.002714__events__20261025-legacy-v1"
+      ]
+    },
+    "600309": {
+      "securityId": "XSHG.600309",
+      "financialPeriod": "2026H1",
+      "statementSnapshotIds": [
+        "XSHG.600309__financials__20260630__20261026-v1"
+      ]
+    },
+    "600406": {
+      "securityId": "XSHG.600406",
+      "financialPeriod": "2026H1",
+      "statementSnapshotIds": [
+        "XSHG.600406__financials__20260630__20261026-v1"
       ]
     }
   }

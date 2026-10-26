@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "huazhu-supplement-20261026",
+  "provider": "华住SEC详细6-K原件",
+  "type": "source_document_extract",
+  "publishedAt": "2026-09-23",
+  "collectedAt": "2026-10-26",
+  "originalFilename": "htht-20260923xex99d1.htm",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/huazhu-supplement-20261026.md",
+    "sha256": "bb63d9b4f6d01fb4006d91dd6b698eef41ed02dfca2f90b4bd9f2be1b170e366"
+  },
+  "notes": "本机保存原始HTML，补充资料不覆盖原报告current/publication；只提取下列历史事实。"
+}
