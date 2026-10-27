@@ -57,7 +57,7 @@ export function readStore(){
      if(o.metric==='dividend_per_share')assert(o.eventDetails,'Dividend must specify announcement/rights/payment status');
      for(const ref of o.sourceRefs){assert(sources.has(ref.sourceId),'Unknown source: '+ref.sourceId);assert(sources.get(ref.sourceId).collectedAt<=s.collectedAt,'Source obtained after snapshot collection');}
      if(dataset==='quotes'){
-      assert.equal(o.period.kind,'instant');assert.equal(o.period.end,s.asOf);assert.equal(o.nature,'historical_fact');
+      assert.equal(o.period.kind,'instant');assert.equal(o.period.end,s.asOf);assert(['historical_fact','derived'].includes(o.nature),'Quote must be observed or explicitly derived');
       const units={close:'currency_per_share',pe_ttm:'times',pb:'times',market_cap:'currency',shares_outstanding:'shares'};
       assert(Object.hasOwn(units,o.metric),'Unknown quote metric; extend contract before using');assert.equal(o.unit,units[o.metric]);
       assert.equal(o.currency,['close','market_cap'].includes(o.metric)?securities.get(id).currency:null,'Quote currency mismatch');

@@ -1,0 +1,64 @@
+{
+  "runId": "gree-q3-20261027",
+  "agent": "codex",
+  "securityId": "XSHE.000651",
+  "oldPointerSha256": "222dc24d6cdfc3310d6108787507d1cc52551997086847251ad1121c3b45cafa",
+  "oldDatasets": {
+    "quotes": {
+      "snapshotId": "XSHE.000651__quotes__20261023__20261024-mx-v1",
+      "file": "securities/XSHE.000651/quotes/2026-10-23__2026-10-24__mx-v1.json",
+      "sha256": "75a5b0eb9e2ff4587f57b39637fe3be00f7890da2fcc4b4cef3a518561ab3a0f"
+    },
+    "financials": {
+      "snapshotId": "XSHE.000651__financials__20261025-legacy-v1",
+      "file": "securities/XSHE.000651/financials/2026-10-25__legacy-v1.json",
+      "sha256": "7f70b715d4fe8627d82fb8a4d8c574bdca54e289da7c89806a6d293ba4676068"
+    },
+    "dividends": {
+      "snapshotId": "XSHE.000651__dividends__20261025-legacy-v1",
+      "file": "securities/XSHE.000651/dividends/2026-10-25__legacy-v1.json",
+      "sha256": "a1347c82d30e3bd569353f16a7c6530a947d45455c8859bb98856ae929f197c3"
+    },
+    "operating": {
+      "snapshotId": "XSHE.000651__operating__20261025-legacy-v1",
+      "file": "securities/XSHE.000651/operating/2026-10-25__legacy-v1.json",
+      "sha256": "0133b9a1cdd4920b19054e46612e63acaaec14dcc6c26bdb99fee3ddfedeb63f"
+    },
+    "events": {
+      "snapshotId": "XSHE.000651__events__20261025-legacy-v1",
+      "file": "securities/XSHE.000651/events/2026-10-25__legacy-v1.json",
+      "sha256": "43b29ecf442b9e38a6747fa04830f73106ae7bddac1b938b376b302e898ba77d"
+    }
+  },
+  "newDatasets": {
+    "quotes": {
+      "snapshotId": "XSHE.000651__quotes__20261026__20261027-public-v1",
+      "file": "securities/XSHE.000651/quotes/2026-10-26__2026-10-27__public-v1.json",
+      "sha256": "b213218eea50ed946498485c163a943847a8f790b8817b0f05388400a34ef59a"
+    },
+    "financials": {
+      "snapshotId": "XSHE.000651__financials__20260930__20261027-public-v1",
+      "file": "securities/XSHE.000651/financials/2026-09-30__2026-10-27__public-v1.json",
+      "sha256": "490bcb90991f94adc8e6a006e03c71daa1f96ede3596a9f876f69efe9668c0be"
+    },
+    "dividends": {
+      "snapshotId": "XSHE.000651__dividends__20261027-public-v1",
+      "file": "securities/XSHE.000651/dividends/2026-10-27__public-v1.json",
+      "sha256": "baf26c07a0c395833e5456cc759e95c71fc5568a8135e5cd4d6b2308e386e5cf"
+    },
+    "operating": {
+      "snapshotId": "XSHE.000651__operating__20261025-legacy-v1",
+      "file": "securities/XSHE.000651/operating/2026-10-25__legacy-v1.json",
+      "sha256": "0133b9a1cdd4920b19054e46612e63acaaec14dcc6c26bdb99fee3ddfedeb63f"
+    },
+    "events": {
+      "snapshotId": "XSHE.000651__events__20261025-legacy-v1",
+      "file": "securities/XSHE.000651/events/2026-10-25__legacy-v1.json",
+      "sha256": "43b29ecf442b9e38a6747fa04830f73106ae7bddac1b938b376b302e898ba77d"
+    }
+  },
+  "changes": "新增三季报、分红预案、10月26日行情；更新六章并撤回旧估值；旧快照保留。",
+  "unresolved": "Q3成本与需求压力使旧正常盈利及70%持续派息联合路径缺乏充分依据；暂停估值，待重建正常化股东现金。",
+  "websiteProjectionUpdated": true,
+  "published": false
+}

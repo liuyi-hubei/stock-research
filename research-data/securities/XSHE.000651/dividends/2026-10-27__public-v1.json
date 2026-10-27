@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000651__dividends__20261027-public-v1",
+  "securityId": "XSHE.000651",
+  "dataset": "dividends",
+  "asOf": "2026-10-27",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/gree-q3-update",
+  "supersedes": null,
+  "notes": "中期每股1元为董事会预案，尚待股东会批准，不等于已实施或未来全年股息。",
+  "observations": [
+    {
+      "id": "interim_dps",
+      "metric": "dividend_per_share",
+      "value": "1",
+      "rawValue": "1",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "event",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "eligible_shares_excluding_treasury"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "gree-public-20261027",
+          "locator": "董事会2026-046第2项"
+        }
+      ],
+      "notes": "2026中期拟每股1元",
+      "eventDetails": {
+        "announcedAt": "2026-10-27",
+        "approvedAt": null,
+        "exDate": null,
+        "paymentDate": null,
+        "distributionStatus": "proposed",
+        "taxBasis": "税前",
+        "fiscalPeriod": "2026H1"
+      }
+    }
+  ]
+}

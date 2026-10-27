@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000651__quotes__20261026__20261027-public-v1",
+  "securityId": "XSHE.000651",
+  "dataset": "quotes",
+  "asOf": "2026-10-26",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/gree-q3-update",
+  "supersedes": null,
+  "notes": "收盘不复权；PE/PB为按最新财报重算的研究者值，不与旧供应商口径混用；股本非加权EPS分母。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "37.18",
+      "rawValue": "37.18",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-26"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "unadjusted",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "gree-public-20261027",
+          "locator": "Investing 2026-10-26收盘；计算口径见证据"
+        }
+      ],
+      "notes": "close"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "8.392318386542643",
+      "rawValue": "8.392318386542643",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-26"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "gree-public-20261027",
+          "locator": "Investing 2026-10-26收盘；计算口径见证据"
+        }
+      ],
+      "notes": "pe_ttm",
+      "derivation": {
+        "formula": "37.18*5601405741/(29003103411.66+17273815437.66-21461336806.54)",
+        "inputs": [
+          "XSHE.000651__financials__20260930__20261027-public-v1#shares",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#equity"
+        ]
+      }
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "1.3839235422529452",
+      "rawValue": "1.3839235422529452",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-26"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "gree-public-20261027",
+          "locator": "Investing 2026-10-26收盘；计算口径见证据"
+        }
+      ],
+      "notes": "pb",
+      "derivation": {
+        "formula": "37.18*5601405741/150485383832.22",
+        "inputs": [
+          "XSHE.000651__financials__20260930__20261027-public-v1#shares",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#equity"
+        ]
+      }
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "208260265450.38",
+      "rawValue": "208260265450.38",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-26"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "gree-public-20261027",
+          "locator": "Investing 2026-10-26收盘；计算口径见证据"
+        }
+      ],
+      "notes": "market_cap",
+      "derivation": {
+        "formula": "37.18*5601405741",
+        "inputs": [
+          "XSHE.000651__financials__20260930__20261027-public-v1#shares",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#equity"
+        ]
+      }
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "5601405741",
+      "rawValue": "5601405741",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-26"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "gree-public-20261027",
+          "locator": "Investing 2026-10-26收盘；计算口径见证据"
+        }
+      ],
+      "notes": "shares_outstanding",
+      "derivation": {
+        "formula": "5601405741",
+        "inputs": [
+          "XSHE.000651__financials__20260930__20261027-public-v1#shares",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#profit_2025_9m",
+          "XSHE.000651__financials__20260930__20261027-public-v1#equity"
+        ]
+      }
+    }
+  ]
+}

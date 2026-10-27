@@ -42,6 +42,20 @@
         "XSHG.600036__events__20261025-legacy-v1"
       ]
     },
+    "600309": {
+      "securityId": "XSHG.600309",
+      "financialPeriod": "2026H1",
+      "statementSnapshotIds": [
+        "XSHG.600309__financials__20260630__20261026-v1"
+      ]
+    },
+    "600406": {
+      "securityId": "XSHG.600406",
+      "financialPeriod": "2026H1",
+      "statementSnapshotIds": [
+        "XSHG.600406__financials__20260630__20261026-v1"
+      ]
+    },
     "600519": {
       "securityId": "XSHG.600519",
       "financialPeriod": "2026H1",
@@ -314,12 +328,10 @@
     },
     "000651": {
       "securityId": "XSHE.000651",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30）",
       "statementSnapshotIds": [
-        "XSHE.000651__financials__20261025-legacy-v1",
-        "XSHE.000651__dividends__20261025-legacy-v1",
-        "XSHE.000651__operating__20261025-legacy-v1",
-        "XSHE.000651__events__20261025-legacy-v1"
+        "XSHE.000651__financials__20260930__20261027-public-v1",
+        "XSHE.000651__dividends__20261027-public-v1"
       ]
     },
     "002555": {
@@ -537,20 +549,6 @@
         "XSHE.002714__dividends__20261025-legacy-v1",
         "XSHE.002714__operating__20261025-legacy-v1",
         "XSHE.002714__events__20261025-legacy-v1"
-      ]
-    },
-    "600309": {
-      "securityId": "XSHG.600309",
-      "financialPeriod": "2026H1",
-      "statementSnapshotIds": [
-        "XSHG.600309__financials__20260630__20261026-v1"
-      ]
-    },
-    "600406": {
-      "securityId": "XSHG.600406",
-      "financialPeriod": "2026H1",
-      "statementSnapshotIds": [
-        "XSHG.600406__financials__20260630__20261026-v1"
       ]
     }
   }

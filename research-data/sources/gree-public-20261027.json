@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "gree-public-20261027",
+  "provider": "公司公告正文及Investing历史行情",
+  "type": "public_disclosure_review",
+  "publishedAt": "2026-10-27",
+  "collectedAt": "2026-10-27",
+  "evidence": {
+    "file": "evidence/gree-20261027.md",
+    "sha256": "e10e4bfab3ddf22ed2e8a5e8b2f00a7ee2210b95198bb58a89ed5acf8cee2673"
+  },
+  "notes": "逐项来源及定位见证据；行情观察日2026-10-26，财报期2026-09-30；股息仅预案。"
+}

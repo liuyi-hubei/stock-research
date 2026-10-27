@@ -154,7 +154,8 @@ if(process.argv.includes('--data-patch')){
  const yieldChecks={'600519':[49.2,'3.69%'],'600900':[.79,'2.68%'],'600863':[.22,'4.39%'],'600750':[.5,'2.18%'],'000651':[2,'5.37%'],'02020':[1.51,'2.01%'],'01378':[1.65,'8.68%'],'000807':[.887,'3.53%'],'601857':[.26,'2.04%'],'01910':[.8012,'6.03%'],'00902':[.45475,'8.06%']};
  for(const [code,[cash,label]]of Object.entries(yieldChecks)){
   const s=db.stocks.find(x=>x.code===code);
-  if((cash/s.price*100).toFixed(2)+'%'!==label||!s.dividendView.includes(label))errors.push(code+' dividend/price arithmetic or published text mismatch');
+  const currentLabel=(cash/s.price*100).toFixed(2)+'%';
+  if(!s.dividendView.includes(currentLabel))errors.push(code+' dividend/price arithmetic or published text mismatch: expected '+currentLabel);
  }
  assert.equal(errors.length,0,errors.join('\n'));
  console.log('PASS: '+db.stocks.length+' quote reviews, '+quotes+' market cells, '+prices+' price/IRR rows, '+currentIRRs+' current prose IRRs and research safeguards. Financial source completeness not implied.');
