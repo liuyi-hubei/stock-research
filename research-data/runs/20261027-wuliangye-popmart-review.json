@@ -1,0 +1,202 @@
+{
+  "runId": "20261027-wuliangye-popmart-review",
+  "agent": "codex",
+  "collectedAt": "2026-10-27",
+  "scope": [
+    "000858",
+    "09992"
+  ],
+  "changes": [
+    {
+      "securityId": "XSHE.000858",
+      "old": {
+        "quotes": {
+          "snapshotId": "XSHE.000858__quotes__20261023__20261024-mx-v1",
+          "file": "securities/XSHE.000858/quotes/2026-10-23__2026-10-24__mx-v1.json",
+          "sha256": "1ca1a77a87cef8545a8506c6f1fb5e583b9a0991e62849b0187ffbc9ef03bbc1"
+        },
+        "financials": {
+          "snapshotId": "XSHE.000858__financials__20261025-legacy-v1",
+          "file": "securities/XSHE.000858/financials/2026-10-25__legacy-v1.json",
+          "sha256": "58ff8993a5e2fdd692efb631efa917e22e4e9eeab8464c1426c8feb467ce4f46"
+        },
+        "dividends": {
+          "snapshotId": "XSHE.000858__dividends__20261025-legacy-v1",
+          "file": "securities/XSHE.000858/dividends/2026-10-25__legacy-v1.json",
+          "sha256": "179c5cd370a67a7d4294e98d3fa89b9cb6bb8a02b28b6168a2adf4c4f93dbf09"
+        },
+        "operating": {
+          "snapshotId": "XSHE.000858__operating__20261025-legacy-v1",
+          "file": "securities/XSHE.000858/operating/2026-10-25__legacy-v1.json",
+          "sha256": "5e9054a5badf6c3a530711d04d84cd26026f29ca2b4992668faaed3a9ed6f6f7"
+        },
+        "events": {
+          "snapshotId": "XSHE.000858__events__20261025-legacy-v1",
+          "file": "securities/XSHE.000858/events/2026-10-25__legacy-v1.json",
+          "sha256": "9ec1d5e4870793ca5f53671f047ab4fe6f210b32df205806f64477403ff9709b"
+        }
+      },
+      "new": {
+        "financials": {
+          "snapshotId": "XSHE.000858__financials__20260930__20261027-v1",
+          "file": "securities/XSHE.000858/financials/2026-09-30__2026-10-27__filing-v1.json",
+          "sha256": "3e2bdbfc0a73165404933e14526994ab022ab93b8919a80cd76e27fd12b0a31e"
+        },
+        "quotes": {
+          "snapshotId": "XSHE.000858__quotes__20261027__research-pe-v2",
+          "file": "securities/XSHE.000858/quotes/2026-10-27__2026-10-27__research-pe-v2.json",
+          "sha256": "4c44e39853756ac6c6f250b7080bc36eb13c966d9f612df8388042caa96820ca"
+        }
+      }
+    },
+    {
+      "securityId": "XHKG.09992",
+      "old": {
+        "quotes": {
+          "snapshotId": "XHKG.09992__quotes__20261023__20261024-mx-v1",
+          "file": "securities/XHKG.09992/quotes/2026-10-23__2026-10-24__mx-v1.json",
+          "sha256": "15ae2ed350cc6499914ad188cc23edc743ae62fb5c8a3fb15df44207baccd2b4"
+        },
+        "financials": {
+          "snapshotId": "XHKG.09992__financials__20261025-legacy-v1",
+          "file": "securities/XHKG.09992/financials/2026-10-25__legacy-v1.json",
+          "sha256": "c51d6c2f1e7e2217dcfc0a7c385ed46c87b893cf879671bce3ab645fa58ff5a1"
+        },
+        "dividends": {
+          "snapshotId": "XHKG.09992__dividends__20261025-legacy-v1",
+          "file": "securities/XHKG.09992/dividends/2026-10-25__legacy-v1.json",
+          "sha256": "259758ac1896ae4376b9094f0cc368909626bd12e7d3ab55cee6b5405882f4e5"
+        },
+        "operating": {
+          "snapshotId": "XHKG.09992__operating__20261025-legacy-v1",
+          "file": "securities/XHKG.09992/operating/2026-10-25__legacy-v1.json",
+          "sha256": "89d256ec5142d9a16a44b0799fd511df25f793c8b5f6c53062dbf0f35eeffbc2"
+        },
+        "events": {
+          "snapshotId": "XHKG.09992__events__20261025-legacy-v1",
+          "file": "securities/XHKG.09992/events/2026-10-25__legacy-v1.json",
+          "sha256": "a300cd795af67c1514a032faff2f4aff52e7349155e90280ece9f0e70aa411b8"
+        }
+      },
+      "new": {
+        "operating": {
+          "snapshotId": "XHKG.09992__operating__20260930__20261027-v1",
+          "file": "securities/XHKG.09992/operating/2026-09-30__2026-10-27__filing-v1.json",
+          "sha256": "3fec2e88b16b15c52fea8487c38326689f770bcc3982f93fc708152fa79ab15e"
+        },
+        "quotes": {
+          "snapshotId": "XHKG.09992__quotes__20261027__mx-v1",
+          "file": "securities/XHKG.09992/quotes/2026-10-27__2026-10-27__mx-v1.json",
+          "sha256": "7ee024b9f08f34bad2a2fc4b8e4b0e25cfdbf60a4895c6a995904bce03b260b3"
+        }
+      }
+    }
+  ],
+  "oldModelAssumptions": {
+    "000858": {
+      "reviewedAt": "2026-09-29",
+      "requiredReturn": 0.105,
+      "assumptions": [
+        {
+          "name": "悲观",
+          "profit": "124亿元",
+          "eps": 3.2,
+          "early": -0.03,
+          "late": 0,
+          "payout": 0.65,
+          "exitPE": 10,
+          "reason": "去库存延续，Q2弱势持续"
+        },
+        {
+          "name": "基准",
+          "profit": "151亿元",
+          "eps": 3.9,
+          "early": 0.04,
+          "late": 0.02,
+          "payout": 0.75,
+          "exitPE": 15,
+          "reason": "旺季稳定，利润恢复但低于历史中枢"
+        },
+        {
+          "name": "乐观",
+          "profit": "171亿元",
+          "eps": 4.4,
+          "early": 0.07,
+          "late": 0.04,
+          "payout": 0.8,
+          "exitPE": 18,
+          "reason": "批价、回款和高端产品同步改善"
+        }
+      ],
+      "rankingDecision": {
+        "eligible": true,
+        "evidenceStatus": "部分核验",
+        "confidence": "中等",
+        "type": "渠道修复型",
+        "reason": "渠道修复型；情景可信度中等。已补2025完整年报：经营净现金297.06亿元，2026H1−21.54亿元是时间/渠道压力，不是全年现金能力必然为负。",
+        "reviewedAt": "2026-09-30"
+      }
+    },
+    "09992": {
+      "reviewedAt": "2026-10-22",
+      "requiredReturn": 0.115,
+      "assumptions": [
+        {
+          "name": "悲观",
+          "profit": "约93亿元人民币",
+          "eps": 8.11851366822777,
+          "early": -0.05,
+          "late": 0,
+          "payout": 0.2,
+          "exitPE": 10,
+          "reason": "海外持续下滑，核心IP热度回落"
+        },
+        {
+          "name": "基准",
+          "profit": "约113亿元人民币",
+          "eps": 9.864430586126216,
+          "early": 0.1,
+          "late": 0.06,
+          "payout": 0.3,
+          "exitPE": 18,
+          "reason": "国内增长、多IP接力抵消海外调整"
+        },
+        {
+          "name": "乐观",
+          "profit": "约133亿元人民币",
+          "eps": 11.610347504024661,
+          "early": 0.15,
+          "late": 0.08,
+          "payout": 0.35,
+          "exitPE": 24,
+          "reason": "海外恢复且新品类延续高复购"
+        }
+      ],
+      "rankingDecision": {
+        "eligible": true,
+        "evidenceStatus": "部分核验",
+        "reviewedAt": "2026-10-22",
+        "reason": "仅保留原库存修复条件比较，113亿元及长期6%偏积极、现金分配未获联合验证；近期渠道及券商偏弱不能当实绩，条件排名非中性预期或买入评级。"
+      }
+    }
+  },
+  "decisions": {
+    "000858": "Q3单季收入及扣非利润显著下滑，前三季度经营现金接近零、预收款继续下降，旧151亿元正常化利润与持续75%分配缺少联合支持；暂不能合理量化正常股东现金。",
+    "09992": "Q3各区域收入转为下降，旧113亿元盈利与多年增长路径需重建；公告未提供利润、现金和库存，不能由收入降幅机械估算利润或分红。"
+  },
+  "limitations": [
+    "五粮液PDF署名2026-10-28、10月27日晚取得，保留差异",
+    "五粮液供应商PE字段冲突仍存，不选其中之一；改为约市值/约TTM利润的研究重算24.0，输入及推导单独入库。",
+    "泡泡玛特只有季度收入区间，利润现金仍截至H1",
+    "历史资料继续保留原证据等级，未因本轮更新自动升级"
+  ],
+  "websiteProjectionUpdated": true,
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "peCorrection": {
+    "supersedes": "XSHE.000858__quotes__20261027__mx-v1",
+    "snapshotId": "XSHE.000858__quotes__20261027__research-pe-v2",
+    "published": false
+  }
+}

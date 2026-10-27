@@ -41,14 +41,17 @@ for(const stock of scope.window.STOCK_RESEARCH.stocks){
     const text=original.replace(/<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/g,'');
     if(scope.window.ShareholderModel.isPending(stock)){
       assert.equal(result,null,`${stock.code}: pending evaluation must be null`);
-      assert(/待重新评估/.test(text),`${file}: missing explicit pending state`);
-      assert(/参考买入价[：:\s]*暂不提供/.test(text),`${file}: missing unavailable reference price`);
+      // 已标日期且有哈希保护的历史底稿保留当时判断；仅当前正文和自动审阅区必须撤回旧结果。
+      if(!snapshot){
+        assert(/待重新评估/.test(text),`${file}: missing explicit pending state`);
+        assert(/参考买入价[：:\s]*暂不提供/.test(text),`${file}: missing unavailable reference price`);
+      }
       const review=original.match(/<!-- MODEL_REVIEW_START -->[\s\S]*?<!-- MODEL_REVIEW_END -->/)?.[0];
       if(review){
         assert(/待重新评估/.test(review) && /参考买入价[：:\s]*暂不提供/.test(review),`${file}: stale review state`);
         assert(!pendingResults(review),`${file}: pending review contains calculated results`);
       }
-      assert(!pendingResults(text),`${file}: pending report contains stale model conclusion`);
+      if(!snapshot)assert(!pendingResults(text),`${file}: pending report contains stale model conclusion`);
       continue;
     }
     if(snapshot)continue;

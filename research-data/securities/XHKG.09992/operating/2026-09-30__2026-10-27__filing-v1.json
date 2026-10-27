@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.09992__operating__20260930__20261027-v1",
+  "securityId": "XHKG.09992",
+  "dataset": "operating",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/quarterly-review-20261027",
+  "supersedes": null,
+  "notes": "董事会基于管理账目的未经审核季度收入同比范围；不是完整财报或利润预测。不用中点替代区间。",
+  "observations": [
+    {
+      "id": "pm_total_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.5",
+      "rawValue": "-0.5",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "total",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页整体收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3整体收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "20",
+        "originalRow": "[\"Q3整体收入同比下界\",\"-50%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_total_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.45",
+      "rawValue": "-0.45",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "total",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页整体收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3整体收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "21",
+        "originalRow": "[\"Q3整体收入同比上界\",\"-45%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_china_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.3",
+      "rawValue": "-0.3",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "china",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页中国收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3中国收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "22",
+        "originalRow": "[\"Q3中国收入同比下界\",\"-30%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_china_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.25",
+      "rawValue": "-0.25",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "china",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页中国收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3中国收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "23",
+        "originalRow": "[\"Q3中国收入同比上界\",\"-25%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_apac_ex_china_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.7",
+      "rawValue": "-0.7",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "apac_ex_china",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页亚太（不含中国）收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3亚太（不含中国）收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "24",
+        "originalRow": "[\"Q3亚太（不含中国）收入同比下界\",\"-70%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_apac_ex_china_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.65",
+      "rawValue": "-0.65",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "apac_ex_china",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页亚太（不含中国）收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3亚太（不含中国）收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "25",
+        "originalRow": "[\"Q3亚太（不含中国）收入同比上界\",\"-65%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_americas_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.75",
+      "rawValue": "-0.75",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "americas",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页美洲收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3美洲收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "26",
+        "originalRow": "[\"Q3美洲收入同比下界\",\"-75%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_americas_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.7",
+      "rawValue": "-0.7",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "americas",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页美洲收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3美洲收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "27",
+        "originalRow": "[\"Q3美洲收入同比上界\",\"-70%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_europe_other_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.55",
+      "rawValue": "-0.55",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "europe_other",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页欧洲及其他收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3欧洲及其他收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "28",
+        "originalRow": "[\"Q3欧洲及其他收入同比下界\",\"-55%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_europe_other_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.5",
+      "rawValue": "-0.5",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "europe_other",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页欧洲及其他收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3欧洲及其他收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "29",
+        "originalRow": "[\"Q3欧洲及其他收入同比上界\",\"-50%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_china_offline_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.1",
+      "rawValue": "-0.1",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "china_offline",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页中国线下收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3中国线下收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "30",
+        "originalRow": "[\"Q3中国线下收入同比下界\",\"-10%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_china_offline_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.05",
+      "rawValue": "-0.05",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "china_offline",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页中国线下收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3中国线下收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "31",
+        "originalRow": "[\"Q3中国线下收入同比上界\",\"-5%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_china_online_lower",
+      "metric": "revenue_yoy_lower",
+      "value": "-0.5",
+      "rawValue": "-0.5",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "china_online",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页中国线上收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3中国线上收入同比下界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "32",
+        "originalRow": "[\"Q3中国线上收入同比下界\",\"-50%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    },
+    {
+      "id": "pm_china_online_upper",
+      "metric": "revenue_yoy_upper",
+      "value": "-0.45",
+      "rawValue": "-0.45",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "china_online",
+        "accountingStandard": "management_accounts_unaudited",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "popmart-q3-20261027",
+          "locator": "PDF第1页中国线上收益表现"
+        }
+      ],
+      "notes": "同比变化区间端点；非收入绝对额、非利润增速。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3中国线上收入同比上界",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "33",
+        "originalRow": "[\"Q3中国线上收入同比上界\",\"-45%\",\"2026Q3单季\",\"同比变化区间端点；非收入绝对额、非利润增速。\"]"
+      }
+    }
+  ]
+}

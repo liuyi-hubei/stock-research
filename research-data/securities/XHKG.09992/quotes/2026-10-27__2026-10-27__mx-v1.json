@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XHKG.09992__quotes__20261027__mx-v1",
+  "securityId": "XHKG.09992",
+  "dataset": "quotes",
+  "asOf": "2026-10-27",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/quarterly-review-20261027",
+  "supersedes": null,
+  "notes": "公告当日不复权收盘，未反映公告后的下一交易日反应。五粮液PE定日期22.36与当前24冲突，选当前近似24并披露；股数及市值为供应商近似数。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "132",
+      "rawValue": "132",
+      "unit": "currency_per_share",
+      "currency": "HKD",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XHKG.09992；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "11.78",
+      "rawValue": "11.78",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XHKG.09992；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "6.622",
+      "rawValue": "6.622",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XHKG.09992；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "175800000000",
+      "rawValue": "175800000000",
+      "unit": "currency",
+      "currency": "HKD",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XHKG.09992；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "1332000000",
+      "rawValue": "1332000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XHKG.09992；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ for(const [code,config]of Object.entries(publication.reports)){
  for(const snapshotId of config.statementSnapshotIds){
   const s=store.snapshots.get(snapshotId);assert(s&&s.securityId===config.securityId&&s.acceptance==='accepted','Invalid report fact version');
   for(const o of s.observations){
-   if(o.dimensions?.kind!=='fact_row')continue;
+   if(o.dimensions?.kind!=='fact_row'||config.excludedFactIds?.includes(o.id))continue;
    assert(!records[o.id],'Duplicate fact id '+o.id);
    records[o.id]={value:o.value,unit:o.unit,currency:o.currency,verification:o.verification,periodLabel:o.dimensions.periodLabel,label:o.dimensions.label,snapshotId,sourceRefs:o.sourceRefs};
    const row=JSON.parse(o.dimensions.originalRow);

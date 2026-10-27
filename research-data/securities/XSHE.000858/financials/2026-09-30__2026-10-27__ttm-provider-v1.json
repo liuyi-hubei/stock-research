@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000858__financials__20260930__20261027-ttm-provider-v1",
+  "securityId": "XSHE.000858",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/quarterly-review-20261027",
+  "supersedes": null,
+  "notes": "供应商TTM归母约121.9亿元，单独存储；非公司原表精确值，不替代Q3当前财报。用于显示近似重算PE，不用于正常化未来盈利。",
+  "observations": [
+    {
+      "id": "ttm_profit_provider",
+      "metric": "net_profit_parent",
+      "value": "12190000000",
+      "rawValue": "121.9亿元",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2025-10-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "ttm",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "补查mx_finance_data_fc37bc0c；归属母公司股东净利润TTM"
+        }
+      ],
+      "notes": "约数，不当作原件逐元精度。"
+    }
+  ]
+}

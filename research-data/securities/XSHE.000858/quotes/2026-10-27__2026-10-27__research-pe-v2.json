@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000858__quotes__20261027__research-pe-v2",
+  "securityId": "XSHE.000858",
+  "dataset": "quotes",
+  "asOf": "2026-10-27",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/quarterly-review-20261027",
+  "supersedes": "XSHE.000858__quotes__20261027__mx-v1",
+  "notes": "修正本轮尚未发布的v1选择：不选择相冲突的服务商PE字段，而由供应商约市值/约TTM归母重算到一位小数。原22.36和24返回保留于证据。研究重算非供应商原生估值。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "75.38",
+      "rawValue": "75.38",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XSHE.000858；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "24.0",
+      "rawValue": "round(2926亿元 / 121.9亿元, 1) = 24.0",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "research_recalculated_ttm",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "derived",
+      "verification": "provider_reported",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XSHE.000858；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "因供应商两个PE字段不同，另立研究重算口径并明确显示；输入为约数，输出仅一位小数，不宣称字段冲突已解决。",
+      "derivation": {
+        "formula": "round(market_cap / ttm_profit_provider, 1)",
+        "inputs": [
+          "XSHE.000858__quotes__20261027__research-pe-v2#market_cap",
+          "XSHE.000858__financials__20260930__20261027-ttm-provider-v1#ttm_profit_provider"
+        ]
+      }
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "2.47",
+      "rawValue": "2.47",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XSHE.000858；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "292600000000",
+      "rawValue": "292600000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XSHE.000858；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "3882000000",
+      "rawValue": "3882000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quotes-20261027",
+          "locator": "XSHE.000858；日收盘表及当前PE字段"
+        }
+      ],
+      "notes": "供应商口径；近似股数不覆盖模型精确股本。"
+    }
+  ]
+}

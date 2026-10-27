@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "wuliangye-q3-20261027",
+  "provider": "公司原始披露",
+  "type": "company_filing",
+  "publishedAt": "2026-10-28",
+  "collectedAt": "2026-10-27",
+  "url": "https://static.cninfo.com.cn/finalpage/2026-10-28/1225630063.PDF",
+  "evidence": {
+    "file": "evidence/wuliangye-q3-20261027.md",
+    "sha256": "e424f1c13174563ae5777b2cdece5707e05fde1c1870873a01c34f279f2efadf"
+  },
+  "notes": "证据为已读材料的指标摘录与研究核对，不保存账号、Cookie或第三方全文。"
+}

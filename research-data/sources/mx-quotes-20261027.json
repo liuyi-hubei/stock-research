@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-quotes-20261027",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-27",
+  "url": "miaoxiang:mx_finance_data_75be3280.md",
+  "evidence": {
+    "file": "evidence/mx-quotes-20261027.md",
+    "sha256": "d16c2a24fb3a4144b56bd0a83beb7a2af94b0249e52f9bd8190c737218f639ba"
+  },
+  "notes": "证据为已读材料的指标摘录与研究核对，不保存账号、Cookie或第三方全文。"
+}

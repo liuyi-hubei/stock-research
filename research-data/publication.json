@@ -308,22 +308,23 @@
     },
     "09992": {
       "securityId": "XHKG.09992",
-      "financialPeriod": "2026H1（截至2026-06-30）",
+      "financialPeriod": "2026H1（财务截至2026-06-30）；2026Q3营运更新（未经审核）",
       "statementSnapshotIds": [
         "XHKG.09992__financials__20261025-legacy-v1",
         "XHKG.09992__dividends__20261025-legacy-v1",
         "XHKG.09992__operating__20261025-legacy-v1",
-        "XHKG.09992__events__20261025-legacy-v1"
+        "XHKG.09992__events__20261025-legacy-v1",
+        "XHKG.09992__operating__20260930__20261027-v1"
+      ],
+      "excludedFactIds": [
+        "fact_2705caca2a95"
       ]
     },
     "000858": {
       "securityId": "XSHE.000858",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026前三季度（截至2026-09-30）",
       "statementSnapshotIds": [
-        "XSHE.000858__financials__20261025-legacy-v1",
-        "XSHE.000858__dividends__20261025-legacy-v1",
-        "XSHE.000858__operating__20261025-legacy-v1",
-        "XSHE.000858__events__20261025-legacy-v1"
+        "XSHE.000858__financials__20260930__20261027-v1"
       ]
     },
     "000651": {

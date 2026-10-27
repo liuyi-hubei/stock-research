@@ -1,0 +1,643 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000858__financials__20260930__20261027-v1",
+  "securityId": "XSHE.000858",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/quarterly-review-20261027",
+  "supersedes": null,
+  "notes": "2026Q3未经审计实际财报；PDF落款10月28日，10月27日晚取得。年度累计与单季分开；不更改历史H1快照。",
+  "observations": [
+    {
+      "id": "wly_revenue_9m",
+      "metric": "revenue",
+      "value": "32858473964.34",
+      "rawValue": "32858473964.34",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；营业收入"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "3",
+        "originalRow": "[\"营业收入\",\"328.58474亿元 / +7.25%\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_profit_9m",
+      "metric": "net_profit_parent",
+      "value": "9710647471.03",
+      "rawValue": "9710647471.03",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；归母净利润"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "4",
+        "originalRow": "[\"归母净利润\",\"97.10647亿元 / +49.98%\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_adjusted_profit_9m",
+      "metric": "adjusted_net_profit_parent",
+      "value": "9440688403.06",
+      "rawValue": "9440688403.06",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；扣非归母净利润"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母净利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "5",
+        "originalRow": "[\"扣非归母净利润\",\"94.40688亿元 / +46.18%\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_revenue_q3",
+      "metric": "revenue",
+      "value": "4441799422.57",
+      "rawValue": "4441799422.57",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；Q3单季营业收入"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3单季营业收入",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "6",
+        "originalRow": "[\"Q3单季营业收入\",\"44.41799亿元 / −37.68%\",\"2026Q3单季\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_profit_q3",
+      "metric": "net_profit_parent",
+      "value": "957704479.72",
+      "rawValue": "957704479.72",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；Q3单季归母"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3单季归母",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "7",
+        "originalRow": "[\"Q3单季归母\",\"9.57704亿元 / −48.25%\",\"2026Q3单季\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_cfo_9m",
+      "metric": "operating_cash_flow",
+      "value": "46684115.79",
+      "rawValue": "46684115.79",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；经营净现金"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营净现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "8",
+        "originalRow": "[\"经营净现金\",\"0.46684亿元 / −99.83%\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_sales_cash_9m",
+      "metric": "cash_received_from_customers",
+      "value": "32690116655.30",
+      "rawValue": "32690116655.30",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；销售收现"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "销售收现",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "9",
+        "originalRow": "[\"销售收现\",\"326.90117亿元\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_capex_cash_9m",
+      "metric": "ppe_cash_payments",
+      "value": "658246537.09",
+      "rawValue": "658246537.09",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；购建长期资产现金"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建长期资产现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "10",
+        "originalRow": "[\"购建长期资产现金\",\"6.58247亿元\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_contract_liability",
+      "metric": "contract_liabilities",
+      "value": "8926973899.03",
+      "rawValue": "8926973899.03",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；合同负债"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "合同负债",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "11",
+        "originalRow": "[\"合同负债\",\"89.26974亿元\",\"2026-09-30\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_inventory",
+      "metric": "inventory",
+      "value": "24197453313.89",
+      "rawValue": "24197453313.89",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；存货"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "存货",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "12",
+        "originalRow": "[\"存货\",\"241.97453亿元\",\"2026-09-30\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_cash",
+      "metric": "cash",
+      "value": "111729809959.56",
+      "rawValue": "111729809959.56",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；货币资金"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "货币资金",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "13",
+        "originalRow": "[\"货币资金\",\"1117.29810亿元\",\"2026-09-30\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_cash_equivalents",
+      "metric": "cash_equivalents",
+      "value": "108631246534.95",
+      "rawValue": "108631246534.95",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；现金等价物"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "现金等价物",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "14",
+        "originalRow": "[\"现金等价物\",\"1086.31247亿元\",\"2026-09-30\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_selling_expense",
+      "metric": "selling_expenses",
+      "value": "7798075590.91",
+      "rawValue": "7798075590.91",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；销售费用"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "销售费用",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "15",
+        "originalRow": "[\"销售费用\",\"77.98076亿元\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_revenue_cost",
+      "metric": "cost_of_revenue",
+      "value": "6606866724.90",
+      "rawValue": "6606866724.90",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；营业成本"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业成本",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "16",
+        "originalRow": "[\"营业成本\",\"66.06867亿元\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_tax_surcharges",
+      "metric": "taxes_and_surcharges",
+      "value": "4858694661.75",
+      "rawValue": "4858694661.75",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；税金及附加"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "税金及附加",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "17",
+        "originalRow": "[\"税金及附加\",\"48.58695亿元\",\"2026前三季度\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_shares_issued",
+      "metric": "shares_outstanding",
+      "value": "3881608005",
+      "rawValue": "3881608005",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "issued"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；法定股本"
+        }
+      ],
+      "notes": "原公告提取；不是未来利润或可分配现金预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "法定股本",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "18",
+        "originalRow": "[\"法定股本\",\"38.81608005亿股\",\"2026-09-30\",\"公司原始披露\"]"
+      }
+    },
+    {
+      "id": "wly_treasury_shares",
+      "metric": "treasury_shares",
+      "value": "16127753",
+      "rawValue": "16127753",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "issued"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "wuliangye-q3-20261027",
+          "locator": "主要会计数据及合并三表；回购专户股份"
+        }
+      ],
+      "notes": "未注销回购股，不提前当作已减少法定总股本。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "回购专户股份",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "19",
+        "originalRow": "[\"回购专户股份\",\"1612.7753万股\",\"2026-09-30\",\"未注销回购股，不提前当作已减少法定总股本。\"]"
+      }
+    }
+  ]
+}
