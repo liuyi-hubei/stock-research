@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600750__dividends__20260911__20261027-filing-v1",
+  "securityId": "XSHG.600750",
+  "dataset": "dividends",
+  "asOf": "2026-09-11",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/jiangzhong-q3-review-20261027",
+  "supersedes": null,
+  "notes": "定向补数；历史原件与行情分层；accepted表示可入库，不表示审计或预测通过。",
+  "observations": [
+    {
+      "id": "jz_dividend_h1",
+      "metric": "dividend_per_share",
+      "value": "0.5",
+      "rawValue": "0.5",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "event",
+        "start": null,
+        "end": "2026-09-11"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-dividend-20261027",
+          "locator": "第二节分配方案、第三节相关日期"
+        }
+      ],
+      "notes": "税前已实施；不是新买入者的未来现金流。",
+      "eventDetails": {
+        "announcedAt": "2026-09-03",
+        "approvedAt": "2026-08-20",
+        "exDate": "2026-09-11",
+        "paymentDate": "2026-09-11",
+        "distributionStatus": "implemented",
+        "taxBasis": "税前",
+        "fiscalPeriod": "2026H1"
+      },
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "中期现金分红",
+        "periodLabel": "2026中期",
+        "originalIndex": "30",
+        "originalRow": "[\"中期现金分红\",\"每股0.50元 / 总额3.1779亿元\",\"2026中期\",\"2026-09-11已实施\"]"
+      }
+    }
+  ]
+}

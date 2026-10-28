@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "jiangzhong-quotes-20261027",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": "2026-10-27",
+  "collectedAt": "2026-10-27",
+  "url": "https://quote.eastmoney.com/sh600750.html",
+  "originalFilename": "sh600750.html",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/jiangzhong-quotes-20261027.md",
+    "sha256": "d13ac51147c15e59a6268c1bed761e9128d18ced92378eab7ab7b8425412bc3d"
+  },
+  "notes": "原件抽取与服务商返回分别标记；研究推导不是公司指引。"
+}

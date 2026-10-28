@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "pingan-q3-20261028",
+  "provider": "公司三季报原件（东方财富镜像；Firecrawl读取）",
+  "type": "issuer_filing",
+  "publishedAt": "2026-10-28",
+  "collectedAt": "2026-10-28",
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610281831124671_1.pdf",
+  "originalFilename": "H2_AN202610281831124671_1.pdf",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/pingan-q3-20261028.md",
+    "sha256": "21f83262266365a29d5696aeb04dda40b35d55a60fa8705a6f1b2195aea09f33"
+  },
+  "notes": "接受表示来源与结构可追溯，不等于独立财务审计。"
+}

@@ -1,0 +1,1131 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600750__financials__20260930__20261027-filing-v1",
+  "securityId": "XSHG.600750",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/jiangzhong-q3-review-20261027",
+  "supersedes": "XSHG.600750__financials__20260930__20261025-mx-v1",
+  "notes": "定向补数；历史原件与行情分层；accepted表示可入库，不表示审计或预测通过。",
+  "observations": [
+    {
+      "id": "jz_revenue_9m",
+      "metric": "revenue",
+      "value": "2661908774.47",
+      "rawValue": "2661908774.47",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "0",
+        "originalRow": "[\"营业收入\",\"26.62亿元 / -9.25%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_profit_9m",
+      "metric": "net_profit_parent",
+      "value": "617318225.42",
+      "rawValue": "617318225.42",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "1",
+        "originalRow": "[\"归母净利润\",\"6.1732亿元 / -9.68%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_adjusted_9m",
+      "metric": "adjusted_net_profit_parent",
+      "value": "589249148.66",
+      "rawValue": "589249148.66",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "excluding_non_recurring",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母净利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "2",
+        "originalRow": "[\"扣非归母净利润\",\"5.8925亿元 / -7.94%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_cfo_9m",
+      "metric": "operating_cash_flow",
+      "value": "1001809320.33",
+      "rawValue": "1001809320.33",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营现金流",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "3",
+        "originalRow": "[\"经营现金流\",\"10.0181亿元 / +2.88%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_otc_9m",
+      "metric": "otc_revenue",
+      "value": "1903446866.38",
+      "rawValue": "1903446866.38",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "OTC收入 / 毛利率",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "4",
+        "originalRow": "[\"OTC收入 / 毛利率\",\"19.0345亿元 / 76.32%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_rx_9m",
+      "metric": "prescription_revenue",
+      "value": "403288153.84",
+      "rawValue": "403288153.84",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "处方药收入 / 毛利率",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "5",
+        "originalRow": "[\"处方药收入 / 毛利率\",\"4.0329亿元 / 33.41%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_health_9m",
+      "metric": "health_revenue",
+      "value": "343781013.87",
+      "rawValue": "343781013.87",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "健康消费及其他收入 / 毛利率",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "6",
+        "originalRow": "[\"健康消费及其他收入 / 毛利率\",\"3.4378亿元 / 45.10%\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_capex_9m",
+      "metric": "purchase_long_lived_assets_cash",
+      "value": "151602659.74",
+      "rawValue": "151602659.74",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建长期资产现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "7",
+        "originalRow": "[\"购建长期资产现金\",\"1.5160亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_selling_9m",
+      "metric": "selling_expense",
+      "value": "790638811.96",
+      "rawValue": "790638811.96",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并利润表／非经常性损益项目表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "销售费用",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "8",
+        "originalRow": "[\"销售费用\",\"7.9064亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_rd_9m",
+      "metric": "research_development_expense",
+      "value": "68815135.92",
+      "rawValue": "68815135.92",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并利润表／非经常性损益项目表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "研发费用",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "9",
+        "originalRow": "[\"研发费用\",\"0.6882亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_revenue_q3",
+      "metric": "revenue",
+      "value": "729621300.24",
+      "rawValue": "729621300.24",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度单季收入",
+        "periodLabel": "2026Q3",
+        "originalIndex": "10",
+        "originalRow": "[\"第三季度单季收入\",\"7.2962亿元 / -7.88%\",\"2026Q3\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_profit_q3",
+      "metric": "net_profit_parent",
+      "value": "125918100.30",
+      "rawValue": "125918100.30",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度单季归母",
+        "periodLabel": "2026Q3",
+        "originalIndex": "11",
+        "originalRow": "[\"第三季度单季归母\",\"1.2592亿元 / -21.84%\",\"2026Q3\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_adjusted_q3",
+      "metric": "adjusted_net_profit_parent",
+      "value": "119643624.92",
+      "rawValue": "119643624.92",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "excluding_non_recurring",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "主要会计指标／主营业务经营数据表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度单季扣非",
+        "periodLabel": "2026Q3",
+        "originalIndex": "12",
+        "originalRow": "[\"第三季度单季扣非\",\"1.1964亿元 / -24.26%\",\"2026Q3\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_cash",
+      "metric": "cash_and_equivalents_balance",
+      "value": "283266935.90",
+      "rawValue": "283266935.90",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "货币资金",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "13",
+        "originalRow": "[\"货币资金\",\"2.8327亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_trading_assets",
+      "metric": "trading_financial_assets",
+      "value": "422540480.33",
+      "rawValue": "422540480.33",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "交易性金融资产",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "14",
+        "originalRow": "[\"交易性金融资产\",\"4.2254亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_shares",
+      "metric": "shares_outstanding",
+      "value": "635588289",
+      "rawValue": "635588289",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "期末总股本",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "15",
+        "originalRow": "[\"期末总股本\",\"635,588,289股\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_inventory",
+      "metric": "inventory",
+      "value": "444483661.42",
+      "rawValue": "444483661.42",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "存货",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "16",
+        "originalRow": "[\"存货\",\"4.4448亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_bills_payable",
+      "metric": "bills_payable",
+      "value": "626502530.48",
+      "rawValue": "626502530.48",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "应付票据",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "17",
+        "originalRow": "[\"应付票据\",\"6.2650亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_contract_liability",
+      "metric": "contract_liability",
+      "value": "81055171.49",
+      "rawValue": "81055171.49",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "合同负债",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "18",
+        "originalRow": "[\"合同负债\",\"0.8106亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_development_balance",
+      "metric": "development_expenditure_balance",
+      "value": "17724990.99",
+      "rawValue": "17724990.99",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "开发支出期末余额",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "19",
+        "originalRow": "[\"开发支出期末余额\",\"0.1772亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_investment_payments",
+      "metric": "investment_cash_payments",
+      "value": "4986836972.22",
+      "rawValue": "4986836972.22",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "投资支付现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "20",
+        "originalRow": "[\"投资支付现金\",\"49.8684亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_investment_redemption",
+      "metric": "investment_redemptions",
+      "value": "4471600000",
+      "rawValue": "4471600000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "收回投资现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "21",
+        "originalRow": "[\"收回投资现金\",\"44.7160亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_distributions_cash",
+      "metric": "dividends_profit_interest_paid_cash",
+      "value": "894142911.74",
+      "rawValue": "894142911.74",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "分配股利利润或偿付利息现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "22",
+        "originalRow": "[\"分配股利利润或偿付利息现金\",\"8.9414亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_nonrecurring",
+      "metric": "nonrecurring_parent_net",
+      "value": "28069076.76",
+      "rawValue": "28069076.76",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并利润表／非经常性损益项目表"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "非经常损益归母净额",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "23",
+        "originalRow": "[\"非经常损益归母净额\",\"0.2807亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_continuous_grants",
+      "metric": "recurring_government_grants",
+      "value": "12607218.73",
+      "rawValue": "12607218.73",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "列入经常性损益的政府补助",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "24",
+        "originalRow": "[\"列入经常性损益的政府补助\",\"0.1261亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_sales_receipts",
+      "metric": "sales_cash_receipts",
+      "value": "3400971077.85",
+      "rawValue": "3400971077.85",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "销售商品提供劳务收到现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "25",
+        "originalRow": "[\"销售商品提供劳务收到现金\",\"34.0097亿元\",\"2026前三季度\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_parent_equity",
+      "metric": "equity_parent",
+      "value": "3770755731.39",
+      "rawValue": "3770755731.39",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净资产",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "26",
+        "originalRow": "[\"归母净资产\",\"37.7076亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_noncurrent_due",
+      "metric": "noncurrent_assets_due_within_year",
+      "value": "935175866.33",
+      "rawValue": "935175866.33",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "一年内到期非流动资产",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "27",
+        "originalRow": "[\"一年内到期非流动资产\",\"9.3518亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_other_noncurrent",
+      "metric": "other_noncurrent_assets",
+      "value": "1283831205.96",
+      "rawValue": "1283831205.96",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并资产负债表／主要指标"
+        }
+      ],
+      "notes": "三季报原件所列历史金额；不是未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "其他非流动资产",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "28",
+        "originalRow": "[\"其他非流动资产\",\"12.8383亿元\",\"2026-09-30\",\"三季报原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "jz_cash_after_capex",
+      "metric": "operating_cash_after_long_asset_purchases",
+      "value": "850206660.59",
+      "rawValue": "850206660.59",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-q3-20261027",
+          "locator": "合并现金流量表及资产负债表"
+        }
+      ],
+      "notes": "合并现金代理量，不等于归母FCFE；尚未分拆维持与扩张投资、少数股东现金及营运资本常态。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "设备后合并现金代理量",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "29",
+        "originalRow": "[\"设备后合并现金代理量\",\"8.5021亿元\",\"2026前三季度\",\"研究推导，不等于归母FCFE\"]"
+      },
+      "derivation": {
+        "formula": "operating_cash_flow - purchase_long_lived_assets_cash",
+        "inputs": [
+          "XSHG.600750__financials__20260930__20261027-filing-v1#jz_cfo_9m",
+          "XSHG.600750__financials__20260930__20261027-filing-v1#jz_capex_9m"
+        ]
+      }
+    }
+  ]
+}

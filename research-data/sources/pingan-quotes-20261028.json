@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "pingan-quotes-20261028",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": "2026-10-28",
+  "collectedAt": "2026-10-28",
+  "url": "https://quote.eastmoney.com/sh601318.html",
+  "originalFilename": "sh601318.html",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/pingan-quotes-20261028.md",
+    "sha256": "e0b40d8025b795d1cd35e46e6f0a19db77919149b6fe78ae82e2afb41cc43b9f"
+  },
+  "notes": "接受表示来源与结构可追溯，不等于独立财务审计。"
+}

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600750__quotes__20261027__20261027-mx-v1",
+  "securityId": "XSHG.600750",
+  "dataset": "quotes",
+  "asOf": "2026-10-27",
+  "collectedAt": "2026-10-27",
+  "acceptance": "accepted",
+  "createdBy": "codex/jiangzhong-q3-review-20261027",
+  "supersedes": null,
+  "notes": "定向补数；历史原件与行情分层；accepted表示可入库，不表示审计或预测通过。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "22.05",
+      "rawValue": "22.05",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_reported"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-quotes-20261027",
+          "locator": "mx_finance_data_7135cb72.md；2026-10-27行情"
+        }
+      ],
+      "notes": "妙想供应商返回；市值、股数近似值。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "16.67",
+      "rawValue": "16.67",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "provider_reported"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-quotes-20261027",
+          "locator": "mx_finance_data_7135cb72.md；2026-10-27行情"
+        }
+      ],
+      "notes": "妙想供应商返回；市值、股数近似值。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "3.717",
+      "rawValue": "3.717",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "provider_reported"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-quotes-20261027",
+          "locator": "mx_finance_data_7135cb72.md；2026-10-27行情"
+        }
+      ],
+      "notes": "妙想供应商返回；市值、股数近似值。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "14010000000",
+      "rawValue": "14010000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "provider_reported"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-quotes-20261027",
+          "locator": "mx_finance_data_7135cb72.md；2026-10-27行情"
+        }
+      ],
+      "notes": "妙想供应商返回；市值、股数近似值。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "635600000",
+      "rawValue": "635600000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-27"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "provider_reported"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "jiangzhong-quotes-20261027",
+          "locator": "mx_finance_data_7135cb72.md；2026-10-27行情"
+        }
+      ],
+      "notes": "妙想供应商返回；市值、股数近似值。"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601318__quotes__20261028__20261028-mx-derived-v1",
+  "securityId": "XSHG.601318",
+  "dataset": "quotes",
+  "asOf": "2026-10-28",
+  "collectedAt": "2026-10-28",
+  "acceptance": "accepted",
+  "createdBy": "codex/pingan-q3-review-20261028",
+  "supersedes": null,
+  "notes": "本轮定向更新；报价、原件、研究推导、未来假设分层，旧快照保留。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "52.31",
+      "rawValue": "52.31",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-28"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "unadjusted",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "mx_finance_data_34c770ce.md、7c50d0ad.md；2026-10-28"
+        }
+      ],
+      "notes": "供应商已显示数值；概数不替换原件精确值。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "9.607671776348782",
+      "rawValue": "9.607671776348782",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-28"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "derived",
+      "verification": "provider_reported",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "mx_finance_data_34c770ce.md、7c50d0ad.md；2026-10-28"
+        }
+      ],
+      "notes": "约9.61倍为研究重算，年度利润输入舍入；原服务商同次5.945与9.61冲突保留于证据，不作为两个已接受PE。",
+      "derivation": {
+        "formula": "A-share close * statutory total shares / approximate TTM parent profit",
+        "inputs": [
+          "XSHG.601318__quotes__20261028__20261028-mx-derived-v1#close",
+          "XSHG.601318__financials__20260930__20261028-filing-v1#pa_shares",
+          "XSHG.601318__financials__20260930__20261028-filing-v1#pa_ttm_profit"
+        ]
+      }
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "0.907",
+      "rawValue": "0.907",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-28"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "mx_finance_data_34c770ce.md、7c50d0ad.md；2026-10-28"
+        }
+      ],
+      "notes": "供应商已显示数值；概数不替换原件精确值。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "866100000000",
+      "rawValue": "866100000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-28"
+      },
+      "basis": {
+        "scope": "provider_csrc_algorithm",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "mx_finance_data_34c770ce.md、7c50d0ad.md；2026-10-28"
+        }
+      ],
+      "notes": "供应商已显示数值；概数不替换原件精确值。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "18110000000",
+      "rawValue": "18110000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-28"
+      },
+      "basis": {
+        "scope": "listed_security",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "mx_finance_data_34c770ce.md、7c50d0ad.md；2026-10-28"
+        }
+      ],
+      "notes": "供应商已显示数值；概数不替换原件精确值。"
+    }
+  ]
+}

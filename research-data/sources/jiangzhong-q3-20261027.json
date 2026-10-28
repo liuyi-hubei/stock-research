@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "jiangzhong-q3-20261027",
+  "provider": "公司公告原件（东方财富镜像；Firecrawl读取）",
+  "type": "issuer_filing",
+  "publishedAt": "2026-10-24",
+  "collectedAt": "2026-10-27",
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610231830843178_1.pdf",
+  "originalFilename": "H2_AN202610231830843178_1.pdf",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/jiangzhong-q3-20261027.md",
+    "sha256": "4c67085b95bfe0753dbbee08fd7cee8ed26aebed6b39254fa8b539eba03267f6"
+  },
+  "notes": "原件抽取与服务商返回分别标记；研究推导不是公司指引。"
+}

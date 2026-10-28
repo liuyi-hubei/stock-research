@@ -1,0 +1,1155 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601318__financials__20260930__20261028-filing-v1",
+  "securityId": "XSHG.601318",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-28",
+  "acceptance": "accepted",
+  "createdBy": "codex/pingan-q3-review-20261028",
+  "supersedes": null,
+  "notes": "本轮定向更新；报价、原件、研究推导、未来假设分层，旧快照保留。",
+  "observations": [
+    {
+      "id": "pa_revenue",
+      "metric": "revenue",
+      "value": "728134000000",
+      "rawValue": "728134000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／合并利润表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "0",
+        "originalRow": "[\"营业收入\",\"7,281.34亿元 / -12.6%\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_profit",
+      "metric": "net_profit_parent",
+      "value": "96645000000",
+      "rawValue": "96645000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／合并利润表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "1",
+        "originalRow": "[\"归母净利润\",\"966.45亿元 / -27.3%\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_adjusted",
+      "metric": "adjusted_net_profit_parent",
+      "value": "91587000000",
+      "rawValue": "91587000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "excluding_non_recurring",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1主要指标；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母净利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "2",
+        "originalRow": "[\"扣非归母净利润\",\"915.87亿元 / -35.5%\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_op_profit",
+      "metric": "operating_profit_parent",
+      "value": "125905000000",
+      "rawValue": "125905000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "company_operating_definition",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.1营运利润勾稽；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母营运利润",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "3",
+        "originalRow": "[\"归母营运利润\",\"1,259.05亿元 / +8.3%\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_q3_profit",
+      "metric": "net_profit_parent",
+      "value": "4060000000",
+      "rawValue": "4060000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／4.1单季变动；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3单季归母",
+        "periodLabel": "2026Q3",
+        "originalIndex": "4",
+        "originalRow": "[\"Q3单季归母\",\"40.60亿元 / -93.7%\",\"2026Q3\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_q3_adjusted",
+      "metric": "adjusted_net_profit_parent",
+      "value": "3875000000",
+      "rawValue": "3875000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "excluding_non_recurring",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／4.1单季变动；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "Q3单季扣非",
+        "periodLabel": "2026Q3",
+        "originalIndex": "5",
+        "originalRow": "[\"Q3单季扣非\",\"38.75亿元 / -94.3%\",\"2026Q3\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_nbv",
+      "metric": "new_business_value",
+      "value": "30987000000",
+      "rawValue": "30987000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "life_health",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.2关键指标；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "公司精算估值指标，是公司披露的本期计量，不等于当期利润或现金。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "寿险及健康险新业务价值",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "6",
+        "originalRow": "[\"寿险及健康险新业务价值\",\"309.87亿元 / -13.3%\",\"2026前三季度\",\"寿险及健康险口径\"]"
+      }
+    },
+    {
+      "id": "pa_nbv_margin",
+      "metric": "new_business_value_margin_first_premium",
+      "value": "0.24",
+      "rawValue": "0.24",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "life_health",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.2关键指标；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "新业务价值率（首年保费）",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "7",
+        "originalRow": "[\"新业务价值率（首年保费）\",\"24.0% / 同比-1.2个百分点\",\"2026前三季度\",\"寿险及健康险口径\"]"
+      }
+    },
+    {
+      "id": "pa_first_premium",
+      "metric": "first_year_premium_for_nbv",
+      "value": "128864000000",
+      "rawValue": "128864000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "life_health",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.2关键指标；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "用来计算NBV的首年保费",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "8",
+        "originalRow": "[\"用来计算NBV的首年保费\",\"1,288.64亿元 / -9.1%\",\"2026前三季度\",\"寿险及健康险口径\"]"
+      }
+    },
+    {
+      "id": "pa_cor",
+      "metric": "combined_ratio",
+      "value": "0.956",
+      "rawValue": "0.956",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "property_casualty",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.3经营指标；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "产险综合成本率",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "9",
+        "originalRow": "[\"产险综合成本率\",\"95.6% / 同比优化1.4个百分点\",\"2026前三季度\",\"产险口径\"]"
+      }
+    },
+    {
+      "id": "pa_pc_op",
+      "metric": "operating_profit",
+      "value": "4717000000",
+      "rawValue": "4717000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "property_casualty",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "company_operating_definition",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.3经营指标；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "产险营运利润（含少数股东）",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "10",
+        "originalRow": "[\"产险营运利润（含少数股东）\",\"47.17亿元 / -68.9%\",\"2026前三季度\",\"产险口径\"]"
+      }
+    },
+    {
+      "id": "pa_net_yield",
+      "metric": "net_investment_yield_nonannualized",
+      "value": "0.025",
+      "rawValue": "0.025",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "insurance_investment",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.4投资组合；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "净投资收益率（非年化）",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "11",
+        "originalRow": "[\"净投资收益率（非年化）\",\"2.5% / 同比-0.3个百分点\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_comprehensive_yield",
+      "metric": "comprehensive_investment_yield_nonannualized",
+      "value": "0.023",
+      "rawValue": "0.023",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "insurance_investment",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.4投资组合；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "综合投资收益率（非年化）",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "12",
+        "originalRow": "[\"综合投资收益率（非年化）\",\"2.3% / 同比-3.1个百分点\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_investment_assets",
+      "metric": "insurance_investment_assets",
+      "value": "6830000000000",
+      "rawValue": "6830000000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "insurance_investment",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.4投资组合；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "保险投资组合规模",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "13",
+        "originalRow": "[\"保险投资组合规模\",\"约6.83万亿元\",\"2026-09-30\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_life_core",
+      "metric": "core_solvency_ratio",
+      "value": "1.377",
+      "rawValue": "1.377",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "life_insurance",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "4.3偿付能力表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "寿险核心偿付能力",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "14",
+        "originalRow": "[\"寿险核心偿付能力\",\"137.7%\",\"2026-09-30\",\"寿险及健康险口径\"]"
+      }
+    },
+    {
+      "id": "pa_life_total",
+      "metric": "comprehensive_solvency_ratio",
+      "value": "1.876",
+      "rawValue": "1.876",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "life_insurance",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "4.3偿付能力表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "寿险综合偿付能力",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "15",
+        "originalRow": "[\"寿险综合偿付能力\",\"187.6%\",\"2026-09-30\",\"寿险及健康险口径\"]"
+      }
+    },
+    {
+      "id": "pa_pc_total",
+      "metric": "comprehensive_solvency_ratio",
+      "value": "2.169",
+      "rawValue": "2.169",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "property_casualty",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "4.3偿付能力表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "产险综合偿付能力",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "16",
+        "originalRow": "[\"产险综合偿付能力\",\"216.9%\",\"2026-09-30\",\"产险口径\"]"
+      }
+    },
+    {
+      "id": "pa_parent_equity",
+      "metric": "equity_parent",
+      "value": "1044366000000",
+      "rawValue": "1044366000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／合并资产负债表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "集团归母净资产",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "17",
+        "originalRow": "[\"集团归母净资产\",\"10,443.66亿元\",\"2026-09-30\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_shares",
+      "metric": "shares_outstanding",
+      "value": "18107641995",
+      "rawValue": "18107641995",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "issuer",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.3股本说明；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "期末总股本",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "18",
+        "originalRow": "[\"期末总股本\",\"18,107,641,995股\",\"2026-09-30\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_cfo",
+      "metric": "operating_cash_flow",
+      "value": "566872000000",
+      "rawValue": "566872000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "合并现金流量表／4.1；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "合并经营现金流",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "19",
+        "originalRow": "[\"合并经营现金流\",\"5,668.72亿元 / +66.7%\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_parent_income_cash",
+      "metric": "investment_income_cash_received",
+      "value": "44024000000",
+      "rawValue": "44024000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "parent_company",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "母公司现金流量表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "含投资收益现金；未拆出纯子公司现金上缴，不等于全部是子公司股息。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "母公司取得投资收益现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "20",
+        "originalRow": "[\"母公司取得投资收益现金\",\"440.24亿元\",\"2026前三季度\",\"母公司原表\"]"
+      }
+    },
+    {
+      "id": "pa_parent_distribution",
+      "metric": "dividends_and_interest_paid_cash",
+      "value": "42758000000",
+      "rawValue": "42758000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "parent_company",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "母公司现金流量表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "母公司分配股利及偿付利息现金",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "21",
+        "originalRow": "[\"母公司分配股利及偿付利息现金\",\"427.58亿元\",\"2026前三季度\",\"母公司原表\"]"
+      }
+    },
+    {
+      "id": "pa_parent_cash_equiv",
+      "metric": "cash_and_cash_equivalents",
+      "value": "16478000000",
+      "rawValue": "16478000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "parent_company",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "母公司现金流量表期末；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "母公司现金及现金等价物",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "22",
+        "originalRow": "[\"母公司现金及现金等价物\",\"164.78亿元\",\"2026-09-30\",\"母公司原表\"]"
+      }
+    },
+    {
+      "id": "pa_parent_cash",
+      "metric": "cash",
+      "value": "11008000000",
+      "rawValue": "11008000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "parent_company",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "母公司资产负债表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "母公司货币资金",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "23",
+        "originalRow": "[\"母公司货币资金\",\"110.08亿元\",\"2026-09-30\",\"母公司原表\"]"
+      }
+    },
+    {
+      "id": "pa_parent_term_deposit",
+      "metric": "term_deposits",
+      "value": "16003000000",
+      "rawValue": "16003000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "parent_company",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "母公司资产负债表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "母公司定期存款",
+        "periodLabel": "2026-09-30",
+        "originalIndex": "24",
+        "originalRow": "[\"母公司定期存款\",\"160.03亿元\",\"2026-09-30\",\"母公司原表\"]"
+      }
+    },
+    {
+      "id": "pa_stat_eps",
+      "metric": "basic_eps",
+      "value": "5.55",
+      "rawValue": "5.55",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "weighted_average_basic"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／合并利润表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "法定基本每股收益",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "25",
+        "originalRow": "[\"法定基本每股收益\",\"5.55元\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_diluted_eps",
+      "metric": "diluted_eps",
+      "value": "4.79",
+      "rawValue": "4.79",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "weighted_average_diluted"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1／合并利润表；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "法定稀释每股收益",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "26",
+        "originalRow": "[\"法定稀释每股收益\",\"4.79元\",\"2026前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_operating_return",
+      "metric": "operating_investment_return_assumption",
+      "value": "0.04",
+      "rawValue": "0.04",
+      "unit": "ratio",
+      "currency": null,
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "life_health_non_vfa",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "3.4.1营运利润定义；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "本项为本期公司分析口径的假设定义，不是市场实绩，不是研究者未来收益预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营运利润调整投资回报假设",
+        "periodLabel": "2026前三季度",
+        "originalIndex": "27",
+        "originalRow": "[\"营运利润调整投资回报假设\",\"4.0%（非实际收益率）\",\"2026前三季度\",\"寿险及健康险口径\"]"
+      }
+    },
+    {
+      "id": "pa_prior_9m_profit",
+      "metric": "net_profit_parent",
+      "value": "132856000000",
+      "rawValue": "132856000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2025-01-01",
+        "end": "2025-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-q3-20261028",
+          "locator": "2.1上年同期列；原表除另注外为人民币百万元，标准化为元"
+        }
+      ],
+      "notes": "原件披露的本期数据；非研究未来预测。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "上年同期归母利润",
+        "periodLabel": "2025前三季度",
+        "originalIndex": "28",
+        "originalRow": "[\"上年同期归母利润\",\"1,328.56亿元\",\"2025前三季度\",\"公司原件（未经审计）\"]"
+      }
+    },
+    {
+      "id": "pa_fy2025",
+      "metric": "net_profit_parent",
+      "value": "134800000000",
+      "rawValue": "134800000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "mx_finance_data_7c50d0ad.md，2025年报归母1348亿元（舍入）"
+        }
+      ],
+      "notes": "供应商已显示数值；概数不替换原件精确值。"
+    },
+    {
+      "id": "pa_ttm_profit",
+      "metric": "net_profit_parent_ttm",
+      "value": "98589000000",
+      "rawValue": "98589000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2025-10-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "derived",
+      "verification": "provider_reported",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "pingan-quotes-20261028",
+          "locator": "年度概数与季度原件桥接"
+        }
+      ],
+      "notes": "TTM约数，年度输入供应商舍入；不是可分配现金或正常化利润。",
+      "derivation": {
+        "formula": "FY2025 net_profit_parent - 9M2025 net_profit_parent + 9M2026 net_profit_parent",
+        "inputs": [
+          "XSHG.601318__financials__20260930__20261028-filing-v1#pa_fy2025",
+          "XSHG.601318__financials__20260930__20261028-filing-v1#pa_prior_9m_profit",
+          "XSHG.601318__financials__20260930__20261028-filing-v1#pa_profit"
+        ]
+      }
+    }
+  ]
+}
