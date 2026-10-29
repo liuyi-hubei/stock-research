@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "luzhou-quote-20261029",
+  "provider": "东方财富公开行情接口；腾讯复核收盘",
+  "type": "public_quote_api",
+  "publishedAt": null,
+  "collectedAt": "2026-10-29",
+  "originalFilename": "quote-eastmoney-live.json",
+  "originalSha256": "49c70e69880679c515c4359b0823d4d3d2ad4599d62c75d6990293406d15ae8d",
+  "evidence": {
+    "file": "evidence/luzhou-quote-20261029.md",
+    "sha256": "9971ab9919c1025d99570b30a6a6e22f7f7e923b26060606d1fb37ab302a7fc8"
+  },
+  "notes": "妙想鉴权失败后兜底；供应商PE/PB分母刷新时差已披露。"
+}

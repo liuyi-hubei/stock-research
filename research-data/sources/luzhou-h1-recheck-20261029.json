@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "luzhou-h1-recheck-20261029",
+  "provider": "公司2026半年报原件复核",
+  "type": "source_document_extract",
+  "publishedAt": "2026-08-26",
+  "collectedAt": "2026-10-29",
+  "originalFilename": "1225501255.PDF",
+  "originalSha256": "33fbc65e9bc5c41a80d2cc5f8ae0eaa2990424c81bb93b90029ccdb05e092ade",
+  "evidence": {
+    "file": "evidence/luzhou-h1-recheck-20261029.md",
+    "sha256": "22668b7714398e01679791477fba09a8d7cd97d2a73a5826dcdf47b74a7330c4"
+  },
+  "notes": "既有原件定向复读H1比较数，非刷新旧快照。"
+}

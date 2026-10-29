@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "luzhou-q3-20261029",
+  "provider": "巨潮资讯：泸州老窖三季报原件",
+  "type": "source_document_extract",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-29",
+  "originalFilename": "1225639079.PDF",
+  "originalSha256": "ce2027403f8c079bc70f34a7de4aa72d0b9a70ad76185a27cd0a3c4bde1052dd",
+  "evidence": {
+    "file": "evidence/luzhou-q3-20261029.md",
+    "sha256": "a9edb0dc7d52f17a7a1e79bc72898d8cad42b78bb765f03daa0c38681ea81e86"
+  },
+  "notes": "公告日期2026-10-30，2026-10-29已取得；正文和原始数据期间分别保留。董事会未批准具体2026股息。"
+}

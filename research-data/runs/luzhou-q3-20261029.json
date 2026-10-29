@@ -1,0 +1,98 @@
+{
+  "runId": "luzhou-q3-20261029",
+  "agent": "codex",
+  "date": "2026-10-29",
+  "securityId": "XSHE.000568",
+  "oldCurrent": {
+    "schemaVersion": "1.0",
+    "securityId": "XSHE.000568",
+    "datasets": {
+      "quotes": {
+        "snapshotId": "XSHE.000568__quotes__20261023__20261024-mx-v1",
+        "file": "securities/XSHE.000568/quotes/2026-10-23__2026-10-24__mx-v1.json",
+        "sha256": "89291513785340a09da07576a38f0c5477848f8fd4c32733fac1ad6a1a17ee4b"
+      },
+      "financials": {
+        "snapshotId": "XSHE.000568__financials__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/financials/2026-10-25__legacy-v1.json",
+        "sha256": "0d5074f4ad12361bebe9658c43d73d70d772247bff79b77b00bb7738564a67e3"
+      },
+      "dividends": {
+        "snapshotId": "XSHE.000568__dividends__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/dividends/2026-10-25__legacy-v1.json",
+        "sha256": "09c7542ac97b2a732b2dd0c2e937597a686fe1fed0306ef8a74ee26630cadd43"
+      },
+      "operating": {
+        "snapshotId": "XSHE.000568__operating__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/operating/2026-10-25__legacy-v1.json",
+        "sha256": "f38570142fe2af753d03fc09e5b1d18f92f03e9965ca6b461a6e6ae5a68ce0a2"
+      },
+      "events": {
+        "snapshotId": "XSHE.000568__events__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/events/2026-10-25__legacy-v1.json",
+        "sha256": "eb098157086c56b597e800d864ef4e5e64134aeb20332dafe1b375873c66f3ad"
+      }
+    }
+  },
+  "newCurrent": {
+    "schemaVersion": "1.0",
+    "securityId": "XSHE.000568",
+    "datasets": {
+      "quotes": {
+        "snapshotId": "XSHE.000568__quotes__20261029__20261029-public-v1",
+        "file": "securities/XSHE.000568/quotes/2026-10-29__2026-10-29-public-v1.json",
+        "sha256": "9e4f6a8fa2afe1104eb70f96120fd990ef164312c49cdf0aac4f14428a87d2b9"
+      },
+      "financials": {
+        "snapshotId": "XSHE.000568__financials__20260930__20261029-v1",
+        "file": "securities/XSHE.000568/financials/2026-09-30__2026-10-29-v1.json",
+        "sha256": "d9f9a574622a979de115c1c9aa0136e1578b2fe1d7a881f7c058f31ce7961247"
+      },
+      "dividends": {
+        "snapshotId": "XSHE.000568__dividends__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/dividends/2026-10-25__legacy-v1.json",
+        "sha256": "09c7542ac97b2a732b2dd0c2e937597a686fe1fed0306ef8a74ee26630cadd43"
+      },
+      "operating": {
+        "snapshotId": "XSHE.000568__operating__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/operating/2026-10-25__legacy-v1.json",
+        "sha256": "f38570142fe2af753d03fc09e5b1d18f92f03e9965ca6b461a6e6ae5a68ce0a2"
+      },
+      "events": {
+        "snapshotId": "XSHE.000568__events__20261025-legacy-v1",
+        "file": "securities/XSHE.000568/events/2026-10-25__legacy-v1.json",
+        "sha256": "eb098157086c56b597e800d864ef4e5e64134aeb20332dafe1b375873c66f3ad"
+      }
+    }
+  },
+  "oldPublication": {
+    "securityId": "XSHE.000568",
+    "financialPeriod": "2026H1（截至2026-06-30）",
+    "statementSnapshotIds": [
+      "XSHE.000568__financials__20261025-legacy-v1",
+      "XSHE.000568__dividends__20261025-legacy-v1",
+      "XSHE.000568__operating__20261025-legacy-v1",
+      "XSHE.000568__events__20261025-legacy-v1"
+    ]
+  },
+  "newPublication": {
+    "securityId": "XSHE.000568",
+    "financialPeriod": "2026Q3",
+    "statementSnapshotIds": [
+      "XSHE.000568__financials__20260930__20261029-v1"
+    ]
+  },
+  "changes": [
+    "2026H1→2026Q3原件事实及研究，累计与单季分开",
+    "行情10月23日69.99→10月29日70.06；东方财富公开接口，妙想403两次",
+    "保留64/70/80亿元及原增长、分配、退出PE、11%门槛，仅更新完成条件及风险判断；未另造生命周期估值",
+    "新快照不覆盖旧数据，未提交/推送/部署"
+  ],
+  "unresolved": [
+    "产品量价与渠道真实库存",
+    "维护/扩张拆分及母公司可分现金",
+    "2026具体年度股息方案与权利日",
+    "供应商PE/PB财务分母更新时间"
+  ],
+  "websiteProjectionUpdated": true
+}

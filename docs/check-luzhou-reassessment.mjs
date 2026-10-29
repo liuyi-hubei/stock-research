@@ -11,7 +11,7 @@ assert.equal(matches.length,1);
 const s=matches[0],m=s.model,r=c.window.ShareholderModel.evaluate(s);
 assert.equal(m.parameterReview.reviewedAt,s.researchDate);
 assert.equal(m.rankingDecision.reviewedAt,s.researchDate);
-assert.equal(c.window.ResearchFreshness.financialEnd(m.financialPeriod),'2026-06-30');
+assert.equal(c.window.ResearchFreshness.financialEnd(m.financialPeriod),'2026-09-30');
 for(let i=0;i<3;i++){
  const a=m.assumptions[i],v=r.scenarios[i];
  assert.equal(a.growthRates.length,10);assert.equal(a.payoutRates.length,10);

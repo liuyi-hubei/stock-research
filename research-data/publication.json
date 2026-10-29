@@ -273,12 +273,9 @@
     },
     "000568": {
       "securityId": "XSHE.000568",
-      "financialPeriod": "2026H1（截至2026-06-30）",
+      "financialPeriod": "2026Q3",
       "statementSnapshotIds": [
-        "XSHE.000568__financials__20261025-legacy-v1",
-        "XSHE.000568__dividends__20261025-legacy-v1",
-        "XSHE.000568__operating__20261025-legacy-v1",
-        "XSHE.000568__events__20261025-legacy-v1"
+        "XSHE.000568__financials__20260930__20261029-v1"
       ]
     },
     "00700": {

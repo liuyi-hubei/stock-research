@@ -1,0 +1,1213 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000568__financials__20260930__20261029-v1",
+  "securityId": "XSHE.000568",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-29",
+  "acceptance": "accepted",
+  "createdBy": "codex/luzhou-q3-update",
+  "supersedes": null,
+  "notes": "三季报原件未经审计；公告标2026-10-30，10月29日已实际取得。原H1和legacy快照保留；差分数据明确derived。",
+  "observations": [
+    {
+      "id": "revenue_9m",
+      "metric": "revenue",
+      "value": "14667616562.73",
+      "rawValue": "14667616562.73",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2页"
+        }
+      ],
+      "notes": "第2页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"营业收入\", \"146.68亿元 / 同比−36.58%\", \"2026Q1—Q3\", \"第2页\"]",
+        "originalIndex": "3",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "profit_9m",
+      "metric": "net_profit_parent",
+      "value": "5671059241.53",
+      "rawValue": "5671059241.53",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2页"
+        }
+      ],
+      "notes": "第2页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"归母净利润\", \"56.71亿元 / 同比−47.31%\", \"2026Q1—Q3\", \"第2页\"]",
+        "originalIndex": "4",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "adjusted_9m",
+      "metric": "adjusted_net_profit_parent",
+      "value": "5620637939.28",
+      "rawValue": "5620637939.28",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2页"
+        }
+      ],
+      "notes": "第2页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"扣非归母\", \"56.21亿元 / 同比−47.67%\", \"2026Q1—Q3\", \"第2页\"]",
+        "originalIndex": "5",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "revenue_q3",
+      "metric": "revenue",
+      "value": "4195391986.95",
+      "rawValue": "4195391986.95",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2页"
+        }
+      ],
+      "notes": "第2页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度收入",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度收入\", \"41.95亿元 / 同比−37.14%\", \"2026Q3单季\", \"第2页\"]",
+        "originalIndex": "6",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "profit_q3",
+      "metric": "net_profit_parent",
+      "value": "1331795155.20",
+      "rawValue": "1331795155.20",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2页"
+        }
+      ],
+      "notes": "第2页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度归母",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度归母\", \"13.32亿元 / 同比−57.03%\", \"2026Q3单季\", \"第2页\"]",
+        "originalIndex": "7",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "adjusted_q3",
+      "metric": "adjusted_net_profit_parent",
+      "value": "1329187091.79",
+      "rawValue": "1329187091.79",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2页"
+        }
+      ],
+      "notes": "第2页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度扣非归母",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度扣非归母\", \"13.29亿元 / 同比−57.01%\", \"2026Q3单季\", \"第2页\"]",
+        "originalIndex": "8",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "ocf_9m",
+      "metric": "operating_cash_flow",
+      "value": "4445413276.27",
+      "rawValue": "4445413276.27",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第2、10页"
+        }
+      ],
+      "notes": "第2、10页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营净现金",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"经营净现金\", \"44.45亿元 / 同比−54.74%\", \"2026Q1—Q3\", \"第2、10页\"]",
+        "originalIndex": "9",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "sales_cash_9m",
+      "metric": "sales_cash_received",
+      "value": "15160944262.33",
+      "rawValue": "15160944262.33",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第10页"
+        }
+      ],
+      "notes": "含税现金流，与不含税收入不直接相除认定收现率",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "销售收现",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"销售收现\", \"151.61亿元\", \"2026Q1—Q3\", \"含税现金流，与不含税收入不直接相除认定收现率\"]",
+        "originalIndex": "10",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "capex_9m",
+      "metric": "ppe_cash_payments",
+      "value": "947762368.34",
+      "rawValue": "947762368.34",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第11页"
+        }
+      ],
+      "notes": "购建现金，不等于维护资本开支",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建长期资产付款",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"购建长期资产付款\", \"9.48亿元\", \"2026Q1—Q3\", \"购建现金，不等于维护资本开支\"]",
+        "originalIndex": "11",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "after_capex_9m",
+      "metric": "cash_after_ppe",
+      "value": "3497650907.93",
+      "rawValue": "3497650907.93",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "derived",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第10—11页"
+        }
+      ],
+      "notes": "44.4541327627−9.4776236834；非普通股自由现金",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建后现金观察差额",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"购建后现金观察差额\", \"34.98亿元\", \"2026Q1—Q3\", \"44.4541327627−9.4776236834；非普通股自由现金\"]",
+        "originalIndex": "12",
+        "scale": "8"
+      },
+      "derivation": {
+        "formula": "ocf_9m - capex_9m",
+        "inputs": [
+          "XSHE.000568__financials__20260930__20261029-v1#ocf_9m",
+          "XSHE.000568__financials__20260930__20261029-v1#capex_9m"
+        ]
+      }
+    },
+    {
+      "id": "cash_sep",
+      "metric": "cash",
+      "value": "22502583597.89",
+      "rawValue": "22502583597.89",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第6页"
+        }
+      ],
+      "notes": "第6页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "货币资金",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"货币资金\", \"225.03亿元\", \"2026-09-30\", \"第6页\"]",
+        "originalIndex": "13",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "cash_equivalents_sep",
+      "metric": "cash_equivalents",
+      "value": "22156056956.73",
+      "rawValue": "22156056956.73",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第11页"
+        }
+      ],
+      "notes": "第11页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "现金及现金等价物",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"现金及现金等价物\", \"221.56亿元\", \"2026-09-30\", \"第11页\"]",
+        "originalIndex": "14",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "contract_sep",
+      "metric": "contract_liability",
+      "value": "2316469718.53",
+      "rawValue": "2316469718.53",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第7页"
+        }
+      ],
+      "notes": "第7页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "合同负债",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"合同负债\", \"23.16亿元\", \"2026-09-30\", \"第7页\"]",
+        "originalIndex": "15",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "inventory_sep",
+      "metric": "inventory",
+      "value": "15679403351.42",
+      "rawValue": "15679403351.42",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第6页"
+        }
+      ],
+      "notes": "第6页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "公司存货",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"公司存货\", \"156.79亿元\", \"2026-09-30\", \"第6页\"]",
+        "originalIndex": "16",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "short_debt_sep",
+      "metric": "short_term_debt",
+      "value": "3001758333.34",
+      "rawValue": "3001758333.34",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第7页"
+        }
+      ],
+      "notes": "第7页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "短期借款",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"短期借款\", \"30.02亿元\", \"2026-09-30\", \"第7页\"]",
+        "originalIndex": "17",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "due_debt_sep",
+      "metric": "current_noncurrent_liabilities",
+      "value": "2226866730.16",
+      "rawValue": "2226866730.16",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第7页"
+        }
+      ],
+      "notes": "第7页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "一年内到期非流动负债",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"一年内到期非流动负债\", \"22.27亿元\", \"2026-09-30\", \"第7页\"]",
+        "originalIndex": "18",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "long_debt_sep",
+      "metric": "long_term_debt",
+      "value": "727801891.51",
+      "rawValue": "727801891.51",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第7页"
+        }
+      ],
+      "notes": "第7页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "长期借款",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"长期借款\", \"7.28亿元\", \"2026-09-30\", \"第7页\"]",
+        "originalIndex": "19",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "shares_sep",
+      "metric": "shares_outstanding",
+      "value": "1471901463",
+      "rawValue": "1471901463",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "ordinary_issued"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第8页"
+        }
+      ],
+      "notes": "第8页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "普通股本",
+        "periodLabel": "2026-09-30",
+        "originalRow": "[\"普通股本\", \"14.71901463亿股\", \"2026-09-30\", \"第8页\"]",
+        "originalIndex": "20",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "distribution_interest_9m",
+      "metric": "distribution_and_interest_payments",
+      "value": "8602991508.17",
+      "rawValue": "8602991508.17",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第11页"
+        }
+      ],
+      "notes": "复合现金项目，不等于普通股分红",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "股利、利润或利息付款",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"股利、利润或利息付款\", \"86.03亿元\", \"2026Q1—Q3\", \"复合现金项目，不等于普通股分红\"]",
+        "originalIndex": "21",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "cost_9m",
+      "metric": "cost_of_revenue",
+      "value": "2399983662.33",
+      "rawValue": "2399983662.33",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第8页"
+        }
+      ],
+      "notes": "第8页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业成本",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"营业成本\", \"24.00亿元\", \"2026Q1—Q3\", \"第8页\"]",
+        "originalIndex": "22",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "selling_9m",
+      "metric": "selling_expenses",
+      "value": "2000805628.94",
+      "rawValue": "2000805628.94",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第8页"
+        }
+      ],
+      "notes": "第8页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "销售费用",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"销售费用\", \"20.01亿元\", \"2026Q1—Q3\", \"第8页\"]",
+        "originalIndex": "23",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "tax_surcharge_9m",
+      "metric": "taxes_and_surcharges",
+      "value": "2512295331.83",
+      "rawValue": "2512295331.83",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "第8页"
+        }
+      ],
+      "notes": "第8页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "税金及附加",
+        "periodLabel": "2026Q1—Q3",
+        "originalRow": "[\"税金及附加\", \"25.12亿元\", \"2026Q1—Q3\", \"第8页\"]",
+        "originalIndex": "24",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "revenue_h1",
+      "metric": "revenue",
+      "value": "10472224575.78",
+      "rawValue": "10472224575.78",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报第7、41—45页"
+        }
+      ],
+      "notes": "半年报第7、41—45页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1营业收入（比较基准）",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"H1营业收入（比较基准）\", \"104.72亿元\", \"2026H1\", \"半年报第7、41—45页\"]",
+        "originalIndex": "25",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "profit_h1",
+      "metric": "net_profit_parent",
+      "value": "4339264086.33",
+      "rawValue": "4339264086.33",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报第7、41—45页"
+        }
+      ],
+      "notes": "半年报第7、41—45页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1归母（比较基准）",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"H1归母（比较基准）\", \"43.39亿元\", \"2026H1\", \"半年报第7、41—45页\"]",
+        "originalIndex": "26",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "ocf_h1",
+      "metric": "operating_cash_flow",
+      "value": "2081610957.97",
+      "rawValue": "2081610957.97",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报第7、41—45页"
+        }
+      ],
+      "notes": "半年报第7、41—45页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1经营现金（比较基准）",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"H1经营现金（比较基准）\", \"20.82亿元\", \"2026H1\", \"半年报第7、41—45页\"]",
+        "originalIndex": "27",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "sales_cash_h1",
+      "metric": "sales_cash_received",
+      "value": "10744210447.26",
+      "rawValue": "10744210447.26",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报第7、41—45页"
+        }
+      ],
+      "notes": "半年报第7、41—45页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1销售收现（比较基准）",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"H1销售收现（比较基准）\", \"107.44亿元\", \"2026H1\", \"半年报第7、41—45页\"]",
+        "originalIndex": "28",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "cost_h1",
+      "metric": "cost_of_revenue",
+      "value": "1534654594.77",
+      "rawValue": "1534654594.77",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报第7、41—45页"
+        }
+      ],
+      "notes": "半年报第7、41—45页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1营业成本（比较基准）",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"H1营业成本（比较基准）\", \"15.35亿元\", \"2026H1\", \"半年报第7、41—45页\"]",
+        "originalIndex": "29",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "selling_h1",
+      "metric": "selling_expenses",
+      "value": "1329931987.36",
+      "rawValue": "1329931987.36",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报第7、41—45页"
+        }
+      ],
+      "notes": "半年报第7、41—45页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1销售费用（比较基准）",
+        "periodLabel": "2026H1",
+        "originalRow": "[\"H1销售费用（比较基准）\", \"13.30亿元\", \"2026H1\", \"半年报第7、41—45页\"]",
+        "originalIndex": "30",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "contract_june",
+      "metric": "contract_liability",
+      "value": "2438299456.97",
+      "rawValue": "2438299456.97",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-06-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-h1-recheck-20261029",
+          "locator": "半年报合并资产负债表及合同负债附注"
+        }
+      ],
+      "notes": "半年报合并资产负债表及合同负债附注",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "H1末合同负债（比较基准）",
+        "periodLabel": "2026-06-30",
+        "originalRow": "[\"H1末合同负债（比较基准）\", \"24.38亿元\", \"2026-06-30\", \"半年报合并资产负债表及合同负债附注\"]",
+        "originalIndex": "31",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "ocf_q3",
+      "metric": "operating_cash_flow",
+      "value": "2363802318.30",
+      "rawValue": "2363802318.30",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "derived",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "三季报第10页减半年报第44页"
+        }
+      ],
+      "notes": "三季报第10页减半年报第44页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度经营现金（差分）",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度经营现金（差分）\", \"23.64亿元\", \"2026Q3单季\", \"三季报第10页减半年报第44页\"]",
+        "originalIndex": "32",
+        "scale": "8"
+      },
+      "derivation": {
+        "formula": "ocf_9m - ocf_h1",
+        "inputs": [
+          "XSHE.000568__financials__20260930__20261029-v1#ocf_9m",
+          "XSHE.000568__financials__20260930__20261029-v1#ocf_h1"
+        ]
+      }
+    },
+    {
+      "id": "sales_cash_q3",
+      "metric": "sales_cash_received",
+      "value": "4416733815.07",
+      "rawValue": "4416733815.07",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "derived",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "derived",
+      "verification": "source_extracted",
+      "precision": "derived",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "luzhou-q3-20261029",
+          "locator": "三季报第10页减半年报第44页"
+        }
+      ],
+      "notes": "三季报第10页减半年报第44页",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度销售收现（差分）",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度销售收现（差分）\", \"44.17亿元\", \"2026Q3单季\", \"三季报第10页减半年报第44页\"]",
+        "originalIndex": "33",
+        "scale": "8"
+      },
+      "derivation": {
+        "formula": "sales_cash_9m - sales_cash_h1",
+        "inputs": [
+          "XSHE.000568__financials__20260930__20261029-v1#sales_cash_9m",
+          "XSHE.000568__financials__20260930__20261029-v1#sales_cash_h1"
+        ]
+      }
+    }
+  ]
+}
