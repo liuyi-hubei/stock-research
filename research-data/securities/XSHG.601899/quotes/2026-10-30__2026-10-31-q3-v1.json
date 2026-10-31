@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601899__quotes__20261030__20261031-q3-v1",
+  "securityId": "XSHG.601899",
+  "dataset": "quotes",
+  "asOf": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-20261031",
+  "supersedes": "XSHG.601899__quotes__20261023__20261024-mx-v1",
+  "notes": "主值来自两次妙想定向查询；close来自已保存的同日妙想行情数据。公开行情页面PB、市值与妙想不同，差异保留，不替换/平均。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "27.60",
+      "rawValue": "27.60",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quote-601899-20261031",
+          "locator": "妙想定向行情，2026-10-30"
+        }
+      ],
+      "notes": "不复权收盘；复用上一轮已保存的妙想收盘数据。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "10.27",
+      "rawValue": "10.27",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quote-601899-20261031",
+          "locator": "妙想定向行情，2026-10-30"
+        }
+      ],
+      "notes": "妙想2026-10-30定向查询；公开行情页面同值。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "3.519",
+      "rawValue": "3.519",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quote-601899-20261031",
+          "locator": "妙想定向行情，2026-10-30"
+        }
+      ],
+      "notes": "妙想2026-10-30定向查询；中财网公开行情页为2.62倍，保留差异。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "711400000000",
+      "rawValue": "711400000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quote-601899-20261031",
+          "locator": "妙想定向行情，2026-10-30"
+        }
+      ],
+      "notes": "妙想显示7114亿元（服务商舍入）；中财网按收盘×股本估算约7339.1亿元，差异保留。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "26590000000",
+      "rawValue": "26590000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quote-601899-20261031",
+          "locator": "妙想定向行情，2026-10-30"
+        }
+      ],
+      "notes": "妙想显示265.9亿股（服务商舍入）；中财网页显示265.91亿股。"
+    }
+  ]
+}

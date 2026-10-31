@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-source-600900-20261031",
+  "provider": "长江电力公告（东方财富公告镜像）",
+  "type": "source_document_extract",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "originalFilename": "search-600900.pdf",
+  "originalSha256": "ba9cad3b152085beb53f5753982e76002c607291738839c42d5dae150a9e179e",
+  "evidence": {
+    "file": "evidence/q3-source-600900-20261031.md",
+    "sha256": "d01a0617d2ebd1e1948253dfb6de92aab369c584fba4d479050bd2e806ce6968"
+  },
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610301831239290_1.pdf",
+  "notes": "公司2026年第三季度报告，未经审计；本次仅录入可从财务报表直接提取的字段。"
+}

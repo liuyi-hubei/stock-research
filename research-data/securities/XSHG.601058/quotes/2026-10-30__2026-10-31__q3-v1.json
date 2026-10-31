@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601058__quotes__20261030__20261031-q3-v1",
+  "securityId": "XSHG.601058",
+  "dataset": "quotes",
+  "asOf": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/20261031-q3-batch5",
+  "supersedes": null,
+  "notes": "三季报披露后的行情复核。收盘价、PE(TTM)、PB、总市值与总股本来自妙想金融数据（东方财富数据链）；PE/PB为供应商TTM口径，不是正常化利润估值；总股本为供应商近似值，不替换模型使用的精确股数。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "11.66",
+      "rawValue": "11.66",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-601058-20261031",
+          "locator": "2026-10-30收盘价"
+        }
+      ],
+      "notes": "不复权收盘价，作为研究价格的刷新基准。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "9.955",
+      "rawValue": "9.955",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-601058-20261031",
+          "locator": "市盈率PE(TTM)"
+        }
+      ],
+      "notes": "供应商TTM口径，含周期与非经常项目，不等于正常化估值。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "1.694",
+      "rawValue": "1.694",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-601058-20261031",
+          "locator": "市净率"
+        }
+      ],
+      "notes": "供应商口径市净率。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "38340000000",
+      "rawValue": "383.4亿",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-601058-20261031",
+          "locator": "总市值"
+        }
+      ],
+      "notes": "供应商口径总市值。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "3288000000",
+      "rawValue": "32.88亿股",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-601058-20261031",
+          "locator": "总股本"
+        }
+      ],
+      "notes": "供应商近似值（披露精度0.01亿股），不替换模型使用的精确股数。"
+    }
+  ]
+}

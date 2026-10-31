@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-full-quote-600900-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-31",
+  "originalFilename": "mx_finance_data_e7abd475.md",
+  "originalSha256": "b99e03582cfe95f14230102fe999ceff63fe5c9dbb1fadfb39c0dac77a6551db",
+  "evidence": {
+    "file": "evidence/mx-full-quote-600900-20261031.md",
+    "sha256": "365eff60ed567202f717f4e72d6a4d0f6eb329a626b4da9838af0bcf5495e257"
+  },
+  "url": "https://quote.eastmoney.com/sh600900.html",
+  "notes": "定向复查总市值、PB、PE(TTM)和总股本。API识别实体数3并警告覆盖1/3实体，但结果表明确为长江电力且返回全部四个指标；股本为舍入244.7亿股。"
+}

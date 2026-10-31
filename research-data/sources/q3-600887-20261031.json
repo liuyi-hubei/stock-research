@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-600887-20261031",
+  "provider": "伊利股份公告（AN202610291831182299）与妙想金融数据",
+  "type": "public_disclosure_review",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/q3-batch4-20261031.md",
+    "sha256": "8c858b40d939ec71059a841d7e61e30ee16dc306845300ff4fb17573e41dbb52"
+  },
+  "notes": "2026年第三季度报告原文表格，未经审计；2026年第三季度报告（未经审计）主要会计数据；合并口径、人民币元。单季与累计分开记录，不相互推导；数字与妙想金融数据交叉校验，冲突时以公告为准。"
+}

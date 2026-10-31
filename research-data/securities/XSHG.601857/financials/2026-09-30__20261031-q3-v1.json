@@ -1,0 +1,355 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601857__financials__20260930__20261031-q3-v1",
+  "securityId": "XSHG.601857",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-research",
+  "supersedes": "XSHG.601857__financials__20261025-legacy-v1",
+  "notes": "公司三季报原PDF；中国企业会计准则。",
+  "observations": [
+    {
+      "id": "q3_20261031_601857_revenue_9m",
+      "metric": "revenue",
+      "value": "2321064000000",
+      "rawValue": "2321064000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"营业收入\", \"23210.64亿元\", \"2026年前三季度\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "100",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_profit_9m",
+      "metric": "net_profit_parent",
+      "value": "155773000000",
+      "rawValue": "155773000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"归母净利润\", \"1557.73亿元\", \"2026年前三季度\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "101",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_adjusted_9m",
+      "metric": "adjusted_net_profit_parent",
+      "value": "158899000000",
+      "rawValue": "158899000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母净利润",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"扣非归母净利润\", \"1588.99亿元\", \"2026年前三季度\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "102",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_cfo_9m",
+      "metric": "operating_cash_flow",
+      "value": "373539000000",
+      "rawValue": "373539000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营现金流净额",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"经营现金流净额\", \"3735.39亿元\", \"2026年前三季度\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "103",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_capex_9m",
+      "metric": "ppe_cash_payments",
+      "value": "159463000000",
+      "rawValue": "159463000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第16页合并现金流量表，购建长期资产支付现金"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建长期资产现金",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"购建长期资产现金\", \"1594.63亿元\", \"2026年前三季度\", \"三季报合并现金流量表，购建长期资产支付现金\"]",
+        "originalIndex": "104",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_revenue_q3",
+      "metric": "revenue",
+      "value": "793573000000",
+      "rawValue": "793573000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度营业收入",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度营业收入\", \"7935.73亿元\", \"2026Q3单季\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "105",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_profit_q3",
+      "metric": "net_profit_parent",
+      "value": "51839000000",
+      "rawValue": "51839000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度归母净利润",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度归母净利润\", \"518.39亿元\", \"2026Q3单季\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "106",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_adjusted_q3",
+      "metric": "adjusted_net_profit_parent",
+      "value": "53366000000",
+      "rawValue": "53366000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度扣非归母",
+        "periodLabel": "2026Q3单季",
+        "originalRow": "[\"第三季度扣非归母\", \"533.66亿元\", \"2026Q3单季\", \"三季报片段中国企业会计准则主要财务数据；现金流量表\"]",
+        "originalIndex": "107",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_601857_eps_9m",
+      "metric": "basic_eps",
+      "value": "0.85",
+      "rawValue": "0.85",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent_equity",
+        "accountingStandard": "PRC_GAAP",
+        "adjustment": "as_disclosed",
+        "shareBasis": "weighted_average"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "petrochina-q3-20261031",
+          "locator": "PDF第2页中国企业会计准则主要会计数据"
+        }
+      ],
+      "notes": "本地PDF提取；同期比较经追溯调整。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "基本每股收益",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"基本每股收益\", \"0.85元\", \"2026年前三季度\", \"PDF第2页中国企业会计准则\"]",
+        "originalIndex": "108"
+      }
+    }
+  ]
+}

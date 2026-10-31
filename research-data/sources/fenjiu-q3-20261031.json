@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "fenjiu-q3-20261031",
+  "provider": "东方财富公告库（妙想金融资讯检索返回公告原文）",
+  "type": "issuer_filing",
+  "publishedAt": "2026-10-28",
+  "collectedAt": "2026-10-31",
+  "originalFilename": "H2_AN202610281831123338_1.pdf",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/fenjiu-q3-20261031.md",
+    "sha256": "d64f57d4cbb53417bb83b3463f476c2a0a8f80c64f1fef3da84e47857db60c7d"
+  },
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610281831123338_1.pdf",
+  "notes": "山西汾酒2026年第三季度报告；公告编号AN202610281831123338_1，检索索引时间2026-10-29 00:18，公告编号日期2026-10-28。本次以检索返回的公告原文「主要会计数据和财务指标」表格取值，未独立下载PDF逐页复核；三季报未经审计。"
+}

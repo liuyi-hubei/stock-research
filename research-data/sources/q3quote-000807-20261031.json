@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3quote-000807-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "market_data",
+  "title": "云铝股份 2026-10-30 行情",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/q3-batch5-20261031.md",
+    "sha256": "e5270e50de8efa139ed6a96b9a9f0f65e7101ba176a22449ef33596beaf01cc0"
+  },
+  "notes": "收盘价 / PE(TTM) / PB / 总市值 / 总股本，供应商口径。"
+}

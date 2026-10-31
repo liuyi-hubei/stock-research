@@ -4,12 +4,13 @@
   "reports": {
     "300059": {
       "securityId": "XSHE.300059",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.300059__financials__20261025-legacy-v1",
         "XSHE.300059__dividends__20261025-legacy-v1",
         "XSHE.300059__operating__20261025-legacy-v1",
-        "XSHE.300059__events__20261025-legacy-v1"
+        "XSHE.300059__events__20261025-legacy-v1",
+        "XSHE.300059__financials__20260930__20261031-q3-v1"
       ]
     },
     "300750": {
@@ -24,76 +25,84 @@
     },
     "300760": {
       "securityId": "XSHE.300760",
-      "financialPeriod": "2026H1（截至2026-06-30）",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.300760__financials__20261025-legacy-v1",
         "XSHE.300760__dividends__20261025-legacy-v1",
         "XSHE.300760__operating__20261025-legacy-v1",
-        "XSHE.300760__events__20261025-legacy-v1"
+        "XSHE.300760__events__20261025-legacy-v1",
+        "XSHE.300760__financials__20260930__20261031-q3-v1"
       ]
     },
     "600036": {
       "securityId": "XSHG.600036",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600036__financials__20261025-legacy-v1",
         "XSHG.600036__dividends__20261025-legacy-v1",
         "XSHG.600036__operating__20261025-legacy-v1",
-        "XSHG.600036__events__20261025-legacy-v1"
+        "XSHG.600036__events__20261025-legacy-v1",
+        "XSHG.600036__financials__20260930__20261031-q3-v1"
       ]
     },
     "600309": {
       "securityId": "XSHG.600309",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
-        "XSHG.600309__financials__20260630__20261026-v1"
+        "XSHG.600309__financials__20260630__20261026-v1",
+        "XSHG.600309__financials__20260930__20261031-q3-v1"
       ]
     },
     "600406": {
       "securityId": "XSHG.600406",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
-        "XSHG.600406__financials__20260630__20261026-v1"
+        "XSHG.600406__financials__20260630__20261026-v1",
+        "XSHG.600406__financials__20260930__20261031-q3-v1"
       ]
     },
     "600519": {
       "securityId": "XSHG.600519",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30）",
       "statementSnapshotIds": [
         "XSHG.600519__financials__20261025-legacy-v1",
         "XSHG.600519__dividends__20261025-legacy-v1",
         "XSHG.600519__operating__20261025-legacy-v1",
-        "XSHG.600519__events__20261025-legacy-v1"
+        "XSHG.600519__events__20261025-legacy-v1",
+        "XSHG.600519__financials__20260930__20261031-q3-v1"
       ]
     },
     "600585": {
       "securityId": "XSHG.600585",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600585__financials__20261025-legacy-v1",
         "XSHG.600585__dividends__20261025-legacy-v1",
         "XSHG.600585__operating__20261025-legacy-v1",
-        "XSHG.600585__events__20261025-legacy-v1"
+        "XSHG.600585__events__20261025-legacy-v1",
+        "XSHG.600585__financials__20260930__20261031-q3-v1"
       ]
     },
     "600660": {
       "securityId": "XSHG.600660",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600660__financials__20261025-legacy-v1",
         "XSHG.600660__dividends__20261025-legacy-v1",
         "XSHG.600660__operating__20261025-legacy-v1",
-        "XSHG.600660__events__20261025-legacy-v1"
+        "XSHG.600660__events__20261025-legacy-v1",
+        "XSHG.600660__financials__20260930__20261031-q3-v1"
       ]
     },
     "600690": {
       "securityId": "XSHG.600690",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600690__financials__20261025-legacy-v1",
         "XSHG.600690__dividends__20261025-legacy-v1",
         "XSHG.600690__operating__20261025-legacy-v1",
-        "XSHG.600690__events__20261025-legacy-v1"
+        "XSHG.600690__events__20261025-legacy-v1",
+        "XSHG.600690__financials__20260930__20261031-q3-v1"
       ]
     },
     "600750": {
@@ -106,62 +115,73 @@
     },
     "600809": {
       "securityId": "XSHG.600809",
-      "financialPeriod": "2026H1（财务截至2026-06-30；2025年报作全年现金对照）",
+      "financialPeriod": "2026Q3（财务截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600809__financials__20261025-legacy-v1",
         "XSHG.600809__dividends__20261025-legacy-v1",
         "XSHG.600809__operating__20261025-legacy-v1",
-        "XSHG.600809__events__20261025-legacy-v1"
+        "XSHG.600809__events__20261025-legacy-v1",
+        "XSHG.600809__financials__20260930__20261031-q3-v1"
       ]
     },
     "600863": {
       "securityId": "XSHG.600863",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600863__financials__20261025-legacy-v1",
         "XSHG.600863__dividends__20261025-legacy-v1",
         "XSHG.600863__operating__20261025-legacy-v1",
-        "XSHG.600863__events__20261025-legacy-v1"
+        "XSHG.600863__events__20261025-legacy-v1",
+        "XSHG.600863__financials__20260930__20261031-q3-v1"
       ]
     },
     "600873": {
       "securityId": "XSHG.600873",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600873__financials__20261025-legacy-v1",
         "XSHG.600873__dividends__20261025-legacy-v1",
         "XSHG.600873__operating__20261025-legacy-v1",
-        "XSHG.600873__events__20261025-legacy-v1"
+        "XSHG.600873__events__20261025-legacy-v1",
+        "XSHG.600873__financials__20260930__20261031-q3-v1"
       ]
     },
     "600886": {
       "securityId": "XSHG.600886",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600886__financials__20261025-legacy-v1",
         "XSHG.600886__dividends__20261025-legacy-v1",
         "XSHG.600886__operating__20261025-legacy-v1",
-        "XSHG.600886__events__20261025-legacy-v1"
+        "XSHG.600886__events__20261025-legacy-v1",
+        "XSHG.600886__financials__20260930__20261031-q3-v1"
       ]
     },
     "600887": {
       "securityId": "XSHG.600887",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.600887__financials__20261025-legacy-v1",
         "XSHG.600887__dividends__20261025-legacy-v1",
         "XSHG.600887__operating__20261025-legacy-v1",
-        "XSHG.600887__events__20261025-legacy-v1"
+        "XSHG.600887__events__20261025-legacy-v1",
+        "XSHG.600887__financials__20260930__20261031-q3-v1"
       ]
     },
     "600900": {
       "securityId": "XSHG.600900",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30）",
       "statementSnapshotIds": [
         "XSHG.600900__financials__20261025-legacy-v1",
         "XSHG.600900__dividends__20261025-legacy-v1",
         "XSHG.600900__operating__20261025-legacy-v1",
-        "XSHG.600900__events__20261025-legacy-v1"
+        "XSHG.600900__events__20261025-legacy-v1",
+        "XSHG.600900__financials__20260930__20261031-q3-v1"
+      ],
+      "excludedFactIds": [
+        "claim_336bb24721f9",
+        "claim_ec740910a061",
+        "claim_b1f31bdb5121"
       ]
     },
     "600941": {
@@ -176,22 +196,24 @@
     },
     "601058": {
       "securityId": "XSHG.601058",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.601058__financials__20261025-legacy-v1",
         "XSHG.601058__dividends__20261025-legacy-v1",
         "XSHG.601058__operating__20261025-legacy-v1",
-        "XSHG.601058__events__20261025-legacy-v1"
+        "XSHG.601058__events__20261025-legacy-v1",
+        "XSHG.601058__financials__20260930__20261031-q3-v1"
       ]
     },
     "601298": {
       "securityId": "XSHG.601298",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.601298__financials__20261025-legacy-v1",
         "XSHG.601298__dividends__20261025-legacy-v1",
         "XSHG.601298__operating__20261025-legacy-v1",
-        "XSHG.601298__events__20261025-legacy-v1"
+        "XSHG.601298__events__20261025-legacy-v1",
+        "XSHG.601298__financials__20260930__20261031-q3-v1"
       ]
     },
     "601318": {
@@ -203,72 +225,80 @@
     },
     "601336": {
       "securityId": "XSHG.601336",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.601336__financials__20261025-legacy-v1",
         "XSHG.601336__dividends__20261025-legacy-v1",
         "XSHG.601336__operating__20261025-legacy-v1",
-        "XSHG.601336__events__20261025-legacy-v1"
+        "XSHG.601336__events__20261025-legacy-v1",
+        "XSHG.601336__financials__20260930__20261031-q3-v1"
       ]
     },
     "601857": {
       "securityId": "XSHG.601857",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30）",
       "statementSnapshotIds": [
         "XSHG.601857__financials__20261025-legacy-v1",
         "XSHG.601857__dividends__20261025-legacy-v1",
         "XSHG.601857__operating__20261025-legacy-v1",
-        "XSHG.601857__events__20261025-legacy-v1"
+        "XSHG.601857__events__20261025-legacy-v1",
+        "XSHG.601857__financials__20260930__20261031-q3-v1"
       ]
     },
     "601899": {
       "securityId": "XSHG.601899",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；未经审计）",
       "statementSnapshotIds": [
         "XSHG.601899__financials__20261025-legacy-v1",
         "XSHG.601899__dividends__20261025-legacy-v1",
         "XSHG.601899__operating__20261025-legacy-v1",
-        "XSHG.601899__events__20261025-legacy-v1"
+        "XSHG.601899__events__20261025-legacy-v1",
+        "XSHG.601899__financials__20260930__20261025-mx-v1",
+        "XSHG.601899__financials__20260930__20261031-q3-v1"
       ]
     },
     "601919": {
       "securityId": "XSHG.601919",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.601919__financials__20261025-legacy-v1",
         "XSHG.601919__dividends__20261025-legacy-v1",
         "XSHG.601919__operating__20261025-legacy-v1",
-        "XSHG.601919__events__20261025-legacy-v1"
+        "XSHG.601919__events__20261025-legacy-v1",
+        "XSHG.601919__financials__20260930__20261031-q3-v1"
       ]
     },
     "603288": {
       "securityId": "XSHG.603288",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.603288__financials__20261025-legacy-v1",
         "XSHG.603288__dividends__20261025-legacy-v1",
         "XSHG.603288__operating__20261025-legacy-v1",
-        "XSHG.603288__events__20261025-legacy-v1"
+        "XSHG.603288__events__20261025-legacy-v1",
+        "XSHG.603288__financials__20260930__20261031-q3-v1"
       ]
     },
     "605499": {
       "securityId": "XSHG.605499",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.605499__financials__20261025-legacy-v1",
         "XSHG.605499__dividends__20261025-legacy-v1",
         "XSHG.605499__operating__20261025-legacy-v1",
-        "XSHG.605499__events__20261025-legacy-v1"
+        "XSHG.605499__events__20261025-legacy-v1",
+        "XSHG.605499__financials__20260930__20261031-q3-v1"
       ]
     },
     "688825": {
       "securityId": "XSHG.688825",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHG.688825__financials__20261025-legacy-v1",
         "XSHG.688825__dividends__20261025-legacy-v1",
         "XSHG.688825__operating__20261025-legacy-v1",
-        "XSHG.688825__events__20261025-legacy-v1"
+        "XSHG.688825__events__20261025-legacy-v1",
+        "XSHG.688825__financials__20260930__20261031-q3-v1"
       ]
     },
     "000568": {
@@ -290,12 +320,20 @@
     },
     "000333": {
       "securityId": "XSHE.000333",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30）",
       "statementSnapshotIds": [
         "XSHE.000333__financials__20261025-legacy-v1",
         "XSHE.000333__dividends__20261025-legacy-v1",
         "XSHE.000333__operating__20261025-legacy-v1",
-        "XSHE.000333__events__20261025-legacy-v1"
+        "XSHE.000333__events__20261025-legacy-v1",
+        "XSHE.000333__financials__20260930__20261031-q3-v1",
+        "XSHE.000333__dividends__20261013__20261031-batch2-v1"
+      ],
+      "excludedRows": [
+        {
+          "id": "old_model_irr",
+          "reason": "2026Q3利润分类差异、现金流与股本尚未重建；旧IRR仅条件对照，不用于当前价格判断。"
+        }
       ]
     },
     "09992": {
@@ -329,12 +367,13 @@
     },
     "002555": {
       "securityId": "XSHE.002555",
-      "financialPeriod": "2026H1（截至2026-06-30）",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002555__financials__20261025-legacy-v1",
         "XSHE.002555__dividends__20261025-legacy-v1",
         "XSHE.002555__operating__20261025-legacy-v1",
-        "XSHE.002555__events__20261025-legacy-v1"
+        "XSHE.002555__events__20261025-legacy-v1",
+        "XSHE.002555__financials__20260930__20261031-q3-v1"
       ]
     },
     "00902": {
@@ -379,22 +418,24 @@
     },
     "000807": {
       "securityId": "XSHE.000807",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.000807__financials__20261025-legacy-v1",
         "XSHE.000807__dividends__20261025-legacy-v1",
         "XSHE.000807__operating__20261025-legacy-v1",
-        "XSHE.000807__events__20261025-legacy-v1"
+        "XSHE.000807__events__20261025-legacy-v1",
+        "XSHE.000807__financials__20260930__20261031-q3-v1"
       ]
     },
     "002223": {
       "securityId": "XSHE.002223",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002223__financials__20261025-legacy-v1",
         "XSHE.002223__dividends__20261025-legacy-v1",
         "XSHE.002223__operating__20261025-legacy-v1",
-        "XSHE.002223__events__20261025-legacy-v1"
+        "XSHE.002223__events__20261025-legacy-v1",
+        "XSHE.002223__financials__20260930__20261031-q3-v1"
       ]
     },
     "09961": {
@@ -429,22 +470,24 @@
     },
     "002594": {
       "securityId": "XSHE.002594",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002594__financials__20261025-legacy-v1",
         "XSHE.002594__dividends__20261025-legacy-v1",
         "XSHE.002594__operating__20261025-legacy-v1",
-        "XSHE.002594__events__20261025-legacy-v1"
+        "XSHE.002594__events__20261025-legacy-v1",
+        "XSHE.002594__financials__20260930__20261031-q3-v1"
       ]
     },
     "002304": {
       "securityId": "XSHE.002304",
-      "financialPeriod": "2026H1（财务截至2026-06-30；2025年报检验全年现金）",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002304__financials__20261025-legacy-v1",
         "XSHE.002304__dividends__20261025-legacy-v1",
         "XSHE.002304__operating__20261025-legacy-v1",
-        "XSHE.002304__events__20261025-legacy-v1"
+        "XSHE.002304__events__20261025-legacy-v1",
+        "XSHE.002304__financials__20260930__20261031-q3-v1"
       ]
     },
     "09988": {
@@ -466,32 +509,35 @@
     },
     "001286": {
       "securityId": "XSHE.001286",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.001286__financials__20261025-legacy-v1",
         "XSHE.001286__dividends__20261025-legacy-v1",
         "XSHE.001286__operating__20261025-legacy-v1",
-        "XSHE.001286__events__20261025-legacy-v1"
+        "XSHE.001286__events__20261025-legacy-v1",
+        "XSHE.001286__financials__20260930__20261031-q3-v1"
       ]
     },
     "000933": {
       "securityId": "XSHE.000933",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30）",
       "statementSnapshotIds": [
         "XSHE.000933__financials__20261025-legacy-v1",
         "XSHE.000933__dividends__20261025-legacy-v1",
         "XSHE.000933__operating__20261025-legacy-v1",
-        "XSHE.000933__events__20261025-legacy-v1"
+        "XSHE.000933__events__20261025-legacy-v1",
+        "XSHE.000933__financials__20260930__20261031-q3-v1"
       ]
     },
     "000538": {
       "securityId": "XSHE.000538",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.000538__financials__20261025-legacy-v1",
         "XSHE.000538__dividends__20261025-legacy-v1",
         "XSHE.000538__operating__20261025-legacy-v1",
-        "XSHE.000538__events__20261025-legacy-v1"
+        "XSHE.000538__events__20261025-legacy-v1",
+        "XSHE.000538__financials__20260930__20261031-q3-v1"
       ]
     },
     "00883": {
@@ -506,42 +552,53 @@
     },
     "000792": {
       "securityId": "XSHE.000792",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.000792__financials__20261025-legacy-v1",
         "XSHE.000792__dividends__20261025-legacy-v1",
         "XSHE.000792__operating__20261025-legacy-v1",
-        "XSHE.000792__events__20261025-legacy-v1"
+        "XSHE.000792__events__20261025-legacy-v1",
+        "XSHE.000792__financials__20260930__20261031-q3-v1"
       ]
     },
     "002027": {
       "securityId": "XSHE.002027",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002027__financials__20261025-legacy-v1",
         "XSHE.002027__dividends__20261025-legacy-v1",
         "XSHE.002027__operating__20261025-legacy-v1",
-        "XSHE.002027__events__20261025-legacy-v1"
+        "XSHE.002027__events__20261025-legacy-v1",
+        "XSHE.002027__financials__20260930__20261031-q3-v1"
       ]
     },
     "002352": {
       "securityId": "XSHE.002352",
-      "financialPeriod": "2026H1（截至2026-06-30）",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002352__financials__20261025-legacy-v1",
         "XSHE.002352__dividends__20261025-legacy-v1",
         "XSHE.002352__operating__20261025-legacy-v1",
-        "XSHE.002352__events__20261025-legacy-v1"
+        "XSHE.002352__events__20261025-legacy-v1",
+        "XSHE.002352__financials__20260930__20261031-q3-v1"
       ]
     },
     "002714": {
       "securityId": "XSHE.002714",
-      "financialPeriod": "2026H1",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
       "statementSnapshotIds": [
         "XSHE.002714__financials__20261025-legacy-v1",
         "XSHE.002714__dividends__20261025-legacy-v1",
         "XSHE.002714__operating__20261025-legacy-v1",
-        "XSHE.002714__events__20261025-legacy-v1"
+        "XSHE.002714__events__20261025-legacy-v1",
+        "XSHE.002714__financials__20260930__20261031-q3-v1"
+      ]
+    },
+    "603369": {
+      "securityId": "XSHG.603369",
+      "financialPeriod": "2026Q3（截至2026-09-30；三季报未经审计）",
+      "statementSnapshotIds": [
+        "XSHG.603369__financials__20260930__20261031-q3-v1"
       ]
     }
   }

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-600519-20261031",
+  "provider": "贵州茅台公告与妙想金融数据",
+  "type": "public_disclosure_review",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/600519-20261031-q3.md",
+    "sha256": "0ea4864c8204af8073ca4fff2f10e5d382ee9e7536eebde7d8f805fc5b3b92f9"
+  },
+  "notes": "公告与行情并列，公告页码及供应商时点见证据；行情为服务商口径。"
+}

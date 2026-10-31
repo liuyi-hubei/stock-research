@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "20261031-q3-batch2",
+  "collectedAt": "2026-10-31",
+  "executedBy": "main GPT-6.1 Sol; workers GPT-6 Luna",
+  "authority": "用户要求继续处理下三个个股；范围为000333/601899/600900。仅本地更新。",
+  "baselineHead": "5225a5cd21420ce9a1338e1610fc7298ec5d7b42",
+  "changes": [
+    {
+      "code": "000333",
+      "securityId": "XSHE.000333",
+      "oldCurrentSha256": "87b606a9ec8e56d6a0cd7629c67d62c130ea22946bb7db93e73138d15c047265",
+      "datasets": {
+        "quotes": {
+          "oldSnapshotId": "XSHE.000333__quotes__20261023__20261024-mx-v1",
+          "newSnapshotId": "XSHE.000333__quotes__20261030__20261031-q3-v1"
+        },
+        "financials": {
+          "oldSnapshotId": "XSHE.000333__financials__20261025-legacy-v1",
+          "newSnapshotId": "XSHE.000333__financials__20260930__20261031-q3-v1"
+        },
+        "dividends": {
+          "oldSnapshotId": "XSHE.000333__dividends__20261025-legacy-v1",
+          "newSnapshotId": "XSHE.000333__dividends__20261013__20261031-batch2-v1"
+        }
+      },
+      "reportProjectionUpdated": true,
+      "assumptionBoundary": "本季事实不自动证明长期盈利、派息或退出假设；见逐股parameterReview。"
+    },
+    {
+      "code": "601899",
+      "securityId": "XSHG.601899",
+      "oldCurrentSha256": "93678f02feb4aa2eb0f131dbc80900076945b9605f27bbe7df6934fafd4bb837",
+      "datasets": {
+        "quotes": {
+          "oldSnapshotId": "XSHG.601899__quotes__20261023__20261024-mx-v1",
+          "newSnapshotId": "XSHG.601899__quotes__20261030__20261031-q3-v1"
+        },
+        "financials": {
+          "oldSnapshotId": "XSHG.601899__financials__20260930__20261025-mx-v1",
+          "newSnapshotId": "XSHG.601899__financials__20260930__20261031-q3-v1"
+        }
+      },
+      "reportProjectionUpdated": true,
+      "assumptionBoundary": "本季事实不自动证明长期盈利、派息或退出假设；见逐股parameterReview。"
+    },
+    {
+      "code": "600900",
+      "securityId": "XSHG.600900",
+      "oldCurrentSha256": "9a653262c0c77bab07e9ae690c352d023d4198ad8bbc1e2715f0d86ed3a29734",
+      "datasets": {
+        "quotes": {
+          "oldSnapshotId": "XSHG.600900__quotes__20261023__20261024-mx-v1",
+          "newSnapshotId": "XSHG.600900__quotes__20261030__20261031-q3-v1"
+        },
+        "financials": {
+          "oldSnapshotId": "XSHG.600900__financials__20261025-legacy-v1",
+          "newSnapshotId": "XSHG.600900__financials__20260930__20261031-q3-v1"
+        }
+      },
+      "reportProjectionUpdated": true,
+      "assumptionBoundary": "本季事实不自动证明长期盈利、派息或退出假设；见逐股parameterReview。"
+    }
+  ],
+  "published": false,
+  "notes": "美的0.50元中期方案已批准但A股除息日待核，撤回9月30日除息表述；紫金扣除已除息0.42元。来源之间的PB/市值差异保留，未替换成研究内在价值。"
+}

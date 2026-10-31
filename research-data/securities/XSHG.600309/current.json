@@ -3,14 +3,14 @@
   "securityId": "XSHG.600309",
   "datasets": {
     "quotes": {
-      "snapshotId": "XSHG.600309__quotes__20261023__20261026-v1",
-      "file": "securities/XSHG.600309/quotes/2026-10-23__2026-10-26-v1.json",
-      "sha256": "3998e6492427b6ab75423673ea02ade552ba996129bc2f7207baab37b5ccd88f"
+      "snapshotId": "XSHG.600309__quotes__20261030__20261031-q3-v1",
+      "file": "securities/XSHG.600309/quotes/2026-10-30__2026-10-31__q3-v1.json",
+      "sha256": "8dfd178620d69767e590bba47cb9b260ab64e6b31cc00cc4169fe519da97724f"
     },
     "financials": {
-      "snapshotId": "XSHG.600309__financials__20260630__20261026-v1",
-      "file": "securities/XSHG.600309/financials/2026-06-30__2026-10-26-v1.json",
-      "sha256": "39b32c96e93c0daa15c34f2f6af23e0ad665ddd1fef7d8b71c14c8b268688eab"
+      "snapshotId": "XSHG.600309__financials__20260930__20261031-q3-v1",
+      "file": "securities/XSHG.600309/financials/2026-09-30__2026-10-31-q3-v1.json",
+      "sha256": "3a25ab2f17146abf576254da61ae01d69dd205f3052c9eb4b33b5c6bdb744794"
     }
   }
 }

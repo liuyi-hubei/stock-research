@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3quote-603369-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "market_data_quote",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/jinshiyuan-q3-20261031.md",
+    "sha256": "413b4589f284fcf750b0893d2a49a915b4ea902a449603dcdcbc2dbf1407ffa2"
+  },
+  "notes": "收盘价 / PE(TTM) / PB / 总市值 / 总股本；供应商口径，PE/PB 为 TTM 不等于正常化估值，股本为近似值，不替换模型精确股数。"
+}

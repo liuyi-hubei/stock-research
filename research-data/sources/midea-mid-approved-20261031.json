@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "midea-mid-approved-20261031",
+  "provider": "美的集团官方公告（巨潮资讯）",
+  "type": "issuer_filing",
+  "publishedAt": "2026-10-14",
+  "collectedAt": "2026-10-31",
+  "url": "https://static.cninfo.com.cn/finalpage/2026-10-14/1225603532.PDF",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/midea-mid-dividend-20261031.md",
+    "sha256": "7dc9d5968163a37004f714cb9d8f8807b572ee8c0284136858b5e34ffb56105b"
+  },
+  "notes": "2026-074股东会决议；第1—2页。方案及获批状态已核，A股登记、除息及支付日期未取得官方实施证据。"
+}

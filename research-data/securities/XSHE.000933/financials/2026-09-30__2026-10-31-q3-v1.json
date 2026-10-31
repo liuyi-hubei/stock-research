@@ -1,0 +1,318 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000933__financials__20260930__20261031-q3-v1",
+  "securityId": "XSHE.000933",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-20261031",
+  "supersedes": null,
+  "notes": "原公告逐项提取；保留旧服务商舍入快照。",
+  "observations": [
+    {
+      "id": "q3_20261031_000933_revenue9",
+      "metric": "revenue",
+      "value": "37835938796.68",
+      "rawValue": "37835938796.68",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：营业收入"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年前三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"营业收入\", \"378.36亿元\", \"2026年前三季度\", \"公告PDF第2页，人民币，合并口径；2026年前三季度。\"]",
+        "originalIndex": "0",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_profit9",
+      "metric": "net_profit_parent",
+      "value": "7486784681.03",
+      "rawValue": "7486784681.03",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：归母净利润"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年前三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"归母净利润\", \"74.87亿元\", \"2026年前三季度\", \"公告PDF第2页，人民币，合并口径；2026年前三季度。\"]",
+        "originalIndex": "1",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_adjusted9",
+      "metric": "adjusted_net_profit_parent",
+      "value": "7484156951.38",
+      "rawValue": "7484156951.38",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "excluding_non_recurring",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：扣非归母净利润"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年前三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母净利润",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"扣非归母净利润\", \"74.84亿元\", \"2026年前三季度\", \"公告PDF第2页，人民币，合并口径；2026年前三季度。\"]",
+        "originalIndex": "2",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_ocf9",
+      "metric": "operating_cash_flow",
+      "value": "11112171363.85",
+      "rawValue": "11112171363.85",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：经营现金流净额"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年前三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营现金流净额",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"经营现金流净额\", \"111.12亿元\", \"2026年前三季度\", \"公告PDF第2页，人民币，合并口径；2026年前三季度。\"]",
+        "originalIndex": "3",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_capex9",
+      "metric": "ppe_cash_payments",
+      "value": "321217608.18",
+      "rawValue": "321217608.18",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第13页：购建长期资产支付现金"
+        }
+      ],
+      "notes": "公告PDF第13页，人民币，合并口径；2026年前三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "购建长期资产支付现金",
+        "periodLabel": "2026年前三季度",
+        "originalRow": "[\"购建长期资产支付现金\", \"3.21亿元\", \"2026年前三季度\", \"公告PDF第13页，人民币，合并口径；2026年前三季度。\"]",
+        "originalIndex": "4",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_revenueq3",
+      "metric": "revenue",
+      "value": "13045081177.32",
+      "rawValue": "13045081177.32",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：营业收入"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年第三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "营业收入",
+        "periodLabel": "2026年第三季度",
+        "originalRow": "[\"营业收入\", \"130.45亿元\", \"2026年第三季度\", \"公告PDF第2页，人民币，合并口径；2026年第三季度。\"]",
+        "originalIndex": "5",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_profitq3",
+      "metric": "net_profit_parent",
+      "value": "2705407375.63",
+      "rawValue": "2705407375.63",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "none",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：归母净利润"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年第三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "归母净利润",
+        "periodLabel": "2026年第三季度",
+        "originalRow": "[\"归母净利润\", \"27.05亿元\", \"2026年第三季度\", \"公告PDF第2页，人民币，合并口径；2026年第三季度。\"]",
+        "originalIndex": "6",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3_20261031_000933_adjustedq3",
+      "metric": "adjusted_net_profit_parent",
+      "value": "2698845730.01",
+      "rawValue": "2698845730.01",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "PRC_CAS",
+        "adjustment": "excluding_non_recurring",
+        "shareBasis": "attributable_to_parent"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-source-000933-20261031",
+          "locator": "PDF第2页：扣非归母净利润"
+        }
+      ],
+      "notes": "公告PDF第2页，人民币，合并口径；2026年第三季度。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "扣非归母净利润",
+        "periodLabel": "2026年第三季度",
+        "originalRow": "[\"扣非归母净利润\", \"26.99亿元\", \"2026年第三季度\", \"公告PDF第2页，人民币，合并口径；2026年第三季度。\"]",
+        "originalIndex": "7",
+        "scale": "8"
+      }
+    }
+  ]
+}

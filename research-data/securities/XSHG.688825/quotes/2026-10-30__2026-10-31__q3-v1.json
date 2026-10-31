@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.688825__quotes__20261030__20261031-q3-v1",
+  "securityId": "XSHG.688825",
+  "dataset": "quotes",
+  "asOf": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/20261031-q3-batch5",
+  "supersedes": null,
+  "notes": "三季报披露后的行情复核。收盘价、PE(TTM)、PB与总股本来自妙想金融数据（东方财富数据链）；PE/PB为供应商TTM口径，不是正常化利润估值；总股本为供应商近似值，不替换模型使用的精确股数。因服务商总股本与「归母÷EPS」反推股数不一致，市值口径存疑，本次不给出总市值观测。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "41.8",
+      "rawValue": "41.8",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-688825-20261031",
+          "locator": "2026-10-30收盘价"
+        }
+      ],
+      "notes": "不复权收盘价，作为研究价格的刷新基准。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "34.68",
+      "rawValue": "34.68",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-688825-20261031",
+          "locator": "市盈率PE(TTM)"
+        }
+      ],
+      "notes": "供应商TTM口径，含周期与非经常项目，不等于正常化估值。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "11.05",
+      "rawValue": "11.05",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-688825-20261031",
+          "locator": "市净率"
+        }
+      ],
+      "notes": "供应商口径市净率。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "67880000000",
+      "rawValue": "678.80亿股",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-688825-20261031",
+          "locator": "总股本"
+        }
+      ],
+      "notes": "服务商总股本678.8亿股（期末值，2026-08-26由668.8亿股增发至678.8亿股）；与「归母÷EPS」反推约617.7亿股（加权平均）的差异系年内增发所致，属正常口径差异，不替换模型精确股数。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "2837384000000",
+      "rawValue": "28373.8亿",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "derived",
+      "verification": "provider_reported",
+      "precision": "derived",
+      "missingReason": null,
+      "derivation": {
+        "formula": "close * shares_outstanding",
+        "inputs": [
+          "XSHG.688825__quotes__20261030__20261031-q3-v1#close",
+          "XSHG.688825__quotes__20261030__20261031-q3-v1#shares_outstanding"
+        ]
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-688825-20261031",
+          "locator": "总市值（按收盘价×总股本推算）"
+        }
+      ],
+      "notes": "收盘价×服务商总股本的推算值（41.8元×678.8亿股），与供应商2026-10-30证监会算法口径2.838万亿一致。加权平均股数617.7亿股与期末股数678.8亿股的差异系年内增发所致，属正常口径差异。"
+    }
+  ]
+}

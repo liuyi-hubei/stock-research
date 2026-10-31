@@ -3,14 +3,14 @@
   "securityId": "XSHE.000933",
   "datasets": {
     "quotes": {
-      "snapshotId": "XSHE.000933__quotes__20261023__20261024-mx-v1",
-      "file": "securities/XSHE.000933/quotes/2026-10-23__2026-10-24__mx-v1.json",
-      "sha256": "3c379d035abfbb2e3fcfa7ce0ab55dee4271c17e8a31c95b898e1eb400f2c1e8"
+      "snapshotId": "XSHE.000933__quotes__20261030__20261031-q3-v1",
+      "file": "securities/XSHE.000933/quotes/2026-10-30__2026-10-31-q3-v1.json",
+      "sha256": "94273d3dfd4ad4302b0761865cd4b053ecd7c34a37a1f47a7a477c3b0ae1bffd"
     },
     "financials": {
-      "snapshotId": "XSHE.000933__financials__20260930__20261025-mx-v1",
-      "file": "securities/XSHE.000933/financials/2026-09-30__2026-10-25__mx-v1.json",
-      "sha256": "037b001f0ef840b88b4928fe8f51ca61e6f15d3aef77d689947f6ccec43e0b0f"
+      "snapshotId": "XSHE.000933__financials__20260930__20261031-q3-v1",
+      "file": "securities/XSHE.000933/financials/2026-09-30__2026-10-31-q3-v1.json",
+      "sha256": "64ca2fae25edf750f927f13fa59664458e03cc2afd9c2f16d44c12851c737580"
     },
     "dividends": {
       "snapshotId": "XSHE.000933__dividends__20261025-legacy-v1",

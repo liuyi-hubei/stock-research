@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-000333-20261031",
+  "provider": "美的集团公告与妙想金融数据",
+  "type": "public_disclosure_review",
+  "publishedAt": "2026-10-29",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/000333-20261031-q3.md",
+    "sha256": "f6adaf52e6b0a7a2ff45d41700ce9ce24af79a93cc9ebe7454ec1e96770f3cc5"
+  },
+  "notes": "公司公告原件与财务报表行项目见证据文件；行情比较见独立行情来源。未经审计。",
+  "originalFilename": "search-000333.pdf",
+  "originalSha256": "9c52a6175a6f41e4dec481127e278dfe3dc832901defd0e4ed053a47cc597805",
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610291831184591_1.PDF"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-000792-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "financial_statement",
+  "title": "盐湖股份 2026年第三季度报告主要会计数据",
+  "publishedAt": "2026-10-31",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/q3-batch5-20261031.md",
+    "sha256": "e5270e50de8efa139ed6a96b9a9f0f65e7101ba176a22449ef33596beaf01cc0"
+  },
+  "notes": "接口取数，合并口径、未经审计。东方财富、牧原股份、中远海控、盐湖股份、三七互娱已调取公告原文核对，冲突时以公告为准。"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3quote-09988-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "market_data",
+  "title": "阿里巴巴 2026-10-30 行情",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/q3-batch6-20261031.md",
+    "sha256": "c271799d8d19af5dac9ba00d63cfc15a47534442744222f9f0eeaabd1ab605de"
+  },
+  "notes": "收盘价 / PE(TTM) / PB / 总市值 / 已发行普通股，供应商口径，币种HKD。"
+}

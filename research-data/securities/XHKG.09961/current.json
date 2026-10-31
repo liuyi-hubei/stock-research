@@ -3,9 +3,9 @@
   "securityId": "XHKG.09961",
   "datasets": {
     "quotes": {
-      "snapshotId": "XHKG.09961__quotes__20261023__20261024-mx-v1",
-      "file": "securities/XHKG.09961/quotes/2026-10-23__2026-10-24__mx-v1.json",
-      "sha256": "5e8e77259036e38e99c61302a22e6833e08d72189c51c2b75cc7cdc2608a79c3"
+      "snapshotId": "XHKG.09961__quotes__20261030__20261031-q3-v1",
+      "file": "securities/XHKG.09961/quotes/2026-10-30__2026-10-31__q3-v1.json",
+      "sha256": "c6815bf73a6c7c5e3595481749147872b8d9465c85756de715b9a5e4d922de79"
     },
     "financials": {
       "snapshotId": "XHKG.09961__financials__20261025-legacy-v1",

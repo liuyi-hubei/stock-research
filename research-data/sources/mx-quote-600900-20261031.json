@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-quote-600900-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-31",
+  "originalFilename": "mx_finance_data_90ba03b9.md",
+  "originalSha256": "ebf40ed9cce8fd6b8f3aa9647202517b17b9d2205e38b01d749dd584681b8d02",
+  "evidence": {
+    "file": "evidence/mx-quote-600900-20261031.md",
+    "sha256": "cb2e6e5a13db0da4feecdf2f6ce305441de3b143a7142414cb820458d18b388e"
+  },
+  "url": "https://quote.eastmoney.com/sh600900.html",
+  "notes": "指定2026-10-30收盘价。"
+}

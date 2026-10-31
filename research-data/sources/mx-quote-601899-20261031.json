@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-quote-601899-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-31",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/quote-601899-20261031.md",
+    "sha256": "9cd0baea32531e874ac9eb88ecf484e0bc2b222e9ff99a928a39faa305737388"
+  },
+  "notes": "两次定向查询分别取得PE(TTM)10.27倍、PB3.519倍、总市值7114亿元、总股本265.9亿股；收盘27.60元沿用此前保存的同日妙想行情原件。公开页面PB、市值存在差异，均保留来源口径。"
+}

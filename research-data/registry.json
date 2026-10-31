@@ -449,6 +449,14 @@
       "exchange": "XSHG",
       "currency": "CNY",
       "reportCode": "600406"
+    },
+    {
+      "securityId": "XSHG.603369",
+      "code": "603369",
+      "name": "今世缘",
+      "exchange": "XSHG",
+      "currency": "CNY",
+      "reportCode": "603369"
     }
   ]
 }

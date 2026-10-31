@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3quote-000333-20261031",
+  "provider": "妙想金融数据（东方财富数据链）与公开行情页面",
+  "type": "market_data_extract",
+  "publishedAt": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/000333-20261031-q3.md",
+    "sha256": "f6adaf52e6b0a7a2ff45d41700ce9ce24af79a93cc9ebe7454ec1e96770f3cc5"
+  },
+  "url": "https://www.zhunshangshi.com/caiwu/?ts_code=000333.SZ",
+  "notes": "妙想定向行情结果及公开页面对照见evidence；市值口径差异保留。"
+}

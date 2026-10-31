@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-source-000933-20261031",
+  "provider": "神火股份公告（东方财富公告镜像）",
+  "type": "source_document_extract",
+  "publishedAt": "2026-10-19",
+  "collectedAt": "2026-10-31",
+  "originalFilename": "000933.pdf",
+  "originalSha256": "3a8a2cb8d85f8cffcfb9522dd19984314c27149f77bee41301319be79bf160dc",
+  "evidence": {
+    "file": "evidence/q3-source-000933-20261031.md",
+    "sha256": "33cf5760878248ee81d97cb0a05449d50beb4290d39460acf16298320f7c6634"
+  },
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610191830687193_1.PDF",
+  "notes": "仅入库所列已读取原文数据；未经审计。"
+}

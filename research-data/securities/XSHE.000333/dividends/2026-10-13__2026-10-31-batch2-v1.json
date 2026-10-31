@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000333__dividends__20261013__20261031-batch2-v1",
+  "securityId": "XSHE.000333",
+  "dataset": "dividends",
+  "asOf": "2026-10-13",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/main-sol/luna-dividend-review",
+  "supersedes": "XSHE.000333__dividends__20261025-legacy-v1",
+  "notes": "获批方案的事实快照；撤回未经证实的9月30日除息说法，未将批准日当除息日。",
+  "observations": [
+    {
+      "id": "q3b2_20261031_000333_dividend_mid",
+      "metric": "dividend_per_share",
+      "value": "0.50",
+      "rawValue": "每10股派现金5元（含税）",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "event",
+        "start": null,
+        "end": "2026-10-13"
+      },
+      "basis": {
+        "scope": "listed_A_share",
+        "accountingStandard": "not_applicable",
+        "adjustment": "gross_cash_dividend",
+        "shareBasis": "ordinary_A_share"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "midea-mid-proposal-20261031",
+          "locator": "第1页"
+        },
+        {
+          "sourceId": "midea-mid-approved-20261031",
+          "locator": "第1—2页"
+        }
+      ],
+      "notes": "分配方案已由股东会批准，不代表已实施或已除息。截至2026-10-31 A股登记、除息、支付日期待核。",
+      "eventDetails": {
+        "announcedAt": "2026-08-29",
+        "approvedAt": "2026-10-13",
+        "exDate": null,
+        "paymentDate": null,
+        "distributionStatus": "approved",
+        "taxBasis": "gross_before_tax",
+        "fiscalPeriod": "2026H1"
+      },
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "已批准中期每股现金股息",
+        "periodLabel": "2026H1分配方案（获批，A股除息日待核）",
+        "originalRow": "[\"已批准中期每股现金股息\", \"0.50元/股（含税）\", \"2026H1方案；A股除息日待核\", \"2026-064方案第1页；2026-074决议第1—2页\"]",
+        "originalIndex": "150",
+        "scale": "0"
+      }
+    }
+  ]
+}

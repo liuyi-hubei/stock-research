@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600900__quotes__20261030__20261031-q3-v1",
+  "securityId": "XSHG.600900",
+  "dataset": "quotes",
+  "asOf": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-20261031",
+  "supersedes": null,
+  "notes": "close来自妙想原始文件并由中财网页交叉核对；其余服务商字段或按舍入股数推算。",
+  "observations": [
+    {
+      "id": "q3b2_20261031_600900_close",
+      "metric": "close",
+      "value": "29.74",
+      "rawValue": "29.74元",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "cross_checked",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-quote-600900-20261031",
+          "locator": "长江电力(600900.SH)；2026-10-30；收盘价"
+        },
+        {
+          "sourceId": "cfi-quote-600900-20261031",
+          "locator": "行情页2026-10-30收盘"
+        }
+      ],
+      "notes": "不复权收盘价；人民币/股；妙想原始文件与网页一致。"
+    },
+    {
+      "id": "q3b2_20261031_600900_pe_ttm",
+      "metric": "pe_ttm",
+      "value": "20.1",
+      "rawValue": "20.1倍",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "cross_checked",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-full-quote-600900-20261031",
+          "locator": "妙想返回表1；PE(TTM)"
+        },
+        {
+          "sourceId": "cfi-quote-600900-20261031",
+          "locator": "中财网页市盈率"
+        }
+      ],
+      "notes": "妙想20.1倍、中财网20.10倍一致；服务商口径，非本研究正常化PE。"
+    },
+    {
+      "id": "q3b2_20261031_600900_pb",
+      "metric": "pb",
+      "value": "3.186",
+      "rawValue": "3.186倍",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "cross_checked",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-full-quote-600900-20261031",
+          "locator": "妙想返回表1；PB"
+        },
+        {
+          "sourceId": "cfi-quote-600900-20261031",
+          "locator": "中财网页市净率"
+        }
+      ],
+      "notes": "妙想3.186倍，中财网页舍入显示3.19倍；服务商净资产分母，页面关联净资产期间为2026-06-30。"
+    },
+    {
+      "id": "q3b2_20261031_600900_market_cap",
+      "metric": "market_cap",
+      "value": "727700000000",
+      "rawValue": "7277亿",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "cross_checked",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-full-quote-600900-20261031",
+          "locator": "妙想返回表1；总市值"
+        },
+        {
+          "sourceId": "cfi-quote-600900-20261031",
+          "locator": "按29.74×244.68亿股估算7276.78亿元"
+        }
+      ],
+      "notes": "妙想服务商显示约7277亿元；中财网舍入股本推算约7276.78亿元，方向一致。均非精确股本市值。"
+    },
+    {
+      "id": "q3b2_20261031_600900_shares",
+      "metric": "shares_outstanding",
+      "value": "24470000000",
+      "rawValue": "244.7亿股",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "cross_checked",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "mx-full-quote-600900-20261031",
+          "locator": "妙想返回表2；2026-10-30总股本"
+        },
+        {
+          "sourceId": "cfi-quote-600900-20261031",
+          "locator": "中财网页总股本244.68亿股"
+        },
+        {
+          "sourceId": "q3-source-600900-20261031",
+          "locator": "PDF第7页；期末股本24468217716股"
+        }
+      ],
+      "notes": "妙想舍入244.7亿股、中财网舍入244.68亿股，均与公告期末244.682亿股方向一致；模型分母采用公告精确股本。"
+    }
+  ]
+}

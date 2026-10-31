@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "petrochina-q3-20261031",
+  "provider": "中国石油公司公告原件（东方财富镜像）",
+  "type": "issuer_filing",
+  "publishedAt": "2026-10-29",
+  "collectedAt": "2026-10-31",
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610281831126593_1.pdf",
+  "originalFilename": "H2_AN202610281831126593_1.pdf",
+  "originalSha256": "2c175a81074b85e1abbaff10ba7e22dbceacae9737539b138e3ee2e60ae2d9b1",
+  "evidence": {
+    "file": "evidence/petrochina-q3-20261031.md",
+    "sha256": "b7b4d190051a043f0fe7af844b91a02239e4ef80e594f44c1f3936efba45c6df"
+  },
+  "notes": "已下载PDF并以pdfplumber提取核对主要指标及现金流；同比采用追溯调整数。"
+}

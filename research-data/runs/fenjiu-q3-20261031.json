@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "20261031-q3-fenjiu",
+  "collectedAt": "2026-10-31",
+  "executedBy": "codex（单股试点）",
+  "authority": "用户要求处理尚未更新的个股；本轮仅取一只试点（600809），不触碰他人认领的600519/000933/601857及batch2的000333/601899/600900。仅本地更新，不提交/推送/部署。",
+  "baselineHead": "5225a5cd21420ce9a1338e1610fc7298ec5d7b42",
+  "changes": [
+    {
+      "code": "600809",
+      "securityId": "XSHG.600809",
+      "oldCurrentSha256": {
+        "quotes": "b635df2329a4c0bee17bbfccefa3bc2bf3f52086ee5503154ea3eb669a6f5755",
+        "financials": "a2afcbfe101a477d3dfe53847bebe86de1c60c784974bd15c2b4ef552da52e54"
+      },
+      "newCurrentSha256": {
+        "quotes": "45c265d0fea921a7c3a41eb8440a4ff523ddb6e30a30755e35c1e8b499e02384",
+        "financials": "6b6b9fb85a7bc7ad1785bd7b9c83a271a9f828a5af35dabe987212bf990548d2"
+      },
+      "datasets": {
+        "quotes": {
+          "oldSnapshotId": "XSHG.600809__quotes__20261023__20261024-mx-v1",
+          "newSnapshotId": "XSHG.600809__quotes__20261030__20261031-q3-v1"
+        },
+        "financials": {
+          "oldSnapshotId": "XSHG.600809__financials__20261025-legacy-v1",
+          "newSnapshotId": "XSHG.600809__financials__20260930__20261031-q3-v1"
+        },
+        "dividends": {"unchanged": "XSHG.600809__dividends__20261025-legacy-v1"},
+        "operating": {"unchanged": "XSHG.600809__operating__20261025-legacy-v1"},
+        "events": {"unchanged": "XSHG.600809__events__20261025-legacy-v1"}
+      },
+      "reportProjectionUpdated": true,
+      "parameterReview": {
+        "decision": "保留原三情景EPS/增速/分红率/退出PE/10.5%门槛，不因三季报或价格变化自动调参",
+        "baseCheck": "基准2026归母97.597亿元、EPS8.00元；三季报实际前三季83.379亿元、EPS6.83元。隐含Q4需14.218亿元，而2025Q4约8.47亿元（2025全年122.46亿元−2025前三季113.99亿元），即隐含Q4同比+68%；在Q3仍同比-34.52%的背景下属于乐观隐含，须Q4与年报复核。",
+        "bearCheck": "悲观情景78.08亿元低于已实现的前三季83.379亿元，隐含Q4亏损约-5.30亿元；该情景下沿与当前进度不符，其结果应视为极端条件而非可行下沿，须与年报一并重设。",
+        "neutralReference": "若Q4与2025Q4持平（约8.47亿元），全年约91.85亿元、EPS约7.53元，落在悲观与基准之间。",
+        "bullCheck": "乐观107.36亿元隐含Q4约23.98亿元，远高于历史同期，条件更强。",
+        "dividendCheck": "2025年度每股6.56元（合计80.03亿元）已于2026-07-31实施，2026-10-30买入不享有；2026年度方案未发生，分红率维持情景值。",
+        "eligibility": "保持eligible=true并更新条件说明；不因偏差自动暂停或恢复排名"
+      },
+      "assumptionBoundary": "本季事实不自动证明长期盈利、派息或退出假设；价格上行12.14%与盈利下修同时发生，当前IRR带有基准尚未随三季报重设的条件。"
+    }
+  ],
+  "sourcesAdded": [
+    "fenjiu-q3-20261031",
+    "fenjiu-quotes-20261031"
+  ],
+  "evidenceAdded": [
+    "evidence/fenjiu-q3-20261031.md",
+    "evidence/fenjiu-quotes-20261031.md"
+  ],
+  "unresolved": [
+    "三季报PDF原件未逐页复核（本次以检索返回的公告原文表格为准）",
+    "分产品/分区域收入与经销商明细的原公告表格未取得，仅券商转载口径",
+    "渠道库存月数、批价、开瓶量等终端动销证据仍缺失",
+    "单季经营现金流公司未单列，券商口径12.83亿元未原件复核",
+    "Q4与2026年报未出，基准97.597亿元的可行性待复核"
+  ],
+  "websiteProjectionUpdated": true
+}

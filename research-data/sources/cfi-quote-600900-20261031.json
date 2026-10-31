@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "cfi-quote-600900-20261031",
+  "provider": "中财网行情",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-31",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/cfi-quote-600900-20261031.md",
+    "sha256": "38c50407dbe70bccbe7f16bfbfcc1345f2574aa7ae6fcf7a5c668637d164445e"
+  },
+  "url": "https://data.cfi.cn/quote1777_600900.html",
+  "notes": "与妙想同日行情的公共网页对照。PE/PB与收盘一致，显示股本244.68亿；以舍入股数推算总市值约7276.78亿元。"
+}

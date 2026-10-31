@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.600519__quotes__20261030__20261031-q3-v1",
+  "securityId": "XSHG.600519",
+  "dataset": "quotes",
+  "asOf": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-update",
+  "supersedes": null,
+  "notes": "妙想行情数据；收盘、估值、市值及近似股本分别查询；不等于独立核验。",
+  "observations": [
+    {
+      "id": "close",
+      "metric": "close",
+      "value": "1392.05",
+      "rawValue": "1392.05",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "unadjusted",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-600519-20261031",
+          "locator": "行情；close"
+        }
+      ],
+      "notes": "不复权收盘；保留原始小数位。"
+    },
+    {
+      "id": "pe_ttm",
+      "metric": "pe_ttm",
+      "value": "21.37",
+      "rawValue": "21.37",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-600519-20261031",
+          "locator": "行情；pe_ttm"
+        }
+      ],
+      "notes": "服务商TTM分母；不替代正常化或退出PE。"
+    },
+    {
+      "id": "pb",
+      "metric": "pb",
+      "value": "6.416",
+      "rawValue": "6.416",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-600519-20261031",
+          "locator": "行情；pb"
+        }
+      ],
+      "notes": "服务商净资产分母；不能按价格比例更新。"
+    },
+    {
+      "id": "market_cap",
+      "metric": "market_cap",
+      "value": "1740000000000",
+      "rawValue": "1.74万亿",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-600519-20261031",
+          "locator": "行情；market_cap"
+        }
+      ],
+      "notes": "按供应商显示量级转基本单位，不代表两地股份实际市值之和。"
+    },
+    {
+      "id": "shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "1250000000",
+      "rawValue": "12.5亿股",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "provider_defined_issuer",
+        "accountingStandard": "provider_defined",
+        "adjustment": "not_applicable",
+        "shareBasis": "provider_defined"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "vendor_rounded",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-600519-20261031",
+          "locator": "行情；shares_outstanding"
+        }
+      ],
+      "notes": "服务商近似股数，不能替换模型精确股本或加权/稀释分母。"
+    }
+  ]
+}

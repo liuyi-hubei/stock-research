@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-601899-20261031",
+  "provider": "紫金矿业公告PDF（东方财富公告镜像）",
+  "type": "issuer_filing",
+  "publishedAt": "2026-10-23",
+  "collectedAt": "2026-10-31",
+  "url": "https://pdf.dfcfw.com/pdf/H2_AN202610231830848116_1.pdf",
+  "evidence": {
+    "file": "evidence/q3-601899-20261031.md",
+    "sha256": "ff76faf571ea4fffcb05c5435c82a98767b0a2ab4bd54278ca971e25915675bb"
+  },
+  "notes": "上一轮已保存原件，本轮复核逐页文本与原始PDF页码；不重复下载。",
+  "originalFilename": "AN202610231830848116_1.pdf",
+  "originalSha256": "ba1ba80534ed7f59b3d75b355009cfb3927129e227077544160fe4facae84733"
+}

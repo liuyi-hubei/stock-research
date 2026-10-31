@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHE.000333__quotes__20261030__20261031-q3-v1",
+  "securityId": "XSHE.000333",
+  "dataset": "quotes",
+  "asOf": "2026-10-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-update",
+  "supersedes": "XSHE.000333__quotes__20261023__20261024-mx-v1",
+  "notes": "候选：妙想收盘价；估值指标未复核，待主集成人复核和验收。",
+  "observations": [
+    {
+      "id": "q3b2_20261031_000333_close_price",
+      "metric": "close",
+      "value": "89.18",
+      "rawValue": "89.18",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "market_quote",
+        "accountingStandard": "not_applicable",
+        "adjustment": "unadjusted",
+        "shareBasis": "per_share"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-000333-20261031",
+          "locator": "mx_finance_data_90ba03b9.md"
+        }
+      ],
+      "notes": "历史同日行情，供应商定义可能不同；不替代原公告股数与模型分母。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "收盘基准价",
+        "periodLabel": "2026-10-30",
+        "originalIndex": "100",
+        "originalRow": "[\"收盘基准价\",\"89.18元\",\"2026-10-30\",\"妙想不复权收盘\"]",
+        "reportedUnit": "元/股",
+        "scale": "0"
+      }
+    },
+    {
+      "id": "q3b2_20261031_000333_pe_ttm",
+      "metric": "pe_ttm",
+      "value": "14.34",
+      "rawValue": "14.34",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "market_quote",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "per_share"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-000333-20261031",
+          "locator": "mx_finance_data_7e166ab4.md，美的集团000333.SZ"
+        }
+      ],
+      "notes": "历史同日行情，供应商定义可能不同；不替代原公告股数与模型分母。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "PE(TTM)",
+        "periodLabel": "2026-10-30",
+        "originalIndex": "101",
+        "originalRow": "[\"PE(TTM)\", \"14.34倍\", \"2026-10-30\", \"妙想金融数据\"]",
+        "reportedUnit": "倍",
+        "scale": "0"
+      }
+    },
+    {
+      "id": "q3b2_20261031_000333_pb",
+      "metric": "pb",
+      "value": "3.059",
+      "rawValue": "3.059",
+      "unit": "times",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "market_quote",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "per_share"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-000333-20261031",
+          "locator": "mx_finance_data_7e166ab4.md，美的集团000333.SZ"
+        }
+      ],
+      "notes": "历史同日行情，供应商定义可能不同；不替代原公告股数与模型分母。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "PB",
+        "periodLabel": "2026-10-30",
+        "originalIndex": "102",
+        "originalRow": "[\"PB\", \"3.059倍\", \"2026-10-30\", \"妙想金融数据\"]",
+        "reportedUnit": "倍",
+        "scale": "0"
+      }
+    },
+    {
+      "id": "q3b2_20261031_000333_market_cap",
+      "metric": "market_cap",
+      "value": "676300000000",
+      "rawValue": "676300000000",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "market_quote",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "per_share"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-000333-20261031",
+          "locator": "mx_finance_data_7e166ab4.md，美的集团000333.SZ"
+        }
+      ],
+      "notes": "供应商总市值为证监会算法口径；与收盘价乘总股本得到的市值有约0.6%差异，保留供应商口径。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "总市值",
+        "periodLabel": "2026-10-30",
+        "originalIndex": "103",
+        "originalRow": "[\"总市值（证监会算法）\", \"6763亿元\", \"2026-10-30\", \"妙想金融数据\"]",
+        "reportedUnit": "currency",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "q3b2_20261031_000333_shares_outstanding",
+      "metric": "shares_outstanding",
+      "value": "7630000000",
+      "rawValue": "7630000000",
+      "unit": "shares",
+      "currency": null,
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-10-30"
+      },
+      "basis": {
+        "scope": "market_quote",
+        "accountingStandard": "not_applicable",
+        "adjustment": "vendor_reported",
+        "shareBasis": "period_end_total"
+      },
+      "nature": "historical_fact",
+      "verification": "source_extracted",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3quote-000333-20261031",
+          "locator": "mx_finance_data_7030e1e7.md，美的集团000333.SZ"
+        }
+      ],
+      "notes": "妙想圆整至0.1亿股；三季报期末精确股本为7629934000股。",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "总股本",
+        "periodLabel": "2026-10-30",
+        "originalIndex": "104",
+        "originalRow": "[\"总股本\", \"76.3亿股\", \"2026-10-30\", \"妙想金融数据（圆整）\"]",
+        "reportedUnit": "shares",
+        "scale": "0"
+      }
+    }
+  ]
+}

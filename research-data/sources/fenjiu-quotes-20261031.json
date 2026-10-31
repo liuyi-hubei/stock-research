@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "fenjiu-quotes-20261031",
+  "provider": "妙想金融数据（东方财富数据库）",
+  "type": "provider_query_result",
+  "publishedAt": null,
+  "collectedAt": "2026-10-31",
+  "originalFilename": null,
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/fenjiu-quotes-20261031.md",
+    "sha256": "a3204125de2f28753d9c306f582e8d0af2c25b0debb9ad99f35c81bd26fc08a5"
+  },
+  "url": null,
+  "notes": "查询问句「山西汾酒600809最新收盘价 市盈率TTM 市净率 总市值」，返回2026-10-26至2026-10-30五个交易日。采用2026-10-30收盘价126.27元、PE(TTM)16.78倍、PB3.852倍、总市值1540亿元（证监会算法）。服务商舍入值，未独立web交叉。"
+}

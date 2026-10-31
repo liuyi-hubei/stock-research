@@ -1,0 +1,329 @@
+{
+  "schemaVersion": "1.0",
+  "snapshotId": "XSHG.601298__financials__20260930__20261031-q3-v1",
+  "securityId": "XSHG.601298",
+  "dataset": "financials",
+  "asOf": "2026-09-30",
+  "collectedAt": "2026-10-31",
+  "acceptance": "accepted",
+  "createdBy": "codex/q3-batch3-20261031",
+  "supersedes": null,
+  "notes": "2026年第三季度报告（未经审计）主要会计数据；合并口径、人民币元；来自公告原文表格，未独立下载PDF逐页复核。累计与单季分开存储，不相互推导使用。公告以人民币元列示。单季归属于母公司股东的净利润原件精确值未取得（PDF表格分片截断），以基本每股收益0.21元推算约13.6亿元，本批只采用已取到的扣非单季值。 不覆盖20261025-legacy-v1快照。",
+  "observations": [
+    {
+      "id": "revenue_9m",
+      "metric": "revenue",
+      "value": "15474044290",
+      "rawValue": "15,474,044,290",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；营业收入"
+        }
+      ],
+      "notes": "公司公告原件；同比+8.68% / -0.76% / +2.97%；未经审计",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "收入 / 归母 / 扣非",
+        "periodLabel": "2026Q3累计",
+        "originalIndex": "100",
+        "originalRow": "[\"收入 / 归母 / 扣非\",\"154.74 / 41.49 / 41.06亿元\",\"2026Q3累计\",\"公司公告原件；同比+8.68% / -0.76% / +2.97%；未经审计\"]",
+        "reportedUnit": "亿元",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "net_profit_parent_9m",
+      "metric": "net_profit_parent",
+      "value": "4148837227",
+      "rawValue": "4,148,837,227",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "total_shares"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；归母净利润"
+        }
+      ],
+      "notes": "归母净利润；2026年第三季度报告披露，未经审计。"
+    },
+    {
+      "id": "adjusted_net_profit_parent_9m",
+      "metric": "adjusted_net_profit_parent",
+      "value": "4105997109",
+      "rawValue": "4,105,997,109",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent",
+        "accountingStandard": "CAS",
+        "adjustment": "non_recurring_excluded",
+        "shareBasis": "total_shares"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；扣非归母"
+        }
+      ],
+      "notes": "扣非归母；2026年第三季度报告披露，未经审计。"
+    },
+    {
+      "id": "revenue_q3",
+      "metric": "revenue",
+      "value": "5017798952",
+      "rawValue": "5,017,798,952",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；第三季度营业收入"
+        }
+      ],
+      "notes": "公司公告原件；同比+4.44%",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度营业收入",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "101",
+        "originalRow": "[\"第三季度营业收入\",\"50.18亿元\",\"2026Q3单季\",\"公司公告原件；同比+4.44%\"]",
+        "reportedUnit": "亿元",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "adjusted_net_profit_parent_q3",
+      "metric": "adjusted_net_profit_parent",
+      "value": "1360511780",
+      "rawValue": "1,360,511,780",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent",
+        "accountingStandard": "CAS",
+        "adjustment": "non_recurring_excluded",
+        "shareBasis": "total_shares"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；第三季度扣非"
+        }
+      ],
+      "notes": "公司公告原件；同比+4.83%；单季归母精确值未取得，以EPS 0.21元推算约13.6亿元",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "第三季度扣非归母净利润",
+        "periodLabel": "2026Q3单季",
+        "originalIndex": "102",
+        "originalRow": "[\"第三季度扣非归母净利润\",\"13.61亿元\",\"2026Q3单季\",\"公司公告原件；同比+4.83%；单季归母精确值未取得，以EPS 0.21元推算约13.6亿元\"]",
+        "reportedUnit": "亿元",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "operating_cash_flow_9m",
+      "metric": "operating_cash_flow",
+      "value": "5506352640",
+      "rawValue": "5,506,352,640",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；经营现金流"
+        }
+      ],
+      "notes": "公司公告原件；同比+28.90%",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "经营现金流净额",
+        "periodLabel": "2026Q3累计",
+        "originalIndex": "103",
+        "originalRow": "[\"经营现金流净额\",\"55.06亿元\",\"2026Q3累计\",\"公司公告原件；同比+28.90%\"]",
+        "reportedUnit": "亿元",
+        "scale": "8"
+      }
+    },
+    {
+      "id": "eps_basic_9m",
+      "metric": "eps_basic",
+      "value": "0.64",
+      "rawValue": "0.64",
+      "unit": "currency_per_share",
+      "currency": "CNY",
+      "period": {
+        "kind": "duration",
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "weighted_average"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；基本每股收益"
+        }
+      ],
+      "notes": "公司公告原件；同比持平",
+      "dimensions": {
+        "kind": "fact_row",
+        "label": "基本每股收益",
+        "periodLabel": "2026Q3累计",
+        "originalIndex": "104",
+        "originalRow": "[\"基本每股收益\",\"0.64元\",\"2026Q3累计\",\"公司公告原件；同比持平\"]",
+        "reportedUnit": "元",
+        "scale": "0"
+      }
+    },
+    {
+      "id": "total_assets",
+      "metric": "total_assets",
+      "value": "71496546345",
+      "rawValue": "71,496,546,345",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "not_applicable"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；总资产"
+        }
+      ],
+      "notes": "总资产；2026年第三季度报告披露，未经审计。"
+    },
+    {
+      "id": "equity_parent",
+      "metric": "equity_parent",
+      "value": "47681468281",
+      "rawValue": "47,681,468,281",
+      "unit": "currency",
+      "currency": "CNY",
+      "period": {
+        "kind": "instant",
+        "start": null,
+        "end": "2026-09-30"
+      },
+      "basis": {
+        "scope": "consolidated_parent",
+        "accountingStandard": "CAS",
+        "adjustment": "as_reported",
+        "shareBasis": "total_shares"
+      },
+      "nature": "historical_fact",
+      "verification": "provider_reported",
+      "precision": "as_reported",
+      "missingReason": null,
+      "sourceRefs": [
+        {
+          "sourceId": "q3-601298-20261031",
+          "locator": "2026年第三季度报告；归母权益"
+        }
+      ],
+      "notes": "归母权益；2026年第三季度报告披露，未经审计。"
+    }
+  ]
+}

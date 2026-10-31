@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "mx-quotes-601857-20261031",
+  "provider": "妙想金融数据（东方财富数据链）",
+  "type": "provider_query_result",
+  "publishedAt": "2026-10-31",
+  "collectedAt": "2026-10-31",
+  "url": "https://quote.eastmoney.com/sh601857.html",
+  "originalFilename": "mx-quotes-601857-20261031.md",
+  "originalSha256": null,
+  "evidence": {
+    "file": "evidence/mx-quotes-601857-20261031.md",
+    "sha256": "232a3d6fc7f6e65eef9b55ec21c17a26298d83737fff529d5c17bb67e7686a74"
+  },
+  "notes": "供应商返回，非独立复核；公告片段并非完整原件。"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourceId": "q3-603369-20261031",
+  "provider": "今世缘股份公告（巨潮 1225646946）与妙想金融数据",
+  "type": "public_disclosure_review",
+  "publishedAt": "2026-10-31",
+  "collectedAt": "2026-10-31",
+  "evidence": {
+    "file": "evidence/jinshiyuan-q3-20261031.md",
+    "sha256": "413b4589f284fcf750b0893d2a49a915b4ea902a449603dcdcbc2dbf1407ffa2"
+  },
+  "notes": "2026年第三季度报告原文表格，未经审计；主要会计数据与财务指标；合并口径、人民币元。单季与累计分开记录，不相互推导；历史基数与妙想金融数据交叉校验，冲突时以公告为准。"
+}
